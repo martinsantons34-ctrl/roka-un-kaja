@@ -1,0 +1,28 @@
+{
+  "standings": {
+    "leagueName": "roka un kaja",
+    "leagueId": 44087407,
+    "startMd": 2,
+    "currentMd": 2,
+    "updatedAt": "2026-10-15T12:00:00Z",
+    "members": [
+      { "name": "renardsudris", "team": "Spartaks", "overall": 134, "officialRank": 1, "md": { "1": 88, "2": 46 } },
+      { "name": "Arturs M", "team": "team maurini", "overall": 129, "officialRank": 2, "md": { "1": 61, "2": 68 } },
+      { "name": "Maarels", "team": "tk3101", "overall": 117, "officialRank": 3, "md": { "1": 64, "2": 53 } },
+      { "name": "Aleks", "team": "zvēri", "overall": 69, "officialRank": 4, "md": { "1": 11, "2": 58 } }
+    ]
+  },
+  "jokes": [
+    {
+      "md": 2,
+      "createdAt": "2026-10-15T12:00:00Z",
+      "items": [
+        "Tumes ķengurs pēc 2. kārtas: \"Nekas, man taču 1. kārtā bija 88 punkti!\" Godīgā tabula: \"Un kurš tev teica, ka tie skaitās?\"",
+        "Kāpēc Mundrito neņem līdzi kāpnes uz Čempionu līgas spēli? Ar 68 punktiem viņš tabulas augšā tiek arī bez tām.",
+        "Lauva Aleks pievienojās līgai pēdējais, bet 2. kārtā savāca 58 punktus. Tagad pārējie lūdz UEFA sākt sezonu no 3. kārtas.",
+        "Maarels izvēlas kapteini kā loto biļeti: ļoti cer uz laimestu, bet sanāk 53.",
+        "Ķenguri lec tālu, bet Tumes ķengurs šonedēļ ar 46 punktiem aizlēca tieši uz tabulas apakšu."
+      ]
+    }
+  ]
+}

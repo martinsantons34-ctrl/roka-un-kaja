@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Roka un kāja</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: one narrow scoreboard column; fair table first, the excluded MD1 points and official table below as context */
+:root {
+  --bg: #eef1ee;
+  --surface: #ffffff;
+  --ink: #14211b;
+  --muted: #5f6e66;
+  --line: #d5ddd7;
+  --accent: #1f6b4a;
+  --gold: #b7791f;
+  --up: #1f7a4d;
+  --down: #b4412f;
+  --chip: #e3ebe5;
+  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1613; --surface: #17211c; --ink: #e6eee9; --muted: #93a39a; --line: #2a3832;
+    --accent: #5cc493; --gold: #e3a94a; --up: #5cc493; --down: #ef7a66; --chip: #213029;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1613; --surface: #17211c; --ink: #e6eee9; --muted: #93a39a; --line: #2a3832;
+  --accent: #5cc493; --gold: #e3a94a; --up: #5cc493; --down: #ef7a66; --chip: #213029;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 680px; margin: 0 auto; padding-inline: 16px; padding-block: 32px 48px; display: grid; gap: 28px; }
+header { display: grid; gap: 6px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 9vw, 56px); line-height: .95; margin: 0; text-transform: uppercase; letter-spacing: .01em; text-wrap: balance; }
+.lede { color: var(--muted); margin: 0; max-width: 60ch; }
+.updated { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.board { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.row { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 14px 16px; border-top: 1px solid var(--line); }
+.row:first-child { border-top: 0; }
+.pos { font-family: var(--display); font-weight: 800; font-size: 34px; line-height: 1; color: var(--muted); text-align: center; font-variant-numeric: tabular-nums; }
+.row.lead .pos { color: var(--gold); }
+.who { min-width: 0; display: grid; gap: 4px; }
+.name { font-weight: 600; font-size: 16px; overflow-wrap: anywhere; }
+.team { color: var(--muted); font-size: 13px; }
+.mds { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { background: var(--chip); border-radius: 4px; padding: 1px 7px; font-size: 12px; font-variant-numeric: tabular-nums; color: var(--ink); }
+.chip b { font-weight: 600; color: var(--muted); margin-right: 3px; }
+.score { text-align: right; display: grid; gap: 2px; justify-items: end; }
+.pts { font-family: var(--display); font-weight: 700; font-size: 38px; line-height: 1; font-variant-numeric: tabular-nums; }
+.pts small { font-size: 15px; font-weight: 500; color: var(--muted); margin-left: 3px; }
+.delta { font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.delta.up { color: var(--up); } .delta.down { color: var(--down); } .delta.same { color: var(--muted); font-weight: 500; }
+
+section h2 { font-family: var(--display); font-weight: 700; font-size: 22px; text-transform: uppercase; letter-spacing: .02em; margin: 0 0 4px; }
+section p { margin: 0 0 12px; color: var(--muted); max-width: 62ch; }
+.round-tag { display: inline-block; font-family: var(--display); font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); margin-bottom: 8px; }
+.joke-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.joke-list li { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; max-width: 65ch; }
+.joke-list li::before { content: "“"; font-family: var(--display); font-weight: 800; font-size: 30px; line-height: 0; color: var(--gold); vertical-align: -10px; margin-right: 4px; }
+details { margin-top: 18px; }
+summary { cursor: pointer; color: var(--accent); font-weight: 600; padding-block: 4px; }
+summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+#jokesOld { display: grid; gap: 18px; margin-top: 12px; }
+.jokes .empty { background: var(--surface); border: 1px dashed var(--line); border-radius: 10px; }
+
+.empty { padding: 28px 18px; color: var(--muted); text-align: center; }
+footer { font-size: 13px; color: var(--muted); }
+.photo { margin: 0; justify-self: center; width: 100%; max-width: 420px; }
+.photo img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
+@media (max-width: 420px) {
+  .row { grid-template-columns: 34px minmax(0, 1fr) auto; gap: 10px; padding: 12px; }
+  .pos { font-size: 28px; } .pts { font-size: 32px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="eyebrow">UCL Fantasy · privātā līga</span>
+    <h1>Roka un kāja</h1>
+    <p class="lede">Godīgā tabula: visiem skaitām punktus tikai no <span id="startMdText">2.</span> kārtas, jo viens pievienojās vēlāk. 1. kārtas punkti netiek ieskaitīti nevienam.</p>
+    <span class="updated" id="updated">Ielādē datus…</span>
+  </header>
+
+  <div class="board" id="board" aria-live="polite">
+    <div class="empty">Tabula parādīsies, tiklīdz būs ielādēti dati no līgas.</div>
+  </div>
+
+  <section class="jokes" aria-live="polite">
+    <h2>Ģērbtuves anekdotes</h2>
+    <p>Pēc katras kārtas jaunas anekdotes par to, kas līgā notika.</p>
+    <div id="jokesCurrent"><div class="empty">Anekdotes parādīsies pēc kārtas noslēguma.</div></div>
+    <details id="jokesArchive" hidden><summary>Iepriekšējo kārtu anekdotes</summary><div id="jokesOld"></div></details>
+  </section>
+
+  <figure class="photo">
+    <img src="bilde.jpg" alt="Pelēks hečbeks ar ieskrāpētām un iespiestām aizmugurējām durvīm un spārnu pie degvielas uzpildes stacijas" loading="lazy">
+  </figure>
+
+  <footer>Dati no UEFA Champions League Fantasy līgas „roka un kaja” (kods yUdmgy). Atjaunojas automātiski pēc katras spēļu dienas.</footer>
+</div>
+
+<script>
+(function () {
+  const board = document.getElementById("board");
+  const jokesCurrent = document.getElementById("jokesCurrent");
+  const jokesArchive = document.getElementById("jokesArchive");
+  const jokesOld = document.getElementById("jokesOld");
+
+  function roundBlock(d) {
+    const items = (Array.isArray(d.items) ? d.items : []).map(t => `<li>${esc(t)}</li>`).join("");
+    return `<div><span class="round-tag">${esc(d.md)}. kārta</span><ul class="joke-list">${items}</ul></div>`;
+  }
+
+  function renderJokes(docs) {
+    const rounds = docs.filter(d => d && Array.isArray(d.items) && d.items.length).sort((a, b) => Number(b.md) - Number(a.md));
+    if (!rounds.length) { jokesArchive.hidden = true; return; }
+    jokesCurrent.innerHTML = roundBlock(rounds[0]);
+    jokesOld.innerHTML = rounds.slice(1).map(roundBlock).join("");
+    jokesArchive.hidden = rounds.length < 2;
+  }
+  const updatedEl = document.getElementById("updated");
+
+  function esc(s) { const d = document.createElement("span"); d.textContent = s == null ? "" : String(s); return d.innerHTML; }
+
+  function render(data) {
+    const startMd = Number(data.startMd || 2);
+    document.getElementById("startMdText").textContent = startMd + ".";
+    const members = (data.members || []).map(m => {
+      const md = m.md || {};
+      const mdNums = Object.keys(md).map(Number).sort((a, b) => a - b);
+      const counted = mdNums.filter(n => n >= startMd);
+      const excluded = mdNums.filter(n => n < startMd).reduce((s, n) => s + (Number(md[n]) || 0), 0);
+      const fair = counted.reduce((s, n) => s + (Number(md[n]) || 0), 0);
+      return { ...m, md, counted, excluded, fair };
+    });
+    members.sort((a, b) => b.fair - a.fair || (a.officialRank || 99) - (b.officialRank || 99));
+
+    let prevPts = null, prevPos = 0;
+    members.forEach((m, i) => { m.pos = m.fair === prevPts ? prevPos : i + 1; prevPts = m.fair; prevPos = m.pos; });
+
+    if (!members.length) {
+      board.innerHTML = '<div class="empty">Līgā vēl nav datu.</div>';
+    } else {
+      board.innerHTML = members.map(m => {
+        const diff = (m.officialRank || m.pos) - m.pos;
+        const delta = diff > 0 ? `<span class="delta up">▲ ${diff} pret oficiālo</span>`
+                    : diff < 0 ? `<span class="delta down">▼ ${-diff} pret oficiālo</span>`
+                    : `<span class="delta same">kā oficiāli</span>`;
+        const chips = m.counted.map(n => `<span class="chip"><b>K${n}</b>${esc(m.md[n] ?? "–")}</span>`).join("");
+        return `<div class="row${m.pos === 1 ? " lead" : ""}">
+          <div class="pos">${m.pos}</div>
+          <div class="who"><span class="name">${esc(m.name)}</span><span class="team">${esc(m.team)}</span><div class="mds">${chips}</div></div>
+          <div class="score"><span class="pts">${m.fair}<small>p</small></span>${delta}</div>
+        </div>`;
+      }).join("");
+    }
+
+    if (data.updatedAt) {
+      const d = new Date(data.updatedAt);
+      const when = isNaN(d) ? data.updatedAt : d.toLocaleString("lv-LV", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" });
+      updatedEl.textContent = `Atjaunots ${when}` + (data.currentMd ? ` · pēdējā aizvadītā kārta: ${data.currentMd}.` : "");
+    }
+  }
+
+  async function start() {
+    try {
+      const res = await fetch("data.json?t=" + Date.now(), { cache: "no-store" });
+      if (!res.ok) throw new Error(res.status);
+      const data = await res.json();
+      render(data.standings || {});
+      renderJokes(data.jokes || []);
+    } catch (e) {
+      updatedEl.textContent = "Neizdevās ielādēt datus. Pārlādē lapu.";
+    }
+  }
+  start();
+})();
+</script>
+</body>
+</html>
