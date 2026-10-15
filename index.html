@@ -125,6 +125,10 @@ table.rounds { width: 100%; border-collapse: collapse; font-variant-numeric: tab
 .tp-pts { font-family: var(--display); font-weight: 700; font-size: 28px; line-height: 1; font-variant-numeric: tabular-nums; }
 .tp-pts small { font-size: 13px; color: var(--muted); font-weight: 500; margin-left: 2px; }
 .tp:first-child .tp-rank { color: var(--gold); }
+.flops .tp:first-child .tp-rank { color: var(--down); }
+.flops .tp-pts { color: var(--down); }
+.tp-score { display: grid; justify-items: end; gap: 3px; }
+.tp-meta { font-size: 11px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
 footer { font-size: 13px; color: var(--muted); }
 .photo { margin: 0; justify-self: center; width: 100%; max-width: 420px; }
 .photo img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
@@ -169,6 +173,12 @@ footer { font-size: 13px; color: var(--muted); }
     <p>Visvairāk punktu guvušie futbolisti no mūsu četrām komandām. Pie katra redzams, kuram no mums viņš ir sastāvā.</p>
     <div class="md-tabs" id="mdTabs" role="tablist" aria-label="Kārta"></div>
     <ol class="top-players" id="topPlayers"><li class="empty">Dati parādīsies pēc nākamā atjauninājuma.</li></ol>
+  </section>
+
+  <section aria-live="polite">
+    <h2>Kārtas 10 lielākās vilšanās</h2>
+    <p>Mūsu komandu futbolisti, kas par savu cenu atnesa vismazāk: punkti uz katru cenas miljonu. Kārtu var pārslēgt augstāk.</p>
+    <ol class="top-players flops" id="flopPlayers"><li class="empty">Dati parādīsies pēc nākamā atjauninājuma.</li></ol>
   </section>
 
   <figure class="photo">
@@ -278,14 +288,22 @@ footer { font-size: 13px; color: var(--muted); }
     const r = topRounds.find(x => Number(x.md) === Number(md));
     document.querySelectorAll("#mdTabs button").forEach(b => b.setAttribute("aria-selected", String(Number(b.dataset.md) === Number(md))));
     const list = document.getElementById("topPlayers");
+    const flopList = document.getElementById("flopPlayers");
+    const flops = (r && r.flops) || [];
+    flopList.innerHTML = flops.length ? flops.slice(0, 10).map((p, i) => playerRow(p, i, `<span class="tp-score"><span class="tp-pts">${esc(p.pts)}<small>p</small></span><span class="tp-meta">€${esc(p.price)}m · ${(Number(p.pts) / Number(p.price)).toFixed(2)} p/€m</span></span>`)).join("")
+      : '<li class="empty">Šai kārtai datu nav.</li>';
     if (!r || !(r.players || []).length) { list.innerHTML = '<li class="empty">Šai kārtai datu nav.</li>'; return; }
-    list.innerHTML = r.players.slice(0, 10).map((p, i) => `<li class="tp">
+    list.innerHTML = r.players.slice(0, 10).map((p, i) => playerRow(p, i, `<span class="tp-pts">${esc(p.pts)}<small>p</small></span>`)).join("");
+  }
+
+  function playerRow(p, i, scoreHtml) {
+    return `<li class="tp">
       <span class="tp-rank">${i + 1}</span>
       <span class="tp-photo"><img src="${IMG_PLAYER}${encodeURIComponent(p.id)}.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'">${p.clubId ? `<img class="crest" src="${IMG_CLUB}${encodeURIComponent(p.clubId)}.png" alt="" loading="lazy" onerror="this.remove()">` : ""}</span>
       <span class="tp-info"><span class="tp-name">${esc(p.name)}</span><span class="tp-club">${esc(p.club || "")}</span>
         <span class="owners">${(p.owners || []).map(o => `<span class="owner${o.captain ? " cap" : ""}${o.bench ? " bench" : ""}" title="${o.captain ? "Kapteinis" : o.bench ? "Uz soliņa" : ""}">${esc(o.name)}${o.captain ? " · C" : ""}${o.bench ? " · rez." : ""}</span>`).join("")}</span></span>
-      <span class="tp-pts">${esc(p.pts)}<small>p</small></span>
-    </li>`).join("");
+      ${scoreHtml}
+    </li>`;
   }
 
   function renderTop(rounds) {

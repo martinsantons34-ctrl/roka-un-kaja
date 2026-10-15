@@ -215,6 +215,156 @@
             }
           ]
         }
+      ],
+      "flops": [
+        {
+          "id": "250088320",
+          "name": "Ferran Torres",
+          "club": "Paris",
+          "clubId": "52747",
+          "pts": -1,
+          "price": 7,
+          "owners": [
+            {
+              "name": "renardsudris",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250171184",
+          "name": "M. Olise",
+          "club": "Bayern München",
+          "clubId": "50037",
+          "pts": -1,
+          "price": 9,
+          "owners": [
+            {
+              "name": "Maarels",
+              "captain": false
+            },
+            {
+              "name": "renardsudris",
+              "captain": true
+            }
+          ]
+        },
+        {
+          "id": "50327420",
+          "name": "V. van Dijk",
+          "club": "Liverpool",
+          "clubId": "7889",
+          "pts": 0,
+          "price": 6,
+          "owners": [
+            {
+              "name": "Aleks",
+              "captain": false
+            },
+            {
+              "name": "Maarels",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250113392",
+          "name": "R. Calafiori",
+          "club": "Arsenal",
+          "clubId": "52280",
+          "pts": 0,
+          "price": 4.5,
+          "owners": [
+            {
+              "name": "Maarels",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250194474",
+          "name": "D. Huijsen",
+          "club": "Real Madrid",
+          "clubId": "50051",
+          "pts": 0,
+          "price": 4.5,
+          "owners": [
+            {
+              "name": "renardsudris",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250101808",
+          "name": "K. Kvaratskhelia",
+          "club": "Paris",
+          "clubId": "52747",
+          "pts": 1,
+          "price": 10,
+          "owners": [
+            {
+              "name": "Maarels",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250008901",
+          "name": "K. De Bruyne",
+          "club": "Napoli",
+          "clubId": "50136",
+          "pts": 1,
+          "price": 7,
+          "owners": [
+            {
+              "name": "Aleks",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250086333",
+          "name": "P. Dybala",
+          "club": "Roma",
+          "clubId": "50137",
+          "pts": 1,
+          "price": 7,
+          "owners": [
+            {
+              "name": "Aleks",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250124063",
+          "name": "R. Cherki",
+          "club": "Man City",
+          "clubId": "52919",
+          "pts": 1,
+          "price": 7,
+          "owners": [
+            {
+              "name": "Maarels",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250139255",
+          "name": "Gavi",
+          "club": "Barcelona",
+          "clubId": "50080",
+          "pts": 1,
+          "price": 6,
+          "owners": [
+            {
+              "name": "Arturs M",
+              "captain": false
+            }
+          ]
+        }
       ]
     }
   ]
