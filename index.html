@@ -160,7 +160,7 @@ footer { font-size: 13px; color: var(--muted); }
 
   <section aria-live="polite">
     <h2>Punkti pa kārtām</h2>
-    <p>Katra dalībnieka punkti katrā kārtā. Kārtas labākais rezultāts ir izcelts. 1. kārta godīgajā kopsummā netiek skaitīta.</p>
+    <p>Katra dalībnieka punkti katrā kārtā. Kārtas labākais rezultāts ir izcelts.</p>
     <div class="tbl-wrap"><table class="rounds" id="roundsTable"><tbody><tr><td class="empty">Ielādē…</td></tr></tbody></table></div>
   </section>
 
@@ -255,16 +255,16 @@ footer { font-size: 13px; color: var(--muted); }
   function renderRounds(data) {
     const startMd = Number(data.startMd || 2);
     const members = data.members || [];
-    const mds = [...new Set(members.flatMap(m => Object.keys(m.md || {}).map(Number)))].sort((a, b) => a - b);
+    const mds = [...new Set(members.flatMap(m => Object.keys(m.md || {}).map(Number)))].filter(n => n >= startMd).sort((a, b) => a - b);
     if (!members.length || !mds.length) return;
     const best = {};
     mds.forEach(n => { best[n] = Math.max(...members.map(m => Number((m.md || {})[n]) || 0)); });
-    const rows = members.map(m => ({ m, fair: mds.filter(n => n >= startMd).reduce((s, n) => s + (Number(m.md[n]) || 0), 0) }))
+    const rows = members.map(m => ({ m, fair: mds.reduce((s, n) => s + (Number(m.md[n]) || 0), 0) }))
       .sort((a, b) => b.fair - a.fair);
-    const head = `<thead><tr><th>Spēlētājs</th>${mds.map(n => `<th>K${n}${n < startMd ? '<span class="sub">neskaitās</span>' : ""}</th>`).join("")}<th class="total">Godīgi</th></tr></thead>`;
+    const head = `<thead><tr><th>Spēlētājs</th>${mds.map(n => `<th>K${n}</th>`).join("")}<th class="total">Punkti kopā</th></tr></thead>`;
     const body = rows.map(({ m, fair }) => `<tr><td>${esc(m.name)}</td>${mds.map(n => {
       const v = (m.md || {})[n];
-      const c = n < startMd ? "off" : (v != null && Number(v) === best[n] ? "best" : "");
+      const c = v != null && Number(v) === best[n] ? "best" : "";
       return `<td class="${c}">${v == null ? "–" : esc(v)}</td>`;
     }).join("")}<td class="total">${fair}</td></tr>`).join("");
     document.getElementById("roundsTable").innerHTML = head + `<tbody>${body}</tbody>`;
