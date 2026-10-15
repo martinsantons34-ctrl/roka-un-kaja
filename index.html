@@ -93,6 +93,38 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; b
 .jokes .empty { background: var(--surface); border: 1px dashed var(--line); border-radius: 10px; }
 
 .empty { padding: 28px 18px; color: var(--muted); text-align: center; }
+
+.tbl-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+table.rounds { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.rounds th, .rounds td { padding: 10px 12px; text-align: right; border-top: 1px solid var(--line); white-space: nowrap; }
+.rounds thead th { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; border-top: 0; }
+.rounds th:first-child, .rounds td:first-child { text-align: left; position: sticky; left: 0; background: var(--surface); }
+.rounds td.off { color: var(--muted); }
+.rounds td.best { color: var(--accent); font-weight: 700; }
+.rounds td.total, .rounds th.total { font-weight: 700; border-left: 1px solid var(--line); }
+.rounds .sub { display: block; font-size: 10px; letter-spacing: .04em; text-transform: none; font-weight: 500; }
+
+.md-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.md-tabs button { font: 600 13px var(--body); padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.md-tabs button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.md-tabs button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.top-players { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.tp { display: grid; grid-template-columns: 22px 48px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 10px 14px; border-top: 1px solid var(--line); }
+.tp:first-child { border-top: 0; }
+.tp-rank { font-family: var(--display); font-weight: 700; font-size: 20px; color: var(--muted); text-align: center; font-variant-numeric: tabular-nums; }
+.tp-photo { width: 48px; height: 48px; border-radius: 50%; overflow: hidden; background: var(--chip); position: relative; }
+.tp-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.tp-photo .crest { position: absolute; right: -2px; bottom: -2px; width: 20px; height: 20px; object-fit: contain; background: var(--surface); border-radius: 50%; padding: 2px; }
+.tp-info { min-width: 0; display: grid; gap: 3px; }
+.tp-name { font-weight: 600; overflow-wrap: anywhere; }
+.tp-club { font-size: 12px; color: var(--muted); }
+.owners { display: flex; flex-wrap: wrap; gap: 4px; }
+.owner { font-size: 11px; background: var(--chip); border-radius: 4px; padding: 1px 6px; }
+.owner.cap { background: var(--gold-step); color: var(--step-ink); font-weight: 600; }
+.owner.bench { opacity: .6; }
+.tp-pts { font-family: var(--display); font-weight: 700; font-size: 28px; line-height: 1; font-variant-numeric: tabular-nums; }
+.tp-pts small { font-size: 13px; color: var(--muted); font-weight: 500; margin-left: 2px; }
+.tp:first-child .tp-rank { color: var(--gold); }
 footer { font-size: 13px; color: var(--muted); }
 .photo { margin: 0; justify-self: center; width: 100%; max-width: 420px; }
 .photo img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
@@ -124,6 +156,19 @@ footer { font-size: 13px; color: var(--muted); }
     <p>Pēc katras kārtas jaunas anekdotes par to, kas līgā notika.</p>
     <div id="jokesCurrent"><div class="empty">Anekdotes parādīsies pēc kārtas noslēguma.</div></div>
     <details id="jokesArchive" hidden><summary>Iepriekšējo kārtu anekdotes</summary><div id="jokesOld"></div></details>
+  </section>
+
+  <section aria-live="polite">
+    <h2>Punkti pa kārtām</h2>
+    <p>Katra dalībnieka punkti katrā kārtā. Kārtas labākais rezultāts ir izcelts. 1. kārta godīgajā kopsummā netiek skaitīta.</p>
+    <div class="tbl-wrap"><table class="rounds" id="roundsTable"><tbody><tr><td class="empty">Ielādē…</td></tr></tbody></table></div>
+  </section>
+
+  <section aria-live="polite">
+    <h2>Kārtas top 10 futbolisti</h2>
+    <p>Visvairāk punktu guvušie futbolisti no mūsu četrām komandām. Pie katra redzams, kuram no mums viņš ir sastāvā.</p>
+    <div class="md-tabs" id="mdTabs" role="tablist" aria-label="Kārta"></div>
+    <ol class="top-players" id="topPlayers"><li class="empty">Dati parādīsies pēc nākamā atjauninājuma.</li></ol>
   </section>
 
   <figure class="photo">
@@ -207,6 +252,51 @@ footer { font-size: 13px; color: var(--muted); }
     }
   }
 
+  function renderRounds(data) {
+    const startMd = Number(data.startMd || 2);
+    const members = data.members || [];
+    const mds = [...new Set(members.flatMap(m => Object.keys(m.md || {}).map(Number)))].sort((a, b) => a - b);
+    if (!members.length || !mds.length) return;
+    const best = {};
+    mds.forEach(n => { best[n] = Math.max(...members.map(m => Number((m.md || {})[n]) || 0)); });
+    const rows = members.map(m => ({ m, fair: mds.filter(n => n >= startMd).reduce((s, n) => s + (Number(m.md[n]) || 0), 0) }))
+      .sort((a, b) => b.fair - a.fair);
+    const head = `<thead><tr><th>Spēlētājs</th>${mds.map(n => `<th>K${n}${n < startMd ? '<span class="sub">neskaitās</span>' : ""}</th>`).join("")}<th class="total">Godīgi</th></tr></thead>`;
+    const body = rows.map(({ m, fair }) => `<tr><td>${esc(m.name)}</td>${mds.map(n => {
+      const v = (m.md || {})[n];
+      const c = n < startMd ? "off" : (v != null && Number(v) === best[n] ? "best" : "");
+      return `<td class="${c}">${v == null ? "–" : esc(v)}</td>`;
+    }).join("")}<td class="total">${fair}</td></tr>`).join("");
+    document.getElementById("roundsTable").innerHTML = head + `<tbody>${body}</tbody>`;
+  }
+
+  const IMG_PLAYER = "https://img.uefa.com/imgml/TP/players/1/2027/324x324/";
+  const IMG_CLUB = "https://img.uefa.com/imgml/TP/teams/logos/140x140/";
+  let topRounds = [];
+
+  function showTop(md) {
+    const r = topRounds.find(x => Number(x.md) === Number(md));
+    document.querySelectorAll("#mdTabs button").forEach(b => b.setAttribute("aria-selected", String(Number(b.dataset.md) === Number(md))));
+    const list = document.getElementById("topPlayers");
+    if (!r || !(r.players || []).length) { list.innerHTML = '<li class="empty">Šai kārtai datu nav.</li>'; return; }
+    list.innerHTML = r.players.slice(0, 10).map((p, i) => `<li class="tp">
+      <span class="tp-rank">${i + 1}</span>
+      <span class="tp-photo"><img src="${IMG_PLAYER}${encodeURIComponent(p.id)}.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'">${p.clubId ? `<img class="crest" src="${IMG_CLUB}${encodeURIComponent(p.clubId)}.png" alt="" loading="lazy" onerror="this.remove()">` : ""}</span>
+      <span class="tp-info"><span class="tp-name">${esc(p.name)}</span><span class="tp-club">${esc(p.club || "")}</span>
+        <span class="owners">${(p.owners || []).map(o => `<span class="owner${o.captain ? " cap" : ""}${o.bench ? " bench" : ""}" title="${o.captain ? "Kapteinis" : o.bench ? "Uz soliņa" : ""}">${esc(o.name)}${o.captain ? " · C" : ""}${o.bench ? " · rez." : ""}</span>`).join("")}</span></span>
+      <span class="tp-pts">${esc(p.pts)}<small>p</small></span>
+    </li>`).join("");
+  }
+
+  function renderTop(rounds) {
+    topRounds = (rounds || []).filter(r => r && (r.players || []).length).sort((a, b) => Number(a.md) - Number(b.md));
+    const tabs = document.getElementById("mdTabs");
+    if (!topRounds.length) { tabs.innerHTML = ""; return; }
+    tabs.innerHTML = topRounds.map(r => `<button type="button" role="tab" data-md="${esc(r.md)}">${esc(r.md)}. kārta</button>`).join("");
+    tabs.onclick = e => { const b = e.target.closest("button"); if (b) showTop(b.dataset.md); };
+    showTop(topRounds[topRounds.length - 1].md);
+  }
+
   async function start() {
     try {
       const res = await fetch("data.json?t=" + Date.now(), { cache: "no-store" });
@@ -214,6 +304,8 @@ footer { font-size: 13px; color: var(--muted); }
       const data = await res.json();
       render(data.standings || {});
       renderJokes(data.jokes || []);
+      renderRounds(data.standings || {});
+      renderTop(data.topPlayers || []);
     } catch (e) {
       updatedEl.textContent = "Neizdevās ielādēt datus. Pārlādē lapu.";
     }

@@ -6,10 +6,46 @@
     "currentMd": 2,
     "updatedAt": "2026-10-15T12:00:00Z",
     "members": [
-      { "name": "renardsudris", "team": "Spartaks", "overall": 134, "officialRank": 1, "md": { "1": 88, "2": 46 } },
-      { "name": "Arturs M", "team": "team maurini", "overall": 129, "officialRank": 2, "md": { "1": 61, "2": 68 } },
-      { "name": "Maarels", "team": "tk3101", "overall": 117, "officialRank": 3, "md": { "1": 64, "2": 53 } },
-      { "name": "Aleks", "team": "zvēri", "overall": 69, "officialRank": 4, "md": { "1": 11, "2": 58 } }
+      {
+        "name": "renardsudris",
+        "team": "Spartaks",
+        "overall": 134,
+        "officialRank": 1,
+        "md": {
+          "1": 88,
+          "2": 46
+        }
+      },
+      {
+        "name": "Arturs M",
+        "team": "team maurini",
+        "overall": 129,
+        "officialRank": 2,
+        "md": {
+          "1": 61,
+          "2": 68
+        }
+      },
+      {
+        "name": "Maarels",
+        "team": "tk3101",
+        "overall": 117,
+        "officialRank": 3,
+        "md": {
+          "1": 64,
+          "2": 53
+        }
+      },
+      {
+        "name": "Aleks",
+        "team": "zvēri",
+        "overall": 69,
+        "officialRank": 4,
+        "md": {
+          "1": 11,
+          "2": 58
+        }
+      }
     ]
   },
   "jokes": [
@@ -22,6 +58,163 @@
         "Lauva Aleks pievienojās līgai pēdējais, bet 2. kārtā savāca 58 punktus. Tagad pārējie lūdz UEFA sākt sezonu no 3. kārtas.",
         "Maarels izvēlas kapteini kā loto biļeti: ļoti cer uz laimestu, bet sanāk 53.",
         "Ķenguri lec tālu, bet Tumes ķengurs šonedēļ ar 46 punktiem aizlēca tieši uz tabulas apakšu."
+      ]
+    }
+  ],
+  "topPlayers": [
+    {
+      "md": 2,
+      "players": [
+        {
+          "id": "250016833",
+          "name": "H. Kane",
+          "club": "Bayern München",
+          "clubId": "50037",
+          "pts": 13,
+          "owners": [
+            {
+              "name": "Arturs M",
+              "captain": true
+            },
+            {
+              "name": "Maarels",
+              "captain": true
+            },
+            {
+              "name": "renardsudris",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250176450",
+          "name": "L. Yamal",
+          "club": "Barcelona",
+          "clubId": "50080",
+          "pts": 11,
+          "owners": [
+            {
+              "name": "Aleks",
+              "captain": true
+            },
+            {
+              "name": "renardsudris",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250059233",
+          "name": "A. Rrahmani",
+          "club": "Napoli",
+          "clubId": "50136",
+          "pts": 10,
+          "owners": [
+            {
+              "name": "Aleks",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250103758",
+          "name": "E. Haaland",
+          "club": "Man City",
+          "clubId": "52919",
+          "pts": 10,
+          "owners": [
+            {
+              "name": "Arturs M",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250066886",
+          "name": "O. Dembélé",
+          "club": "Paris",
+          "clubId": "52747",
+          "pts": 9,
+          "owners": [
+            {
+              "name": "Arturs M",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250076574",
+          "name": "K. Mbappé",
+          "club": "Real Madrid",
+          "clubId": "50051",
+          "pts": 8,
+          "owners": [
+            {
+              "name": "Aleks",
+              "captain": false
+            },
+            {
+              "name": "Maarels",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250131901",
+          "name": "Gabriel",
+          "club": "Arsenal",
+          "clubId": "52280",
+          "pts": 7,
+          "owners": [
+            {
+              "name": "Aleks",
+              "captain": false
+            },
+            {
+              "name": "renardsudris",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250124068",
+          "name": "C. Lukeba",
+          "club": "Leipzig",
+          "clubId": "2603790",
+          "pts": 7,
+          "owners": [
+            {
+              "name": "renardsudris",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250144211",
+          "name": "Antony",
+          "club": "Real Betis",
+          "clubId": "52265",
+          "pts": 6,
+          "owners": [
+            {
+              "name": "renardsudris",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250171278",
+          "name": "D. Raya",
+          "club": "Arsenal",
+          "clubId": "52280",
+          "pts": 6,
+          "owners": [
+            {
+              "name": "Maarels",
+              "captain": false
+            }
+          ]
+        }
       ]
     }
   ]
