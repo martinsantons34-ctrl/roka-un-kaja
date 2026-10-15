@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap">
 <style>
-/* Layout: one narrow scoreboard column; fair table first, the excluded MD1 points and official table below as context */
+/* Layout: one narrow scoreboard column; podium of the top three, then the full fair table, then anecdotes and the photo */
 :root {
   --bg: #eef1ee;
   --surface: #ffffff;
@@ -19,6 +19,10 @@
   --up: #1f7a4d;
   --down: #b4412f;
   --chip: #e3ebe5;
+  --gold-step: #e2b350;
+  --silver: #c5ceca;
+  --bronze: #cf9466;
+  --step-ink: #1b2620;
   --display: "Barlow Condensed", "Arial Narrow", sans-serif;
   --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -26,12 +30,14 @@
   :root:not([data-theme="light"]) {
     --bg: #0f1613; --surface: #17211c; --ink: #e6eee9; --muted: #93a39a; --line: #2a3832;
     --accent: #5cc493; --gold: #e3a94a; --up: #5cc493; --down: #ef7a66; --chip: #213029;
+    --gold-step: #d6a443; --silver: #9ba8a2; --bronze: #b5794f; --step-ink: #101713;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0f1613; --surface: #17211c; --ink: #e6eee9; --muted: #93a39a; --line: #2a3832;
   --accent: #5cc493; --gold: #e3a94a; --up: #5cc493; --down: #ef7a66; --chip: #213029;
+    --gold-step: #d6a443; --silver: #9ba8a2; --bronze: #b5794f; --step-ink: #101713;
   color-scheme: dark;
 }
 *, *::before, *::after { box-sizing: border-box; }
@@ -45,6 +51,18 @@ h1 { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 9vw, 
 .lede { color: var(--muted); margin: 0; max-width: 60ch; }
 .updated { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
 
+.podium { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: end; gap: 8px; padding-top: 8px; }
+.podium .place { display: grid; justify-items: center; gap: 6px; min-width: 0; text-align: center; }
+.podium .pname { font-weight: 600; font-size: 15px; line-height: 1.2; overflow-wrap: anywhere; }
+.podium .pteam { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.podium .ppts { font-family: var(--display); font-weight: 700; font-size: 28px; line-height: 1; font-variant-numeric: tabular-nums; }
+.podium .ppts small { font-size: 13px; font-weight: 500; color: var(--muted); margin-left: 2px; }
+.podium .step { width: 100%; border-radius: 8px 8px 0 0; display: grid; place-items: start center; padding-top: 10px; font-family: var(--display); font-weight: 800; font-size: 40px; line-height: 1; color: var(--step-ink); }
+.podium .p1 .step { height: 120px; background: var(--gold-step); }
+.podium .p2 .step { height: 88px; background: var(--silver); }
+.podium .p3 .step { height: 64px; background: var(--bronze); }
+.podium .p1 .ppts { font-size: 34px; }
+.podium .crown { font-size: 22px; line-height: 1; color: var(--gold); }
 .board { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
 .row { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 14px 16px; border-top: 1px solid var(--line); }
 .row:first-child { border-top: 0; }
@@ -92,6 +110,10 @@ footer { font-size: 13px; color: var(--muted); }
     <p class="lede">Godīgā tabula: visiem skaitām punktus tikai no <span id="startMdText">2.</span> kārtas, jo viens pievienojās vēlāk. 1. kārtas punkti netiek ieskaitīti nevienam.</p>
     <span class="updated" id="updated">Ielādē datus…</span>
   </header>
+
+  <div>
+    <div class="podium" id="podium" aria-label="Pirmās trīs vietas"></div>
+  </div>
 
   <div class="board" id="board" aria-live="polite">
     <div class="empty">Tabula parādīsies, tiklīdz būs ielādēti dati no līgas.</div>
@@ -149,6 +171,17 @@ footer { font-size: 13px; color: var(--muted); }
 
     let prevPts = null, prevPos = 0;
     members.forEach((m, i) => { m.pos = m.fair === prevPts ? prevPos : i + 1; prevPts = m.fair; prevPos = m.pos; });
+
+    const top = members.slice(0, 3);
+    const order = [top[1], top[0], top[2]];
+    const cls = ["p2", "p1", "p3"];
+    document.getElementById("podium").innerHTML = order.map((m, i) => m ? `<div class="place ${cls[i]}">
+        ${cls[i] === "p1" ? '<span class="crown" aria-hidden="true">♛</span>' : ""}
+        <span class="pname">${esc(m.name)}</span>
+        <span class="pteam">${esc(m.team)}</span>
+        <span class="ppts">${m.fair}<small>p</small></span>
+        <div class="step">${m.pos}</div>
+      </div>` : "<div></div>").join("");
 
     if (!members.length) {
       board.innerHTML = '<div class="empty">Līgā vēl nav datu.</div>';
