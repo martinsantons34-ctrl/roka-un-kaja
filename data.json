@@ -367,5 +367,228 @@
         }
       ]
     }
-  ]
+  ],
+  "transfers": [
+    {
+      "md": 2,
+      "members": [
+        {
+          "name": "renardsudris",
+          "count": 2,
+          "penalty": 0,
+          "in": [
+            {
+              "id": "250171184",
+              "name": "M. Olise",
+              "pts": -1
+            },
+            {
+              "id": "250105927",
+              "name": "V. Gyökeres",
+              "pts": 2
+            }
+          ],
+          "out": [
+            {
+              "id": "250087938",
+              "name": "K. Havertz",
+              "pts": 3
+            },
+            {
+              "id": "250112880",
+              "name": "Raphinha",
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "name": "Arturs M",
+          "count": 0,
+          "penalty": 0,
+          "in": [],
+          "out": []
+        },
+        {
+          "name": "Maarels",
+          "count": 2,
+          "penalty": 0,
+          "in": [
+            {
+              "id": "250171184",
+              "name": "M. Olise",
+              "pts": -1
+            },
+            {
+              "id": "250055294",
+              "name": "R. Marin",
+              "pts": 1
+            }
+          ],
+          "out": [
+            {
+              "id": "250083732",
+              "name": "D. Rice",
+              "pts": 4
+            },
+            {
+              "id": "250104066",
+              "name": "D. Szoboszlai",
+              "pts": 0
+            }
+          ]
+        },
+        {
+          "name": "Aleks",
+          "count": 1,
+          "penalty": 0,
+          "in": [
+            {
+              "id": "97923",
+              "name": "M. Neuer",
+              "pts": 0
+            }
+          ],
+          "out": [
+            {
+              "id": "250069832",
+              "name": "G. Kobel",
+              "pts": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "nextRound": {
+    "md": 3,
+    "deadline": "2026-10-20T18:45:00+02:00",
+    "matches": [
+      {
+        "home": "Fenerbahçe",
+        "homeId": "52692",
+        "away": "Slavia Praha",
+        "awayId": "52498",
+        "kickoff": "2026-10-20T18:45:00+02:00"
+      },
+      {
+        "home": "Sabah",
+        "homeId": "2609356",
+        "away": "B. Dortmund",
+        "awayId": "52758",
+        "kickoff": "2026-10-20T18:45:00+02:00"
+      },
+      {
+        "home": "Paris",
+        "homeId": "52747",
+        "away": "Barcelona",
+        "awayId": "50080",
+        "kickoff": "2026-10-20T21:00:00+02:00"
+      },
+      {
+        "home": "Stuttgart",
+        "homeId": "50107",
+        "away": "Atleti",
+        "awayId": "50124",
+        "kickoff": "2026-10-20T21:00:00+02:00"
+      },
+      {
+        "home": "Liverpool",
+        "homeId": "7889",
+        "away": "Villarreal",
+        "awayId": "70691",
+        "kickoff": "2026-10-20T21:00:00+02:00"
+      },
+      {
+        "home": "Napoli",
+        "homeId": "50136",
+        "away": "Bodø/Glimt",
+        "awayId": "59333",
+        "kickoff": "2026-10-20T21:00:00+02:00"
+      },
+      {
+        "home": "Roma",
+        "homeId": "50137",
+        "away": "S. Bratislava",
+        "awayId": "52797",
+        "kickoff": "2026-10-20T21:00:00+02:00"
+      },
+      {
+        "home": "Porto",
+        "homeId": "50064",
+        "away": "PSV",
+        "awayId": "50062",
+        "kickoff": "2026-10-20T21:00:00+02:00"
+      },
+      {
+        "home": "Man City",
+        "homeId": "52919",
+        "away": "AEK Athens",
+        "awayId": "50129",
+        "kickoff": "2026-10-20T21:00:00+02:00"
+      },
+      {
+        "home": "Lille",
+        "homeId": "75797",
+        "away": "Galatasaray",
+        "awayId": "50067",
+        "kickoff": "2026-10-21T18:45:00+02:00"
+      },
+      {
+        "home": "Como",
+        "homeId": "79946",
+        "away": "Man Utd",
+        "awayId": "52682",
+        "kickoff": "2026-10-21T18:45:00+02:00"
+      },
+      {
+        "home": "Inter",
+        "homeId": "50138",
+        "away": "Shakhtar",
+        "awayId": "52707",
+        "kickoff": "2026-10-21T21:00:00+02:00"
+      },
+      {
+        "home": "Real Betis",
+        "homeId": "52265",
+        "away": "Feyenoord",
+        "awayId": "52749",
+        "kickoff": "2026-10-21T21:00:00+02:00"
+      },
+      {
+        "home": "Club Brugge",
+        "homeId": "50043",
+        "away": "Lens",
+        "awayId": "52277",
+        "kickoff": "2026-10-21T21:00:00+02:00"
+      },
+      {
+        "home": "Bayern München",
+        "homeId": "50037",
+        "away": "Arsenal",
+        "awayId": "52280",
+        "kickoff": "2026-10-21T21:00:00+02:00"
+      },
+      {
+        "home": "Real Madrid",
+        "homeId": "50051",
+        "away": "Leipzig",
+        "awayId": "2603790",
+        "kickoff": "2026-10-21T21:00:00+02:00"
+      },
+      {
+        "home": "Sporting CP",
+        "homeId": "50149",
+        "away": "LASK",
+        "awayId": "63405",
+        "kickoff": "2026-10-21T21:00:00+02:00"
+      },
+      {
+        "home": "Aston Villa",
+        "homeId": "52683",
+        "away": "Viking",
+        "awayId": "52319",
+        "kickoff": "2026-10-21T21:00:00+02:00"
+      }
+    ]
+  }
 }

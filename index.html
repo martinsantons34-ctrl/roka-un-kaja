@@ -129,6 +129,51 @@ table.rounds { width: 100%; border-collapse: collapse; font-variant-numeric: tab
 .flops .tp-pts { color: var(--down); }
 .tp-score { display: grid; justify-items: end; gap: 3px; }
 .tp-meta { font-size: 11px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.bill-input { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-weight: 600; font-size: 14px; margin-bottom: 14px; }
+.bill-field { display: inline-flex; align-items: center; gap: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 4px 10px; }
+.bill-field input { width: 90px; border: 0; background: transparent; color: var(--ink); font: 600 16px var(--body); font-variant-numeric: tabular-nums; outline: none; }
+.bill-field:focus-within { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 25%, transparent); }
+.bill-bar { display: flex; height: 38px; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); margin-bottom: 12px; }
+.bill-bar span { display: grid; place-items: center; font-size: 12px; font-weight: 600; color: var(--step-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-inline: 4px; min-width: 0; }
+.bill-list { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.bl { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 12px; padding: 12px 16px; border-top: 1px solid var(--line); }
+.bl:first-child { border-top: 0; }
+.bl-name { font-weight: 600; }
+.bl-name small { color: var(--muted); font-weight: 500; margin-left: 6px; }
+.bl-share { font-family: var(--display); font-weight: 700; font-size: 26px; line-height: 1; text-align: right; font-variant-numeric: tabular-nums; }
+.bl-share small { display: block; font-family: var(--body); font-size: 12px; font-weight: 500; color: var(--muted); }
+.bl-gauge { grid-column: 1 / -1; display: grid; gap: 4px; }
+.gauge { position: relative; height: 10px; border-radius: 999px; background: var(--chip); overflow: hidden; }
+.gauge i { position: absolute; inset: 0 auto 0 0; border-radius: 999px; }
+.bl-note { font-size: 12px; color: var(--muted); }
+.bl-note b { color: var(--ink); }
+.z50 { background: var(--down); } .z30 { background: var(--bronze); } .z20 { background: var(--silver); } .z0 { background: var(--up); }
+
+.next { display: grid; gap: 12px; }
+.countdown { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.cd-time { font-family: var(--display); font-weight: 800; font-size: 34px; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+.cd-label { color: var(--muted); font-size: 13px; }
+.fx-day { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 4px 0 6px; }
+.fx-list { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.fx { display: grid; grid-template-columns: 44px minmax(0, 1fr) 20px minmax(0, 1fr); align-items: center; gap: 8px; padding: 8px 12px; border-top: 1px solid var(--line); font-size: 14px; }
+.fx:first-child { border-top: 0; }
+.fx-t { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.fx-team { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.fx-team span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fx-team.home { justify-content: flex-end; text-align: right; }
+.fx-team img { width: 20px; height: 20px; object-fit: contain; flex: none; }
+.fx-v { text-align: center; color: var(--muted); font-size: 12px; }
+
+.tr-rounds { display: grid; gap: 14px; margin-top: 14px; }
+.tr-card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; display: grid; gap: 8px; }
+.tr-head { display: flex; justify-content: space-between; gap: 12px; font-weight: 600; }
+.tr-net { font-variant-numeric: tabular-nums; }
+.tr-net.up { color: var(--up); } .tr-net.down { color: var(--down); } .tr-net.same { color: var(--muted); }
+.tr-moves { display: grid; gap: 4px; font-size: 13px; }
+.tr-move { display: grid; grid-template-columns: 20px minmax(0, 1fr) auto; gap: 8px; align-items: center; }
+.tr-move .arrow.in { color: var(--up); } .tr-move .arrow.out { color: var(--down); }
+.tr-move .p { font-variant-numeric: tabular-nums; color: var(--muted); }
+.rounds td.up { color: var(--up); font-weight: 600; } .rounds td.down { color: var(--down); font-weight: 600; }
 footer { font-size: 13px; color: var(--muted); }
 .photo { margin: 0; justify-self: center; width: 100%; max-width: 200px; }
 .photo img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
@@ -155,6 +200,21 @@ footer { font-size: 13px; color: var(--muted); }
     <div class="empty">Tabula parādīsies, tiklīdz būs ielādēti dati no līgas.</div>
   </div>
 
+  <section class="bill" aria-live="polite">
+    <h2>Padel un King rēķins</h2>
+    <p>Pēc sezonas visi četri ejam uz padel un paēst uz King. Pēdējā vieta maksā 50% no rēķina, 3. vieta 30%, 2. vieta 20%, uzvarētājs neko. Šādi sanāktu, ja sezona beigtos šodien.</p>
+    <label class="bill-input" for="billTotal">Vakara summa kopā
+      <span class="bill-field"><input id="billTotal" type="number" inputmode="decimal" min="0" step="1" placeholder="piem. 200"><span>€</span></span>
+    </label>
+    <div class="bill-bar" id="billBar" aria-hidden="true"></div>
+    <ol class="bill-list" id="billList"><li class="empty">Ielādē…</li></ol>
+  </section>
+
+  <section aria-live="polite">
+    <h2>Nākamā kārta</h2>
+    <div class="next" id="nextRound"><div class="empty">Ielādē…</div></div>
+  </section>
+
   <section class="jokes" aria-live="polite">
     <h2>Ģērbtuves anekdotes</h2>
     <p>Pēc katras kārtas jaunas anekdotes par to, kas līgā notika.</p>
@@ -179,6 +239,13 @@ footer { font-size: 13px; color: var(--muted); }
     <h2>Kārtas 10 lielākās vilšanās</h2>
     <p>Mūsu komandu futbolisti, kas par savu cenu atnesa vismazāk: punkti uz katru cenas miljonu. Kārtu var pārslēgt augstāk.</p>
     <ol class="top-players flops" id="flopPlayers"><li class="empty">Dati parādīsies pēc nākamā atjauninājuma.</li></ol>
+  </section>
+
+  <section aria-live="polite">
+    <h2>Transferi</h2>
+    <p>Kurš ko nopirka un pārdeva, un vai tas atmaksājās: nopirkto spēlētāju punkti tajā kārtā pret pārdoto spēlētāju punktiem tajā pašā kārtā.</p>
+    <div class="tbl-wrap"><table class="rounds" id="transferSummary"><tbody><tr><td class="empty">Ielādē…</td></tr></tbody></table></div>
+    <div class="tr-rounds" id="transferRounds"></div>
   </section>
 
   <figure class="photo">
@@ -315,6 +382,128 @@ footer { font-size: 13px; color: var(--muted); }
     showTop(topRounds[topRounds.length - 1].md);
   }
 
+  // ---- Padel un King rēķins ----
+  const SHARES = [0, 20, 30, 50]; // 1., 2., 3., 4. vieta
+  const ZONE = { 50: "z50", 30: "z30", 20: "z20", 0: "z0" };
+  let billMembers = [];
+
+  function fairOf(m, startMd) {
+    return Object.keys(m.md || {}).map(Number).filter(n => n >= startMd).reduce((s, n) => s + (Number(m.md[n]) || 0), 0);
+  }
+
+  function readTotal() {
+    const v = parseFloat(document.getElementById("billTotal").value);
+    return isFinite(v) && v > 0 ? v : null;
+  }
+
+  function euro(v) { return v.toLocaleString("lv-LV", { minimumFractionDigits: v % 1 ? 2 : 0, maximumFractionDigits: 2 }) + " €"; }
+
+  function drawBill() {
+    const list = billMembers;
+    if (!list.length) return;
+    const total = readTotal();
+    const bar = document.getElementById("billBar");
+    bar.innerHTML = [...list].reverse().filter(m => m.share > 0)
+      .map(m => `<span class="${ZONE[m.zone]}" style="flex:${m.share}">${esc(m.name)} ${fmtPct(m.share)}</span>`).join("");
+    const maxGap = Math.max(1, ...list.map(m => m.gapLast));
+    document.getElementById("billList").innerHTML = list.map(m => {
+      const money = total != null ? `<small>${euro(total * m.share / 100)}</small>` : `<small>no rēķina</small>`;
+      let note;
+      if (m.place === list.length) {
+        note = m.toAbove > 0 ? `Pašlaik maksā lielāko daļu. Līdz 3. vietai trūkst <b>${m.toAbove} p</b>.` : `Dala vietu ar kaimiņu, punkti vienādi.`;
+      } else {
+        note = `<b>${m.gapLast} p</b> virs pēdējās vietas` + (m.place > 1 ? ` · līdz nākamajai vietai augstāk trūkst <b>${m.toAbove} p</b>` : ` · pārsvars pār 2. vietu <b>${m.toBelow} p</b>`);
+      }
+      const width = m.place === list.length ? 100 : Math.max(6, Math.round(m.gapLast / maxGap * 100));
+      return `<li class="bl">
+        <span class="bl-name">${m.place}. ${esc(m.name)}<small>${m.fair} p</small></span>
+        <span class="bl-share">${fmtPct(m.share)}${money}</span>
+        <span class="bl-gauge"><span class="gauge"><i class="${ZONE[m.zone]}" style="width:${width}%"></i></span><span class="bl-note">${note}</span></span>
+      </li>`;
+    }).join("");
+  }
+
+  function fmtPct(v) { return (Math.round(v * 10) / 10).toString().replace(".", ",") + "%"; }
+
+  function renderBill(data) {
+    const startMd = Number(data.startMd || 2);
+    const ms = (data.members || []).map(m => ({ name: m.name, fair: fairOf(m, startMd) })).sort((a, b) => b.fair - a.fair);
+    if (!ms.length) return;
+    // vienādi punkti: dala attiecīgo vietu daļas vienādi
+    let i = 0;
+    while (i < ms.length) {
+      let j = i; while (j + 1 < ms.length && ms[j + 1].fair === ms[i].fair) j++;
+      const shares = SHARES.slice(i, j + 1).map(s => s ?? 0);
+      const avg = shares.reduce((s, x) => s + x, 0) / shares.length;
+      for (let k = i; k <= j; k++) { ms[k].place = i + 1; ms[k].share = avg; ms[k].zone = SHARES[Math.min(j, SHARES.length - 1)]; }
+      i = j + 1;
+    }
+    const last = ms[ms.length - 1].fair;
+    ms.forEach((m, k) => {
+      m.gapLast = m.fair - last;
+      const above = ms.slice(0, k).filter(x => x.fair > m.fair).pop();
+      const below = ms.slice(k + 1).find(x => x.fair < m.fair);
+      m.toAbove = above ? above.fair - m.fair + 1 : 0;
+      m.toBelow = below ? m.fair - below.fair : 0;
+    });
+    billMembers = ms;
+    const input = document.getElementById("billTotal");
+    try { const saved = localStorage.getItem("rk-bill-total"); if (saved && !input.value) input.value = saved; } catch (e) {}
+    input.oninput = () => { try { localStorage.setItem("rk-bill-total", input.value); } catch (e) {} drawBill(); };
+    drawBill();
+  }
+
+  // ---- Nākamā kārta ----
+  let cdTimer = null;
+  function renderNext(n) {
+    const box = document.getElementById("nextRound");
+    if (!n || !n.deadline) { box.innerHTML = '<div class="empty">Informācija par nākamo kārtu parādīsies pēc nākamā atjauninājuma.</div>'; return; }
+    const dl = new Date(n.deadline);
+    const dayFmt = d => d.toLocaleDateString("lv-LV", { weekday: "long", day: "numeric", month: "long" });
+    const timeFmt = d => d.toLocaleTimeString("lv-LV", { hour: "2-digit", minute: "2-digit" });
+    const groups = {};
+    (n.matches || []).forEach(m => { const d = new Date(m.kickoff); const k = dayFmt(d); (groups[k] ||= []).push({ ...m, d }); });
+    const team = (name, id, cls) => `<span class="fx-team ${cls}">${cls === "home" ? `<span>${esc(name)}</span>` : ""}<img src="${IMG_CLUB}${encodeURIComponent(id)}.png" alt="" loading="lazy" onerror="this.remove()">${cls === "away" ? `<span>${esc(name)}</span>` : ""}</span>`;
+    box.innerHTML = `<div class="countdown"><span class="cd-time" id="cdTime">–</span><span class="cd-label">līdz ${esc(n.md)}. kārtas termiņam · ${esc(dayFmt(dl))} plkst. ${esc(timeFmt(dl))}. Līdz tam jāsakārto komanda un kapteinis.</span></div>`
+      + Object.entries(groups).map(([day, ms]) => `<div><div class="fx-day">${esc(day)}</div><ul class="fx-list">${ms.sort((a, b) => a.d - b.d).map(m => `<li class="fx"><span class="fx-t">${esc(timeFmt(m.d))}</span>${team(m.home, m.homeId, "home")}<span class="fx-v">pret</span>${team(m.away, m.awayId, "away")}</li>`).join("")}</ul></div>`).join("");
+    const tick = () => {
+      const el = document.getElementById("cdTime"); if (!el) return;
+      let s = Math.floor((dl - Date.now()) / 1000);
+      if (s <= 0) { el.textContent = "Termiņš pagājis"; clearInterval(cdTimer); return; }
+      const d = Math.floor(s / 86400); s %= 86400; const h = Math.floor(s / 3600); s %= 3600; const m = Math.floor(s / 60);
+      el.textContent = (d ? d + " d " : "") + h + " h " + String(m).padStart(2, "0") + " min";
+    };
+    clearInterval(cdTimer); tick(); cdTimer = setInterval(tick, 30000);
+  }
+
+  // ---- Transferi ----
+  function renderTransfers(rounds) {
+    const rs = (rounds || []).filter(r => r && (r.members || []).length).sort((a, b) => Number(b.md) - Number(a.md));
+    const summary = document.getElementById("transferSummary");
+    const cards = document.getElementById("transferRounds");
+    if (!rs.length) { summary.innerHTML = '<tbody><tr><td class="empty">Datu vēl nav.</td></tr></tbody>'; cards.innerHTML = ""; return; }
+    const sum = arr => arr.reduce((s, p) => s + (Number(p.pts) || 0), 0);
+    const tot = {};
+    rs.forEach(r => r.members.forEach(m => {
+      const t = tot[m.name] ||= { name: m.name, count: 0, net: 0, penalty: 0 };
+      t.count += Number(m.count) || 0; t.penalty += Number(m.penalty) || 0;
+      t.net += sum(m.in || []) - sum(m.out || []) - (Number(m.penalty) || 0);
+    }));
+    const cls = v => v > 0 ? "up" : v < 0 ? "down" : "";
+    const sign = v => (v > 0 ? "+" : "") + v;
+    summary.innerHTML = `<thead><tr><th>Spēlētājs</th><th>Transferi</th><th>Soda punkti</th><th class="total">Ieguvums</th></tr></thead><tbody>`
+      + Object.values(tot).sort((a, b) => b.net - a.net).map(t => `<tr><td>${esc(t.name)}</td><td>${t.count}</td><td>${t.penalty ? "−" + t.penalty : 0}</td><td class="total ${cls(t.net)}">${sign(t.net)} p</td></tr>`).join("") + "</tbody>";
+    cards.innerHTML = rs.map(r => `<div><span class="round-tag">${esc(r.md)}. kārta</span><div class="tr-rounds" style="margin-top:0">${r.members.map(m => {
+      const net = sum(m.in || []) - sum(m.out || []) - (Number(m.penalty) || 0);
+      const moves = (m.in || []).length || (m.out || []).length
+        ? (m.in || []).map(p => `<span class="tr-move"><span class="arrow in">↑</span><span>${esc(p.name)}</span><span class="p">${esc(p.pts)} p</span></span>`).join("")
+          + (m.out || []).map(p => `<span class="tr-move"><span class="arrow out">↓</span><span>${esc(p.name)}</span><span class="p">${esc(p.pts)} p</span></span>`).join("")
+        : `<span class="bl-note">Bez transferiem.</span>`;
+      const verdict = !(m.in || []).length ? "" : net > 0 ? "atmaksājās" : net < 0 ? "neatmaksājās" : "neizšķirti";
+      return `<div class="tr-card"><div class="tr-head"><span>${esc(m.name)}</span><span class="tr-net ${net > 0 ? "up" : net < 0 ? "down" : "same"}">${(m.in || []).length ? sign(net) + " p · " + verdict : ""}</span></div><div class="tr-moves">${moves}</div>${m.penalty ? `<span class="bl-note">Soda punkti: −${esc(m.penalty)}</span>` : ""}</div>`;
+    }).join("")}</div></div>`).join("");
+  }
+
   async function start() {
     try {
       const res = await fetch("data.json?t=" + Date.now(), { cache: "no-store" });
@@ -324,6 +513,9 @@ footer { font-size: 13px; color: var(--muted); }
       renderJokes(data.jokes || []);
       renderRounds(data.standings || {});
       renderTop(data.topPlayers || []);
+      renderBill(data.standings || {});
+      renderNext(data.nextRound);
+      renderTransfers(data.transfers || []);
     } catch (e) {
       updatedEl.textContent = "Neizdevās ielādēt datus. Pārlādē lapu.";
     }
