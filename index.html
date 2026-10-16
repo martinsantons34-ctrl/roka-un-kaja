@@ -257,11 +257,26 @@ footer { font-size: 13px; color: var(--muted); }
   .pos { font-size: 26px; } .pts { font-size: 30px; }
   .podium .crown { width: 52px; height: 52px; }
 }
+/* Prize button: a loud red call to action at the very top; opens a looping video in a full-screen overlay. */
+.prize-btn { display: block; width: 100%; margin: 0 0 14px; padding: 16px 20px; border: 0; border-radius: 14px; cursor: pointer;
+  background: #e0201b; color: #fff; font: 800 20px/1.2 var(--body); letter-spacing: .02em; text-transform: uppercase;
+  box-shadow: 0 6px 0 #9c1210, 0 10px 24px rgba(224,32,27,.45); animation: prize-pulse 1.6s ease-in-out infinite; }
+.prize-btn:hover { background: #f02a24; }
+.prize-btn:active { transform: translateY(4px); box-shadow: 0 2px 0 #9c1210, 0 4px 12px rgba(224,32,27,.4); }
+.prize-btn:focus-visible { outline: 3px solid #ffd23f; outline-offset: 3px; }
+@keyframes prize-pulse { 50% { transform: scale(1.03); } }
+@media (prefers-reduced-motion: reduce) { .prize-btn { animation: none; } }
+.prize-modal { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 16px; background: rgba(0,0,0,.85); }
+.prize-modal[hidden] { display: none; }
+.prize-modal video { max-width: 100%; max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); border-radius: 12px; background: #000; }
+.prize-close { position: absolute; top: max(12px, env(safe-area-inset-top)); right: 12px; width: 44px; height: 44px; border: 0; border-radius: 50%;
+  background: #fff; color: #111; font: 700 24px/1 var(--body); cursor: pointer; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="sky">
+  <button type="button" class="prize-btn" id="prizeBtn">🍺 Uzspied un laimē alu! 🍺</button>
   <p class="rule">Noteikums: cik punktu savāc, tik alus būs jāizdzer.</p>
   <div class="season" id="season" aria-label="Sezonas progress">
     <div class="season-head"><span class="season-title">Sezona</span><span class="season-count" id="seasonCount">–</span></div>
@@ -730,6 +745,28 @@ footer { font-size: 13px; color: var(--muted); }
     }
   }
   start();
+})();
+</script>
+<div class="prize-modal" id="prizeModal" role="dialog" aria-modal="true" aria-label="Balvas video" hidden>
+  <button type="button" class="prize-close" id="prizeClose" aria-label="Aizvērt">✕</button>
+  <video id="prizeVideo" src="alus.mp4" loop playsinline controls preload="none"></video>
+</div>
+<script>
+(function () {
+  var btn = document.getElementById('prizeBtn'), modal = document.getElementById('prizeModal'),
+      video = document.getElementById('prizeVideo'), close = document.getElementById('prizeClose');
+  function open() {
+    modal.hidden = false;
+    video.currentTime = 0;
+    var p = video.play();
+    if (p && p.catch) p.catch(function () { video.muted = true; video.play(); });
+    close.focus();
+  }
+  function shut() { video.pause(); modal.hidden = true; btn.focus(); }
+  btn.addEventListener('click', open);
+  close.addEventListener('click', shut);
+  modal.addEventListener('click', function (e) { if (e.target === modal) shut(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) shut(); });
 })();
 </script>
 </body>
