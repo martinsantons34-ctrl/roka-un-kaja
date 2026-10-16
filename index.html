@@ -200,16 +200,6 @@ footer { font-size: 13px; color: var(--muted); }
     <div class="empty">Tabula parādīsies, tiklīdz būs ielādēti dati no līgas.</div>
   </div>
 
-  <section class="bill" aria-live="polite">
-    <h2>Padel un King rēķins</h2>
-    <p>Pēc sezonas visi četri ejam uz padel un paēst uz King. Pēdējā vieta maksā 50% no rēķina, 3. vieta 30%, 2. vieta 20%, uzvarētājs neko. Šādi sanāktu, ja sezona beigtos šodien.</p>
-    <label class="bill-input" for="billTotal">Vakara summa kopā
-      <span class="bill-field"><input id="billTotal" type="number" inputmode="decimal" min="0" step="1" placeholder="piem. 200"><span>€</span></span>
-    </label>
-    <div class="bill-bar" id="billBar" aria-hidden="true"></div>
-    <ol class="bill-list" id="billList"><li class="empty">Ielādē…</li></ol>
-  </section>
-
   <section aria-live="polite">
     <h2>Nākamā kārta</h2>
     <div class="next" id="nextRound"><div class="empty">Ielādē…</div></div>
@@ -246,6 +236,14 @@ footer { font-size: 13px; color: var(--muted); }
     <p>Kurš ko nopirka un pārdeva, un vai tas atmaksājās: nopirkto spēlētāju punkti tajā kārtā pret pārdoto spēlētāju punktiem tajā pašā kārtā.</p>
     <div class="tbl-wrap"><table class="rounds" id="transferSummary"><tbody><tr><td class="empty">Ielādē…</td></tr></tbody></table></div>
     <div class="tr-rounds" id="transferRounds"></div>
+  </section>
+
+  <section class="bill" aria-live="polite">
+    <label class="bill-input" for="billTotal">Vakara summa kopā
+      <span class="bill-field"><input id="billTotal" type="number" inputmode="decimal" min="0" step="1" placeholder="piem. 200"><span>€</span></span>
+    </label>
+    <div class="bill-bar" id="billBar" aria-hidden="true"></div>
+    <ol class="bill-list" id="billList"><li class="empty">Ielādē…</li></ol>
   </section>
 
   <figure class="photo">
