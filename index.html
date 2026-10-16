@@ -45,6 +45,26 @@ img { max-width: 100%; }
 [hidden] { display: none !important; }
 body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; }
 .wrap { max-width: 680px; margin: 0 auto; padding-inline: 16px; padding-block: 32px 48px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
+.season { display: grid; gap: 8px; }
+.season-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.season-title { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+.season-count { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.season-count b { color: var(--ink); }
+.season-track { position: relative; height: 34px; margin-right: 22px; }
+.season-track::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 6px; transform: translateY(-50%); background: var(--chip); border-radius: 999px; }
+.season-fill { position: absolute; left: 0; top: 50%; height: 6px; transform: translateY(-50%); background: var(--accent); border-radius: 999px; transition: width .8s ease; }
+.season-ticks span { position: absolute; top: 50%; width: 2px; height: 14px; transform: translate(-1px, -50%); background: var(--line); border-radius: 1px; }
+.season-ticks span.done { background: var(--accent); }
+.season-ticks span.phase { height: 22px; width: 3px; background: var(--muted); }
+.season-runner { position: absolute; top: 50%; width: 18px; height: 18px; transform: translate(-50%, -50%); border-radius: 50%; background: var(--surface); border: 4px solid var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 20%, transparent); transition: left .8s ease; }
+.season-finish { position: absolute; right: -22px; top: 0; bottom: 0; width: 22px; display: grid; align-items: center; }
+.season-finish::before { content: ""; position: absolute; left: 0; top: 2px; bottom: 2px; width: 3px; background: var(--ink); border-radius: 2px; }
+.season-finish .flag { position: absolute; left: 3px; top: 2px; width: 18px; height: 13px; background: repeating-conic-gradient(var(--ink) 0 25%, var(--surface) 0 50%) 0 0 / 6px 6px; border: 1px solid var(--ink); }
+.season-phases { position: relative; height: 16px; margin-right: 22px; font-size: 11px; color: var(--muted); }
+.season-phases span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; }
+.season-phases span.first { transform: none; }
+.season-phases span.last { transform: translateX(-100%); }
+@media (prefers-reduced-motion: reduce) { .season-fill, .season-runner { transition: none; } }
 header { display: grid; gap: 6px; }
 .eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
 h1 { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 9vw, 56px); line-height: .95; margin: 0; text-transform: uppercase; letter-spacing: .01em; text-wrap: balance; }
@@ -185,6 +205,17 @@ footer { font-size: 13px; color: var(--muted); }
 </head>
 <body>
 <div class="wrap">
+  <div class="season" id="season" aria-label="Sezonas progress">
+    <div class="season-head"><span class="season-title">Sezona</span><span class="season-count" id="seasonCount">–</span></div>
+    <div class="season-track">
+      <div class="season-fill" id="seasonFill" style="width:0%"></div>
+      <div class="season-ticks" id="seasonTicks"></div>
+      <div class="season-runner" id="seasonRunner" style="left:0%"></div>
+      <div class="season-finish" aria-hidden="true"><span class="flag"></span></div>
+    </div>
+    <div class="season-phases" id="seasonPhases"></div>
+  </div>
+
   <header>
     <span class="eyebrow">UCL Fantasy · privātā līga</span>
     <h1>Roka un kāja</h1>
@@ -380,6 +411,24 @@ footer { font-size: 13px; color: var(--muted); }
     showTop(topRounds[topRounds.length - 1].md);
   }
 
+  // ---- Sezonas progress ----
+  // UCL Fantasy: 8 līgas fāzes kārtas, 8 izslēgšanas kārtas (play-off, 1/8, 1/4, 1/2 – katrai 2 spēles), fināls
+  const SEASON_MD = 17;
+  const PHASES = [{ name: "Līgas fāze", from: 0 }, { name: "Izslēgšana", from: 8 }, { name: "Fināls", from: 16 }];
+
+  function renderSeason(data) {
+    const done = Math.min(SEASON_MD, Math.max(0, Number(data.currentMd) || 0));
+    const pct = n => (n / SEASON_MD) * 100;
+    document.getElementById("seasonFill").style.width = pct(done) + "%";
+    document.getElementById("seasonRunner").style.left = pct(done) + "%";
+    document.getElementById("seasonTicks").innerHTML = Array.from({ length: SEASON_MD - 1 }, (_, i) => i + 1)
+      .map(n => `<span class="${n <= done ? "done" : ""}${PHASES.some(p => p.from === n) ? " phase" : ""}" style="left:${pct(n)}%"></span>`).join("");
+    document.getElementById("seasonPhases").innerHTML = PHASES.map((p, i) =>
+      `<span class="${i === 0 ? "first" : i === PHASES.length - 1 ? "last" : ""}" style="left:${i === PHASES.length - 1 ? 100 : pct(p.from)}%">${esc(p.name)}</span>`).join("");
+    const left = SEASON_MD - done;
+    document.getElementById("seasonCount").innerHTML = `<b>${done}.</b> kārta no ${SEASON_MD} · līdz finišam ${left} ${left === 1 ? "kārta" : "kārtas"}`;
+  }
+
   // ---- Padel un King rēķins ----
   const SHARES = [0, 20, 30, 50]; // 1., 2., 3., 4. vieta
   const ZONE = { 50: "z50", 30: "z30", 20: "z20", 0: "z0" };
@@ -512,6 +561,7 @@ footer { font-size: 13px; color: var(--muted); }
       renderRounds(data.standings || {});
       renderTop(data.topPlayers || []);
       renderBill(data.standings || {});
+      renderSeason(data.standings || {});
       renderNext(data.nextRound);
       renderTransfers(data.transfers || []);
     } catch (e) {
