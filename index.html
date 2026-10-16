@@ -64,7 +64,8 @@ body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--b
 .wrap { max-width: 700px; margin: 0 auto; padding-inline: 16px; padding-block: 0 48px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 30px; }
 
 /* sky + header */
-.sky { margin-inline: -16px; padding: 22px 16px 0; background: linear-gradient(180deg, var(--sky-1), var(--sky-2)); display: grid; gap: 22px; position: relative; overflow: hidden; }
+.sky { margin-inline: -16px; padding: 12px 16px 0; background: linear-gradient(180deg, var(--sky-1), var(--sky-2)); display: grid; gap: 18px; position: relative; overflow: hidden; }
+.rule { margin: 0; font-size: 12px; color: var(--muted); font-style: italic; }
 .season { display: grid; gap: 6px; }
 .season-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
 .season-title { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; font-weight: 800; color: var(--accent); }
@@ -261,6 +262,7 @@ footer { font-size: 13px; color: var(--muted); }
 <body>
 <div class="wrap">
   <div class="sky">
+  <p class="rule">Noteikums: cik punktu savāc, tik alus būs jāizdzer.</p>
   <div class="season" id="season" aria-label="Sezonas progress">
     <div class="season-head"><span class="season-title">Sezona</span><span class="season-count" id="seasonCount">–</span></div>
     <div class="season-track">
