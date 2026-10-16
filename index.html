@@ -112,7 +112,7 @@ h1 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 10vw,
 .podium .pname { font-weight: 800; font-size: 15px; line-height: 1.2; overflow-wrap: anywhere; }
 .podium .pteam { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
 .podium .ppts { font-family: var(--display); font-size: 28px; line-height: 1; font-variant-numeric: tabular-nums; }
-.podium .ppts small { font-family: var(--body); font-size: 13px; color: var(--muted); margin-left: 2px; }
+.podium .ppts small { display: block; font-family: var(--body); font-size: 12px; color: var(--muted); margin-top: 2px; }
 .podium .p1 .ppts { font-size: 34px; }
 .podium .crown { font-size: 0; width: 64px; height: 64px; display: block; margin-bottom: -6px; }
 .podium .crown svg { width: 100%; height: 100%; display: block; }
@@ -145,7 +145,7 @@ h1 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 10vw,
 .chip b { font-weight: 800; color: var(--accent); margin-right: 3px; }
 .score { text-align: right; display: grid; gap: 2px; justify-items: end; }
 .pts { font-family: var(--display); font-size: 36px; line-height: 1; font-variant-numeric: tabular-nums; }
-.pts small { font-family: var(--body); font-size: 14px; color: var(--muted); margin-left: 3px; }
+.pts small { display: block; font-family: var(--body); font-size: 12px; color: var(--muted); text-align: right; margin-top: 2px; }
 .delta { font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
 .delta.up { color: var(--up); } .delta.down { color: var(--down); } .delta.same { color: var(--muted); font-weight: 600; }
 
@@ -195,7 +195,7 @@ table.rounds { width: 100%; border-collapse: collapse; font-variant-numeric: tab
 .owner.cap { background: var(--cheese); color: #2a2000; }
 .owner.bench { opacity: .6; }
 .tp-pts { font-family: var(--display); font-size: 28px; line-height: 1; font-variant-numeric: tabular-nums; }
-.tp-pts small { font-family: var(--body); font-size: 13px; color: var(--muted); margin-left: 2px; }
+.tp-pts small { display: block; font-family: var(--body); font-size: 11px; color: var(--muted); text-align: right; margin-top: 2px; white-space: nowrap; }
 .tp:first-child .tp-rank { color: var(--cheese-ink); }
 .flops .tp:first-child .tp-rank { color: var(--down); }
 .flops .tp-pts { color: var(--down); }
@@ -276,7 +276,7 @@ footer { font-size: 13px; color: var(--muted); }
     <div class="htext">
     <span class="eyebrow">UCL Fantasy · privātā līga · Līgo!</span>
     <h1>Roka un kāja</h1>
-    <p class="lede">Godīgā tabula: visiem skaitām punktus tikai no <span id="startMdText">2.</span> kārtas, jo viens pievienojās vēlāk. 1. kārtas punkti netiek ieskaitīti nevienam.</p>
+    <p class="lede">Godīgā tabula: visiem skaitām izdzertos alus tikai no <span id="startMdText">2.</span> kārtas, jo viens pievienojās vēlāk. 1. kārtā izdzertie ali netiek ieskaitīti nevienam.</p>
     <span class="updated" id="updated">Ielādē datus…</span>
     </div>
     <div class="hero-wreath" id="heroWreath" aria-hidden="true"></div>
@@ -311,8 +311,8 @@ footer { font-size: 13px; color: var(--muted); }
   <div class="ornament" aria-hidden="true"></div>
 
   <section id="kartas" aria-live="polite">
-    <h2 data-pg="P305">Punkti pa kārtām</h2>
-    <p>Katra dalībnieka punkti katrā kārtā. Kārtas labākais rezultāts ir izcelts.</p>
+    <h2 data-pg="P305">Izdzertie ali pa kārtām</h2>
+    <p>Cik alus katrs izdzēra katrā kārtā. Kārtas lielākais dzērājs ir izcelts.</p>
     <div class="tbl-wrap"><table class="rounds" id="roundsTable"><tbody><tr><td class="empty">Ielādē…</td></tr></tbody></table></div>
   </section>
 
@@ -320,7 +320,7 @@ footer { font-size: 13px; color: var(--muted); }
 
   <section id="top10" aria-live="polite">
     <h2 data-pg="P306">Kārtas top 10 futbolisti</h2>
-    <p>Visvairāk punktu guvušie futbolisti no mūsu četrām komandām. Pie katra redzams, kuram no mums viņš ir sastāvā.</p>
+    <p>Futbolisti no mūsu četrām komandām, kas izdzēra visvairāk alus. Pie katra redzams, kuram no mums viņš ir sastāvā.</p>
     <div class="md-tabs" id="mdTabs" role="tablist" aria-label="Kārta"></div>
     <ol class="top-players" id="topPlayers"><li class="empty">Dati parādīsies pēc nākamā atjauninājuma.</li></ol>
   </section>
@@ -329,7 +329,7 @@ footer { font-size: 13px; color: var(--muted); }
 
   <section id="vilsanas" aria-live="polite">
     <h2 data-pg="P307">Kārtas 10 lielākās vilšanās</h2>
-    <p>Mūsu komandu futbolisti, kas par savu cenu atnesa vismazāk: punkti uz katru cenas miljonu. Kārtu var pārslēgt augstāk.</p>
+    <p>Mūsu komandu futbolisti, kas par savu cenu izdzēra vismazāk: izdzertie ali uz katru cenas miljonu. Kārtu var pārslēgt augstāk.</p>
     <ol class="top-players flops" id="flopPlayers"><li class="empty">Dati parādīsies pēc nākamā atjauninājuma.</li></ol>
   </section>
 
@@ -337,7 +337,7 @@ footer { font-size: 13px; color: var(--muted); }
 
   <section id="transferi" aria-live="polite">
     <h2 data-pg="P308">Transferi</h2>
-    <p>Kurš ko nopirka un pārdeva, un vai tas atmaksājās: nopirkto spēlētāju punkti tajā kārtā pret pārdoto spēlētāju punktiem tajā pašā kārtā.</p>
+    <p>Kurš ko nopirka un pārdeva, un vai tas atmaksājās: nopirkto spēlētāju izdzertie ali tajā kārtā pret pārdoto spēlētāju aliem tajā pašā kārtā.</p>
     <div class="tbl-wrap"><table class="rounds" id="transferSummary"><tbody><tr><td class="empty">Ielādē…</td></tr></tbody></table></div>
     <div class="tr-rounds" id="transferRounds"></div>
   </section>
@@ -380,6 +380,11 @@ footer { font-size: 13px; color: var(--muted); }
   }
   const updatedEl = document.getElementById("updated");
 
+  // 1, 21, 31… alus izdzerts; pārējie: ali izdzerti
+  function isOne(n) { const a = Math.abs(Math.round(Number(n) || 0)); return a % 10 === 1 && a % 100 !== 11; }
+  function ali(n) { return isOne(n) ? "alus izdzerts" : "ali izdzerti"; }
+  function aliShort(n) { return isOne(n) ? "alus" : "ali"; }
+
   function esc(s) { const d = document.createElement("span"); d.textContent = s == null ? "" : String(s); return d.innerHTML; }
 
   function render(data) {
@@ -405,7 +410,7 @@ footer { font-size: 13px; color: var(--muted); }
         ${cls[i] === "p1" ? '<span class="crown" aria-hidden="true">' + wreathSVG(64, true) + '</span>' : ""}
         <span class="pname">${esc(m.name)}</span>
         <span class="pteam">${esc(m.team)}</span>
-        <span class="ppts">${m.fair}<small>p</small></span>
+        <span class="ppts">${m.fair}<small>${ali(m.fair)}</small></span>
         <div class="step">${m.pos}</div>
       </div>` : "<div></div>").join("");
 
@@ -421,7 +426,7 @@ footer { font-size: 13px; color: var(--muted); }
         return `<div class="row${m.pos === 1 ? " lead" : ""}">
           <div class="pos">${m.pos}</div>
           <div class="who"><span class="name">${esc(m.name)}</span><span class="team">${esc(m.team)}</span><div class="mds">${chips}</div></div>
-          <div class="score"><span class="pts">${m.fair}<small>p</small></span>${delta}</div>
+          <div class="score"><span class="pts">${m.fair}<small>${ali(m.fair)}</small></span>${delta}</div>
         </div>`;
       }).join("");
     }
@@ -442,7 +447,7 @@ footer { font-size: 13px; color: var(--muted); }
     mds.forEach(n => { best[n] = Math.max(...members.map(m => Number((m.md || {})[n]) || 0)); });
     const rows = members.map(m => ({ m, fair: mds.reduce((s, n) => s + (Number(m.md[n]) || 0), 0) }))
       .sort((a, b) => b.fair - a.fair);
-    const head = `<thead><tr><th>Spēlētājs</th>${mds.map(n => `<th>K${n}</th>`).join("")}<th class="total">Punkti kopā</th></tr></thead>`;
+    const head = `<thead><tr><th>Spēlētājs</th>${mds.map(n => `<th>K${n}</th>`).join("")}<th class="total">Ali izdzerti kopā</th></tr></thead>`;
     const body = rows.map(({ m, fair }) => `<tr><td>${esc(m.name)}</td>${mds.map(n => {
       const v = (m.md || {})[n];
       const c = v != null && Number(v) === best[n] ? "best" : "";
@@ -461,10 +466,10 @@ footer { font-size: 13px; color: var(--muted); }
     const list = document.getElementById("topPlayers");
     const flopList = document.getElementById("flopPlayers");
     const flops = (r && r.flops) || [];
-    flopList.innerHTML = flops.length ? flops.slice(0, 10).map((p, i) => playerRow(p, i, `<span class="tp-score"><span class="tp-pts">${esc(p.pts)}<small>p</small></span><span class="tp-meta">€${esc(p.price)}m · ${(Number(p.pts) / Number(p.price)).toFixed(2)} p/€m</span></span>`)).join("")
+    flopList.innerHTML = flops.length ? flops.slice(0, 10).map((p, i) => playerRow(p, i, `<span class="tp-score"><span class="tp-pts">${esc(p.pts)}<small>${ali(p.pts)}</small></span><span class="tp-meta">€${esc(p.price)}m · ${(Number(p.pts) / Number(p.price)).toFixed(2)} ali/€m</span></span>`)).join("")
       : '<li class="empty">Šai kārtai datu nav.</li>';
     if (!r || !(r.players || []).length) { list.innerHTML = '<li class="empty">Šai kārtai datu nav.</li>'; return; }
-    list.innerHTML = r.players.slice(0, 10).map((p, i) => playerRow(p, i, `<span class="tp-pts">${esc(p.pts)}<small>p</small></span>`)).join("");
+    list.innerHTML = r.players.slice(0, 10).map((p, i) => playerRow(p, i, `<span class="tp-pts">${esc(p.pts)}<small>${ali(p.pts)}</small></span>`)).join("");
   }
 
   function playerRow(p, i, scoreHtml) {
@@ -532,13 +537,13 @@ footer { font-size: 13px; color: var(--muted); }
       const money = total != null ? `<small>${euro(total * m.share / 100)}</small>` : `<small>no rēķina</small>`;
       let note;
       if (m.place === list.length) {
-        note = m.toAbove > 0 ? `Pašlaik maksā lielāko daļu. Līdz 3. vietai trūkst <b>${m.toAbove} p</b>.` : `Dala vietu ar kaimiņu, punkti vienādi.`;
+        note = m.toAbove > 0 ? `Pašlaik maksā lielāko daļu. Līdz 3. vietai trūkst <b>${m.toAbove} alu</b>.` : `Dala vietu ar kaimiņu, ali vienādi.`;
       } else {
-        note = `<b>${m.gapLast} p</b> virs pēdējās vietas` + (m.place > 1 ? ` · līdz nākamajai vietai augstāk trūkst <b>${m.toAbove} p</b>` : ` · pārsvars pār 2. vietu <b>${m.toBelow} p</b>`);
+        note = `<b>${m.gapLast} ${aliShort(m.gapLast)}</b> virs pēdējās vietas` + (m.place > 1 ? ` · līdz nākamajai vietai augstāk trūkst <b>${m.toAbove} alu</b>` : ` · pārsvars pār 2. vietu <b>${m.toBelow} ${aliShort(m.toBelow)}</b>`);
       }
       const width = m.place === list.length ? 100 : Math.max(6, Math.round(m.gapLast / maxGap * 100));
       return `<li class="bl">
-        <span class="bl-name">${m.place}. ${esc(m.name)}<small>${m.fair} p</small></span>
+        <span class="bl-name">${m.place}. ${esc(m.name)}<small>${m.fair} ${aliShort(m.fair)}</small></span>
         <span class="bl-share">${fmtPct(m.share)}${money}</span>
         <span class="bl-gauge"><span class="gauge"><i class="${ZONE[m.zone]}" style="width:${width}%"></i></span><span class="bl-note">${note}</span></span>
       </li>`;
@@ -613,16 +618,16 @@ footer { font-size: 13px; color: var(--muted); }
     }));
     const cls = v => v > 0 ? "up" : v < 0 ? "down" : "";
     const sign = v => (v > 0 ? "+" : "") + v;
-    summary.innerHTML = `<thead><tr><th>Spēlētājs</th><th>Transferi</th><th>Soda punkti</th><th class="total">Ieguvums</th></tr></thead><tbody>`
-      + Object.values(tot).sort((a, b) => b.net - a.net).map(t => `<tr><td>${esc(t.name)}</td><td>${t.count}</td><td>${t.penalty ? "−" + t.penalty : 0}</td><td class="total ${cls(t.net)}">${sign(t.net)} p</td></tr>`).join("") + "</tbody>";
+    summary.innerHTML = `<thead><tr><th>Spēlētājs</th><th>Transferi</th><th>Soda ali</th><th class="total">Ieguvums</th></tr></thead><tbody>`
+      + Object.values(tot).sort((a, b) => b.net - a.net).map(t => `<tr><td>${esc(t.name)}</td><td>${t.count}</td><td>${t.penalty ? "−" + t.penalty : 0}</td><td class="total ${cls(t.net)}">${sign(t.net)} ${aliShort(t.net)}</td></tr>`).join("") + "</tbody>";
     cards.innerHTML = rs.map(r => `<div><span class="round-tag">${esc(r.md)}. kārta</span><div class="tr-rounds" style="margin-top:0">${r.members.map(m => {
       const net = sum(m.in || []) - sum(m.out || []) - (Number(m.penalty) || 0);
       const moves = (m.in || []).length || (m.out || []).length
-        ? (m.in || []).map(p => `<span class="tr-move"><span class="arrow in">↑</span><span>${esc(p.name)}</span><span class="p">${esc(p.pts)} p</span></span>`).join("")
-          + (m.out || []).map(p => `<span class="tr-move"><span class="arrow out">↓</span><span>${esc(p.name)}</span><span class="p">${esc(p.pts)} p</span></span>`).join("")
+        ? (m.in || []).map(p => `<span class="tr-move"><span class="arrow in">↑</span><span>${esc(p.name)}</span><span class="p">${esc(p.pts)} ${aliShort(p.pts)}</span></span>`).join("")
+          + (m.out || []).map(p => `<span class="tr-move"><span class="arrow out">↓</span><span>${esc(p.name)}</span><span class="p">${esc(p.pts)} ${aliShort(p.pts)}</span></span>`).join("")
         : `<span class="bl-note">Bez transferiem.</span>`;
       const verdict = !(m.in || []).length ? "" : net > 0 ? "atmaksājās" : net < 0 ? "neatmaksājās" : "neizšķirti";
-      return `<div class="tr-card"><div class="tr-head"><span>${esc(m.name)}</span><span class="tr-net ${net > 0 ? "up" : net < 0 ? "down" : "same"}">${(m.in || []).length ? sign(net) + " p · " + verdict : ""}</span></div><div class="tr-moves">${moves}</div>${m.penalty ? `<span class="bl-note">Soda punkti: −${esc(m.penalty)}</span>` : ""}</div>`;
+      return `<div class="tr-card"><div class="tr-head"><span>${esc(m.name)}</span><span class="tr-net ${net > 0 ? "up" : net < 0 ? "down" : "same"}">${(m.in || []).length ? sign(net) + " " + aliShort(net) + " · " + verdict : ""}</span></div><div class="tr-moves">${moves}</div>${m.penalty ? `<span class="bl-note">Soda ali: −${esc(m.penalty)}</span>` : ""}</div>`;
     }).join("")}</div></div>`).join("");
   }
 
