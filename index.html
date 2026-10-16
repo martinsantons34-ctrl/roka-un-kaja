@@ -9,35 +9,35 @@
 <style>
 /* Layout: one narrow scoreboard column; podium of the top three, then the full fair table, then anecdotes and the photo */
 :root {
-  --bg: #eef1ee;
+  --bg: #f2f4f9;
   --surface: #ffffff;
-  --ink: #14211b;
-  --muted: #5f6e66;
-  --line: #d5ddd7;
-  --accent: #1f6b4a;
-  --gold: #b7791f;
-  --up: #1f7a4d;
-  --down: #b4412f;
-  --chip: #e3ebe5;
-  --gold-step: #e2b350;
-  --silver: #c5ceca;
-  --bronze: #cf9466;
-  --step-ink: #1b2620;
+  --ink: #131a2c;
+  --muted: #5c6580;
+  --line: #d8dde9;
+  --accent: #2a45c9;
+  --gold: #b86e0a;
+  --up: #1d8656;
+  --down: #c03a2b;
+  --chip: #e5e9f4;
+  --gold-step: #f2b441;
+  --silver: #c4cad8;
+  --bronze: #d38c5c;
+  --step-ink: #161c2d;
   --display: "Barlow Condensed", "Arial Narrow", sans-serif;
   --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0f1613; --surface: #17211c; --ink: #e6eee9; --muted: #93a39a; --line: #2a3832;
-    --accent: #5cc493; --gold: #e3a94a; --up: #5cc493; --down: #ef7a66; --chip: #213029;
-    --gold-step: #d6a443; --silver: #9ba8a2; --bronze: #b5794f; --step-ink: #101713;
+    --bg: #0b1120; --surface: #131b30; --ink: #e6eaf4; --muted: #939fbc; --line: #252f4d;
+    --accent: #8098ff; --gold: #f2b441; --up: #4cc58d; --down: #ff7b66; --chip: #1c2541;
+    --gold-step: #e5a93a; --silver: #9aa3b8; --bronze: #bf7d52; --step-ink: #0b1120;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0f1613; --surface: #17211c; --ink: #e6eee9; --muted: #93a39a; --line: #2a3832;
-  --accent: #5cc493; --gold: #e3a94a; --up: #5cc493; --down: #ef7a66; --chip: #213029;
-    --gold-step: #d6a443; --silver: #9ba8a2; --bronze: #b5794f; --step-ink: #101713;
+  --bg: #0b1120; --surface: #131b30; --ink: #e6eaf4; --muted: #939fbc; --line: #252f4d;
+    --accent: #8098ff; --gold: #f2b441; --up: #4cc58d; --down: #ff7b66; --chip: #1c2541;
+    --gold-step: #e5a93a; --silver: #9aa3b8; --bronze: #bf7d52; --step-ink: #0b1120;
   color-scheme: dark;
 }
 *, *::before, *::after { box-sizing: border-box; }
@@ -130,7 +130,7 @@ table.rounds { width: 100%; border-collapse: collapse; font-variant-numeric: tab
 .tp-score { display: grid; justify-items: end; gap: 3px; }
 .tp-meta { font-size: 11px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
 footer { font-size: 13px; color: var(--muted); }
-.photo { margin: 0; justify-self: center; width: 100%; max-width: 420px; }
+.photo { margin: 0; justify-self: center; width: 100%; max-width: 200px; }
 .photo img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
 @media (max-width: 420px) {
   .row { grid-template-columns: 34px minmax(0, 1fr) auto; gap: 10px; padding: 12px; }
@@ -147,10 +147,6 @@ footer { font-size: 13px; color: var(--muted); }
     <span class="updated" id="updated">Ielādē datus…</span>
   </header>
 
-  <figure class="photo">
-    <img src="bilde.jpg" alt="Pelēks hečbeks ar ieskrāpētām un iespiestām aizmugurējām durvīm un spārnu pie degvielas uzpildes stacijas" loading="lazy">
-  </figure>
-
   <div>
     <div class="podium" id="podium" aria-label="Pirmās trīs vietas"></div>
   </div>
@@ -159,10 +155,6 @@ footer { font-size: 13px; color: var(--muted); }
     <div class="empty">Tabula parādīsies, tiklīdz būs ielādēti dati no līgas.</div>
   </div>
 
-  <figure class="photo">
-    <img src="bilde.jpg" alt="Pelēks hečbeks ar ieskrāpētām un iespiestām aizmugurējām durvīm un spārnu pie degvielas uzpildes stacijas" loading="lazy">
-  </figure>
-
   <section class="jokes" aria-live="polite">
     <h2>Ģērbtuves anekdotes</h2>
     <p>Pēc katras kārtas jaunas anekdotes par to, kas līgā notika.</p>
@@ -170,19 +162,11 @@ footer { font-size: 13px; color: var(--muted); }
     <details id="jokesArchive" hidden><summary>Iepriekšējo kārtu anekdotes</summary><div id="jokesOld"></div></details>
   </section>
 
-  <figure class="photo">
-    <img src="bilde.jpg" alt="Pelēks hečbeks ar ieskrāpētām un iespiestām aizmugurējām durvīm un spārnu pie degvielas uzpildes stacijas" loading="lazy">
-  </figure>
-
   <section aria-live="polite">
     <h2>Punkti pa kārtām</h2>
     <p>Katra dalībnieka punkti katrā kārtā. Kārtas labākais rezultāts ir izcelts.</p>
     <div class="tbl-wrap"><table class="rounds" id="roundsTable"><tbody><tr><td class="empty">Ielādē…</td></tr></tbody></table></div>
   </section>
-
-  <figure class="photo">
-    <img src="bilde.jpg" alt="Pelēks hečbeks ar ieskrāpētām un iespiestām aizmugurējām durvīm un spārnu pie degvielas uzpildes stacijas" loading="lazy">
-  </figure>
 
   <section aria-live="polite">
     <h2>Kārtas top 10 futbolisti</h2>
@@ -190,10 +174,6 @@ footer { font-size: 13px; color: var(--muted); }
     <div class="md-tabs" id="mdTabs" role="tablist" aria-label="Kārta"></div>
     <ol class="top-players" id="topPlayers"><li class="empty">Dati parādīsies pēc nākamā atjauninājuma.</li></ol>
   </section>
-
-  <figure class="photo">
-    <img src="bilde.jpg" alt="Pelēks hečbeks ar ieskrāpētām un iespiestām aizmugurējām durvīm un spārnu pie degvielas uzpildes stacijas" loading="lazy">
-  </figure>
 
   <section aria-live="polite">
     <h2>Kārtas 10 lielākās vilšanās</h2>
