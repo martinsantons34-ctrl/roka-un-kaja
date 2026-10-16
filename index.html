@@ -648,14 +648,14 @@ footer { font-size: 13px; color: var(--muted); }
   }
 
   function wreathSVG(size, flowers, center) {
-    const R = 34, n = 22, rnd = seeded(7);
+    const R = 33, n = 34, rnd = seeded(7);
     let leaves = "";
     for (let i = 0; i < n; i++) {
       const a = i / n * 360;
       const x = 50 + Math.cos(a * Math.PI / 180) * R, y = 50 + Math.sin(a * Math.PI / 180) * R;
-      const tilt = a + 90 + (i % 2 ? 38 : -38);
+      const tilt = a + 90 + (i % 2 ? 42 : -42);
       const col = i % 3 === 0 ? "var(--oak-dark)" : "var(--oak)";
-      leaves += `<path d="${OAK_LEAF}" transform="translate(${x.toFixed(2)} ${y.toFixed(2)}) rotate(${tilt.toFixed(1)}) scale(${(1 + rnd() * .25).toFixed(2)})" style="fill:${col}"/>`;
+      leaves += `<path d="${OAK_LEAF}" transform="translate(${x.toFixed(2)} ${y.toFixed(2)}) rotate(${tilt.toFixed(1)}) scale(${(1.35 + rnd() * .3).toFixed(2)})" style="fill:${col}"/>`;
     }
     let fl = "";
     if (flowers) {
