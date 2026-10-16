@@ -44,7 +44,7 @@
 img { max-width: 100%; }
 [hidden] { display: none !important; }
 body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; }
-.wrap { max-width: 680px; margin: 0 auto; padding-inline: 16px; padding-block: 32px 48px; display: grid; gap: 28px; }
+.wrap { max-width: 680px; margin: 0 auto; padding-inline: 16px; padding-block: 32px 48px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
 header { display: grid; gap: 6px; }
 .eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
 h1 { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 9vw, 56px); line-height: .95; margin: 0; text-transform: uppercase; letter-spacing: .01em; text-wrap: balance; }
