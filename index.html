@@ -7,61 +7,75 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Nunito:wght@400;600;700;800&display=swap">
 <style>
-/* Layout: a Jāņi (Latvian midsummer) page — meadow by day, twilight by night. Header with an oak wreath and a strip of
-   jāņuzāles, sections separated by a folk ornament band; podium as ķimeņu siers, cornflower and beer; season line ends at the bonfire. */
+/* Layout: a Christmas page — snowy morning by day, starry winter night by dark. Header with a fir wreath (berries and
+   baubles), falling snow, a snowdrift with little firs; podium as a gold gift box, a red bauble and a piparkūka; season line ends at the tree. */
 :root {
-  --bg: #eef4e4;
-  --surface: #fbfdf6;
-  --ink: #1c2a19;
-  --muted: #5b6a55;
-  --line: #d2dec4;
-  --accent: #2f6b2a;
-  --oak: #3d7a2f;
-  --oak-dark: #24521f;
-  --meadow: #7fb24a;
-  --cheese: #f0c23b;
-  --cheese-ink: #8a6200;
-  --caraway: #8a6a2a;
-  --cornflower: #3a6fd8;
-  --beer: #d98c1f;
-  --foam: #fffaf0;
-  --fire: #e2552b;
-  --flame: #ffb02e;
+  --bg: #f3f6fa;
+  --surface: #ffffff;
+  --ink: #1b2230;
+  --muted: #5a6577;
+  --line: #d9e0ea;
+  --accent: #b3202a;
+  --oak: #1f6b45;
+  --oak-dark: #124a2f;
+  --meadow: #3f8f5f;
+  --cheese: #e9b93c;
+  --cheese-ink: #8a5c00;
+  --caraway: #b3202a;
+  --cornflower: #c8202d;
+  --beer: #b9682e;
+  --foam: #fffaf2;
+  --fire: #c8202d;
+  --flame: #ffcf4a;
+  --berry: #d3202d;
+  --snow: #ffffff;
   --gold: var(--cheese-ink);
-  --up: #2c8a3e;
-  --down: #c2412d;
-  --chip: #e2ecd6;
+  --up: #1f7a45;
+  --down: #c2312d;
+  --chip: #e8edf4;
   --gold-step: var(--cheese);
   --silver: var(--cornflower);
   --bronze: var(--beer);
-  --step-ink: #1c2a19;
-  --sky-1: #cfe6f2;
-  --sky-2: #eef4e4;
-  --title: #24521f;
+  --step-ink: #1b2230;
+  --sky-1: #d6e4f3;
+  --sky-2: #f3f6fa;
+  --title: #9e1b25;
   --display: "Yeseva One", Georgia, "Times New Roman", serif;
   --body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0c1a1d; --surface: #12252a; --ink: #eef3e6; --muted: #9fb3a7; --line: #23403f;
-    --accent: #95d36f; --oak: #6fae4f; --oak-dark: #3f7a33; --meadow: #4f8a37; --cheese: #f2c94c; --cheese-ink: #f2c94c; --caraway: #7a5a20;
-    --cornflower: #7aa2ff; --beer: #f0a640; --foam: #fff6e0; --fire: #ff6a3d; --flame: #ffc04d;
-    --up: #6fd38a; --down: #ff7b66; --chip: #1b3236; --step-ink: #0c1a1d; --sky-1: #1b2350; --sky-2: #0c1a1d; --title: #eef3e6;
+    --bg: #0a1322; --surface: #111d32; --ink: #eef2f8; --muted: #9aa8bf; --line: #22314d;
+    --accent: #ff6b6b; --oak: #3f9a66; --oak-dark: #22663f; --meadow: #4fae78; --cheese: #f2c94c; --cheese-ink: #f2c94c; --caraway: #e0343f;
+    --cornflower: #e0343f; --beer: #d88a4e; --foam: #fff6e8; --fire: #ff5a5a; --flame: #ffd45e; --berry: #ff4b55; --snow: #eaf1fb;
+    --up: #6fd38a; --down: #ff7b66; --chip: #1a2843; --step-ink: #0a1322; --sky-1: #16234a; --sky-2: #0a1322; --title: #ffe7a6;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0c1a1d; --surface: #12252a; --ink: #eef3e6; --muted: #9fb3a7; --line: #23403f;
-  --accent: #95d36f; --oak: #6fae4f; --oak-dark: #3f7a33; --meadow: #4f8a37; --cheese: #f2c94c; --cheese-ink: #f2c94c; --caraway: #7a5a20;
-  --cornflower: #7aa2ff; --beer: #f0a640; --foam: #fff6e0; --fire: #ff6a3d; --flame: #ffc04d;
-  --up: #6fd38a; --down: #ff7b66; --chip: #1b3236; --step-ink: #0c1a1d; --sky-1: #1b2350; --sky-2: #0c1a1d; --title: #eef3e6;
+  --bg: #0a1322; --surface: #111d32; --ink: #eef2f8; --muted: #9aa8bf; --line: #22314d;
+  --accent: #ff6b6b; --oak: #3f9a66; --oak-dark: #22663f; --meadow: #4fae78; --cheese: #f2c94c; --cheese-ink: #f2c94c; --caraway: #e0343f;
+  --cornflower: #e0343f; --beer: #d88a4e; --foam: #fff6e8; --fire: #ff5a5a; --flame: #ffd45e; --berry: #ff4b55; --snow: #eaf1fb;
+  --up: #6fd38a; --down: #ff7b66; --chip: #1a2843; --step-ink: #0a1322; --sky-1: #16234a; --sky-2: #0a1322; --title: #ffe7a6;
   color-scheme: dark;
 }
 *, *::before, *::after { box-sizing: border-box; }
 img { max-width: 100%; }
 [hidden] { display: none !important; }
 body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; }
-.wrap { max-width: 700px; margin: 0 auto; padding-inline: 16px; padding-block: 0 48px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 30px; }
+/* falling snow: three layers of dots drifting down, behind nothing interactive */
+.snowfall { position: fixed; inset: -10% 0 0; pointer-events: none; z-index: 0; opacity: .85;
+  background-image:
+    radial-gradient(circle, color-mix(in srgb, var(--snow) 95%, transparent) 0 2px, transparent 2.5px),
+    radial-gradient(circle, color-mix(in srgb, var(--snow) 80%, transparent) 0 1.5px, transparent 2px),
+    radial-gradient(circle, color-mix(in srgb, var(--snow) 70%, transparent) 0 1px, transparent 1.5px);
+  background-size: 140px 140px, 90px 90px, 60px 60px;
+  background-position: 10px 0, 40px 30px, 20px 10px;
+  animation: snow 18s linear infinite; }
+:root:not([data-theme="dark"]) .snowfall { filter: drop-shadow(0 0 1px rgba(90,110,140,.55)); }
+@keyframes snow { to { background-position: 40px 140px, 10px 210px, 40px 130px; } }
+@media (prefers-reduced-motion: reduce) { .snowfall { animation: none; } }
+.wrap { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; padding-inline: 16px; padding-block: 0 48px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 30px; }
 
 /* sky + header */
 .sky { margin-inline: -16px; padding: 12px 16px 0; background: linear-gradient(180deg, var(--sky-1), var(--sky-2)); display: grid; gap: 18px; position: relative; overflow: hidden; }
@@ -118,18 +132,23 @@ h1 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 10vw,
 .podium .crown { font-size: 0; width: 64px; height: 64px; display: block; margin-bottom: -6px; }
 .podium .crown svg { width: 100%; height: 100%; display: block; }
 .podium .step { width: 100%; display: grid; place-items: start center; padding-top: 10px; font-family: var(--display); font-size: 40px; line-height: 1; color: var(--step-ink); position: relative; }
-.podium .p1 .step { height: 124px; border-radius: 14px 14px 4px 4px; background:
-  radial-gradient(circle at 20% 70%, var(--caraway) 0 2px, transparent 3px),
-  radial-gradient(circle at 70% 45%, var(--caraway) 0 2px, transparent 3px),
-  radial-gradient(circle at 45% 85%, var(--caraway) 0 2px, transparent 3px),
-  radial-gradient(circle at 82% 80%, var(--caraway) 0 2px, transparent 3px),
-  radial-gradient(circle at 30% 40%, color-mix(in srgb, var(--caraway) 70%, transparent) 0 1.5px, transparent 2.5px),
-  var(--cheese); background-size: 46px 46px, 52px 52px, 38px 38px, 60px 60px, 34px 34px, auto; box-shadow: inset 0 -10px 0 color-mix(in srgb, var(--cheese) 70%, #a5740a); }
-.podium .p2 .step { height: 90px; border-radius: 14px 14px 4px 4px; background:
-  radial-gradient(circle at 50% 30%, color-mix(in srgb, #fff 35%, transparent) 0 3px, transparent 4px), var(--cornflower); background-size: 26px 26px, auto; color: #fff; }
-.podium .p3 .step { height: 66px; border-radius: 4px; background: linear-gradient(180deg, var(--foam) 0 14px, var(--beer) 14px); }
-.podium .p3 .step::before { content: ""; position: absolute; left: 6px; right: 6px; top: -6px; height: 12px; background: radial-gradient(circle at 10% 100%, var(--foam) 0 7px, transparent 8px) 0 0 / 22px 12px repeat-x; }
-.podium .p3 .step { padding-top: 18px; }
+/* 1st: a gold gift box with a red ribbon and bow */
+.podium .p1 .step { height: 124px; border-radius: 6px; padding-top: 30px; background:
+  linear-gradient(90deg, transparent calc(50% - 9px), var(--berry) calc(50% - 9px) calc(50% + 9px), transparent calc(50% + 9px)),
+  linear-gradient(180deg, transparent 14px, var(--berry) 14px 26px, transparent 26px),
+  radial-gradient(circle at 25% 60%, color-mix(in srgb, #fff 45%, transparent) 0 2px, transparent 3px),
+  var(--cheese); background-size: auto, auto, 30px 30px, auto; box-shadow: inset 0 -10px 0 color-mix(in srgb, var(--cheese) 70%, #8a5c00); }
+.podium .p1 .step::before { content: ""; position: absolute; top: -14px; left: 50%; width: 46px; height: 22px; transform: translateX(-50%);
+  background: radial-gradient(ellipse at 25% 50%, var(--berry) 0 10px, transparent 11px), radial-gradient(ellipse at 75% 50%, var(--berry) 0 10px, transparent 11px), radial-gradient(circle, color-mix(in srgb, var(--berry) 70%, #000) 0 5px, transparent 6px); }
+/* 2nd: a red bauble with snow dots */
+.podium .p2 .step { height: 90px; border-radius: 30px 30px 6px 6px; background:
+  radial-gradient(circle at 30% 30%, color-mix(in srgb, #fff 55%, transparent) 0 6px, transparent 14px),
+  radial-gradient(circle at 50% 30%, color-mix(in srgb, #fff 35%, transparent) 0 2.5px, transparent 3.5px), var(--cornflower); background-size: auto, 22px 22px, auto; color: #fff; }
+.podium .p2 .step::before { content: ""; position: absolute; top: -10px; left: 50%; width: 20px; height: 12px; transform: translateX(-50%); border-radius: 3px 3px 0 0; background: linear-gradient(90deg, #c9a43a, #f7dc84, #c9a43a); }
+/* 3rd: a piparkūka with white icing */
+.podium .p3 .step { height: 66px; border-radius: 10px; background: var(--beer); color: #fff; padding-top: 18px; box-shadow: inset 0 0 0 4px var(--beer), inset 0 0 0 6px var(--foam); }
+.podium .p3 .step::before { content: ""; position: absolute; left: 10px; right: 10px; top: 6px; height: 8px;
+  background: radial-gradient(circle at 50% 0, transparent 4px, var(--foam) 4px 5.5px, transparent 6px) 0 0 / 12px 8px repeat-x; }
 
 /* main table */
 .board { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
@@ -157,7 +176,7 @@ section > h2 + p, section > h2 + div, section > h2 + .next { margin-top: 0; }
 .round-tag { display: inline-block; font-weight: 800; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
 .joke-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .joke-list li { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px 12px 44px; position: relative; max-width: 66ch; }
-.joke-list li::before { content: ""; position: absolute; left: 14px; top: 15px; width: 18px; height: 18px; border-radius: 50%; background: radial-gradient(circle, var(--cheese) 0 4px, transparent 5px), conic-gradient(from 0deg, #fff 0 10%, transparent 10% 12.5%, #fff 12.5% 22.5%, transparent 22.5% 25%, #fff 25% 35%, transparent 35% 37.5%, #fff 37.5% 47.5%, transparent 47.5% 50%, #fff 50% 60%, transparent 60% 62.5%, #fff 62.5% 72.5%, transparent 72.5% 75%, #fff 75% 85%, transparent 85% 87.5%, #fff 87.5% 97.5%, transparent 97.5%); box-shadow: 0 0 0 1px var(--line); }
+.joke-list li::before { content: "❄"; position: absolute; left: 14px; top: 11px; font-size: 18px; line-height: 1; color: color-mix(in srgb, var(--cornflower) 30%, #6f95c8); }
 details { margin-top: 16px; }
 summary { cursor: pointer; color: var(--accent); font-weight: 700; padding-block: 4px; }
 summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
@@ -269,15 +288,47 @@ footer { font-size: 13px; color: var(--muted); }
 .prize-modal { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 16px; background: rgba(0,0,0,.85); }
 .prize-modal[hidden] { display: none; }
 .prize-modal video { max-width: 100%; max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); border-radius: 12px; background: #000; }
+.podium .p1 .step { margin-top: 14px; }
+.prize-btn { background: repeating-linear-gradient(135deg, #d11f1a 0 18px, #e0201b 18px 36px); }
+
+/* News: a short teaser card at the top that jumps to the full articles at the bottom */
+.news-peek { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; display: grid; gap: 8px;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 12%, transparent); }
+.news-peek-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.news-peek-title { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; font-weight: 800; color: var(--accent); }
+.news-peek-all { font-size: 13px; font-weight: 700; color: var(--accent); text-decoration: none; }
+.news-peek ul { list-style: none; margin: 0; padding: 0; display: grid; }
+.news-peek li + li { border-top: 1px solid var(--line); }
+.news-peek a.np { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 2px 10px; align-items: center; padding: 8px 0; color: var(--ink); text-decoration: none; }
+.news-peek a.np:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.np-tag, .na-tag { font-size: 11px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; border-radius: 999px; padding: 1px 8px; color: #fff; background: var(--oak); white-space: nowrap; }
+.np-tag.t-futzals, .na-tag.t-futzals { background: var(--accent); }
+.np-tag.t-izlase, .na-tag.t-izlase { background: var(--cheese); color: #2a2000; }
+.np-h { font-weight: 800; font-size: 15px; line-height: 1.25; }
+.np-go { color: var(--accent); font-weight: 800; }
+.np-teaser { grid-column: 2 / 3; font-size: 13px; color: var(--muted); line-height: 1.35; }
+.news-list { display: grid; gap: 14px; }
+.news-art { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: grid; gap: 8px; scroll-margin-top: 16px; transition: box-shadow .4s; }
+.news-art.flash { box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 40%, transparent); }
+.na-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+.news-art h3 { font-family: var(--display); font-weight: 400; font-size: 22px; line-height: 1.15; margin: 0; text-wrap: balance; }
+.news-art p { margin: 0; color: var(--ink); max-width: 66ch; }
+.na-src { font-size: 12px; color: var(--muted); }
+.na-src a { color: var(--muted); }
 .prize-close { position: absolute; top: max(12px, env(safe-area-inset-top)); right: 12px; width: 44px; height: 44px; border: 0; border-radius: 50%;
   background: #fff; color: #111; font: 700 24px/1 var(--body); cursor: pointer; }
 </style>
 </head>
 <body>
+<div class="snowfall" aria-hidden="true"></div>
 <div class="wrap">
   <div class="sky">
-  <button type="button" class="prize-btn" id="prizeBtn">🍺 Uzspied un laimē alu! 🍺</button>
+  <button type="button" class="prize-btn" id="prizeBtn">🎁 Uzspied un laimē alu! 🍺</button>
   <p class="rule">Noteikums: cik punktu savāc, tik alus būs jāizdzer.</p>
+  <nav class="news-peek" id="newsPeek" aria-label="Jaunumi" hidden>
+    <div class="news-peek-head"><span class="news-peek-title">🎄 Jaunumi</span><a class="news-peek-all" href="#zinas">Visas ziņas ↓</a></div>
+    <ul id="newsPeekList"></ul>
+  </nav>
   <div class="season" id="season" aria-label="Sezonas progress">
     <div class="season-head"><span class="season-title">Sezona</span><span class="season-count" id="seasonCount">–</span></div>
     <div class="season-track">
@@ -291,7 +342,7 @@ footer { font-size: 13px; color: var(--muted); }
 
   <header>
     <div class="htext">
-    <span class="eyebrow">UCL Fantasy · privātā līga · Līgo!</span>
+    <span class="eyebrow">UCL Fantasy · privātā līga · Priecīgus Ziemassvētkus!</span>
     <h1>Roka un kāja</h1>
     <p class="lede">Godīgā tabula: visiem skaitām izdzertos alus tikai no <span id="startMdText">2.</span> kārtas, jo viens pievienojās vēlāk. 1. kārtā izdzertie ali netiek ieskaitīti nevienam.</p>
     <span class="updated" id="updated">Ielādē datus…</span>
@@ -367,6 +418,14 @@ footer { font-size: 13px; color: var(--muted); }
     </label>
     <div class="bill-bar" id="billBar" aria-hidden="true"></div>
     <ol class="bill-list" id="billList"><li class="empty">Ielādē…</li></ol>
+  </section>
+
+  <div class="ornament" aria-hidden="true"></div>
+
+  <section id="zinas" aria-live="polite">
+    <h2>Ziņas</h2>
+    <p>Jaunumi par mūsējiem: Mārtiņš Antons un “Zemgale/LBTU” hokejā, Renārs Ūdris Lešno futzālā un Latvijas izlasē.</p>
+    <div class="news-list" id="newsList"><div class="empty">Ielādē ziņas…</div></div>
   </section>
 
   <figure class="photo">
@@ -648,84 +707,104 @@ footer { font-size: 13px; color: var(--muted); }
     }).join("")}</div></div>`).join("");
   }
 
-  // ---- Jāņu zīmējumi: vainags, ugunskurs, jāņuzāles ----
+  // ---- Ziemassvētku zīmējumi: egļu vainags, eglīte, sniega kupenas ----
   function seeded(seed) { let s = seed; return () => (s = (s * 16807) % 2147483647) / 2147483647; }
-  const OAK_LEAF = "M0,0 C-3,-2 -5,-4 -3,-6 C-6,-7 -6,-10 -3,-10 C-5,-12 -4,-15 0,-16 C4,-15 5,-12 3,-10 C6,-10 6,-7 3,-6 C5,-4 3,-2 0,0Z";
 
-  function daisy(x, y, r) {
-    let p = "";
-    for (let i = 0; i < 8; i++) {
-      const a = i * Math.PI / 4;
-      p += `<ellipse cx="${(x + Math.cos(a) * r * .9).toFixed(2)}" cy="${(y + Math.sin(a) * r * .9).toFixed(2)}" rx="${(r * .55).toFixed(2)}" ry="${(r * .28).toFixed(2)}" transform="rotate(${i * 45} ${(x + Math.cos(a) * r * .9).toFixed(2)} ${(y + Math.sin(a) * r * .9).toFixed(2)})" style="fill:#fff"/>`;
-    }
-    return p + `<circle cx="${x}" cy="${y}" r="${(r * .45).toFixed(2)}" style="fill:var(--cheese)"/>`;
-  }
-  function cornflower(x, y, r) {
-    let p = "";
-    for (let i = 0; i < 7; i++) {
-      const a = i * 2 * Math.PI / 7;
-      p += `<circle cx="${(x + Math.cos(a) * r * .7).toFixed(2)}" cy="${(y + Math.sin(a) * r * .7).toFixed(2)}" r="${(r * .42).toFixed(2)}" style="fill:var(--cornflower)"/>`;
-    }
-    return p + `<circle cx="${x}" cy="${y}" r="${(r * .35).toFixed(2)}" style="fill:#2a3f8a"/>`;
+  function bauble(x, y, r, col) {
+    return `<circle cx="${x}" cy="${y}" r="${r}" style="fill:${col}"/><circle cx="${(x - r * .35).toFixed(2)}" cy="${(y - r * .35).toFixed(2)}" r="${(r * .3).toFixed(2)}" style="fill:#fff;opacity:.6"/>`;
   }
 
-  function wreathSVG(size, flowers, center) {
-    const R = 33, n = 34, rnd = seeded(7);
-    let leaves = "";
-    for (let i = 0; i < n; i++) {
-      const a = i / n * 360;
-      const x = 50 + Math.cos(a * Math.PI / 180) * R, y = 50 + Math.sin(a * Math.PI / 180) * R;
-      const tilt = a + 90 + (i % 2 ? 42 : -42);
-      const col = i % 3 === 0 ? "var(--oak-dark)" : "var(--oak)";
-      leaves += `<path d="${OAK_LEAF}" transform="translate(${x.toFixed(2)} ${y.toFixed(2)}) rotate(${tilt.toFixed(1)}) scale(${(1.35 + rnd() * .3).toFixed(2)})" style="fill:${col}"/>`;
+  function wreathSVG(size, decorated, center) {
+    const R = 33, rnd = seeded(7);
+    let needles = "";
+    for (let i = 0; i < 120; i++) {
+      const a = rnd() * Math.PI * 2, rr = R + (rnd() - .5) * 14;
+      const x = 50 + Math.cos(a) * rr, y = 50 + Math.sin(a) * rr;
+      const ang = a * 180 / Math.PI + 90 + (rnd() - .5) * 80, len = 6 + rnd() * 5;
+      const col = rnd() < .45 ? "var(--oak-dark)" : "var(--oak)";
+      needles += `<rect x="${(-len / 2).toFixed(1)}" y="-1.1" width="${len.toFixed(1)}" height="2.2" rx="1.1" transform="translate(${x.toFixed(2)} ${y.toFixed(2)}) rotate(${ang.toFixed(1)})" style="fill:${col}"/>`;
     }
-    let fl = "";
-    if (flowers) {
-      [[20, "d"], [75, "c"], [130, "d"], [185, "c"], [240, "d"], [300, "c"], [335, "d"]].forEach(([deg, t]) => {
-        const x = 50 + Math.cos(deg * Math.PI / 180) * R, y = 50 + Math.sin(deg * Math.PI / 180) * R;
-        fl += t === "d" ? daisy(+x.toFixed(2), +y.toFixed(2), 5) : cornflower(+x.toFixed(2), +y.toFixed(2), 4.2);
+    let deco = "";
+    if (decorated) {
+      [20, 65, 110, 160, 205, 250, 300, 340].forEach((deg, i) => {
+        const x = +(50 + Math.cos(deg * Math.PI / 180) * R).toFixed(2), y = +(50 + Math.sin(deg * Math.PI / 180) * R).toFixed(2);
+        deco += i % 2 ? bauble(x, y, 3.6, "var(--cheese)") : `<circle cx="${x - 1.6}" cy="${y}" r="2.3" style="fill:var(--berry)"/><circle cx="${x + 1.6}" cy="${y + 1}" r="2.3" style="fill:var(--berry)"/><circle cx="${x}" cy="${y - 2}" r="2.3" style="fill:var(--berry)"/>`;
       });
+      // red bow at the bottom
+      deco += `<path d="M50 83 C40 76 38 90 50 85 C62 90 60 76 50 83Z" style="fill:var(--berry)"/><path d="M48 85 L44 96 M52 85 L56 96" style="stroke:var(--berry);stroke-width:3;stroke-linecap:round"/><circle cx="50" cy="84" r="2.6" style="fill:color-mix(in srgb, var(--berry) 70%, #000)"/>`;
     }
     let mid = "";
     if (center === "ball") {
       mid = `<circle cx="50" cy="50" r="15" style="fill:#fff;stroke:var(--ink);stroke-width:1.6"/>
         <polygon points="50,43 56.7,47.8 54.1,55.7 45.9,55.7 43.3,47.8" style="fill:var(--ink)"/>
-        <path d="M50 43 V35.5 M56.7 47.8 L63.5 45.5 M54.1 55.7 L58.5 62 M45.9 55.7 L41.5 62 M43.3 47.8 L36.5 45.5" style="stroke:var(--ink);stroke-width:1.4;fill:none"/>`;
+        <path d="M50 43 V35.5 M56.7 47.8 L63.5 45.5 M54.1 55.7 L58.5 62 M45.9 55.7 L41.5 62 M43.3 47.8 L36.5 45.5" style="stroke:var(--ink);stroke-width:1.4;fill:none"/>
+        <path d="M37 41 C40 31 58 29 63 39 C58 37 44 37 37 41Z" style="fill:var(--berry)"/><path d="M36 40 C44 36 56 36 64 39" style="stroke:#fff;stroke-width:3.4;fill:none;stroke-linecap:round"/><circle cx="62" cy="31" r="3" style="fill:#fff"/><path d="M50 32 C55 29 60 29 62 31" style="stroke:var(--berry);stroke-width:4;fill:none"/>`;
     }
-    return `<svg viewBox="0 0 100 100" width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">${leaves}${fl}${mid}</svg>`;
+    return `<svg viewBox="0 0 100 100" width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">${needles}${deco}${mid}</svg>`;
   }
 
-  function bonfireSVG() {
+  function treeSVG() {
     return `<svg viewBox="0 0 40 52" xmlns="http://www.w3.org/2000/svg">
-      <path class="flame" d="M20 8 C27 18 31 24 29 33 C28 40 24 44 20 44 C15 44 11 40 11 34 C11 27 16 24 17 17 C19 21 21 22 22 24 C23 19 22 13 20 8Z" style="fill:var(--fire)"/>
-      <path class="flame f2" d="M20 22 C24 28 26 32 25 37 C24 41 22 43 20 43 C17 43 15 41 15 37 C15 33 18 31 19 27 C20 30 21 31 21.5 32 C22 29 21.5 25 20 22Z" style="fill:var(--flame)"/>
-      <rect x="4" y="42" width="32" height="5" rx="2.5" transform="rotate(-14 20 44.5)" style="fill:#7a4a22"/>
-      <rect x="4" y="42" width="32" height="5" rx="2.5" transform="rotate(14 20 44.5)" style="fill:#8f5a2b"/>
+      <rect x="17" y="43" width="6" height="7" style="fill:#7a4a22"/>
+      <path d="M20 8 L31 22 H26 L34 33 H28 L37 44 H3 L12 33 H6 L14 22 H9Z" style="fill:var(--oak)"/>
+      <path d="M12 30 Q20 34 28 28 M9 40 Q20 44 32 38" style="stroke:var(--cheese);stroke-width:1.2;fill:none"/>
+      <circle cx="16" cy="25" r="1.8" style="fill:var(--berry)"/><circle cx="25" cy="34" r="1.8" style="fill:var(--berry)"/><circle cx="14" cy="38" r="1.8" style="fill:var(--cheese)"/><circle cx="23" cy="22" r="1.6" style="fill:var(--cheese)"/><circle cx="29" cy="41" r="1.6" style="fill:#fff"/>
+      <path class="flame" d="M20 1 L21.8 5.2 L26.2 5.4 L22.8 8.2 L24 12.5 L20 10 L16 12.5 L17.2 8.2 L13.8 5.4 L18.2 5.2Z" style="fill:var(--flame)"/>
     </svg>`;
   }
 
-  function grassSVG() {
+  function snowSVG() {
     const rnd = seeded(42), W = 400, H = 54;
-    let blades = "", flowers = "";
-    for (let i = 0; i < 150; i++) {
-      const x = rnd() * W, h = 14 + rnd() * 34, lean = (rnd() - .5) * 14, w = 1.6 + rnd() * 2;
-      const col = rnd() < .5 ? "var(--meadow)" : "var(--oak)";
-      blades += `<path d="M${(x - w).toFixed(1)} ${H} Q${(x + lean * .4).toFixed(1)} ${(H - h * .6).toFixed(1)} ${(x + lean).toFixed(1)} ${(H - h).toFixed(1)} Q${(x + lean * .4 + w * .4).toFixed(1)} ${(H - h * .55).toFixed(1)} ${(x + w).toFixed(1)} ${H}Z" style="fill:${col};opacity:${(.65 + rnd() * .35).toFixed(2)}"/>`;
+    let trees = "", flakes = "";
+    for (let i = 0; i < 9; i++) {
+      const x = 15 + i * 45 + rnd() * 20, h = 18 + rnd() * 22, w = h * .55;
+      trees += `<path d="M${x.toFixed(1)} ${(H - 14 - h).toFixed(1)} L${(x + w / 2).toFixed(1)} ${(H - 10).toFixed(1)} H${(x - w / 2).toFixed(1)}Z" style="fill:${i % 2 ? "var(--oak)" : "var(--oak-dark)"}"/>`;
+      trees += `<path d="M${(x - w * .22).toFixed(1)} ${(H - 14 - h * .55).toFixed(1)} L${x.toFixed(1)} ${(H - 14 - h).toFixed(1)} L${(x + w * .22).toFixed(1)} ${(H - 14 - h * .55).toFixed(1)}Z" style="fill:var(--snow)"/>`;
     }
-    for (let i = 0; i < 16; i++) {
-      const x = 10 + rnd() * (W - 20), y = 12 + rnd() * 20;
-      flowers += `<path d="M${x.toFixed(1)} ${H} Q${(x + 2).toFixed(1)} ${((H + y) / 2).toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)}" style="stroke:var(--oak);stroke-width:1.2;fill:none"/>`;
-      flowers += i % 3 === 0 ? cornflower(+x.toFixed(1), +y.toFixed(1), 3.2) : daisy(+x.toFixed(1), +y.toFixed(1), 3.6);
-    }
-    return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">${blades}${flowers}</svg>`;
+    for (let i = 0; i < 30; i++) flakes += `<circle cx="${(rnd() * W).toFixed(1)}" cy="${(rnd() * (H - 20)).toFixed(1)}" r="${(0.8 + rnd() * 1.4).toFixed(1)}" style="fill:var(--snow)"/>`;
+    const drift = `<path d="M0 ${H} V${H - 14} Q50 ${H - 26} 100 ${H - 16} T200 ${H - 15} T300 ${H - 18} T400 ${H - 14} V${H}Z" style="fill:var(--snow)"/>`
+      + `<path d="M0 ${H - 14} Q50 ${H - 26} 100 ${H - 16} T200 ${H - 15} T300 ${H - 18} T400 ${H - 14}" style="fill:none;stroke:color-mix(in srgb, var(--sky-1) 70%, #8aa4c8);stroke-width:1.2"/>`;
+    return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">${flakes}${trees}${drift}</svg>`;
   }
 
   (function drawArt() {
     const hw = document.getElementById("heroWreath"); if (hw) hw.innerHTML = wreathSVG(150, true, "ball");
-    const g = document.getElementById("grass"); if (g) g.innerHTML = grassSVG();
+    const g = document.getElementById("grass"); if (g) g.innerHTML = snowSVG();
     const r = document.getElementById("seasonRunner"); if (r) r.innerHTML = wreathSVG(30, false);
-    const f = document.querySelector(".season-finish"); if (f) f.innerHTML = bonfireSVG();
+    const f = document.querySelector(".season-finish"); if (f) f.innerHTML = treeSVG();
   })();
+
+  // ---- Ziņas: īss saraksts augšā, pilni raksti apakšā (news.json) ----
+  const TAGCLS = t => "t-" + String(t || "").toLowerCase().replace("ā", "a").replace(/[^a-z]/g, "");
+  function newsDate(d) { const x = new Date(d); return isNaN(x) ? esc(d) : x.toLocaleDateString("lv-LV", { day: "numeric", month: "long", year: "numeric" }); }
+
+  function renderNews(news) {
+    const items = ((news && news.items) || []).filter(n => n && n.id && n.title).sort((a, b) => String(b.date).localeCompare(String(a.date)));
+    const list = document.getElementById("newsList");
+    if (!items.length) { list.innerHTML = '<div class="empty">Ziņu pagaidām nav.</div>'; return; }
+    document.getElementById("newsPeekList").innerHTML = items.slice(0, 4).map((n, i) => `<li><a class="np" href="#zina-${esc(n.id)}" data-id="${esc(n.id)}">
+        <span class="np-tag ${TAGCLS(n.tag)}">${esc(n.tag)}</span><span class="np-h">${esc(n.title)}</span><span class="np-go" aria-hidden="true">↓</span>
+        ${i === 0 && n.teaser ? `<span class="np-teaser">${esc(n.teaser)}</span>` : ""}</a></li>`).join("");
+    document.getElementById("newsPeek").hidden = false;
+    list.innerHTML = items.map(n => `<article class="news-art" id="zina-${esc(n.id)}">
+        <div class="na-meta"><span class="na-tag ${TAGCLS(n.tag)}">${esc(n.tag)}</span><time datetime="${esc(n.date)}">${newsDate(n.date)}</time></div>
+        <h3>${esc(n.title)}</h3>
+        ${(n.body || []).map(p => `<p>${esc(p)}</p>`).join("")}
+        ${(n.sources || []).length ? `<div class="na-src">Avoti: ${n.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(", ")}</div>` : ""}
+      </article>`).join("");
+  }
+
+  document.getElementById("newsPeekList").addEventListener("click", e => {
+    const a = e.target.closest("a.np"); if (!a) return;
+    const art = document.getElementById("zina-" + a.dataset.id); if (!art) return;
+    e.preventDefault();
+    art.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+    history.replaceState(null, "", "#zina-" + a.dataset.id);
+    art.classList.add("flash"); setTimeout(() => art.classList.remove("flash"), 1600);
+  });
+
+  fetch("news.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(renderNews)
+    .catch(() => { document.getElementById("newsList").innerHTML = '<div class="empty">Neizdevās ielādēt ziņas.</div>'; });
 
   async function start() {
     try {
