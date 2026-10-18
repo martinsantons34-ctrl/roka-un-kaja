@@ -304,6 +304,7 @@ footer { font-size: 13px; color: var(--muted); }
 .np-tag, .na-tag { font-size: 11px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; border-radius: 999px; padding: 1px 8px; color: #fff; background: var(--oak); white-space: nowrap; }
 .np-tag.t-futzals, .na-tag.t-futzals { background: var(--accent); }
 .np-tag.t-izlase, .na-tag.t-izlase { background: var(--cheese); color: #2a2000; }
+.np-tag.t-fantasy, .na-tag.t-fantasy { background: #2f5fb3; }
 .np-h { font-weight: 800; font-size: 15px; line-height: 1.25; }
 .np-go { color: var(--accent); font-weight: 800; }
 .np-teaser { grid-column: 2 / 3; font-size: 13px; color: var(--muted); line-height: 1.35; }
@@ -424,7 +425,7 @@ footer { font-size: 13px; color: var(--muted); }
 
   <section id="zinas" aria-live="polite">
     <h2>Ziņas</h2>
-    <p>Jaunumi par mūsējiem: Mārtiņš Antons un “Zemgale/LBTU” hokejā, Renārs Ūdris Lešno futzālā un Latvijas izlasē.</p>
+    <p>Fantasy jaunumi par mūsu komandu spēlētājiem (traumas, diskvalifikācijas, forma), kā arī ziņas par mūsējiem: Mārtiņš Antons un “Zemgale/LBTU” hokejā, Renārs Ūdris Lešno futzālā un Latvijas izlasē.</p>
     <div class="news-list" id="newsList"><div class="empty">Ielādē ziņas…</div></div>
   </section>
 
@@ -782,7 +783,7 @@ footer { font-size: 13px; color: var(--muted); }
     const items = ((news && news.items) || []).filter(n => n && n.id && n.title).sort((a, b) => String(b.date).localeCompare(String(a.date)));
     const list = document.getElementById("newsList");
     if (!items.length) { list.innerHTML = '<div class="empty">Ziņu pagaidām nav.</div>'; return; }
-    document.getElementById("newsPeekList").innerHTML = items.slice(0, 4).map((n, i) => `<li><a class="np" href="#zina-${esc(n.id)}" data-id="${esc(n.id)}">
+    document.getElementById("newsPeekList").innerHTML = items.slice(0, 5).map((n, i) => `<li><a class="np" href="#zina-${esc(n.id)}" data-id="${esc(n.id)}">
         <span class="np-tag ${TAGCLS(n.tag)}">${esc(n.tag)}</span><span class="np-h">${esc(n.title)}</span><span class="np-go" aria-hidden="true">↓</span>
         ${i === 0 && n.teaser ? `<span class="np-teaser">${esc(n.teaser)}</span>` : ""}</a></li>`).join("");
     document.getElementById("newsPeek").hidden = false;
