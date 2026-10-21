@@ -511,7 +511,7 @@ footer { font-size: 13px; color: var(--muted); }
     if (data.updatedAt) {
       const d = new Date(data.updatedAt);
       const when = isNaN(d) ? data.updatedAt : d.toLocaleString("lv-LV", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" });
-      updatedEl.textContent = `Atjaunots ${when}` + (data.currentMd ? ` · pēdējā aizvadītā kārta: ${data.currentMd}.` : "");
+      updatedEl.textContent = `Atjaunots ${when}` + (data.liveMd ? ` · ${data.liveNote || data.liveMd + ". kārta vēl notiek."}` : data.currentMd ? ` · pēdējā aizvadītā kārta: ${data.currentMd}.` : "");
     }
   }
 

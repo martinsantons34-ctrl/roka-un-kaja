@@ -4,49 +4,55 @@
     "leagueId": 44087407,
     "startMd": 2,
     "currentMd": 2,
-    "updatedAt": "2026-10-15T12:00:00Z",
+    "updatedAt": "2026-10-20T21:30:00Z",
     "members": [
       {
         "name": "renardsudris",
         "team": "Spartaks",
-        "overall": 134,
+        "overall": 146,
         "officialRank": 1,
         "md": {
           "1": 88,
-          "2": 46
+          "2": 46,
+          "3": 12
         }
       },
       {
         "name": "Arturs M",
         "team": "team maurini",
-        "overall": 129,
-        "officialRank": 2,
+        "overall": 135,
+        "officialRank": 3,
         "md": {
           "1": 61,
-          "2": 68
+          "2": 68,
+          "3": 6
         }
       },
       {
         "name": "Maarels",
         "team": "tk3101",
-        "overall": 117,
-        "officialRank": 3,
+        "overall": 139,
+        "officialRank": 2,
         "md": {
           "1": 64,
-          "2": 53
+          "2": 53,
+          "3": 22
         }
       },
       {
         "name": "Aleks",
         "team": "zvēri",
-        "overall": 69,
+        "overall": 99,
         "officialRank": 4,
         "md": {
           "1": 11,
-          "2": 58
+          "2": 58,
+          "3": 30
         }
       }
-    ]
+    ],
+    "liveMd": 3,
+    "liveNote": "3. kārta vēl notiek: ieskaitīta tikai otrdiena, trešdienas spēles vēl priekšā."
   },
   "jokes": [
     {
