@@ -228,7 +228,7 @@ table.rounds { width: 100%; border-collapse: collapse; font-variant-numeric: tab
 .cd-label { color: var(--muted); font-size: 13px; }
 .fx-day { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 800; margin: 4px 0 6px; }
 .fx-list { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
-.fx { display: grid; grid-template-columns: 44px minmax(0, 1fr) 24px minmax(0, 1fr); align-items: center; gap: 8px; padding: 8px 12px; border-top: 1px solid var(--line); font-size: 14px; }
+.fx { display: grid; grid-template-columns: 50px minmax(0, 1fr) 40px minmax(0, 1fr); align-items: center; gap: 8px; padding: 8px 12px; border-top: 1px solid var(--line); font-size: 14px; }
 .fx:first-child { border-top: 0; }
 .fx-t { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; font-weight: 700; }
 .fx-team { display: flex; align-items: center; gap: 6px; min-width: 0; font-weight: 600; }
@@ -236,6 +236,8 @@ table.rounds { width: 100%; border-collapse: collapse; font-variant-numeric: tab
 .fx-team.home { justify-content: flex-end; text-align: right; }
 .fx-team img { width: 20px; height: 20px; object-fit: contain; flex: none; }
 .fx-v { text-align: center; color: var(--muted); font-size: 12px; }
+.fx-v b { color: var(--ink); font-size: 15px; font-variant-numeric: tabular-nums; }
+.fx.done .fx-t { color: var(--muted); font-weight: 600; }
 
 .tr-rounds { display: grid; gap: 14px; margin-top: 14px; }
 .tr-card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px; display: grid; gap: 8px; }
@@ -668,8 +670,10 @@ footer { font-size: 13px; color: var(--muted); }
     const groups = {};
     (n.matches || []).forEach(m => { const d = new Date(m.kickoff); const k = dayFmt(d); (groups[k] ||= []).push({ ...m, d }); });
     const team = (name, id, cls) => `<span class="fx-team ${cls}">${cls === "home" ? `<span>${esc(name)}</span>` : ""}<img src="${IMG_CLUB}${encodeURIComponent(id)}.png" alt="" loading="lazy" onerror="this.remove()">${cls === "away" ? `<span>${esc(name)}</span>` : ""}</span>`;
-    box.innerHTML = `<div class="countdown"><span class="cd-time" id="cdTime">–</span><span class="cd-label">līdz ${esc(n.md)}. kārtas termiņam · ${esc(dayFmt(dl))} plkst. ${esc(timeFmt(dl))}. Līdz tam jāsakārto komanda un kapteinis.</span></div>`
-      + Object.entries(groups).map(([day, ms]) => `<div><div class="fx-day">${esc(day)}</div><ul class="fx-list">${ms.sort((a, b) => a.d - b.d).map(m => `<li class="fx"><span class="fx-t">${esc(timeFmt(m.d))}</span>${team(m.home, m.homeId, "home")}<span class="fx-v">pret</span>${team(m.away, m.awayId, "away")}</li>`).join("")}</ul></div>`).join("");
+    const anyDone = (n.matches || []).some(m => m.status === "done");
+    const h2 = document.querySelector("#nakama h2"); if (h2) h2.textContent = anyDone ? `${n.md}. kārta` : "Nākamā kārta";
+    box.innerHTML = `<div class="countdown"><span class="cd-time" id="cdTime">–</span><span class="cd-label">līdz ${anyDone ? "nākamajam" : esc(n.md) + ". kārtas"} termiņam · ${esc(dayFmt(dl))} plkst. ${esc(timeFmt(dl))}. Līdz tam jāsakārto komanda un kapteinis.</span></div>`
+      + Object.entries(groups).map(([day, ms]) => `<div><div class="fx-day">${esc(day)}</div><ul class="fx-list">${ms.sort((a, b) => a.d - b.d).map(m => `<li class="fx${m.status === "done" ? " done" : ""}"><span class="fx-t">${m.status === "done" ? "Beigās" : esc(timeFmt(m.d))}</span>${team(m.home, m.homeId, "home")}<span class="fx-v">${m.status === "done" ? `<b>${esc(m.hs)}:${esc(m.as)}</b>` : "pret"}</span>${team(m.away, m.awayId, "away")}</li>`).join("")}</ul></div>`).join("");
     const tick = () => {
       const el = document.getElementById("cdTime"); if (!el) return;
       let s = Math.floor((dl - Date.now()) / 1000);
@@ -681,7 +685,7 @@ footer { font-size: 13px; color: var(--muted); }
   }
 
   // ---- Transferi ----
-  function renderTransfers(rounds) {
+  function renderTransfers(rounds, liveMd) {
     const rs = (rounds || []).filter(r => r && (r.members || []).length).sort((a, b) => Number(b.md) - Number(a.md));
     const summary = document.getElementById("transferSummary");
     const cards = document.getElementById("transferRounds");
@@ -703,7 +707,7 @@ footer { font-size: 13px; color: var(--muted); }
         ? (m.in || []).map(p => `<span class="tr-move"><span class="arrow in">↑</span><span>${esc(p.name)}</span><span class="p">${esc(p.pts)} ${aliShort(p.pts)}</span></span>`).join("")
           + (m.out || []).map(p => `<span class="tr-move"><span class="arrow out">↓</span><span>${esc(p.name)}</span><span class="p">${esc(p.pts)} ${aliShort(p.pts)}</span></span>`).join("")
         : `<span class="bl-note">Bez transferiem.</span>`;
-      const verdict = !(m.in || []).length ? "" : net > 0 ? "atmaksājās" : net < 0 ? "neatmaksājās" : "neizšķirti";
+      const verdict = !(m.in || []).length ? "" : Number(r.md) === Number(liveMd) ? "kārta vēl notiek" : net > 0 ? "atmaksājās" : net < 0 ? "neatmaksājās" : "neizšķirti";
       return `<div class="tr-card"><div class="tr-head"><span>${esc(m.name)}</span><span class="tr-net ${net > 0 ? "up" : net < 0 ? "down" : "same"}">${(m.in || []).length ? sign(net) + " " + aliShort(net) + " · " + verdict : ""}</span></div><div class="tr-moves">${moves}</div>${m.penalty ? `<span class="bl-note">Soda ali: −${esc(m.penalty)}</span>` : ""}</div>`;
     }).join("")}</div></div>`).join("");
   }
@@ -819,7 +823,7 @@ footer { font-size: 13px; color: var(--muted); }
       renderBill(data.standings || {});
       renderSeason(data.standings || {});
       renderNext(data.nextRound);
-      renderTransfers(data.transfers || []);
+      renderTransfers(data.transfers || [], (data.standings || {}).liveMd);
     } catch (e) {
       updatedEl.textContent = "Neizdevās ielādēt datus. Pārlādē lapu.";
     }
