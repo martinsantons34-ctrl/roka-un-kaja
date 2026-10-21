@@ -1,79 +1,96 @@
 {
-  "updatedAt": "2026-10-18T18:00:00Z",
+  "updatedAt": "2026-10-21T22:00:00Z",
   "items": [
     {
-      "id": "fantasy-k3-traumas",
-      "date": "2026-10-18",
+      "id": "fantasy-k3-tresdiena",
+      "date": "2026-10-21",
       "tag": "Fantasy",
-      "title": "3. kārta: Olise diskvalificēts, Mbappé atpakaļ ierindā",
-      "teaser": "Maarels un renardsudris: Olise pret “Arsenal” nespēlēs. Pirms termiņa vēl paskaties Liverpool un PSG traumu sarakstus.",
+      "title": "3. kārtas trešdiena: Kane soda sitienā, Mbappé atkal precīzs, Bārklijs iesit Aleksam",
+      "teaser": "Kanem vārti jau desmitajā Čempionu līgas spēlē pēc kārtas, Mbappé ar vārtiem pret “Leipzig”, Aleksa jaunpienācējs Bārklijs iesit uzreiz.",
       "body": [
-        "Mihaels Olise 2. kārtā spēlē pret “Viking” (3:3) tika noraidīts, tāpēc viņam fantasy bija −1. Saskaņā ar Yahoo Sports viņš 3. kārtā Minhenē pret “Arsenal” nespēlēs. Olise ir gan Maarela, gan renardsudris sastāvā, tāpēc viņu jāsēdina uz soliņa vai jāpārdod.",
-        "Pārējās “Bayern” ziņas: Musiala ar augšstilba traumu nebūs gatavs, bet Noiers ir zem jautājuma zīmes, jo viņam pēdā ir šķidrums. Ja Noiers nespēlēs, vārtos stāsies Urbigs. Harijam Kanem traumu nav, un 2. kārtā viņš “Viking” vārtos iesita divreiz.",
-        "Kilians Mbappé septembra beigās izlasē savainoja kreiso ceļgalu, bet oktobrī atgriezās treniņos un 2. kārtā guva vārtus Romā (4:3). Trešdien “Real” mājās spēlēs pret “Leipzig”, kas nupat zaudēja “Bayern” ar 1:6. Tas ir labs mačs Aleksam un Maarelam.",
-        "“Liverpool” pussargs Soboslai un aizsargs Frimpongs savainojās spēlē pret “Brentford”, un ir maz ticams, ka otrdien viņi spēlēs pret “Villarreal”. Par van Dijku jaunu ziņu nav, taču pēc 2. kārtas izbraukuma spēles pret LASK viņam palika 0 punktu.",
-        "PSG kreisais aizsargs Nuno Mendešs ar augšstilba traumu izlaidīs vairākas nedēļas, tostarp otrdienas spēli pret “Barcelona”. Tas varētu atvērt labo flangu Jamalam (Aleksam un renardsudris)."
+        "Minhenē “Bayern” un “Arsenal” nospēlēja 2:2. Harijs Kane 61. minūtē realizēja 11 metru soda sitienu, kas piešķirts par Timbera spēli ar roku. Pēc Sky Sports datiem, Kane ir tikai otrais spēlētājs pēc Ronaldu, kurš vārtus guvis desmit Čempionu līgas spēlēs pēc kārtas. Kane ir Arturam, Maarelam un renardsudris. Olise šajā spēlē nepiedalījās diskvalifikācijas dēļ. “Arsenal” vārtsargs Raja (Maarelam) atvairīja Deivisa metienu no tuvas distances, bet Saka agri tika nomainīts traumas dēļ.",
+        "Madridē “Real” ar 4:1 sagrāva “Leipzig”, un Mbappé 83. minūtē guva trešos vārtus. Mbappé ir Aleksam un Maarelam, un renardsudris viņu nopirka tieši pirms šīs kārtas.",
+        "Aleksa transfers attaisnojās uzreiz: Ross Bārklijs, ko Aleks nopirka pirms 3. kārtas, 23. minūtē atklāja rezultātu, “Aston Villa” uzvarot “Viking” ar 3:1. Par otru jaunpienācēju Nikolasu Džeksonu atskaitēs nekas nav minēts.",
+        "Sevilja: “Betis” uzvarēja “Feyenoord” ar 1:0, vienīgos vārtus no soda sitiena guva Isko. Antonijs (renardsudris) vārtus neguva un tika nomainīts."
       ],
       "sources": [
         {
-          "label": "Yahoo Sports (Olise)",
-          "url": "https://sports.yahoo.com/articles/arsenal-gets-early-bayern-munich-170000181.html"
+          "label": "Sky Sports (Bayern–Arsenal)",
+          "url": "https://www.skysports.com/football/bayern-munich-vs-arsenal/report/577643"
         },
         {
-          "label": "OneFootball (Neuer, Musiala)",
-          "url": "https://onefootball.com/en/news/neuer-a-doubt-musiala-out-as-bayern-face-arsenal-in-champions-league-43630785"
+          "label": "Yahoo Sports (Real–Leipzig)",
+          "url": "https://sports.yahoo.com/articles/real-madrid-rout-leipzig-continue-205844654.html"
         },
         {
-          "label": "beIN Sports (Mbappé)",
-          "url": "https://www.beinsports.com/en-us/soccer/la-liga/articles/good-news-for-mourinho-mbapp%C3%A9-is-back-2026-10-08"
+          "label": "VAVEL (Real–Leipzig)",
+          "url": "https://www.vavel.com/en-us/soccer/2026/10/21/1276250-real-madrid-vs-leipzig-live-score-uefa-champions-league.html"
         },
         {
-          "label": "Goal (Liverpool)",
-          "url": "https://www.goal.com/en-in/news/a-major-setback-for-liverpool-before-the-villarreal-clash-in-the-champions-league/blt74b154fbfabacd73"
+          "label": "101 Great Goals (Villa–Viking)",
+          "url": "https://www.101greatgoals.com/match-reports/aston-villa-3-1-viking-report-result-goals/"
         },
         {
-          "label": "Sports Mole (Liverpool–LASK)",
-          "url": "https://www.sportsmole.co.uk/football/liverpool/injury-news/news/iraola-issues-pessimistic-liverpool-injury-updates-ahead-of-lask-clash_606704.html"
-        },
-        {
-          "label": "PSG Fans (Nuno Mendes)",
-          "url": "https://en.parisfans.fr/official-psg-provides-an-update-on-nuno-mendes-injury.html"
+          "label": "VAVEL (Betis–Feyenoord)",
+          "url": "https://www.vavel.com/en-us/soccer/2026/10/21/1276237-real-betis-vs-feyenoord-live-score-uefa-champions-league.html"
         }
       ]
     },
     {
-      "id": "fantasy-vartu-karali",
-      "date": "2026-10-17",
+      "id": "fantasy-k3-otrdiena",
+      "date": "2026-10-20",
       "tag": "Fantasy",
-      "title": "Vārtu karaļi: Hālanam 4, Kanem, Dembelē un Feranam pa 3",
-      "teaser": "Četri no labākajiem Čempionu līgas vārtu guvējiem ir mūsu komandās. Kuru likt par kapteini?",
+      "title": "3. kārtas otrdiena: Jamals iesit PSG, Dembelē un Kvara savainojas, Hālands uz soliņa",
+      "teaser": "PSG ar 4:2 uzvar “Barcelona”, bet Arturam un Maarelam bažas par Dembelē un Kvaraschēliju pirms 4. kārtas.",
       "body": [
-        "Pēc divām kārtām UEFA vārtu guvēju sarakstu vada Erlings Hālands (“Man City”), Ermedins Demirovičs (“Stuttgart”) un Nikolo Tresoldi (“Club Brugge”), katram ir 4 vārti. Pa trim vārtiem ir Kanem, Dembelē, Feranam Toresam, Barkolam un Nikolasam Džeksonam.",
-        "Hālands (Arturs M) guva visus četrus “City” vārtus Čempionu līgā, tostarp divus, kad mājās zaudēja PSG ar 2:4. 3. kārtā “City” mājās uzņems Atēnu AEK, tāpēc viņš ir loģisks kapteiņa kandidāts.",
-        "Kane ir trim no mums (Artūram, Maarelam un renardsudris). Trešdien viņam būs grūtāks mačs pret “Arsenal”, kuram gan arī trūkst aizsargu, jo Saliba vēl nav spēlējis šajā sezonā.",
-        "PSG pāris Dembelē (Arturs M) un Ferans Toress (renardsudris) otrdien spēlēs mājās pret “Barcelona”. Gan PSG, gan “Barça” ir 6 punkti un vārtu starpība +7. Dembelē nedēļas nogalē guva vārtus Strasbūrā, bet Jamals pret “Betis”.",
-        "Aleksa “Napoli” pāris Rrahmani un De Breine pagaidām ir bez punktiem līgas fāzē. Mačā ar “Villarreal” (1:3) Rrahmani guva vārtus, bet De Breine sestdien pret “Venezia” neiesita pendeli un mačā ar “Villarreal” sastrīdējās ar Allegri. Otrdien mājās pret “Bodø/Glimt”, kam ir četras uzvaras pēc kārtas, tostarp 1:0 pret Dortmundi."
+        "Parīzē PSG ar 4:2 pieveica “Barcelona”. Lamins Jamals 79. minūtē izlīdzināja rezultātu uz 2:2, un mūsu datos viņam ir 7 punkti. Jamals ir Aleksam (kā kapteinis), Maarelam un renardsudris. PSG pēc tam guva vēl divus vārtus (Vitinja un Fabiāns Ruiss).",
+        "Sliktās ziņas: Usmans Dembelē (Arturs M) jau ap 19. minūti tika nomainīts, iespējams, ar pakaļējās augšstilba muskuļa traumu, bet Hviča Kvaraschēlija (Maarels) 59. minūtē tika izvests no laukuma ar sasitumu. Cik ilgi viņi būs ārā, vēl nav zināms, tāpēc pirms 4. kārtas jāseko ziņām.",
+        "“Man City” mājās ar 5:1 sagrāva AEK, bet Hālands (Arturs M) pēc nedēļas nogalē gūtā sasituma sāka uz soliņa un viņam ir 0 punktu. Toties Šerkī (Maarels) savāca 7 punktus.",
+        "Pārējie: “Liverpool” ar 4:3 uzvarēja “Villarreal”, un van Dijkam (Aleks, Maarels) bija 3 punkti. “Napoli” ar 4:3 pieveica “Bodø/Glimt”, un Aleksa De Breinem bija 6 punkti. Punkti ņemti no mūsu līgas datiem.",
+        "4. kārta sāksies 3. novembrī."
       ],
       "sources": [
         {
-          "label": "Vanguard (UEFA vārtu guvēji)",
-          "url": "https://www.vanguardngr.com/2026/10/list-of-champions-league-top-scorers-after-matchday-2/"
+          "label": "Sky Sports (PSG–Barcelona)",
+          "url": "https://www.skysports.com/football/news/13600929/psg-4-2-barcelona-european-giants-turn-out-in-classic-as-hansi-flicks-side-handed-first-defeat-of-the-season"
         },
         {
-          "label": "UEFA",
-          "url": "https://www.uefa.com/uefachampionsleague/news/02a9-218f8e669a0a-debba167a199-1000--champions-league-top-scorer-nicolo-tresoldi/"
+          "label": "Al Jazeera",
+          "url": "https://www.aljazeera.com/sports/2026/10/20/psg-sink-barcelona-4-2-for-third-champions-league-win-in-a-row"
         },
         {
-          "label": "Goal (PSG–Barcelona)",
-          "url": "https://www.goal.com/en/news/paris-saint-germain-barcelona-uefa-champions-league-preview/blt96f2a3d3544518e3"
+          "label": "Yahoo Sports (Hālands)",
+          "url": "https://sports.yahoo.com/articles/erling-haaland-rested-man-city-175646667.html"
+        }
+      ]
+    },
+    {
+      "id": "udris-cehija",
+      "date": "2026-10-20",
+      "tag": "Izlase",
+      "title": "Ūdris ar diviem vārtiem Čehijā: Latvija Pasaules kausa atlasi sāk ar 3:3",
+      "teaser": "Renārs Ūdris guva otros Latvijas vārtus un vēlāk izlīdzināja uz 3:3 pret favorīti Čehiju.",
+      "body": [
+        "20. oktobrī 2028. gada Pasaules kausa kvalifikācijas pamatturnīra pirmajā spēlē Latvija izbraukumā nospēlēja 3:3 ar Čehiju. Andžejs Mickēvičs guva vārtus pirmā puslaika pēdējā sekundē, bet Renārs Ūdris otrā puslaika sākumā (22. minūtē) panāca 2:0.",
+        "Čehija atspēlējās, un Dušans Kuntsners ar diviem vārtiem panāca 3:2. Taču apmēram minūti vēlāk Ūdris ar saviem otrajiem vārtiem šajā mačā izlīdzināja uz 3:3. Treneris Masimiljano Bellarte uzsvēra, ka punkts izbraukumā pret pasaules ranga 19. vietas komandu ir svarīgs.",
+        "Četras dienas iepriekš pārbaudes spēlē Rīgā pret Ukrainu (2:2) Ūdris izsita bumbu no vārtu līnijas un palīdzēja noturēt neizšķirtu. Nākamā kvalifikācijas spēle: 8. novembrī izbraukumā pret Azerbaidžānu."
+      ],
+      "sources": [
+        {
+          "label": "LSM",
+          "url": "https://www.lsm.lv/raksts/sports/futbols/20.10.2026-latvijas-telpu-futbolisti-pret-cehiju-izcina-neizskirtu-pasaules-kausa-atlases-cikla-starta.a668377/"
         },
         {
-          "label": "Sports Mole (Napoli–Bodø/Glimt)",
-          "url": "https://www.sportsmole.co.uk/football/napoli/champions-league/preview/napoli-vs-bodoglimt-prediction-team-news-lineups_607142.html"
+          "label": "Sportacentrs.com",
+          "url": "https://sportacentrs.com/futbols/futzals/20102026-varti_puslaika_pedeja_sekunde_latvija_pk_"
         },
         {
-          "label": "The False 9 (Arsenal)",
-          "url": "https://thefalse9.com/2026/10/arsenal-injury-news-saliba-zubimendi.html"
+          "label": "Sportacentrs.com (Ukraina)",
+          "url": "https://sportacentrs.com/futbols/futzals/16102026-telpu_futbola_izlase_spele_neizskirti_ar_"
+        },
+        {
+          "label": "Sportacentrs.com (sastāvs)",
+          "url": "https://sportacentrs.com/futbols/futzals/08102026-telpu_futbolisti_uznems_ukrainu_un_cehija"
         }
       ]
     },
