@@ -1,6 +1,71 @@
 {
-  "updatedAt": "2026-10-21T22:00:00Z",
+  "updatedAt": "2026-10-25T22:50:00Z",
   "items": [
+    {
+      "id": "fantasy-k4-traumas",
+      "date": "2026-10-25",
+      "tag": "Fantasy",
+      "title": "Pirms 4. kārtas: Kvaraschēlijam sezona galā, Dembelē ārā apmēram trīs nedēļas",
+      "teaser": "Maarel, Kvaraschēliju jāpārdod: PSG apstiprina krusteniskās saites plīsumu. Arturam pret “Villarreal” trūks Dembelē un Markiņoša.",
+      "body": [
+        "PSG oficiāli apstiprināja, ka Hvičam Kvaraschēlijam spēlē pret “Barcelona” plīsa labā ceļa priekšējā krusteniskā saite, un viņam tiks veikta operācija. Klubs atgriešanās laiku nenosauca, bet ESPN raksta, ka viņš izlaidīs visu atlikušo sezonu. Pēc mūsu datiem viņš ir Maarela komandā, tāpēc pirms 4. kārtas viņš noteikti jāpārdod.",
+        "Usmanam Dembelē (Arturs M) ir pakaļējā augšstilba muskuļa trauma. Saskaņā ar L'Équipe viņš būs ārā apmēram trīs nedēļas un izlaidīs arī Čempionu līgas spēli pret “Villarreal”. PSG kapteinis Markiņošs (arī Arturam) ar augšstilba traumu būs ārā \"dažas nedēļas\".",
+        "4. kārta sākas 3. novembrī. Ja kādam no mums PSG spēlētāju ir daudz, ir laiks domāt par transferiem."
+      ],
+      "sources": [
+        {
+          "label": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/50235833/khvicha-kvaratskhelia-ruptured-acl-paris-saint-germain-confirm"
+        },
+        {
+          "label": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/13601843/khvicha-kvaratskhelia-psg-forward-set-for-surgery-after-rupturing-acl-in-champions-league-win-over-barcelona"
+        },
+        {
+          "label": "Yahoo Sports (Dembélé)",
+          "url": "https://sports.yahoo.com/articles/timescale-ousmane-demb-l-return-102200795.html"
+        },
+        {
+          "label": "Foot Mercato",
+          "url": "https://www.footmercato.net/a8365289177564647735-le-psg-confirme-une-rupture-des-ligaments-croises-pour-kvaratskhelia-et-annonce-de-longues-absences-pour-dembele-et-marquinhos"
+        }
+      ]
+    },
+    {
+      "id": "zemgale-liepaja",
+      "date": "2026-10-24",
+      "tag": "Hokejs",
+      "title": "Antons iesit vairākumā, “Zemgale/LBTU” papildlaikā uzvar Liepājā",
+      "teaser": "Liepājā 5:4 papildlaikā, Antonam vārti vairākumā. Jelgavnieki tabulā ir trešie.",
+      "body": [
+        "24. oktobrī “Zemgale/LBTU” izbraukumā ar 5:4 papildlaikā pārspēja Liepājas hokeja komandu. Pirmajā periodā 12:44 Mārtiņš Antons pēc Gricinska un Karašas piespēlēm iemeta vārtus vairākumā. Tie ir viņa trešie vārti OHL sezonā.",
+        "Vēl vārtus jelgavniekiem guva Deniss Fjodorovs, Haralds Jirgens un Kristaps Roķis, kurš panāca 4:4. Papildlaikā uzvaru atnesa Patriks Zabusovs. Gatim Gricinskim šajā spēlē bija trīs piespēles.",
+        "Pēc astoņām spēlēm “Zemgale/LBTU” ir trešajā vietā ar 12 punktiem (4 uzvaras pamatlaikā, 2 papildlaikā, 2 zaudējumi), vārtu attiecība 34:21."
+      ],
+      "sources": [
+        {
+          "label": "Sportacentrs.com",
+          "url": "https://sportacentrs.com/hokejs/latvijas_cempionats/24102026-fjodorovs_piesakas_sezonas_skaistakajiem_"
+        }
+      ]
+    },
+    {
+      "id": "leszno-wemet",
+      "date": "2026-10-25",
+      "tag": "Futzāls",
+      "title": "Lešno pēc izlases pauzes: 3:3 ar “We-Met”",
+      "teaser": "Lešno mājās nospēlēja neizšķirti, bet Ūdris pēc diviem vārtiem Čehijā šoreiz vārtus neguva.",
+      "body": [
+        "FOGO Futsal Ekstraklasa 10. kārtā “GI Malepszy Leszno” mājās “Hala Trapez” zālē nospēlēja 3:3 ar “We-Met FC Gmina Sierakowice” (puslaikā 1:1). Lešno vārtus guva Lisovskis, Siecla un Mališko.",
+        "Renārs Ūdris, kurš pirms dažām dienām Latvijas izlasē iesita divus vārtus Čehijai, klubā šoreiz vārtu guvēju sarakstā neparādījās. Tāpēc Lešno uzvaru sērija apstājās pie trim spēlēm."
+      ],
+      "sources": [
+        {
+          "label": "KS Futsal Leszno",
+          "url": "https://www.futsal.leszno.pl/2026/10/25/podzial-punktow-w-hali-trapez-gi-malepszy-leszno-remisuje-z-we-metem/"
+        }
+      ]
+    },
     {
       "id": "fantasy-k3-tresdiena",
       "date": "2026-10-21",
@@ -121,28 +186,6 @@
         {
           "label": "LHF",
           "url": "https://www.lhf.lv/en/game/kyc-zmg/20261010/35847"
-        }
-      ]
-    },
-    {
-      "id": "zemgale-tabula",
-      "date": "2026-10-14",
-      "tag": "Hokejs",
-      "title": "“Zemgale/LBTU” ar 71 metienu sagrauj pankus un ir ceturtā",
-      "teaser": "Jelgavā 6:0 pret “Hockey Punks-Mototoja”, Ozolam otrā sausā spēle. Nākamā spēle 24. oktobrī Liepājā.",
-      "body": [
-        "14. oktobrī Jelgavas ledus hallē “Zemgale/LBTU” ar 6:0 (4:0, 2:0, 0:0) pārspēja Viļņas “Hockey Punks-Mototoja”. Metienos bija 71:19. Divus vārtus guva Patriks Zabusovs, pa vieniem Kristaps Roķis, Džeks Bodins, Ate Rajala un Gustavs Millers. Vārtsargs Akselis Ozols sezonā aizvadīja jau otro sauso spēli.",
-        "Pirms tam bija divi zaudējumi pēc kārtas: 2:4 pret līderi “Mogo/RSU” un 0:4 Kijivā pret “Capitals”. Pēc septiņām spēlēm jelgavnieki ir ceturtie ar 10 punktiem (4 uzvaras pamatlaikā, 1 papildlaikā, 2 zaudējumi), vārtu attiecība 29:17. Priekšā ir “Mogo/RSU” (17), “Capitals” (14) un “Panter” (11).",
-        "Nākamā spēle: 24. oktobrī plkst. 17.00 izbraukumā pret Liepājas hokeja komandu."
-      ],
-      "sources": [
-        {
-          "label": "ZZ.lv",
-          "url": "https://zz.lv/sports/hokejs/zemgale-lbtu-izdara-71-metienu-un-ar-60-parspej-hockey-punks-mototoja/"
-        },
-        {
-          "label": "hokejazinas.com",
-          "url": "https://hokejazinas.com/tag/zemgale-llu/"
         }
       ]
     },
