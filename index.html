@@ -271,20 +271,33 @@ footer { font-size: 13px; color: var(--muted); }
   .pos { font-size: 26px; } .pts { font-size: 30px; }
   .podium .crown { width: 52px; height: 52px; }
 }
-/* Prize button: a loud red call to action at the very top; opens a looping video in a full-screen overlay. */
-.prize-btn { display: block; width: 100%; margin: 0 0 14px; padding: 16px 20px; border: 0; border-radius: 14px; cursor: pointer;
-  background: #e0201b; color: #fff; font: 800 20px/1.2 var(--body); letter-spacing: .02em; text-transform: uppercase;
-  box-shadow: 0 6px 0 #9c1210, 0 10px 24px rgba(224,32,27,.45); animation: prize-pulse 1.6s ease-in-out infinite; }
-.prize-btn:hover { background: #f02a24; }
-.prize-btn:active { transform: translateY(4px); box-shadow: 0 2px 0 #9c1210, 0 4px 12px rgba(224,32,27,.4); }
-.prize-btn:focus-visible { outline: 3px solid #ffd23f; outline-offset: 3px; }
-@keyframes prize-pulse { 50% { transform: scale(1.03); } }
-@media (prefers-reduced-motion: reduce) { .prize-btn { animation: none; } }
 .prize-modal { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 16px; background: rgba(0,0,0,.85); }
 .prize-modal[hidden] { display: none; }
 .prize-modal video { max-width: 100%; max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); border-radius: 12px; background: #000; }
 .podium .p1 .step { margin-top: 14px; }
-.prize-btn { background: repeating-linear-gradient(135deg, #d11f1a 0 18px, #e0201b 18px 36px); }
+/* Prize button: a VAR screen at the very top. A spinning neon frame, a blinking LIVE light, a glow that breathes and a
+   shake every few seconds, so nobody scrolls past it; opens the video in a full-screen overlay. */
+.prize-btn { position: relative; display: grid; justify-items: center; gap: 6px; width: 100%; margin: 4px 0 16px; padding: 4px; border: 0;
+  border-radius: 18px; cursor: pointer; overflow: hidden; isolation: isolate; background: #000;
+  animation: var-glow 1.4s ease-in-out infinite, var-shake 4s ease-in-out infinite; }
+.prize-btn::before { content: ""; position: absolute; inset: -60%; z-index: -1;
+  background: conic-gradient(#ff2d55, #ffd400, #39ff14, #00e5ff, #b44dff, #ff2d55); animation: var-spin 2.2s linear infinite; }
+.prize-btn .var-screen { display: grid; justify-items: center; gap: 6px; width: 100%; padding: 16px 14px 18px; border-radius: 14px;
+  background: radial-gradient(circle, rgba(255,255,255,.06) 1px, transparent 1.5px) 0 0 / 4px 4px, linear-gradient(180deg, #0b1220, #04070d); }
+.prize-btn .var-live { display: inline-flex; align-items: center; gap: 6px; font: 800 12px/1 var(--body); letter-spacing: .16em; text-transform: uppercase;
+  color: #fff; background: #e10600; padding: 5px 10px 5px 8px; border-radius: 4px; }
+.prize-btn .var-live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #fff; animation: var-blink 1s steps(2, start) infinite; }
+.prize-btn .var-title { font: italic 800 clamp(30px, 9vw, 46px)/.95 var(--display); letter-spacing: .02em; text-transform: uppercase; color: #39ff14;
+  text-shadow: 0 0 8px rgba(57,255,20,.8), 0 0 22px rgba(57,255,20,.55); }
+.prize-btn .var-sub { font: 800 15px/1.2 var(--body); letter-spacing: .08em; text-transform: uppercase; color: #fff; }
+.prize-btn:hover .var-title { color: #b6ff9e; }
+.prize-btn:active { transform: scale(.97); }
+.prize-btn:focus-visible { outline: 4px solid #ffd400; outline-offset: 3px; }
+@keyframes var-spin { to { transform: rotate(1turn); } }
+@keyframes var-blink { to { visibility: hidden; } }
+@keyframes var-glow { 0%, 100% { box-shadow: 0 0 18px rgba(57,255,20,.45), 0 10px 26px rgba(0,0,0,.35); } 50% { box-shadow: 0 0 42px rgba(255,45,85,.75), 0 10px 26px rgba(0,0,0,.35); } }
+@keyframes var-shake { 0%, 84%, 100% { transform: none; } 86% { transform: rotate(-2deg) scale(1.03); } 89% { transform: rotate(2deg) scale(1.05); } 92% { transform: rotate(-1.5deg) scale(1.03); } 95% { transform: rotate(1deg); } }
+@media (prefers-reduced-motion: reduce) { .prize-btn, .prize-btn::before, .prize-btn .var-live::before { animation: none; } }
 
 /* News: a short teaser card at the top that jumps to the full articles at the bottom */
 .news-peek { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; display: grid; gap: 8px;
@@ -318,7 +331,9 @@ footer { font-size: 13px; color: var(--muted); }
 <body>
 <div class="wrap">
   <div class="sky">
-  <button type="button" class="prize-btn" id="prizeBtn">⚽ Uzspied un laimē alu! 🍺</button>
+  <button type="button" class="prize-btn" id="prizeBtn" data-video="seja.mp4"><span class="var-screen">
+    <span class="var-live">Tiešraide</span><span class="var-title">VAR pārbaude</span><span class="var-sub">📺 Spied un skaties! 👀</span>
+  </span></button>
   <p class="rule">Noteikums: cik punktu savāc, tik alus būs jāizdzer.</p>
   <nav class="news-peek" id="newsPeek" aria-label="Jaunumi" hidden>
     <div class="news-peek-head"><span class="news-peek-title">Jaunumi</span><a class="news-peek-all" href="#zinas">Visas ziņas ↓</a></div>
@@ -818,13 +833,15 @@ footer { font-size: 13px; color: var(--muted); }
 </script>
 <div class="prize-modal" id="prizeModal" role="dialog" aria-modal="true" aria-label="Balvas video" hidden>
   <button type="button" class="prize-close" id="prizeClose" aria-label="Aizvērt">✕</button>
-  <video id="prizeVideo" src="alus.mp4" loop playsinline controls preload="none"></video>
+  <video id="prizeVideo" src="seja.mp4" loop playsinline controls preload="none"></video>
 </div>
 <script>
 (function () {
   var btn = document.getElementById('prizeBtn'), modal = document.getElementById('prizeModal'),
       video = document.getElementById('prizeVideo'), close = document.getElementById('prizeClose');
-  function open() {
+  function open(e) {
+    btn = e.currentTarget;
+    if (video.getAttribute('src') !== btn.dataset.video) video.src = btn.dataset.video;
     modal.hidden = false;
     video.currentTime = 0;
     var p = video.play();
@@ -832,7 +849,7 @@ footer { font-size: 13px; color: var(--muted); }
     close.focus();
   }
   function shut() { video.pause(); modal.hidden = true; btn.focus(); }
-  btn.addEventListener('click', open);
+  document.querySelectorAll('.prize-btn[data-video]').forEach(function (b) { b.addEventListener('click', open); });
   close.addEventListener('click', shut);
   modal.addEventListener('click', function (e) { if (e.target === modal) shut(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) shut(); });
