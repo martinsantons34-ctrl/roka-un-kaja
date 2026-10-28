@@ -1,6 +1,28 @@
 {
-  "updatedAt": "2026-10-25T22:50:00Z",
+  "updatedAt": "2026-10-28T22:50:00Z",
   "items": [
+    {
+      "id": "antons-capitals",
+      "date": "2026-10-28",
+      "tag": "Hokejs",
+      "title": "Antons 59. minūtē! “Zemgale/LBTU” ar 4:3 pieveic vicelīderi “Capitals”",
+      "teaser": "Mārtiņš Antons 48 sekundes pirms beigām vairākumā iemeta uzvaras vārtus pret Kijivas “Capitals”.",
+      "body": [
+        "28. oktobrī Jelgavā “Zemgale/LBTU” ar 4:3 (1:0, 2:1, 1:2) pārspēja turnīra vicelīderi Kijivas “Capitals”. Iepriekš šīs komandas bija tikušās Kijivā, kur jelgavnieki zaudēja ar 0:4.",
+        "Vārtus jelgavniekiem guva Henrijs Ģirts Upenieks, Markuss Streikišs (mazākumā) un Gatis Gricinskis (vairākumā), bet Kijivas komanda trešajā periodā izlīdzināja uz 3:3. 59:12 vairākumā izšķirošos vārtus iemeta Mārtiņš Antons pēc Bajaruna un Roķa piespēlēm. Tā ir jau otrā spēle pēc kārtas, kurā Antons gūst vārtus.",
+        "Pēc deviņām spēlēm “Zemgale/LBTU” ir ceturtā ar 14 punktiem. Priekšā ir “Mogo/RSU” (21 punkts, 11 spēles), “Capitals” (20 punkti, 13 spēles) un “Panter” (14 punkti, 11 spēles)."
+      ],
+      "sources": [
+        {
+          "label": "Sportacentrs.com",
+          "url": "https://sportacentrs.com/hokejs/latvijas_cempionats/28102026-antona_varti_atnes_zemgalei_aizraujosu_uz"
+        },
+        {
+          "label": "sportazinas.com",
+          "url": "https://www.sportazinas.com/capitals-paklup-jelgava-un-lauj-mogo-rsu-atgriezties-ohl-liderpozicija/"
+        }
+      ]
+    },
     {
       "id": "fantasy-k4-traumas",
       "date": "2026-10-25",
