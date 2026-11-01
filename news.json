@@ -1,6 +1,28 @@
 {
-  "updatedAt": "2026-11-01T12:00:00Z",
+  "updatedAt": "2026-11-01T22:50:00Z",
   "items": [
+    {
+      "id": "leszno-poznan",
+      "date": "2026-10-30",
+      "tag": "Futzāls",
+      "title": "Lešno uzvar Poznaņas derbijā un pakāpjas uz 8. vietu",
+      "teaser": "“GI Malepszy Leszno” izbraukumā ar 2:0 pārspēja “Wiara Lecha”. Ūdris vārtu guvēju sarakstā nav jau otro spēli pēc kārtas.",
+      "body": [
+        "FOGO Futsal Ekstraklasa 11. kārtā Lēnpolijas derbijā “GI Malepszy Leszno” izbraukumā ar 2:0 uzvarēja “Wiara Lecha Poznań”. Vārtus guva Daniels Galjego Garsija (19. minūtē pēc Sieclas stūra sitiena) un Serhijs Mališko (26. minūtē pēc Galjego Garsijas piespēles).",
+        "Iepriekšējā kārtā Lešno mājās nospēlēja 3:3 ar “We-Met”. Pēc 11 spēlēm komandai ir 16 punkti un 8. vieta.",
+        "Renārs Ūdris klubā vārtus nav guvis jau divas spēles pēc kārtas. Kluba atskaitēs par Poznaņas spēli viņš nav minēts. 8. novembrī viņu gaida Latvijas izlases Pasaules kausa kvalifikācijas spēle Azerbaidžānā."
+      ],
+      "sources": [
+        {
+          "label": "KS Futsal Leszno",
+          "url": "https://www.futsal.leszno.pl/2026/10/31/derby-wielkopolski-dla-gi-malepszy-leszno-zwyciestwo-w-poznaniu/"
+        },
+        {
+          "label": "KS Futsal Leszno (We-Met)",
+          "url": "https://www.futsal.leszno.pl/2026/10/25/podzial-punktow-w-hali-trapez-gi-malepszy-leszno-remisuje-z-we-metem/"
+        }
+      ]
+    },
     {
       "id": "antons-capitals",
       "date": "2026-10-28",
@@ -24,36 +46,6 @@
       ]
     },
     {
-      "id": "fantasy-k4-traumas",
-      "date": "2026-10-25",
-      "tag": "Fantasy",
-      "title": "Pirms 4. kārtas: Kvaraschēlijam sezona galā, Dembelē ārā apmēram trīs nedēļas",
-      "teaser": "Maarel, Kvaraschēliju jāpārdod: PSG apstiprina krusteniskās saites plīsumu. Arturam pret “Villarreal” trūks Dembelē un Markiņoša.",
-      "body": [
-        "PSG oficiāli apstiprināja, ka Hvičam Kvaraschēlijam spēlē pret “Barcelona” plīsa labā ceļa priekšējā krusteniskā saite, un viņam tiks veikta operācija. Klubs atgriešanās laiku nenosauca, bet ESPN raksta, ka viņš izlaidīs visu atlikušo sezonu. Pēc mūsu datiem viņš ir Maarela komandā, tāpēc pirms 4. kārtas viņš noteikti jāpārdod.",
-        "Usmanam Dembelē (Arturs M) ir pakaļējā augšstilba muskuļa trauma. Saskaņā ar L'Équipe viņš būs ārā apmēram trīs nedēļas un izlaidīs arī Čempionu līgas spēli pret “Villarreal”. PSG kapteinis Markiņošs (arī Arturam) ar augšstilba traumu būs ārā \"dažas nedēļas\".",
-        "4. kārta sākas 3. novembrī. Ja kādam no mums PSG spēlētāju ir daudz, ir laiks domāt par transferiem."
-      ],
-      "sources": [
-        {
-          "label": "ESPN",
-          "url": "https://www.espn.com/soccer/story/_/id/50235833/khvicha-kvaratskhelia-ruptured-acl-paris-saint-germain-confirm"
-        },
-        {
-          "label": "Sky Sports",
-          "url": "https://www.skysports.com/football/news/13601843/khvicha-kvaratskhelia-psg-forward-set-for-surgery-after-rupturing-acl-in-champions-league-win-over-barcelona"
-        },
-        {
-          "label": "Yahoo Sports (Dembélé)",
-          "url": "https://sports.yahoo.com/articles/timescale-ousmane-demb-l-return-102200795.html"
-        },
-        {
-          "label": "Foot Mercato",
-          "url": "https://www.footmercato.net/a8365289177564647735-le-psg-confirme-une-rupture-des-ligaments-croises-pour-kvaratskhelia-et-annonce-de-longues-absences-pour-dembele-et-marquinhos"
-        }
-      ]
-    },
-    {
       "id": "zemgale-liepaja",
       "date": "2026-10-24",
       "tag": "Hokejs",
@@ -68,23 +60,6 @@
         {
           "label": "Sportacentrs.com",
           "url": "https://sportacentrs.com/hokejs/latvijas_cempionats/24102026-fjodorovs_piesakas_sezonas_skaistakajiem_"
-        }
-      ]
-    },
-    {
-      "id": "leszno-wemet",
-      "date": "2026-10-25",
-      "tag": "Futzāls",
-      "title": "Lešno pēc izlases pauzes: 3:3 ar “We-Met”",
-      "teaser": "Lešno mājās nospēlēja neizšķirti, bet Ūdris pēc diviem vārtiem Čehijā šoreiz vārtus neguva.",
-      "body": [
-        "FOGO Futsal Ekstraklasa 10. kārtā “GI Malepszy Leszno” mājās “Hala Trapez” zālē nospēlēja 3:3 ar “We-Met FC Gmina Sierakowice” (puslaikā 1:1). Lešno vārtus guva Lisovskis, Siecla un Mališko.",
-        "Renārs Ūdris, kurš pirms dažām dienām Latvijas izlasē iesita divus vārtus Čehijai, klubā šoreiz vārtu guvēju sarakstā neparādījās. Tāpēc Lešno uzvaru sērija apstājās pie trim spēlēm."
-      ],
-      "sources": [
-        {
-          "label": "KS Futsal Leszno",
-          "url": "https://www.futsal.leszno.pl/2026/10/25/podzial-punktow-w-hali-trapez-gi-malepszy-leszno-remisuje-z-we-metem/"
         }
       ]
     },
