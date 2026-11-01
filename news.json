@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T22:50:00Z",
+  "updatedAt": "2026-11-01T12:00:00Z",
   "items": [
     {
       "id": "antons-capitals",
@@ -264,6 +264,38 @@
         {
           "label": "Sportacentrs.com",
           "url": "https://sportacentrs.com/futbols/futzals/09102025-latvijas_izlase_divas_parbaudes_speles_uz"
+        }
+      ]
+    },
+    {
+      "id": "fantasy-k4-pirms",
+      "date": "2026-11-01",
+      "tag": "Fantasy",
+      "title": "Pirms 4. kārtas: PSG bez Dembelē un Kvaraschēlijas, Olise apšaubāms, Kane un Kurtuā spēlēs",
+      "teaser": "Arturam un Maarelam jādomā par PSG spēlētājiem, renardsudris jāseko Olises ziņām, bet Kane un Mbappé ir veseli.",
+      "body": [
+        "Noteikti nespēlēs: PSG spēlē pret “Villarreal” otrdien nebūs Usmana Dembelē (Arturs M) un Markiņoša (pakaļējā augšstilba muskuļa traumas), kā arī Hvičas Kvaraschēlijas (Maarels), kuram plīsa krusteniskā saite. Sports Mole minētajā PSG sastāvā Dembelē vietā ir Doē, Torress un Akliušs. Vilijans Pačo (Maarels, renardsudris) traumēto sarakstā nav, un viņš ir prognozētajā pamatsastāvā.",
+        "Apšaubāmi: “Bayern” Maikls Olise spēles pret Dortmundi beigās tika nomainīts, un klubs pirms spēles ar “Atlético” nav paziņojis, kāds ir viņa stāvoklis. 2. kārtā viņš bija renardsudris kapteinis, tāpēc, ja viņš joprojām ir komandā, labāk izvēlēties citu kapteini. Ārā ir arī Gnabri un Saibari (neviens nav mūsu komandās). Mančestras “City” Hālandam (Arturs M) 18. oktobrī pret “Ipswich” trāpīja pa pēdu, un 3. kārtā viņš sāka uz soliņa. Jaunākas ziņas par viņu neatradām, tāpēc pirmdienas preses konferencē jāklausās, ko saka Mareska. Tajā pašā spēlē muskuļa problēmu guva Mateušs Nuness (Maarels), un nav skaidrs, vai viņš būs gatavs spēlei ar “Leipzig”.",
+        "Labās ziņas: Harijs Kane (Arturs M, Maarels, renardsudris) ir vesels. Madrides “Real” vārtsargs Tibo Kurtuā (Arturs M, renardsudris) pēc gripas, kuras dēļ izlaida El Klasiko, atkal trenējas ar komandu. Kilianam Mbappé (Aleks, Maarels, renardsudris) traumas nav, un El Klasiko viņš guva abus vārtus 2:1 uzvarā Barselonā. Pret AEK trešdien no diskvalifikācijas atgriezīsies arī Vinīsijs, savukārt Valverde pēc nelielas kājas muskuļa sāpes ir atpakaļ treniņos.",
+        "Komandu sastāvi ņemti no mūsu līgas 3. kārtas datiem. Ja kopš tā laika esat taisījuši transferus, pārbaudiet savus spēlētājus paši. Par Jamalu, De Breini, van Deiku un Arsenāla spēlētājiem jaunu traumu ziņu neatradām.",
+        "4. kārtas termiņš: otrdien, 3. novembrī plkst. 19:45 (Latvijas laiks). Līdz tam jāsakārto komanda un kapteinis."
+      ],
+      "sources": [
+        {
+          "label": "Sports Mole (Villarreal–PSG)",
+          "url": "https://www.sportsmole.co.uk/football/villarreal/champions-league/preview/villarreal-vs-psg-prediction-team-news-lineups_608209.html"
+        },
+        {
+          "label": "The False 9 (Bayern)",
+          "url": "https://thefalse9.com/2026/11/bayern-saibari-gnabry-injury-atletico.html"
+        },
+        {
+          "label": "Sports Mole (Man City)",
+          "url": "https://www.sportsmole.co.uk/football/man-city/injury-news/news/is-haaland-injured-maresca-delivers-big-update-on-man-city-goal-machine_607237.html"
+        },
+        {
+          "label": "Madrid Journals (Real Madrid)",
+          "url": "https://madridjournals.com/sports/thibaut-courtois-returns-to-full-real-madrid-training-ahead-of-crucial-la-liga-clash-against-racing-santander"
         }
       ]
     }
