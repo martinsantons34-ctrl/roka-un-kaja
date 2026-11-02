@@ -59,7 +59,7 @@
           "note": "Prognozes izkaisītas no Galatasaray uzvaras līdz 2:3 par labu Stuttgart. Galvenais jautājums ir Osimhen veselība: viņš Konjā tika nomainīts 61. minūtē, un lēmums par viņu būs tikai dažas stundas pirms spēles.",
           "players": [
             {
-              "name": "Osimhen",
+              "name": "Victor Osimhen",
               "club": "Galatasaray",
               "odds": 1.85,
               "pct": 54,
@@ -954,7 +954,7 @@
           "note": "Modelis."
         },
         {
-          "name": "Osimhen",
+          "name": "Victor Osimhen",
           "club": "Galatasaray",
           "vs": "Stuttgart",
           "pct": 54,
