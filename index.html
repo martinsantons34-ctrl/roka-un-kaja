@@ -932,7 +932,7 @@ body.view-bets #likmes { padding-top: 26px; }
   }
   function playerRowBet(p) {
     const od = p.odds ? Number(p.odds).toFixed(2).replace(".", ",") : "";
-    return `<div class="bp"><span class="nm">${esc(p.name)}${p.ours ? ` <small>· ${esc(p.ours)}</small>` : ""}</span><span class="pc">${pctTxt(p.pct)}</span><span class="od">${od}</span>
+    return `<div class="bp"><span class="nm">${esc(p.name)}</span><span class="pc">${pctTxt(p.pct)}</span><span class="od">${od}</span>
       ${p.pct ? `<span class="bar"><i style="width:${Math.min(100, p.pct)}%"></i></span>` : ""}${p.note ? `<span class="nt">${esc(p.note)}</span>` : ""}</div>`;
   }
   function renderBets(b) {
@@ -959,11 +959,10 @@ body.view-bets #likmes { padding-top: 26px; }
         ${m.score || m.alt ? `<span class="bet-score">${m.score ? `Prognozētais rezultāts: <b>${esc(m.score)}</b>` : ""}${m.score && m.alt ? " · " : ""}${m.alt ? `Vēl: ${esc(m.alt)}` : ""}</span>` : ""}
         ${m.note ? `<p>${esc(m.note)}</p>` : ""}
         ${(m.players || []).length ? `<div class="bet-players"><span class="ttl">Iespēja gūt vārtus</span>${m.players.map(playerRowBet).join("")}</div>` : ""}
-        ${m.ours ? `<span class="bet-ours">Mūsu spēlētāji: <b>${esc(m.ours)}</b></span>` : ""}
         ${(m.sources || []).length ? `<span class="bet-src">Avoti: ${m.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(", ")}</span>` : ""}`;
-    const BADGE = { svariga: "Svarīga mums", vertiba: "Vērtība" };
+    const BADGE = { svariga: "Galvenā spēle", vertiba: "Vērtība" };
     const feat = ms.filter(m => m.featured);
-    const minis = `<h3 class="bet-sub" style="margin-top:0">Visas spēles</h3><p class="bet-hint">Pieskaries spēlei, lai redzētu prognozi un vārtu guvējus. <span class="lg s">Zaļa josla</span> nozīmē svarīgu spēli mums, <span class="lg v">dzeltena</span> spēli ar vērtību.</p><div class="bet-minis">`
+    const minis = `<h3 class="bet-sub" style="margin-top:0">Visas spēles</h3><p class="bet-hint">Pieskaries spēlei, lai redzētu prognozi un vārtu guvējus. <span class="lg s">Zaļa josla</span> nozīmē kārtas galveno spēli, <span class="lg v">dzeltena</span> spēli ar vērtību.</p><div class="bet-minis">`
       + ms.map(m => `<details class="bet-mini${m.featured ? " is-" + m.featured.type : ""}">
           <summary><span class="mt"><span class="tm">${esc(when(m.kickoff))}</span><span class="tn">${esc(m.home)} – ${esc(m.away)}</span></span>${oddsCells(m, true)}</summary>
           <div class="mini-body">${m.featured ? `<span class="bet-badge ${m.featured.type}">${BADGE[m.featured.type]}</span><p class="bet-why">${esc(m.featured.why)}</p>` : ""}${body(m)}${(m.analysis || []).length ? `<div class="bet-analysis"><span class="ttl">Plašāk par spēli</span>${m.analysis.map(t => `<p>${esc(t)}</p>`).join("")}</div>` : ""}</div>
@@ -980,7 +979,7 @@ body.view-bets #likmes { padding-top: 26px; }
       extra += `<h3 class="bet-sub">Lielākās izredzes gūt vārtus</h3><div class="bet-players" style="background:var(--surface);border:1px solid var(--line)"><span class="ttl">Spēlētājs · iespēja · koeficients</span>${b.scorers.map(s => playerRowBet({ ...s, name: s.name + " (pret " + s.vs + ")" })).join("")}</div>`;
     }
     if ((b.cleanSheets || []).length) {
-      extra += `<h3 class="bet-sub">Sausās spēles iespēja</h3><ul class="bet-cs">${b.cleanSheets.map(c => `<li><span>${esc(c.team)} pret ${esc(c.vs)}</span><b>${pctTxt(c.pct)}</b>${c.ours ? `<small>Mūsu aizsargi un vārtsargi: ${esc(c.ours)}</small>` : ""}</li>`).join("")}</ul>${b.cleanSrc ? `<span class="bet-src">Avots: <a href="${esc(b.cleanSrc.url)}" target="_blank" rel="noopener">${esc(b.cleanSrc.label)}</a></span>` : ""}`;
+      extra += `<h3 class="bet-sub">Sausās spēles iespēja</h3><ul class="bet-cs">${b.cleanSheets.map(c => `<li><span>${esc(c.team)} pret ${esc(c.vs)}</span><b>${pctTxt(c.pct)}</b></li>`).join("")}</ul>${b.cleanSrc ? `<span class="bet-src">Avots: <a href="${esc(b.cleanSrc.url)}" target="_blank" rel="noopener">${esc(b.cleanSrc.label)}</a></span>` : ""}`;
     }
     if (b.combo && (b.combo.legs || []).length) {
       const tot = b.combo.legs.reduce((p, l) => p * Number(l.odds), 1);

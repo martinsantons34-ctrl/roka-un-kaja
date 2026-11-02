@@ -1,7 +1,7 @@
 {
   "md": 4,
   "updatedAt": "2026-11-02T20:00:00Z",
-  "intro": "Visas 18 kārtas spēles: koeficienti, prognozes un spēlētāju izredzes gūt vārtus. Procenti aprēķināti no bukmeikeru koeficientiem (100 ÷ koeficients, ar bukmeikera uzcenojumu) vai ņemti no Fantasy Football Pundit modeļa (FFP). Tikai interesei.",
+  "intro": "Visas 18 kārtas spēles: koeficienti, prognozes un spēlētāju izredzes gūt vārtus. Procenti aprēķināti no bukmeikeru koeficientiem (100 ÷ koeficients, ar bukmeikera uzcenojumu) vai ņemti no statistikas modeļa (Fantasy Football Pundit). Tikai interesei.",
   "matches": [
     {
       "kickoff": "2026-11-03T18:45:00+01:00",
@@ -60,7 +60,7 @@
           "club": "Galatasaray",
           "odds": 1.85,
           "pct": 54,
-          "note": "Koeficients 1,80–1,91, FFP modelis: 52 %. Spēlēs, ja būs vesels.",
+          "note": "Koeficients 1,80–1,91, Modelis: 52 %. Spēlēs, ja būs vesels.",
           "ours": ""
         }
       ],
@@ -106,7 +106,7 @@
           "odds": 2.1,
           "pct": 48,
           "note": "3 vārti 157 minūtēs Čempionu līgā. Bez Dembelē viņš būs galvenais uzbrucējs.",
-          "ours": "renardsudris"
+          "ours": ""
         },
         {
           "name": "Desirē Dué",
@@ -117,7 +117,7 @@
           "ours": ""
         }
       ],
-      "ours": "Pacho (Maarels, renardsudris), Ferans Toress (renardsudris)",
+      "ours": "",
       "sources": [
         {
           "label": "Squawka",
@@ -159,7 +159,7 @@
           "odds": 2.0,
           "pct": 50,
           "note": "4 vārti 3 spēlēs, vārti 10 Čempionu līgas spēlēs pēc kārtas.",
-          "ours": "Arturs M, Maarels, renardsudris"
+          "ours": ""
         },
         {
           "name": "Aleksandrs Sērlots",
@@ -178,7 +178,7 @@
           "ours": ""
         }
       ],
-      "ours": "Kane (Arturs M, Maarels, renardsudris), Deiviss un Kimihs (Arturs M), Olise (Maarels, renardsudris)",
+      "ours": "",
       "sources": [
         {
           "label": "Covers",
@@ -199,12 +199,12 @@
       ],
       "featured": {
         "type": "svariga",
-        "why": "Kane ir trim no mums, Deiviss un Kimihs Arturam. Kārtas līdzsvarotākā spēle."
+        "why": "Kārtas līdzsvarotākā spēle: bukmeikeri nespēj izvēlēties favorītu, un Kane spēlē pret vienu no grūtākajām aizsardzībām."
       },
       "analysis": [
         "Kas uz spēles: abām komandām līgas fāzē ir labs starts, un šī ir kārtas vienīgā spēle, kur bukmeikeri nespēj izvēlēties favorītu. Pēc koeficientiem (bez bukmeikera uzcenojuma) iespējas ir Atleti 37 %, neizšķirts 25 %, Bayern 38 %.",
         "Kāpēc tik līdzīgi: Bayern ir labākā sastāvā spēlējošā komanda, bet uzbrukumā trūkst Musialas un Luisa Diasa, un Olise trenējas ar pārsietu ceļgalu. Atleti mājās „Metropolitano” stadionā ir neērts pretinieks, un viņu uzbrucēji Sērlots un Alvaress kopā ir bīstami (abiem ~36 % iespēja gūt vārtus). Prognozētāji ir sadalījušies: Squawka gaida 1:1, Sports Mole 2:1 Atleti, Covers iesaka „Atleti nezaudēs” un mazāk par 3,5 vārtiem, bet tips.gg „Bayern nezaudēs”.",
-        "Mums svarīgākais ir Kane. Viņš ir trim no mums (Arturam, Maarelam, renardsudris) un vārtus guvis 10 Čempionu līgas spēlēs pēc kārtas, bet koeficients 2,00 nozīmē, ka bukmeikeri viņam šoreiz dod tikai ~50 %. Pret Atleti aizsardzību vārti nav garantēti, tāpēc kā kapteinis viņš ir riskantāks nekā Mbappé pret AEK.",
+        "Kane vārtus guvis 10 Čempionu līgas spēlēs pēc kārtas, bet koeficients 2,00 nozīmē, ka bukmeikeri viņam šoreiz dod tikai ~50 %. Pret Atleti aizsardzību vārti nav garantēti, tāpēc viņa sērija šeit ir reālā pārbaudījumā.",
         "Kopsavilkums: tā ir spēle, kuru interesanti skatīties, bet grūti prognozēt. Ja kas, tad neizšķirts (4,00) ir loģiskākā „interešu” likme, jo to izvēlējās vairāki neatkarīgi prognozētāji."
       ]
     },
@@ -229,16 +229,16 @@
           "club": "Barcelona",
           "odds": 1.7,
           "pct": 59,
-          "note": "FFP modelis: 59 %.",
-          "ours": "Aleks"
+          "note": "Modelis: 59 %.",
+          "ours": ""
         },
         {
           "name": "Lamins Jamals",
           "club": "Barcelona",
           "odds": 1.9,
           "pct": 53,
-          "note": "Koeficients 1,80–1,95, FFP modelis: 54 %.",
-          "ours": "Aleks, Maarels, renardsudris"
+          "note": "Koeficients 1,80–1,95, Modelis: 54 %.",
+          "ours": ""
         },
         {
           "name": "Nikolass Džeksons",
@@ -246,10 +246,10 @@
           "odds": 3.1,
           "pct": 32,
           "note": "3 vārti Čempionu līgā.",
-          "ours": "Aleks"
+          "ours": ""
         }
       ],
-      "ours": "Jamals (Aleks, Maarels, renardsudris), Rafinja (Aleks), Rodri un Gavi (Arturs M), Bārklijs un Džeksons (Aleks)",
+      "ours": "",
       "sources": [
         {
           "label": "Racing Post",
@@ -266,13 +266,13 @@
       ],
       "featured": {
         "type": "svariga",
-        "why": "Jamals ir trim no mums, Rafinja Aleksam. Abu iespēja gūt vārtus pārsniedz 50 %."
+        "why": "Lielais favorīts pret Eiropā neuzvarēto Villu. Rafinjam un Jamalam abiem iespēja gūt vārtus pārsniedz 50 %."
       },
       "analysis": [
         "Kas uz spēles: Barcelona mājās ir kārtas otrais lielākais favorīts (iespēja uzvarēt ~77 %). Aston Villa gan Eiropā šosezon uzvarējusi visas trīs spēles un guvusi 12 vārtus, tāpēc tā nav vienkārša pretiniece.",
         "Tāpēc populārākā likme nav vienkārši Barcelona uzvara (1,22, kas ir ļoti zems koeficients), bet gan „abas komandas gūst vārtus” (1,50) vai „Barcelona uzvara un abas gūst vārtus” (2,05). Football Whispers prognozē 3:1, Statz 2:1.",
-        "Mums: Jamals ir trim no mums, Rafinja Aleksam, Rodri un Gavi Arturam, Bārklijs un Džeksons Aleksam. Rafinjam ir kārtas trešā lielākā iespēja gūt vārtus (59 %), Jamalam 53 %. Džeksonam kā Villas uzbrucējam ir ap 32 %.",
-        "Kopsavilkums: tā ir laba spēle fantasy punktiem uzbrucējiem, bet sliktāka Barcelona aizsargiem, jo Villa šosezon gūst vārtus gandrīz katrā spēlē."
+        "Vārtu guvēji: Rafinjam ir kārtas trešā lielākā iespēja gūt vārtus (59 %), Jamalam 53 %. Villas pusē Nikolasam Džeksonam ir ap 32 %, un viņš Čempionu līgā jau guvis 3 vārtus.",
+        "Kopsavilkums: sagaidāms vārtiem bagāts mačs. Barcelona uzvara ir ļoti ticama, bet Villa šosezon gūst vārtus gandrīz katrā spēlē, tāpēc sausā spēle Barcelonai nav garantēta (~36 %)."
       ]
     },
     {
@@ -308,7 +308,7 @@
           "ours": ""
         }
       ],
-      "ours": "Dibala (Aleks) ir savainots",
+      "ours": "",
       "sources": [
         {
           "label": "LiveScore",
@@ -421,7 +421,7 @@
           "club": "Bodø/Glimt",
           "odds": null,
           "pct": 50,
-          "note": "Tikai FFP modeļa vērtējums.",
+          "note": "Tikai modeļa vērtējums.",
           "ours": ""
         }
       ],
@@ -495,7 +495,7 @@
           "odds": 2.15,
           "pct": 47,
           "note": "",
-          "ours": "Aleks"
+          "ours": ""
         },
         {
           "name": "Kodijs Gakpo",
@@ -506,7 +506,7 @@
           "ours": ""
         }
       ],
-      "ours": "Van Dijks (Aleks, Maarels), Isaks un Edersons (Aleks)",
+      "ours": "",
       "sources": [
         {
           "label": "Football Whispers",
@@ -533,8 +533,8 @@
       "analysis": [
         "Kāpēc vērtība: Fenerbahçe uzvara mājās maksā 4,33 (~21 % pēc uzcenojuma noņemšanas). Squawka modelis viņiem dod 24 % un pats to sauc par vērtīgu likmi, jo tirgus Fenerbahçe vērtē vēl zemāk, tikai ~18 %.",
         "Argumenti: Liverpool ielaiduši vārtus visās trijās šīs Čempionu līgas spēlēs, un visās bija vismaz 3 vārti. Soboslai joprojām ir savainots, un Stambulas atmosfēra ir viena no grūtākajām Eiropā. Fenerbahçe guvuši vārtus abās savās mājas spēlēs.",
-        "Atšķirība starp modeli un tirgu gan ir neliela (24 % pret ~21 %), tāpēc vienprātīgāka likme ir „abas komandas gūst vārtus” (1,53–1,57). Isakam (Aleksa komandā) ir ~47 % iespēja gūt vārtus, Gakpo ~40 %.",
-        "Mums: van Dijks ir Aleksam un Maarelam, bet Liverpool sausās spēles iespēja ir tikai ~35 %."
+        "Atšķirība starp modeli un tirgu gan ir neliela (24 % pret ~21 %), tāpēc vienprātīgāka likme ir „abas komandas gūst vārtus” (1,53–1,57). Isakam ir ~47 % iespēja gūt vārtus, Gakpo ~40 %.",
+        "Liverpool sausās spēles iespēja ir tikai ~35 %, kas apstiprina, ka Stambulā gaidāmi vārti abos laukuma galos."
       ]
     },
     {
@@ -558,8 +558,8 @@
           "club": "Real Madrid",
           "odds": 1.42,
           "pct": 70,
-          "note": "Koeficients 1,40–1,44, FFP: 68 %. Vārti piecās spēlēs pēc kārtas.",
-          "ours": "Aleks, Maarels, renardsudris"
+          "note": "Koeficients 1,40–1,44, modelis: 68 %. Vārti piecās spēlēs pēc kārtas.",
+          "ours": ""
         },
         {
           "name": "Vinisiuss",
@@ -582,11 +582,11 @@
           "club": "Real Madrid",
           "odds": null,
           "pct": 55,
-          "note": "FFP modelis.",
+          "note": "Modelis.",
           "ours": ""
         }
       ],
-      "ours": "Mbappé (Aleks, Maarels, renardsudris), Kurtuā (Arturs M, renardsudris), Kukurelja (Arturs M)",
+      "ours": "",
       "sources": [
         {
           "label": "tips.gg",
@@ -607,13 +607,13 @@
       ],
       "featured": {
         "type": "svariga",
-        "why": "Mbappé ir trim no mums, un viņam ir kārtas lielākā iespēja gūt vārtus (~70 %)."
+        "why": "Kārtas drošākais favorīts, un Mbappé ir kārtas lielākā iespēja gūt vārtus (~70 %)."
       },
       "analysis": [
         "Kas uz spēles: Real ir kārtas pārliecinošākais favorīts izbraukumā (iespēja uzvarēt ~76 %, AEK koeficients 9,00). Realam gan trūkst Rodrigo un Asensio, un Valverde un Mendī ir apšaubāmi.",
-        "Mbappé ir kārtas „drošākais” vārtu guvējs: koeficients 1,40–1,44 nozīmē ~70 %, un arī Fantasy Football Pundit modelis dod 68 %. Viņš ir guvis vārtus piecās spēlēs pēc kārtas. Vinisiusa iespēja ir ap 40 %, Belingema ap 31 %.",
-        "Mums: Mbappé ir Aleksam, Maarelam un renardsudris, Kurtuā Arturam un renardsudris, Kukurelja Arturam. Realam ir kārtas otrā lielākā sausās spēles iespēja (42 %), kas ir labi Kurtuā un Kukureljas īpašniekiem.",
-        "Kopsavilkums: ja kādam vajag drošu kapteini, tad Mbappé pret AEK statistiski ir labākā izvēle kārtā. Spēle ir trešdien 19:45 pēc Latvijas laika, agrāk nekā lielākā daļa trešdienas spēļu (22:00)."
+        "Mbappé ir kārtas „drošākais” vārtu guvējs: koeficients 1,40–1,44 nozīmē ~70 %, un arī statistikas modelis dod 68 %. Viņš ir guvis vārtus piecās spēlēs pēc kārtas. Vinisiusa iespēja ir ap 40 %, Belingema ap 31 %.",
+        "Realam ir arī kārtas otrā lielākā sausās spēles iespēja (42 %). Tāpēc „Real uzvara un AEK negūst vārtus” ir loģiska kombinācija, lai gan AEK mājās parasti cīnās līdz galam.",
+        "Kopsavilkums: Mbappé vārti ir kārtas statistiski ticamākais notikums. Spēle ir trešdien 19:45 pēc Latvijas laika, agrāk nekā lielākā daļa trešdienas spēļu (22:00)."
       ]
     },
     {
@@ -693,11 +693,11 @@
           "club": "Man City",
           "odds": null,
           "pct": 61,
-          "note": "FFP modelis: 61 %. Iesitīs vai atdos rezultatīvu piespēli: 1,45.",
-          "ours": "Arturs M"
+          "note": "Modelis: 61 %. Iesitīs vai atdos rezultatīvu piespēli: 1,45.",
+          "ours": ""
         }
       ],
-      "ours": "Hālands (Arturs M), Šerkī un Matheuss Nunešs (Maarels)",
+      "ours": "",
       "sources": [
         {
           "label": "Squawka",
@@ -758,11 +758,11 @@
           "club": "Dortmund",
           "odds": 2.1,
           "pct": 48,
-          "note": "4 vārti 210 minūtēs, FFP: 50 %.",
+          "note": "4 vārti 210 minūtēs, modelis: 50 %.",
           "ours": ""
         }
       ],
-      "ours": "Lo Selso (Arturs M), Antonijs (renardsudris)",
+      "ours": "",
       "sources": [
         {
           "label": "Squawka",
@@ -815,7 +815,7 @@
           "ours": ""
         }
       ],
-      "ours": "De Breine un Rrahmani (Aleks)",
+      "ours": "",
       "sources": [
         {
           "label": "Betfair",
@@ -896,7 +896,7 @@
           "ours": ""
         }
       ],
-      "ours": "Gabriels (Aleks, renardsudris)",
+      "ours": "",
       "sources": [
         {
           "label": "Squawka",
@@ -920,8 +920,8 @@
       "vs": "AEK Athens",
       "pct": 70,
       "odds": 1.42,
-      "ours": "Aleks, Maarels, renardsudris",
-      "note": "Koeficients 1,40–1,44, FFP: 68 %. Vārti piecās spēlēs pēc kārtas."
+      "ours": "",
+      "note": "Koeficients 1,40–1,44, modelis: 68 %. Vārti piecās spēlēs pēc kārtas."
     },
     {
       "name": "Erlings Hālands",
@@ -929,8 +929,8 @@
       "vs": "Leipzig",
       "pct": 61,
       "odds": null,
-      "ours": "Arturs M",
-      "note": "FFP modelis: 61 %. Iesitīs vai atdos rezultatīvu piespēli: 1,45."
+      "ours": "",
+      "note": "Modelis: 61 %. Iesitīs vai atdos rezultatīvu piespēli: 1,45."
     },
     {
       "name": "Rafinja",
@@ -938,8 +938,8 @@
       "vs": "Aston Villa",
       "pct": 59,
       "odds": 1.7,
-      "ours": "Aleks",
-      "note": "FFP modelis: 59 %."
+      "ours": "",
+      "note": "Modelis: 59 %."
     },
     {
       "name": "Karloss Espi",
@@ -948,7 +948,7 @@
       "pct": 55,
       "odds": null,
       "ours": "",
-      "note": "FFP modelis."
+      "note": "Modelis."
     },
     {
       "name": "Osimhens",
@@ -957,7 +957,7 @@
       "pct": 54,
       "odds": 1.85,
       "ours": "",
-      "note": "Koeficients 1,80–1,91, FFP modelis: 52 %. Spēlēs, ja būs vesels."
+      "note": "Koeficients 1,80–1,91, Modelis: 52 %. Spēlēs, ja būs vesels."
     },
     {
       "name": "Lamins Jamals",
@@ -965,8 +965,8 @@
       "vs": "Aston Villa",
       "pct": 53,
       "odds": 1.9,
-      "ours": "Aleks, Maarels, renardsudris",
-      "note": "Koeficients 1,80–1,95, FFP modelis: 54 %."
+      "ours": "",
+      "note": "Koeficients 1,80–1,95, Modelis: 54 %."
     },
     {
       "name": "Harijs Kane",
@@ -974,7 +974,7 @@
       "vs": "Atleti",
       "pct": 50,
       "odds": 2.0,
-      "ours": "Arturs M, Maarels, renardsudris",
+      "ours": "",
       "note": "4 vārti 3 spēlēs, vārti 10 Čempionu līgas spēlēs pēc kārtas."
     },
     {
@@ -984,7 +984,7 @@
       "pct": 50,
       "odds": null,
       "ours": "",
-      "note": "Tikai FFP modeļa vērtējums."
+      "note": "Tikai modeļa vērtējums."
     },
     {
       "name": "Ferans Toress",
@@ -992,7 +992,7 @@
       "vs": "Villarreal",
       "pct": 48,
       "odds": 2.1,
-      "ours": "renardsudris",
+      "ours": "",
       "note": "3 vārti 157 minūtēs Čempionu līgā. Bez Dembelē viņš būs galvenais uzbrucējs."
     },
     {
@@ -1002,7 +1002,7 @@
       "pct": 48,
       "odds": 2.1,
       "ours": "",
-      "note": "4 vārti 210 minūtēs, FFP: 50 %."
+      "note": "4 vārti 210 minūtēs, modelis: 50 %."
     },
     {
       "name": "Donjels Malens",
@@ -1019,7 +1019,7 @@
       "vs": "Fenerbahçe",
       "pct": 47,
       "odds": 2.15,
-      "ours": "Aleks",
+      "ours": "",
       "note": ""
     },
     {
@@ -1046,13 +1046,13 @@
       "team": "Arsenal",
       "pct": 50.0,
       "vs": "Slavia",
-      "ours": "Gabriels (Aleks, renardsudris)"
+      "ours": ""
     },
     {
       "team": "Real Madrid",
       "pct": 41.7,
       "vs": "AEK",
-      "ours": "Kurtuā (Arturs M, renardsudris), Kukurelja (Arturs M)"
+      "ours": ""
     },
     {
       "team": "LASK",
@@ -1076,7 +1076,7 @@
       "team": "Liverpool",
       "pct": 34.5,
       "vs": "Fenerbahçe",
-      "ours": "Van Dijks (Aleks, Maarels)"
+      "ours": ""
     }
   ],
   "cleanSrc": {
@@ -1138,11 +1138,11 @@
         ]
       },
       {
-        "h": "Ko tas nozīmē mūsu līgai",
+        "h": "Vārtu guvēji un sausās spēles",
         "p": [
-          "Kapteinis: statistiski drošākais ir Mbappé pret AEK (~70 % iespēja gūt vārtus). Hālands pie Leipzig ir 61 %, bet pēc sasituma nav simtprocentīgi drošs. Kane pret Atleti ir ~50 %, jo pretinieks ir daudz grūtāks nekā iepriekšējās kārtās.",
-          "Uzmanību: Dembelē (Arturs M) un Kvaraschēlija (Maarels) nespēlēs, Dibala (Aleks) ir savainots, De Breines (Aleks) dalība ir apšaubāma, Olise (Maarels, renardsudris) varētu spēlēt ar pārsietu ceļgalu.",
-          "Aizsargiem un vārtsargiem labākās iespējas uz sauso spēli ir Arsenal (50 %, Gabriels: Aleks, renardsudris) un Real (42 %, Kurtuā: Arturs M, renardsudris)."
+          "Statistiski ticamākais vārtu guvējs ir Mbappé pret AEK (~70 %), tālāk seko Hālands pie Leipzig (61 %, pēc sasituma gan nav simtprocentīgi drošs) un Rafinja pret Villu (59 %). Kane pret Atleti ir ~50 %, jo pretinieks ir daudz grūtāks nekā iepriekšējās kārtās.",
+          "Traumas maina ainu: PSG nespēlēs Dembelē un Kvaraschēlija, Romai trūks Dibalas un Pellegrīni, Liverpoolam Soboslai, Bayern Musialas un Luisa Diasa.",
+          "Lielākās sausās spēles iespējas ir Arsenal (50 %, pie Slavia) un Real (42 %, pie AEK)."
         ]
       },
       {
