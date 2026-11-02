@@ -411,10 +411,23 @@ footer { font-size: 13px; color: var(--muted); }
 .bet-more { margin-top: 12px; width: 100%; padding: 10px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--accent); font: 800 15px var(--body); cursor: pointer; }
 .bet-more:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .bet-warn { font-size: 12px; color: var(--muted); border-left: 3px solid var(--fire); padding: 4px 0 4px 10px; margin-top: 14px; }
+
+/* Page tabs: "Sākums" = the whole league page, "Likmes" = the betting section alone, like a separate page */
+.page-tabs { position: sticky; top: 0; z-index: 20; margin: 0 -16px -30px; padding: 8px 16px; display: flex; gap: 8px; background: var(--sky-1); border-bottom: 1px solid color-mix(in srgb, var(--line) 60%, transparent); }
+.page-tabs a { flex: 1; text-align: center; font: 800 15px var(--body); padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); text-decoration: none; }
+.page-tabs a[aria-current="page"] { background: var(--oak); border-color: var(--oak); color: #fff; }
+.page-tabs a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+body:not(.view-bets) #likmes { display: none; }
+body.view-bets .wrap > :not(.page-tabs):not(#likmes) { display: none; }
+body.view-bets #likmes { padding-top: 26px; }
 </style>
 </head>
 <body>
 <div class="wrap">
+  <nav class="page-tabs" aria-label="Lapas">
+    <a href="#sakums" data-view="home">🏠 Sākums</a>
+    <a href="#likmes" data-view="bets">🎯 Likmes</a>
+  </nav>
   <div class="sky">
   <button type="button" class="prize-btn" id="prizeBtn" data-video="seja.mp4"><span class="var-screen">
     <span class="var-live">Tiešraide</span><span class="var-title">Nespied! <span class="var-new">(jaunums)</span></span><span class="var-sub">🚫 Nopietni, labāk nespied… 👀</span>
@@ -463,8 +476,6 @@ footer { font-size: 13px; color: var(--muted); }
     <h2 data-pg="P303">Nākamā kārta</h2>
     <div class="next" id="nextRound"><div class="empty">Ielādē…</div></div>
   </section>
-
-  <div class="ornament" aria-hidden="true"></div>
 
   <section id="likmes" aria-live="polite">
     <h2>Likmes</h2>
@@ -973,6 +984,17 @@ footer { font-size: 13px; color: var(--muted); }
     if (b.disclaimer) extra += `<p class="bet-warn">${esc(b.disclaimer)}</p>`;
     document.getElementById("betExtra").innerHTML = extra;
   }
+  // ---- Lapas: Sākums / Likmes (#likmes) ----
+  function setView(scroll) {
+    const bets = location.hash === "#likmes";
+    const changed = document.body.classList.contains("view-bets") !== bets || location.hash === "#sakums";
+    document.body.classList.toggle("view-bets", bets);
+    document.querySelectorAll(".page-tabs a").forEach(a => a.setAttribute("aria-current", (a.dataset.view === "bets") === bets ? "page" : "false"));
+    if (scroll && changed) window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", () => setView(true));
+  setView(location.hash === "#likmes");
+
   fetch("bets.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(renderBets)
     .catch(() => { document.getElementById("betList").innerHTML = '<div class="empty">Neizdevās ielādēt likmes.</div>'; });
 
