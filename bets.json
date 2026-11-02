@@ -200,7 +200,13 @@
       "featured": {
         "type": "svariga",
         "why": "Kane ir trim no mums, Deiviss un Kimihs Arturam. Kārtas līdzsvarotākā spēle."
-      }
+      },
+      "analysis": [
+        "Kas uz spēles: abām komandām līgas fāzē ir labs starts, un šī ir kārtas vienīgā spēle, kur bukmeikeri nespēj izvēlēties favorītu. Pēc koeficientiem (bez bukmeikera uzcenojuma) iespējas ir Atleti 37 %, neizšķirts 25 %, Bayern 38 %.",
+        "Kāpēc tik līdzīgi: Bayern ir labākā sastāvā spēlējošā komanda, bet uzbrukumā trūkst Musialas un Luisa Diasa, un Olise trenējas ar pārsietu ceļgalu. Atleti mājās „Metropolitano” stadionā ir neērts pretinieks, un viņu uzbrucēji Sērlots un Alvaress kopā ir bīstami (abiem ~36 % iespēja gūt vārtus). Prognozētāji ir sadalījušies: Squawka gaida 1:1, Sports Mole 2:1 Atleti, Covers iesaka „Atleti nezaudēs” un mazāk par 3,5 vārtiem, bet tips.gg „Bayern nezaudēs”.",
+        "Mums svarīgākais ir Kane. Viņš ir trim no mums (Arturam, Maarelam, renardsudris) un vārtus guvis 10 Čempionu līgas spēlēs pēc kārtas, bet koeficients 2,00 nozīmē, ka bukmeikeri viņam šoreiz dod tikai ~50 %. Pret Atleti aizsardzību vārti nav garantēti, tāpēc kā kapteinis viņš ir riskantāks nekā Mbappé pret AEK.",
+        "Kopsavilkums: tā ir spēle, kuru interesanti skatīties, bet grūti prognozēt. Ja kas, tad neizšķirts (4,00) ir loģiskākā „interešu” likme, jo to izvēlējās vairāki neatkarīgi prognozētāji."
+      ]
     },
     {
       "kickoff": "2026-11-03T21:00:00+01:00",
@@ -261,7 +267,13 @@
       "featured": {
         "type": "svariga",
         "why": "Jamals ir trim no mums, Rafinja Aleksam. Abu iespēja gūt vārtus pārsniedz 50 %."
-      }
+      },
+      "analysis": [
+        "Kas uz spēles: Barcelona mājās ir kārtas otrais lielākais favorīts (iespēja uzvarēt ~77 %). Aston Villa gan Eiropā šosezon uzvarējusi visas trīs spēles un guvusi 12 vārtus, tāpēc tā nav vienkārša pretiniece.",
+        "Tāpēc populārākā likme nav vienkārši Barcelona uzvara (1,22, kas ir ļoti zems koeficients), bet gan „abas komandas gūst vārtus” (1,50) vai „Barcelona uzvara un abas gūst vārtus” (2,05). Football Whispers prognozē 3:1, Statz 2:1.",
+        "Mums: Jamals ir trim no mums, Rafinja Aleksam, Rodri un Gavi Arturam, Bārklijs un Džeksons Aleksam. Rafinjam ir kārtas trešā lielākā iespēja gūt vārtus (59 %), Jamalam 53 %. Džeksonam kā Villas uzbrucējam ir ap 32 %.",
+        "Kopsavilkums: tā ir laba spēle fantasy punktiem uzbrucējiem, bet sliktāka Barcelona aizsargiem, jo Villa šosezon gūst vārtus gandrīz katrā spēlē."
+      ]
     },
     {
       "kickoff": "2026-11-03T21:00:00+01:00",
@@ -380,7 +392,13 @@
         "type": "vertiba",
         "why": "Feyenoord uzvara 4,50 (iespēja pēc koeficienta 22 %), bet Wincomparator modelis dod 34 %. Feyenoord mājās šosezon nav zaudējuši."
       },
-      "valueSide": "1"
+      "valueSide": "1",
+      "analysis": [
+        "Kāpēc vērtība: bukmeikeri Feyenoord uzvarai mājās dod 4,50, kas pēc uzcenojuma noņemšanas ir tikai ~21 % iespēja. Wincomparator modelis Feyenoord dod 34 %, un MightyTips iesaka „Feyenoord uzvara vai neizšķirts” (2,06).",
+        "Argumenti par Feyenoord: šosezon „De Kuip” stadionā viņi vēl nav zaudējuši, un Hadžs Musa sezonā guvis 6 vārtus 9 spēlēs. Interam, iespējams, trūks Lautaro Martinesa, tāpēc uzbrukumā spēlēs Tirāms (2,20), Espozito (2,35) vai Bonī (2,60).",
+        "Argumenti pret: lielākā daļa prognožu tik un tā gaida Inter uzvaru ar 2:1 vai 3:1 (Statz Interam dod 59 %). Modeļi savā starpā ievērojami atšķiras, tāpēc „vērtība” šeit ir drīzāk pazīme, ka bukmeikeri Feyenoord varētu nedaudz par zemu novērtēt, nevis paredzējums, ka Feyenoord uzvarēs.",
+        "Drošāka alternatīva ir „vairāk par 2,5 vārtiem” (1,42), kam piekrīt vairāki avoti."
+      ]
     },
     {
       "kickoff": "2026-11-03T21:00:00+01:00",
@@ -511,7 +529,13 @@
         "type": "vertiba",
         "why": "Fenerbahçe uzvara 4,33. Squawka modelis dod Fenerbahçe 24 %, kamēr tirgus tikai ~18 %, un pats Squawka to sauc par vērtīgu likmi."
       },
-      "valueSide": "1"
+      "valueSide": "1",
+      "analysis": [
+        "Kāpēc vērtība: Fenerbahçe uzvara mājās maksā 4,33 (~21 % pēc uzcenojuma noņemšanas). Squawka modelis viņiem dod 24 % un pats to sauc par vērtīgu likmi, jo tirgus Fenerbahçe vērtē vēl zemāk, tikai ~18 %.",
+        "Argumenti: Liverpool ielaiduši vārtus visās trijās šīs Čempionu līgas spēlēs, un visās bija vismaz 3 vārti. Soboslai joprojām ir savainots, un Stambulas atmosfēra ir viena no grūtākajām Eiropā. Fenerbahçe guvuši vārtus abās savās mājas spēlēs.",
+        "Atšķirība starp modeli un tirgu gan ir neliela (24 % pret ~21 %), tāpēc vienprātīgāka likme ir „abas komandas gūst vārtus” (1,53–1,57). Isakam (Aleksa komandā) ir ~47 % iespēja gūt vārtus, Gakpo ~40 %.",
+        "Mums: van Dijks ir Aleksam un Maarelam, bet Liverpool sausās spēles iespēja ir tikai ~35 %."
+      ]
     },
     {
       "kickoff": "2026-11-04T18:45:00+01:00",
@@ -584,7 +608,13 @@
       "featured": {
         "type": "svariga",
         "why": "Mbappé ir trim no mums, un viņam ir kārtas lielākā iespēja gūt vārtus (~70 %)."
-      }
+      },
+      "analysis": [
+        "Kas uz spēles: Real ir kārtas pārliecinošākais favorīts izbraukumā (iespēja uzvarēt ~76 %, AEK koeficients 9,00). Realam gan trūkst Rodrigo un Asensio, un Valverde un Mendī ir apšaubāmi.",
+        "Mbappé ir kārtas „drošākais” vārtu guvējs: koeficients 1,40–1,44 nozīmē ~70 %, un arī Fantasy Football Pundit modelis dod 68 %. Viņš ir guvis vārtus piecās spēlēs pēc kārtas. Vinisiusa iespēja ir ap 40 %, Belingema ap 31 %.",
+        "Mums: Mbappé ir Aleksam, Maarelam un renardsudris, Kurtuā Arturam un renardsudris, Kukurelja Arturam. Realam ir kārtas otrā lielākā sausās spēles iespēja (42 %), kas ir labi Kurtuā un Kukureljas īpašniekiem.",
+        "Kopsavilkums: ja kādam vajag drošu kapteini, tad Mbappé pret AEK statistiski ir labākā izvēle kārtā. Spēle ir trešdien 19:45 pēc Latvijas laika, agrāk nekā lielākā daļa trešdienas spēļu (22:00)."
+      ]
     },
     {
       "kickoff": "2026-11-04T21:00:00+01:00",
@@ -634,7 +664,13 @@
         "type": "vertiba",
         "why": "Club Brugge uzvara 2,90 (34 %), bet Wincomparator modelis Brugge dod 40 %, un ATS iesaka Brugge ar „draw no bet”."
       },
-      "valueSide": "2"
+      "valueSide": "2",
+      "analysis": [
+        "Kāpēc vērtība: bukmeikeri nedaudz favorizē PSV mājās (iespēja ~45 %), bet Wincomparator modelis domā, ka favorīte ir Club Brugge (40 % pret PSV 36 %). Brugge uzvara maksā 2,90 (~33 %), tāpēc modelis to vērtē augstāk par tirgu. ATS iesaka Brugge ar „draw no bet” (ja neizšķirts, likme atgriežas).",
+        "Galvenais iemesls ir Nikolo Tresoldi, viens no Čempionu līgas vārtu guvēju līderiem (4 vārti no 12 sitieniem 255 minūtēs). Brugge uzbrukums šosezon ir ļoti efektīvs.",
+        "Prognozes gan krasi atšķiras: Foresportia modelis PSV dod 52 %, bet Squawka gaida 2:1 PSV. Vienīgais, kam lielākā daļa piekrīt, ir vārti: Squawka „vairāk par 2,5” (1,33), WhoScored arī.",
+        "Kopsavilkums: ja interesē „modelis pret bukmeikeri” eksperiments, šī ir labākā spēle, jo vērtības pazīme ir pie diezgan zema koeficienta, nevis pie autsaidera."
+      ]
     },
     {
       "kickoff": "2026-11-04T21:00:00+01:00",
@@ -1076,5 +1112,45 @@
   ],
   "disclaimer": "Šī ir izklaide un apskats, nevis padoms likt naudu. Koeficienti ņemti no publiskām prognožu lapām un bukmeikeru vietnēm (2. novembris) un var būt mainījušies. Procenti no koeficientiem ietver bukmeikera uzcenojumu. Azartspēles tikai no 18 gadiem. Palīdzība: www.spelesatkariba.lv",
   "oddsNote": "Betsafe koeficientus no mana servera nevar nolasīt, jo Betsafe bloķē piekļuvi no tās valsts, kur atrodas serveris. Tāpēc koeficienti ņemti no citiem bukmeikeriem un salīdzināšanas vietnēm. Betsafe koeficienti var nedaudz atšķirties, tāpēc pirms likmes paskaties Betsafe.",
-  "valueNote": "„Vērtība” nozīmē, ka kāds neatkarīgs modelis rezultātam dod lielāku iespēju nekā bukmeikera koeficients. Tas nav garantēts laimests, tikai pazīme, ka koeficients varētu būt pārāk augsts."
+  "valueNote": "„Vērtība” nozīmē, ka kāds neatkarīgs modelis rezultātam dod lielāku iespēju nekā bukmeikera koeficients. Tas nav garantēts laimests, tikai pazīme, ka koeficients varētu būt pārāk augsts.",
+  "review": {
+    "title": "4. kārtas apskats",
+    "sections": [
+      {
+        "h": "Kopaina",
+        "p": [
+          "Pēc trim kārtām ar 9 punktiem ir PSG, Real, Liverpool un Aston Villa, Arsenal ir 7, Barcelona 6. 4. kārtā lielākie favorīti visi spēlē pret vājākajām komandām: Real pie AEK (~76 %), Barcelona pret Villa (~77 %), Arsenal pie Slavia (~75 %). Bukmeikeru vērtējumā tā ir kārta bez lieliem pārsteigumiem.",
+          "Lielākā nezināmā ir PSG. Līdere brauc uz Villarreal bez Dembelē (augšstilba trauma, ~3 nedēļas), Kvaraschēlijas (plīsusi krusteniskā saite, sezona galā), Markiņoša un Nuno Mendeša. Koeficients 1,58 atbilst ~57–63 % iespējai, bet Statz modelis dod tikai 54 %. Tā ir kārtas skaidrākā pazīme, ka favorīts varētu būt pārvērtēts."
+        ]
+      },
+      {
+        "h": "Kur modeļi nepiekrīt bukmeikeriem",
+        "p": [
+          "Trīs spēlēs neatkarīgi modeļi autsaideram vai mazākajam favorītam dod lielāku iespēju nekā koeficients: Feyenoord pret Inter (34 % pret 21 %), Club Brugge pret PSV (40 % pret 33 %) un Fenerbahçe pret Liverpool (24 % pret 21 %). Tās nav prognozes, ka šīs komandas uzvarēs. Tā ir pazīme, ka koeficients varētu būt augstāks, nekā vajadzētu.",
+          "Bukmeikeri ieliek savu peļņu (uzcenojumu) koeficientos: šajā kārtā tas ir no ~2 % (Leipzig – City) līdz ~10 % (Villarreal – PSG). Tāpēc, salīdzinot procentus, vienmēr jāatceras, ka bukmeikera procenti kopā pārsniedz 100 %."
+        ]
+      },
+      {
+        "h": "Vārti",
+        "p": [
+          "Kārtas lielā tendence: daudz vārtu. Sešās spēlēs galvenais ieteikums ir „abas komandas gūst vārtus” (Barcelona – Villa, Man Utd – Roma, Fenerbahçe – Liverpool, Viking – Sabah, Dortmund – Betis, Porto – Napoli), bet vēl vairākās „vairāk par 2,5 vārtiem”. Liverpool, Dortmund un Shakhtar ielaiduši vārtus visās trijās spēlēs.",
+          "Izņēmums ir Atleti – Bayern, kur Covers iesaka mazāk par 3,5 vārtiem. Lielas spēles starp līdzvērtīgām komandām bieži ir piesardzīgākas."
+        ]
+      },
+      {
+        "h": "Ko tas nozīmē mūsu līgai",
+        "p": [
+          "Kapteinis: statistiski drošākais ir Mbappé pret AEK (~70 % iespēja gūt vārtus). Hālands pie Leipzig ir 61 %, bet pēc sasituma nav simtprocentīgi drošs. Kane pret Atleti ir ~50 %, jo pretinieks ir daudz grūtāks nekā iepriekšējās kārtās.",
+          "Uzmanību: Dembelē (Arturs M) un Kvaraschēlija (Maarels) nespēlēs, Dibala (Aleks) ir savainots, De Breines (Aleks) dalība ir apšaubāma, Olise (Maarels, renardsudris) varētu spēlēt ar pārsietu ceļgalu.",
+          "Aizsargiem un vārtsargiem labākās iespējas uz sauso spēli ir Arsenal (50 %, Gabriels: Aleks, renardsudris) un Real (42 %, Kurtuā: Arturs M, renardsudris)."
+        ]
+      },
+      {
+        "h": "Pirms spēles",
+        "p": [
+          "Koeficienti mainās līdz pat sākuma svilpei, īpaši pēc sastāvu paziņošanas, kas notiek apmēram stundu pirms spēles. Ja interesē kāds vārtu guvējs, vispirms pārbaudi, vai viņš ir pamatsastāvā. Betsafe koeficienti var nedaudz atšķirties no šeit norādītajiem."
+        ]
+      }
+    ]
+  }
 }

@@ -408,6 +408,13 @@ footer { font-size: 13px; color: var(--muted); }
 .bet-odd.val { background: color-mix(in srgb, var(--cheese) 30%, var(--chip)); box-shadow: inset 0 0 0 2px var(--cheese); }
 .bet-hint .lg { font-weight: 700; padding-left: 8px; border-left: 4px solid var(--accent); }
 .bet-hint .lg.v { border-left-color: var(--cheese); }
+.bet-analysis { display: grid; gap: 8px; padding: 12px 14px; border-radius: 12px; background: color-mix(in srgb, var(--accent) 7%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--line)); }
+.bet-card.vertiba .bet-analysis { background: color-mix(in srgb, var(--cheese) 10%, var(--surface)); border-color: color-mix(in srgb, var(--cheese) 40%, var(--line)); }
+.bet-analysis .ttl { font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.bet-analysis p, .bet-review p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink); max-width: none; }
+.bet-review { margin-top: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px 18px; display: grid; gap: 10px; }
+.bet-review h3 { font-family: var(--display); font-weight: 800; font-size: 26px; text-transform: uppercase; line-height: 1.05; margin: 0; }
+.bet-review h4 { font-family: var(--display); font-weight: 800; font-size: 18px; text-transform: uppercase; margin: 8px 0 0; color: var(--accent); }
 .bet-more { margin-top: 12px; width: 100%; padding: 10px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--accent); font: 800 15px var(--body); cursor: pointer; }
 .bet-more:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .bet-warn { font-size: 12px; color: var(--muted); border-left: 3px solid var(--fire); padding: 4px 0 4px 10px; margin-top: 14px; }
@@ -959,13 +966,14 @@ body.view-bets #likmes { padding-top: 26px; }
     const minis = `<h3 class="bet-sub" style="margin-top:0">Visas spēles</h3><p class="bet-hint">Pieskaries spēlei, lai redzētu prognozi un vārtu guvējus. <span class="lg s">Zaļa josla</span> nozīmē svarīgu spēli mums, <span class="lg v">dzeltena</span> spēli ar vērtību.</p><div class="bet-minis">`
       + ms.map(m => `<details class="bet-mini${m.featured ? " is-" + m.featured.type : ""}">
           <summary><span class="mt"><span class="tm">${esc(when(m.kickoff))}</span><span class="tn">${esc(m.home)} – ${esc(m.away)}</span></span>${oddsCells(m, true)}</summary>
-          <div class="mini-body">${m.featured ? `<span class="bet-badge ${m.featured.type}">${BADGE[m.featured.type]}</span><p class="bet-why">${esc(m.featured.why)}</p>` : ""}${body(m)}</div>
+          <div class="mini-body">${m.featured ? `<span class="bet-badge ${m.featured.type}">${BADGE[m.featured.type]}</span><p class="bet-why">${esc(m.featured.why)}</p>` : ""}${body(m)}${(m.analysis || []).length ? `<div class="bet-analysis"><span class="ttl">Plašāk par spēli</span>${m.analysis.map(t => `<p>${esc(t)}</p>`).join("")}</div>` : ""}</div>
         </details>`).join("") + `</div>`;
     list.innerHTML = minis + (feat.length ? `<h3 class="bet-sub">Izceltās spēles</h3>` : "") + feat.map(m => `<article class="bet-card ${m.featured.type}">
         <span class="bet-badge ${m.featured.type}">${BADGE[m.featured.type] || ""}</span>
         <div class="bet-head"><span class="bet-teams">${esc(m.home)} – ${esc(m.away)}</span><span class="bet-time">${esc(when(m.kickoff))}</span></div>
         ${m.featured.why ? `<p class="bet-why">${esc(m.featured.why)}</p>` : ""}
         ${oddsCells(m, false)}${body(m)}
+        ${(m.analysis || []).length ? `<div class="bet-analysis"><span class="ttl">Plašāk par spēli</span>${m.analysis.map(t => `<p>${esc(t)}</p>`).join("")}</div>` : ""}
       </article>`).join("");
     let extra = "";
     if ((b.scorers || []).length) {
@@ -978,6 +986,9 @@ body.view-bets #likmes { padding-top: 26px; }
       const tot = b.combo.legs.reduce((p, l) => p * Number(l.odds), 1);
       extra += `<h3 class="bet-sub">${esc(b.combo.title || "Ekspresis")}</h3><div class="bet-combo">${b.combo.legs.map(l => `<div class="leg"><span>${esc(l.match)}: ${esc(l.pick)}</span><span>${num(l.odds)}</span></div>`).join("")}
         <div class="tot"><span>Kopējais koeficients</span><b>${num(tot)}</b></div>${b.combo.note ? `<small>${esc(b.combo.note)}</small>` : ""}</div>`;
+    }
+    if (b.review && (b.review.sections || []).length) {
+      extra += `<article class="bet-review"><h3>${esc(b.review.title || "Kārtas apskats")}</h3>${b.review.sections.map(sec => `<h4>${esc(sec.h)}</h4>${(sec.p || []).map(t => `<p>${esc(t)}</p>`).join("")}`).join("")}</article>`;
     }
     if (b.valueNote) extra += `<p class="bet-warn" style="border-left-color:var(--cheese)">${esc(b.valueNote)}</p>`;
     if (b.oddsNote) extra += `<p class="bet-warn" style="border-left-color:var(--cornflower)">${esc(b.oddsNote)}</p>`;
