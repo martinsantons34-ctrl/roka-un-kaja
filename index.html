@@ -415,6 +415,25 @@ footer { font-size: 13px; color: var(--muted); }
 .bet-review { margin-top: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px 18px; display: grid; gap: 10px; }
 .bet-review h3 { font-family: var(--display); font-weight: 800; font-size: 26px; text-transform: uppercase; line-height: 1.05; margin: 0; }
 .bet-review h4 { font-family: var(--display); font-weight: 800; font-size: 18px; text-transform: uppercase; margin: 8px 0 0; color: var(--accent); }
+.bet-result { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; padding: 8px 10px; border-radius: 10px; background: var(--chip); font-size: 14px; }
+.bet-result b { font-family: var(--display); font-size: 20px; font-variant-numeric: tabular-nums; }
+.bet-result p { flex-basis: 100%; margin: 0; font-size: 13px; color: var(--muted); }
+.hit { font-size: 11px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; border-radius: 999px; padding: 1px 8px; white-space: nowrap; }
+.hit.ok { background: color-mix(in srgb, var(--up) 18%, transparent); color: var(--up); }
+.hit.no { background: color-mix(in srgb, var(--down) 15%, transparent); color: var(--down); }
+.bet-mini .tm .res, .bet-time .res { color: var(--ink); font-size: 13px; font-variant-numeric: tabular-nums; }
+.bp.scored .nm { color: var(--up); }
+.bet-odd.won { outline: 2px solid var(--ink); outline-offset: -2px; }
+.bp.missed { opacity: .6; }
+.bet-recap { background: var(--surface); border: 2px solid var(--accent); border-radius: 16px; padding: 14px 16px; display: grid; gap: 10px; margin-bottom: 14px; }
+.bet-recap h3 { font-family: var(--display); font-weight: 800; font-size: 22px; text-transform: uppercase; margin: 0; }
+.bet-recap p { margin: 0; font-size: 15px; color: var(--ink); max-width: none; }
+.rc-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 8px; }
+.rc-stats span { background: var(--chip); border-radius: 12px; padding: 8px; text-align: center; display: grid; }
+.rc-stats b { font-family: var(--display); font-size: 26px; line-height: 1; }
+.rc-stats small { font-size: 11px; color: var(--muted); }
+.rc-stats b i { font-style: normal; font-size: 16px; color: var(--muted); }
+#betTabs { margin: 4px 0 10px; }
 .bet-more { margin-top: 12px; width: 100%; padding: 10px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--accent); font: 800 15px var(--body); cursor: pointer; }
 .bet-more:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .bet-warn { font-size: 12px; color: var(--muted); border-left: 3px solid var(--fire); padding: 4px 0 4px 10px; margin-top: 14px; }
@@ -486,7 +505,9 @@ body.view-bets #likmes { padding-top: 26px; }
 
   <section id="likmes" aria-live="polite">
     <h2>Likmes</h2>
+    <div class="md-tabs" id="betTabs" role="tablist" aria-label="Kārta"></div>
     <p class="bet-intro" id="betIntro">Ko par nākamo kārtu saka bukmeikeri un prognožu lapas. Tikai interesei.</p>
+    <div id="betRecap"></div>
     <ul class="bet-insights" id="betInsights" hidden></ul>
     <div class="bet-list" id="betList"><div class="empty">Ielādē…</div></div>
     <div id="betExtra"></div>
@@ -930,29 +951,64 @@ body.view-bets #likmes { padding-top: 26px; }
     return `<div class="bet-prob" aria-hidden="true"><i class="h" style="width:${h}%"></i><i class="d" style="width:${d}%"></i><i class="a" style="width:${a}%"></i></div>
       <div class="bet-probtxt"><span>${esc(m.home)} ${Math.round(h)} %</span><span>neizšķirts ${Math.round(d)} %</span><span>${esc(m.away)} ${Math.round(a)} %</span></div>`;
   }
+  function hitMark(m) { return m.hit === true ? '<span class="hit ok">✓ prognoze</span>' : m.hit === false ? '<span class="hit no">✗ prognoze</span>' : ""; }
+  function resultHtml(m) {
+    if (!m.result) return "";
+    return `<div class="bet-result"><span>Rezultāts: <b>${esc(m.result.h)}:${esc(m.result.a)}</b></span>${m.hit === true ? '<span class="hit ok">✓ Ieteikums izdevās</span>' : m.hit === false ? '<span class="hit no">✗ Ieteikums neizdevās</span>' : ""}${m.resultNote ? `<p>${esc(m.resultNote)}</p>` : ""}</div>`;
+  }
+  function recapHtml(b) {
+    const ms = (b && b.matches) || [];
+    const done = ms.filter(m => m.result), judged = ms.filter(m => m.hit === true || m.hit === false), hits = judged.filter(m => m.hit).length;
+    const pl = [].concat(...ms.map(m => m.players || [])).filter(p => p.scored === true || p.scored === false), plHits = pl.filter(p => p.scored).length;
+    const r = b && b.recap;
+    if (!done.length && !r) return "";
+    return `<article class="bet-recap"><h3>${esc((r && r.title) || "Prognozes pret realitāti")}</h3>
+      <div class="rc-stats"><span><b>${done.length}<i>/${ms.length}</i></b><small>spēles nospēlētas</small></span>${judged.length ? `<span><b>${hits}<i>/${judged.length}</i></b><small>ieteikumi izdevās</small></span>` : ""}${pl.length ? `<span><b>${plHits}<i>/${pl.length}</i></b><small>minētie spēlētāji guva vārtus</small></span>` : ""}</div>
+      ${((r && r.p) || []).map(t => `<p>${esc(t)}</p>`).join("")}</article>`;
+  }
+  let betData = null;
+  function loadBets(data) {
+    if (!data) throw new Error("no data");
+    const rounds = (data.rounds || [data]).filter(r => r && r.md).sort((a, b) => Number(a.md) - Number(b.md));
+    const tabs = document.getElementById("betTabs");
+    betData = rounds;
+    const pick = md => {
+      tabs.querySelectorAll("button").forEach(b => b.setAttribute("aria-selected", String(Number(b.dataset.md) === Number(md))));
+      renderBets(rounds.find(r => Number(r.md) === Number(md)));
+    };
+    tabs.innerHTML = rounds.map(r => `<button type="button" role="tab" data-md="${esc(r.md)}">${esc(r.md)}. kārta</button>`).join("");
+    tabs.hidden = !rounds.length;
+    tabs.onclick = e => { const b = e.target.closest("button"); if (b) pick(b.dataset.md); };
+    const cur = rounds.some(r => Number(r.md) === Number(data.current)) ? data.current : (rounds.length ? rounds[rounds.length - 1].md : null);
+    if (cur != null) pick(cur); else renderBets(null);
+  }
   function playerRowBet(p) {
     const od = p.odds ? Number(p.odds).toFixed(2).replace(".", ",") : "";
-    return `<div class="bp"><span class="nm">${esc(p.name)}</span><span class="pc">${pctTxt(p.pct)}</span><span class="od">${od}</span>
+    return `<div class="bp${p.scored === true ? " scored" : p.scored === false ? " missed" : ""}"><span class="nm">${esc(p.name)}${p.scored === true ? " ⚽" : ""}</span><span class="pc">${pctTxt(p.pct)}</span><span class="od">${od}</span>
       ${p.pct ? `<span class="bar"><i style="width:${Math.min(100, p.pct)}%"></i></span>` : ""}${p.note ? `<span class="nt">${esc(p.note)}</span>` : ""}</div>`;
   }
   function renderBets(b) {
     const list = document.getElementById("betList");
     const ins = document.getElementById("betInsights");
-    if (b && (b.insights || []).length) { ins.innerHTML = b.insights.map(t => `<li>${esc(t)}</li>`).join(""); ins.hidden = false; }
+    ins.hidden = !(b && (b.insights || []).length);
+    ins.innerHTML = ins.hidden ? "" : b.insights.map(t => `<li>${esc(t)}</li>`).join("");
+    document.getElementById("betRecap").innerHTML = recapHtml(b);
     const ms = ((b && b.matches) || []).slice().sort((x, y) => String(x.kickoff).localeCompare(String(y.kickoff)));
-    if (!ms.length) { list.innerHTML = '<div class="empty">Likmju apskats parādīsies pirms nākamās kārtas.</div>'; return; }
+    if (!ms.length) { list.innerHTML = '<div class="empty">Likmju apskats parādīsies pirms nākamās kārtas.</div>'; document.getElementById("betExtra").innerHTML = ""; return; }
     const num = v => v == null ? "–" : Number(v).toFixed(2).replace(".", ",");
     const when = d => { const x = new Date(d); return isNaN(x) ? "" : x.toLocaleString("lv-LV", { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }); };
-    if (b.intro) document.getElementById("betIntro").textContent = (b.md ? b.md + ". kārta. " : "") + b.intro;
+    document.getElementById("betIntro").textContent = (b.md ? b.md + ". kārta. " : "") + (b.intro || "");
     const oddsCells = (m, mini) => {
       const o = m.odds || {};
       const vals = ["1", "X", "2"].map(k => o[k]).filter(v => v != null);
       const fav = vals.length ? Math.min(...vals) : null;
       const val = m.featured && m.featured.type === "vertiba" ? m.valueSide : null;
-      const cell = (k, label) => `<span class="bet-odd${o[k] != null && o[k] === fav ? " fav" : ""}${val === k ? " val" : ""}"${val === k ? ' title="Vērtība"' : ""}><small>${label}</small><b>${num(o[k])}</b></span>`;
+      const won = m.result ? (Number(m.result.h) > Number(m.result.a) ? "1" : Number(m.result.h) < Number(m.result.a) ? "2" : "X") : null;
+      const cell = (k, label) => `<span class="bet-odd${o[k] != null && o[k] === fav ? " fav" : ""}${val === k ? " val" : ""}${won === k ? " won" : ""}"${val === k ? ' title="Vērtība"' : ""}><small>${label}</small><b>${num(o[k])}</b></span>`;
       return `<div class="bet-odds${mini ? " mini" : ""}">${cell("1", mini ? "1" : esc(m.home))}${cell("X", mini ? "X" : "Neizšķirts")}${cell("2", mini ? "2" : esc(m.away))}</div>`;
     };
     const body = m => `
+        ${resultHtml(m)}
         ${(m.odds || {}).src ? `<span class="bet-src">Koeficienti: ${esc(m.odds.src)}</span>` : ""}
         ${probBar(m.odds || {}, m)}
         <div class="bet-pick"><span class="lbl">Ieteikums</span><b>${esc(m.pick)}</b>${m.pickOdds ? `<span class="od">${num(m.pickOdds)}</span>` : ""}</div>
@@ -964,12 +1020,12 @@ body.view-bets #likmes { padding-top: 26px; }
     const feat = ms.filter(m => m.featured);
     const minis = `<h3 class="bet-sub" style="margin-top:0">Visas spēles</h3><p class="bet-hint">Pieskaries spēlei, lai redzētu prognozi un vārtu guvējus. <span class="lg s">Zaļa josla</span> nozīmē kārtas galveno spēli, <span class="lg v">dzeltena</span> spēli ar vērtību.</p><div class="bet-minis">`
       + ms.map(m => `<details class="bet-mini${m.featured ? " is-" + m.featured.type : ""}">
-          <summary><span class="mt"><span class="tm">${esc(when(m.kickoff))}</span><span class="tn">${esc(m.home)} – ${esc(m.away)}</span></span>${oddsCells(m, true)}</summary>
+          <summary><span class="mt"><span class="tm">${m.result ? `<b class="res">${esc(m.result.h)}:${esc(m.result.a)}</b> ${hitMark(m)}` : esc(when(m.kickoff))}</span><span class="tn">${esc(m.home)} – ${esc(m.away)}</span></span>${oddsCells(m, true)}</summary>
           <div class="mini-body">${m.featured ? `<span class="bet-badge ${m.featured.type}">${BADGE[m.featured.type]}</span><p class="bet-why">${esc(m.featured.why)}</p>` : ""}${body(m)}${(m.analysis || []).length ? `<div class="bet-analysis"><span class="ttl">Plašāk par spēli</span>${m.analysis.map(t => `<p>${esc(t)}</p>`).join("")}</div>` : ""}</div>
         </details>`).join("") + `</div>`;
     list.innerHTML = minis + (feat.length ? `<h3 class="bet-sub">Izceltās spēles</h3>` : "") + feat.map(m => `<article class="bet-card ${m.featured.type}">
         <span class="bet-badge ${m.featured.type}">${BADGE[m.featured.type] || ""}</span>
-        <div class="bet-head"><span class="bet-teams">${esc(m.home)} – ${esc(m.away)}</span><span class="bet-time">${esc(when(m.kickoff))}</span></div>
+        <div class="bet-head"><span class="bet-teams">${esc(m.home)} – ${esc(m.away)}</span><span class="bet-time">${m.result ? `<b class="res">${esc(m.result.h)}:${esc(m.result.a)}</b>` : esc(when(m.kickoff))}</span></div>
         ${m.featured.why ? `<p class="bet-why">${esc(m.featured.why)}</p>` : ""}
         ${oddsCells(m, false)}${body(m)}
         ${(m.analysis || []).length ? `<div class="bet-analysis"><span class="ttl">Plašāk par spēli</span>${m.analysis.map(t => `<p>${esc(t)}</p>`).join("")}</div>` : ""}
@@ -1005,7 +1061,7 @@ body.view-bets #likmes { padding-top: 26px; }
   window.addEventListener("hashchange", () => setView(true));
   setView(location.hash === "#likmes");
 
-  fetch("bets.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(renderBets)
+  fetch("bets.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(loadBets)
     .catch(() => { document.getElementById("betList").innerHTML = '<div class="empty">Neizdevās ielādēt likmes.</div>'; });
 
   fetch("news.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(renderNews)
