@@ -1,0 +1,404 @@
+{
+  "md": 4,
+  "updatedAt": "2026-11-02T10:00:00Z",
+  "intro": "Ko par 4. kārtu saka bukmeikeri un prognožu lapas. Koeficienti ir decimālie (1,50 = uz 1 € likmi atgriežas 1,50 €) un pirms spēles mainās. Tikai interesei.",
+  "matches": [
+    {
+      "kickoff": "2026-11-03T21:00:00+01:00",
+      "home": "Villarreal",
+      "away": "Paris",
+      "odds": {
+        "1": null,
+        "X": null,
+        "2": 1.57,
+        "src": "bet365"
+      },
+      "score": "1:2",
+      "pick": "PSG uzvara",
+      "pickOdds": 1.57,
+      "alt": "Abas gūst vārtus – 1,43",
+      "note": "PSG ir līdere ar 9 punktiem, taču trūkst Dembelē, Kvaraschēlijas, Markiņoša un Nuno Mendeša. Statz modelis: PSG 54 %, neizšķirts 22 %, Villarreal 24 %.",
+      "ours": "Pacho (Maarels, renardsudris), Ferans Toress (renardsudris)",
+      "sources": [
+        {
+          "label": "Squawka",
+          "url": "https://www.squawka.com/en/news/previews/villarreal-vs-psg-predictions-betting-tips-03-11-26/"
+        },
+        {
+          "label": "Bet-Experts",
+          "url": "https://www.bet-experts.com/picks/football/champions-league/villarreal-vs-psg-prediction-betting-tips-03-11-2026"
+        },
+        {
+          "label": "Statz",
+          "url": "https://statz.ai/news/19872639-villarreal-vs-psg-predictions-betting-tips"
+        }
+      ]
+    },
+    {
+      "kickoff": "2026-11-03T21:00:00+01:00",
+      "home": "Atleti",
+      "away": "Bayern München",
+      "odds": {
+        "1": 2.55,
+        "X": 3.8,
+        "2": 2.44,
+        "src": "tips.gg apskats"
+      },
+      "score": "1:1",
+      "pick": "Neizšķirts",
+      "pickOdds": 4.0,
+      "alt": "Mazāk par 3,5 vārtiem (Covers)",
+      "note": "Kārtas līdzsvarotākā spēle. Prognozes atšķiras: Squawka gaida 1:1, Covers un Goal liek uz Atleti „uzvara vai neizšķirts”, bet tips.gg uz to, ka Bayern nezaudēs. Bayern trūks Musialas un Luisa Diasa, Olise ir apšaubāms.",
+      "ours": "Kane (Arturs M, Maarels, renardsudris), Deiviss un Kimihs (Arturs M)",
+      "sources": [
+        {
+          "label": "Covers",
+          "url": "https://www.covers.com/soccer/atletico-madrid-vs-bayern-munich-prediction-picks-nov-3-2026"
+        },
+        {
+          "label": "Goal",
+          "url": "https://www.goal.com/en-ng/betting/tips/atletico-madrid-vs-bayern-munich-predictions-03-11-2026/A%3Ablta883f22253efae04"
+        },
+        {
+          "label": "Dimers (Polymarket)",
+          "url": "https://www.dimers.com/la-liga/news/atletico-madrid-bayern-munich-champions-league-matchday-4-live-odds-and-polymarket-predictions-03-11-2026"
+        }
+      ]
+    },
+    {
+      "kickoff": "2026-11-03T21:00:00+01:00",
+      "home": "Barcelona",
+      "away": "Aston Villa",
+      "odds": {
+        "1": 1.22,
+        "X": 6.45,
+        "2": 10.5,
+        "src": "Sapphirebet"
+      },
+      "score": "3:1",
+      "pick": "Abas komandas gūst vārtus",
+      "pickOdds": 1.5,
+      "alt": "Barcelona uzvara un abas gūst vārtus – 2,05",
+      "note": "Barcelona ir lieli favorīti, bet Villa Eiropā ir ar perfektu bilanci un jau 12 gūtiem vārtiem. Tāpēc populārākā likme ir uz vārtiem abos laukuma galos.",
+      "ours": "Jamals (Aleks, Maarels, renardsudris), Rafinja (Aleks), Rodri un Gavi (Arturs M), Bārklijs (Aleks)",
+      "sources": [
+        {
+          "label": "Racing Post",
+          "url": "https://www.racingpost.com/sport/football-tips/champions-league/barcelona-vs-aston-villa-predictions-team-news-odds-betting-tips-bet-builder-aVCHB3d1Idxt/"
+        },
+        {
+          "label": "Bet-Experts",
+          "url": "https://www.bet-experts.com/picks/football/champions-league/barcelona-vs-aston-villa-prediction-betting-tips-03-11-2026"
+        },
+        {
+          "label": "Football Whispers",
+          "url": "https://footballwhispers.com/blog/barcelona-vs-aston-villa-prediction-03-11-2026/"
+        }
+      ]
+    },
+    {
+      "kickoff": "2026-11-03T21:00:00+01:00",
+      "home": "Man Utd",
+      "away": "Roma",
+      "odds": {
+        "1": 2.3,
+        "X": 3.8,
+        "2": 2.7,
+        "src": "Paddy Power"
+      },
+      "score": "2:2",
+      "pick": "Abas gūst vārtus un vairāk par 2,5",
+      "pickOdds": 1.75,
+      "alt": "Roma uzvara – 2,80 (BetJets)",
+      "note": "„United” nav uzvarējuši deviņās spēlēs pēc kārtas, kas ir garākā sērija kopš 1988. gada. Prognozētāji ir sadalījušies starp neizšķirtu un Romas uzvaru, bet par daudziem vārtiem ir vienisprātis.",
+      "ours": "",
+      "sources": [
+        {
+          "label": "LiveScore",
+          "url": "https://www.livescore.com/en/news/football/champions-league/predictions/manchester-united-v-roma-predictions-champions-league/"
+        },
+        {
+          "label": "Mr Fixit's Tips",
+          "url": "https://mrfixitstips.co.uk/previews/manchester-utd-vs-roma-prediction-and-betting-tips-2026-11-03/"
+        },
+        {
+          "label": "Statz",
+          "url": "https://statz.ai/news/19872620-man-utd-vs-roma-predictions-betting-tips"
+        }
+      ]
+    },
+    {
+      "kickoff": "2026-11-03T21:00:00+01:00",
+      "home": "Feyenoord",
+      "away": "Inter",
+      "odds": {
+        "1": null,
+        "X": null,
+        "2": 1.75,
+        "src": "bet365"
+      },
+      "score": "1:2",
+      "pick": "Vairāk par 2,5 vārtiem",
+      "pickOdds": 1.42,
+      "alt": "Pretējs viedoklis: Feyenoord uzvara vai neizšķirts – 2,06 (MightyTips)",
+      "note": "Inter ir favorīti (Statz: 59 %), taču Feyenoord šosezon mājās vēl nav zaudējuši.",
+      "ours": "",
+      "sources": [
+        {
+          "label": "Bet-Experts",
+          "url": "https://www.bet-experts.com/picks/football/champions-league/feyenoord-vs-inter-prediction-betting-tips-03-11-2026"
+        },
+        {
+          "label": "MightyTips",
+          "url": "https://www.mightytips.com/football-predictions/feyenoord-vs-inter-milan-prediction-03-11-2026/"
+        },
+        {
+          "label": "Statz",
+          "url": "https://statz.ai/news/19873229-feyenoord-vs-inter-predictions-betting-tips"
+        }
+      ]
+    },
+    {
+      "kickoff": "2026-11-04T18:45:00+01:00",
+      "home": "Fenerbahçe",
+      "away": "Liverpool",
+      "odds": {
+        "1": null,
+        "X": null,
+        "2": 1.57,
+        "src": "Football Whispers"
+      },
+      "score": "1:2",
+      "pick": "Abas gūst vārtus",
+      "pickOdds": 1.57,
+      "alt": "Isaks gūs vārtus – 2,15",
+      "note": "„Liverpool” ielaiduši vārtus visās trijās šīs Čempionu līgas spēlēs, bet „Fenerbahçe” vārtus guvuši abās mājas spēlēs. Soboslai joprojām savainots.",
+      "ours": "Van Dijks (Aleks, Maarels), Isaks (Aleks), Edersons (Aleks)",
+      "sources": [
+        {
+          "label": "Squawka",
+          "url": "https://www.squawka.com/en/news/previews/fenerbahce-vs-liverpool-predictions-betting-tips-04-11-26/"
+        },
+        {
+          "label": "Football Whispers",
+          "url": "https://footballwhispers.com/blog/fenerbahce-vs-liverpool-prediction-04-11-2026/"
+        },
+        {
+          "label": "Statz",
+          "url": "https://statz.ai/news/19872622-fenerbahce-vs-liverpool-predictions-betting-tips"
+        }
+      ]
+    },
+    {
+      "kickoff": "2026-11-04T18:45:00+01:00",
+      "home": "AEK Athens",
+      "away": "Real Madrid",
+      "odds": {
+        "1": 9.0,
+        "X": 7.0,
+        "2": 1.25,
+        "src": "bet365 / apskati"
+      },
+      "score": "1:2",
+      "pick": "Real ar −1,5 handikapu",
+      "pickOdds": 1.77,
+      "alt": "Mbappé gūs pirmos vārtus – 3,00 (FanDuel)",
+      "note": "Mbappé ir guvis vārtus piecās spēlēs pēc kārtas. Pret AEK Real ir lieli favorīti.",
+      "ours": "Mbappé (Aleks, Maarels, renardsudris), Kurtuā (Arturs M, renardsudris), Kukurelja (Arturs M)",
+      "sources": [
+        {
+          "label": "Squawka",
+          "url": "https://www.squawka.com/us/news/champions-league/match-preview-aek-athens-vs-real-madrid-04-11-26-champions-league/"
+        },
+        {
+          "label": "Ratingbet",
+          "url": "https://ratingbet.com/predictions/aek-vs-real-madrid-prediction-teams-form-analysis-possible-lineups-on-november-4-2026/"
+        },
+        {
+          "label": "FanDuel",
+          "url": "https://sportsbook.fanduel.com/soccer/uefa-champions-league/aek-athens-v-real-madrid-36220990?tab=goal-scorer"
+        }
+      ]
+    },
+    {
+      "kickoff": "2026-11-04T21:00:00+01:00",
+      "home": "Leipzig",
+      "away": "Man City",
+      "odds": {
+        "1": 5.54,
+        "X": 4.93,
+        "2": 1.58,
+        "src": "22bet"
+      },
+      "score": "1:2",
+      "pick": "Man City uzvara",
+      "pickOdds": 1.57,
+      "alt": "Vairāk par 2,5 vārtiem (Statz: 69 %)",
+      "note": "„City” uzvarējuši četrās no pēdējām sešām savstarpējām spēlēm, bet „Leipzig” iepriekšējā kārtā zaudēja Real ar 1:4.",
+      "ours": "Hālands (Arturs M), Šerkī un Matheuss Nunešs (Maarels)",
+      "sources": [
+        {
+          "label": "Squawka",
+          "url": "https://www.squawka.com/en/news/previews/rb-leipzig-vs-manchester-city-predictions-betting-tips-04-11-26/"
+        },
+        {
+          "label": "MightyTips",
+          "url": "https://www.mightytips.com/football-predictions/rb-leipzig-vs-manchester-city-prediction-04-11-2026/"
+        },
+        {
+          "label": "Statz",
+          "url": "https://statz.ai/news/19872618-rb-leipzig-vs-man-city-predictions-betting-tips"
+        }
+      ]
+    },
+    {
+      "kickoff": "2026-11-04T21:00:00+01:00",
+      "home": "Slavia Praha",
+      "away": "Arsenal",
+      "odds": {
+        "1": 10.0,
+        "X": 6.5,
+        "2": 1.29,
+        "src": "bet365"
+      },
+      "score": "0:3",
+      "pick": "Arsenal ar −1,5 handikapu",
+      "pickOdds": null,
+      "alt": "Vairāk par 2,5 vārtiem – 1,58",
+      "note": "„Arsenal” ir 7 punkti, „Slavia” tikai 1. Saka ir savainots.",
+      "ours": "Gabriels (Aleks, renardsudris)",
+      "sources": [
+        {
+          "label": "Squawka",
+          "url": "https://www.squawka.com/en/news/previews/slavia-praha-vs-arsenal-predictions-betting-tips-04-11-26/"
+        },
+        {
+          "label": "SoccerNews",
+          "url": "https://www.soccernews.com/prediction-slavia-prague-vs-arsenal/407427/"
+        },
+        {
+          "label": "Bet-Experts",
+          "url": "https://www.bet-experts.com/picks/football/champions-league/slavia-prague-vs-arsenal-prediction-betting-tips-04-11-2026"
+        }
+      ]
+    },
+    {
+      "kickoff": "2026-11-04T21:00:00+01:00",
+      "home": "Porto",
+      "away": "Napoli",
+      "odds": {
+        "1": 2.1,
+        "X": 3.6,
+        "2": 3.13,
+        "src": "Betfair"
+      },
+      "score": "1:1",
+      "pick": "Abas gūst vārtus",
+      "pickOdds": 1.63,
+      "alt": "Pretējs viedoklis: Napoli uzvara – 3,75 (Squawka)",
+      "note": "Abām komandām Čempionu līgā neveicas: Porto ir 0 punktu, Napoli 3. Prognozes izkaisītas no Porto uzvaras līdz 0:2 par labu Napoli.",
+      "ours": "De Breine un Rrahmani (Aleks)",
+      "sources": [
+        {
+          "label": "Betfair",
+          "url": "https://betting.betfair.com/football/predictions/uefa-champions-league/porto-vs-napoli/5uuv8o6rf0dwb2hqo2rbqlc0k/"
+        },
+        {
+          "label": "Squawka",
+          "url": "https://www.squawka.com/en/news/previews/porto-vs-napoli-predictions-betting-tips-04-11-26/"
+        },
+        {
+          "label": "Bet-Experts",
+          "url": "https://www.bet-experts.com/picks/football/champions-league/fc-porto-vs-napoli-prediction-betting-tips-04-11-2026"
+        }
+      ]
+    },
+    {
+      "kickoff": "2026-11-04T21:00:00+01:00",
+      "home": "B. Dortmund",
+      "away": "Real Betis",
+      "odds": {
+        "1": 1.75,
+        "X": null,
+        "2": 4.33,
+        "src": "Ladbrokes / bet365"
+      },
+      "score": "2:1",
+      "pick": "Abas gūst vārtus",
+      "pickOdds": 1.53,
+      "alt": "Dortmund uzvara ar 1 vārtu starpību – 4,00 (FreeTips)",
+      "note": "Dortmund ielaiduši vārtus visās trijās šīs Čempionu līgas spēlēs. 100 000 simulāciju dod Dortmund uzvarai 58 %.",
+      "ours": "Lo Selso (Arturs M), Antonijs (renardsudris)",
+      "sources": [
+        {
+          "label": "Squawka",
+          "url": "https://www.squawka.com/en/news/previews/borussia-dortmund-vs-real-betis-predictions-betting-tips-04-11-26/"
+        },
+        {
+          "label": "OddAlerts",
+          "url": "https://www.oddalerts.com/simulations/borussia-dortmund-vs-real-betis-prediction/420676171"
+        },
+        {
+          "label": "MightyTips",
+          "url": "https://www.mightytips.com/football-predictions/borussia-dortmund-vs-real-betis-prediction-04-11-2026/"
+        }
+      ]
+    }
+  ],
+  "scorers": [
+    {
+      "name": "Kilians Mbappé",
+      "club": "Real Madrid",
+      "vs": "AEK",
+      "odds": "pirmie vārti 3,00",
+      "why": "Vārti piecās spēlēs pēc kārtas.",
+      "ours": "Aleks, Maarels, renardsudris"
+    },
+    {
+      "name": "Harijs Kane",
+      "club": "Bayern",
+      "vs": "Atleti",
+      "odds": "",
+      "why": "Tikai otrais spēlētājs pēc Ronaldu, kurš vārtus guvis 10 Čempionu līgas spēlēs pēc kārtas.",
+      "ours": "Arturs M, Maarels, renardsudris"
+    },
+    {
+      "name": "Aleksandrs Isaks",
+      "club": "Liverpool",
+      "vs": "Fenerbahçe",
+      "odds": "2,15",
+      "why": "Football Whispers ieteiktā vārtu guvēja likme.",
+      "ours": "Aleks"
+    },
+    {
+      "name": "Ferans Toress",
+      "club": "PSG",
+      "vs": "Villarreal",
+      "odds": "",
+      "why": "Iekļauts Squawka ekspresī. Bez Dembelē viņam būs lielāka loma uzbrukumā.",
+      "ours": "renardsudris"
+    }
+  ],
+  "combo": {
+    "title": "Draugu ekspresis (tikai prieka pēc)",
+    "legs": [
+      {
+        "match": "Barcelona – Aston Villa",
+        "pick": "Barcelona uzvara",
+        "odds": 1.22
+      },
+      {
+        "match": "AEK – Real Madrid",
+        "pick": "Real uzvara",
+        "odds": 1.25
+      },
+      {
+        "match": "Slavia – Arsenal",
+        "pick": "Arsenal uzvara",
+        "odds": 1.29
+      }
+    ],
+    "note": "Trīs lielākie favorīti kopā. Pat šādu „drošu” kombināciju bukmeikeri vērtē tikai ar aptuveni 50 % iespēju."
+  },
+  "disclaimer": "Šī ir izklaide un apskats, nevis padoms likt naudu. Koeficienti ņemti no publiskām prognožu lapām un bukmeikeru vietnēm (2.–3. novembris) un var būt mainījušies. Azartspēles tikai no 18 gadiem. Palīdzība: www.spelesatkariba.lv"
+}

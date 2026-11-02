@@ -327,6 +327,46 @@ footer { font-size: 13px; color: var(--muted); }
 .na-src a { color: var(--muted); }
 .prize-close { position: absolute; top: max(12px, env(safe-area-inset-top)); right: 12px; width: 44px; height: 44px; border: 0; border-radius: 50%;
   background: #fff; color: #111; font: 700 24px/1 var(--body); cursor: pointer; }
+
+/* Likmes: one card per match — 1/X/2 odds row, the consensus pick, and our owners */
+.bet-intro { font-size: 14px; }
+.bet-list { display: grid; gap: 12px; }
+.bet-card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; display: grid; gap: 8px; }
+.bet-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.bet-teams { font-family: var(--display); font-weight: 800; font-size: 21px; line-height: 1.1; text-transform: uppercase; }
+.bet-time { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bet-odds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.bet-odd { background: var(--chip); border-radius: 10px; padding: 6px 4px; text-align: center; display: grid; gap: 1px; }
+.bet-odd small { font-size: 11px; color: var(--muted); font-weight: 700; }
+.bet-odd b { font-size: 17px; font-variant-numeric: tabular-nums; }
+.bet-odd.fav { background: color-mix(in srgb, var(--accent) 18%, var(--chip)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 45%, transparent); }
+.bet-pick { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; padding: 8px 10px; border-radius: 10px; background: color-mix(in srgb, var(--cheese) 16%, var(--surface)); border: 1px solid color-mix(in srgb, var(--cheese) 45%, var(--line)); }
+.bet-pick .lbl { font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--cheese-ink); }
+.bet-pick b { font-weight: 800; }
+.bet-pick .od { margin-left: auto; font-family: var(--display); font-weight: 800; font-size: 20px; font-variant-numeric: tabular-nums; }
+.bet-score { font-size: 13px; color: var(--muted); }
+.bet-score b { color: var(--ink); font-variant-numeric: tabular-nums; }
+.bet-card p { margin: 0; font-size: 14px; color: var(--ink); }
+.bet-ours { font-size: 12px; color: var(--muted); }
+.bet-ours b { color: var(--ink); }
+.bet-src { font-size: 11px; color: var(--muted); }
+.bet-src a { color: var(--muted); }
+.bet-sub { font-family: var(--display); font-weight: 800; font-size: 20px; text-transform: uppercase; margin: 18px 0 8px; }
+.bet-scorers { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.bet-scorers li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; padding: 10px 14px; border-top: 1px solid var(--line); }
+.bet-scorers li:first-child { border-top: 0; }
+.bet-scorers .nm { font-weight: 800; }
+.bet-scorers .od { font-weight: 800; font-variant-numeric: tabular-nums; text-align: right; }
+.bet-scorers .why { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+.bet-combo { background: var(--board); color: #f4f4f4; border-radius: 16px; padding: 14px 16px; display: grid; gap: 6px; }
+.bet-combo .leg { display: flex; justify-content: space-between; gap: 10px; font-size: 14px; }
+.bet-combo .leg span:last-child { font-variant-numeric: tabular-nums; font-weight: 800; color: var(--led); }
+.bet-combo .tot { display: flex; justify-content: space-between; border-top: 1px dashed rgba(255,255,255,.25); padding-top: 6px; font-weight: 800; }
+.bet-combo .tot b { font-family: var(--display); font-size: 24px; color: var(--led); }
+.bet-combo small { color: #b9c2bb; font-size: 12px; }
+.bet-more { margin-top: 12px; width: 100%; padding: 10px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--accent); font: 800 15px var(--body); cursor: pointer; }
+.bet-more:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.bet-warn { font-size: 12px; color: var(--muted); border-left: 3px solid var(--fire); padding: 4px 0 4px 10px; margin-top: 14px; }
 </style>
 </head>
 <body>
@@ -378,6 +418,15 @@ footer { font-size: 13px; color: var(--muted); }
   <section id="nakama" aria-live="polite">
     <h2 data-pg="P303">Nākamā kārta</h2>
     <div class="next" id="nextRound"><div class="empty">Ielādē…</div></div>
+  </section>
+
+  <div class="ornament" aria-hidden="true"></div>
+
+  <section id="likmes" aria-live="polite">
+    <h2>Likmes</h2>
+    <p class="bet-intro" id="betIntro">Ko par nākamo kārtu saka bukmeikeri un prognožu lapas. Tikai interesei.</p>
+    <div class="bet-list" id="betList"><div class="empty">Ielādē…</div></div>
+    <div id="betExtra"></div>
   </section>
 
   <div class="ornament" aria-hidden="true"></div>
@@ -808,6 +857,47 @@ footer { font-size: 13px; color: var(--muted); }
     history.replaceState(null, "", "#zina-" + a.dataset.id);
     art.classList.add("flash"); setTimeout(() => art.classList.remove("flash"), 1600);
   });
+
+  // ---- Likmes (bets.json): koeficienti, prognozes un vārtu guvēji nākamajai kārtai ----
+  function renderBets(b) {
+    const list = document.getElementById("betList");
+    const ms = ((b && b.matches) || []).slice().sort((x, y) => String(x.kickoff).localeCompare(String(y.kickoff)));
+    if (!ms.length) { list.innerHTML = '<div class="empty">Likmju apskats parādīsies pirms nākamās kārtas.</div>'; return; }
+    const num = v => v == null ? "–" : Number(v).toFixed(2).replace(".", ",");
+    const when = d => { const x = new Date(d); return isNaN(x) ? "" : x.toLocaleString("lv-LV", { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }); };
+    if (b.intro) document.getElementById("betIntro").textContent = (b.md ? b.md + ". kārta. " : "") + b.intro;
+    list.innerHTML = ms.map((m, i) => {
+      const o = m.odds || {};
+      const vals = ["1", "X", "2"].map(k => o[k]).filter(v => v != null);
+      const fav = vals.length ? Math.min(...vals) : null;
+      const cell = (k, label) => `<span class="bet-odd${o[k] != null && o[k] === fav ? " fav" : ""}"><small>${label}</small><b>${num(o[k])}</b></span>`;
+      return `<article class="bet-card"${i >= 4 ? " hidden" : ""}>
+        <div class="bet-head"><span class="bet-teams">${esc(m.home)} – ${esc(m.away)}</span><span class="bet-time">${esc(when(m.kickoff))}</span></div>
+        <div class="bet-odds">${cell("1", esc(m.home))}${cell("X", "Neizšķirts")}${cell("2", esc(m.away))}</div>
+        ${o.src ? `<span class="bet-src">Koeficienti: ${esc(o.src)}</span>` : ""}
+        <div class="bet-pick"><span class="lbl">Ieteikums</span><b>${esc(m.pick)}</b>${m.pickOdds ? `<span class="od">${num(m.pickOdds)}</span>` : ""}</div>
+        ${m.score || m.alt ? `<span class="bet-score">${m.score ? `Prognozētais rezultāts: <b>${esc(m.score)}</b>` : ""}${m.score && m.alt ? " · " : ""}${m.alt ? `Vēl: ${esc(m.alt)}` : ""}</span>` : ""}
+        ${m.note ? `<p>${esc(m.note)}</p>` : ""}
+        ${m.ours ? `<span class="bet-ours">Mūsu spēlētāji: <b>${esc(m.ours)}</b></span>` : ""}
+        ${(m.sources || []).length ? `<span class="bet-src">Avoti: ${m.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(", ")}</span>` : ""}
+      </article>`;
+    }).join("");
+    let extra = ms.length > 4 ? `<button type="button" class="bet-more" id="betMore">Rādīt visas spēles (${ms.length})</button>` : "";
+    if ((b.scorers || []).length) {
+      extra += `<h3 class="bet-sub">Vārtu guvēji</h3><ul class="bet-scorers">${b.scorers.map(s => `<li><span class="nm">${esc(s.name)} <small style="font-weight:600;color:var(--muted)">${esc(s.club)} pret ${esc(s.vs)}</small></span><span class="od">${esc(s.odds || "")}</span><span class="why">${esc(s.why)}${s.ours ? ` · Pieder: ${esc(s.ours)}` : ""}</span></li>`).join("")}</ul>`;
+    }
+    if (b.combo && (b.combo.legs || []).length) {
+      const tot = b.combo.legs.reduce((p, l) => p * Number(l.odds), 1);
+      extra += `<h3 class="bet-sub">${esc(b.combo.title || "Ekspresis")}</h3><div class="bet-combo">${b.combo.legs.map(l => `<div class="leg"><span>${esc(l.match)}: ${esc(l.pick)}</span><span>${num(l.odds)}</span></div>`).join("")}
+        <div class="tot"><span>Kopējais koeficients</span><b>${num(tot)}</b></div>${b.combo.note ? `<small>${esc(b.combo.note)}</small>` : ""}</div>`;
+    }
+    if (b.disclaimer) extra += `<p class="bet-warn">${esc(b.disclaimer)}</p>`;
+    document.getElementById("betExtra").innerHTML = extra;
+    const more = document.getElementById("betMore");
+    if (more) more.onclick = () => { list.querySelectorAll(".bet-card[hidden]").forEach(c => c.hidden = false); more.remove(); };
+  }
+  fetch("bets.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(renderBets)
+    .catch(() => { document.getElementById("betList").innerHTML = '<div class="empty">Neizdevās ielādēt likmes.</div>'; });
 
   fetch("news.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(renderNews)
     .catch(() => { document.getElementById("newsList").innerHTML = '<div class="empty">Neizdevās ielādēt ziņas.</div>'; });
