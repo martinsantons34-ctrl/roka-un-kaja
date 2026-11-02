@@ -8,10 +8,10 @@
       "home": "Shakhtar",
       "away": "Sporting CP",
       "odds": {
-        "1": null,
-        "X": null,
-        "2": 2.0,
-        "src": "bet365"
+        "1": 3.7,
+        "X": 3.75,
+        "2": 1.82,
+        "src": "Wincomparator"
       },
       "score": "1:2",
       "pick": "Sporting uzvara",
@@ -32,6 +32,10 @@
         {
           "label": "Bet-Experts",
           "url": "https://www.bet-experts.com/picks/football/champions-league/shakhtar-donetsk-vs-sporting-cp-prediction-betting-tips-03-11-2026"
+        },
+        {
+          "label": "Wincomparator",
+          "url": "https://www.wincomparator.com/predictions/shakhtar-donetsk-sporting-portugal-8786644/"
         }
       ]
     },
@@ -40,10 +44,10 @@
       "home": "Galatasaray",
       "away": "Stuttgart",
       "odds": {
-        "1": 2.15,
-        "X": null,
-        "2": null,
-        "src": "bet365"
+        "1": 2.3,
+        "X": 3.6,
+        "2": 2.75,
+        "src": "Wincomparator"
       },
       "score": "1:1",
       "pick": "Galatasaray uzvara",
@@ -73,6 +77,10 @@
         {
           "label": "Statz",
           "url": "https://statz.ai/news/19873252-galatasaray-vs-stuttgart-predictions-betting-tips"
+        },
+        {
+          "label": "Wincomparator",
+          "url": "https://www.wincomparator.com/predictions/galatasaray-stuttgart-8786645/"
         }
       ]
     },
@@ -81,10 +89,10 @@
       "home": "Villarreal",
       "away": "Paris",
       "odds": {
-        "1": null,
-        "X": null,
-        "2": 1.57,
-        "src": "bet365"
+        "1": 4.2,
+        "X": 4.33,
+        "2": 1.58,
+        "src": "bet365 (Wincomparator)"
       },
       "score": "1:2",
       "pick": "PSG uzvara",
@@ -122,6 +130,10 @@
         {
           "label": "Statz",
           "url": "https://statz.ai/news/19872639-villarreal-vs-psg-predictions-betting-tips"
+        },
+        {
+          "label": "Wincomparator",
+          "url": "https://www.wincomparator.com/predictions/villarreal-psg-8786652/"
         }
       ]
     },
@@ -184,7 +196,11 @@
           "label": "Fox Sports",
           "url": "https://www.foxsports.com/soccer/champions-league-atletico-madrid-vs-bayern-munich-nov-03-2026-game-boxscore-1003377"
         }
-      ]
+      ],
+      "featured": {
+        "type": "svariga",
+        "why": "Kane ir trim no mums, Deiviss un Kimihs Arturam. Kārtas līdzsvarotākā spēle."
+      }
     },
     {
       "kickoff": "2026-11-03T21:00:00+01:00",
@@ -241,7 +257,11 @@
           "label": "Goal",
           "url": "https://www.goal.com/en-ng/betting/tips/barcelona-vs-aston-villa-predictions-03-11-2026/A%3Ablt5ac58df14fbc157d"
         }
-      ]
+      ],
+      "featured": {
+        "type": "svariga",
+        "why": "Jamals ir trim no mums, Rafinja Aleksam. Abu iespēja gūt vārtus pārsniedz 50 %."
+      }
     },
     {
       "kickoff": "2026-11-03T21:00:00+01:00",
@@ -301,10 +321,10 @@
       "home": "Feyenoord",
       "away": "Inter",
       "odds": {
-        "1": null,
-        "X": null,
-        "2": 1.75,
-        "src": "bet365"
+        "1": 4.5,
+        "X": 4.0,
+        "2": 1.67,
+        "src": "bet365 (Wincomparator)"
       },
       "score": "1:2",
       "pick": "Vairāk par 2,5 vārtiem",
@@ -350,8 +370,17 @@
         {
           "label": "Protipster",
           "url": "https://www.protipster.com/betting-tips/inter-milano-feyenoord-rotterdam/885643942"
+        },
+        {
+          "label": "Wincomparator",
+          "url": "https://www.wincomparator.com/predictions/feyenoord-inter-milan-8786648/"
         }
-      ]
+      ],
+      "featured": {
+        "type": "vertiba",
+        "why": "Feyenoord uzvara 4,50 (iespēja pēc koeficienta 22 %), bet Wincomparator modelis dod 34 %. Feyenoord mājās šosezon nav zaudējuši."
+      },
+      "valueSide": "1"
     },
     {
       "kickoff": "2026-11-03T21:00:00+01:00",
@@ -431,10 +460,10 @@
       "home": "Fenerbahçe",
       "away": "Liverpool",
       "odds": {
-        "1": null,
-        "X": null,
-        "2": 1.57,
-        "src": "Football Whispers"
+        "1": 4.33,
+        "X": 4.0,
+        "2": 1.67,
+        "src": "Wincomparator"
       },
       "score": "1:2",
       "pick": "Abas gūst vārtus",
@@ -472,8 +501,17 @@
         {
           "label": "KhelNow",
           "url": "https://khelnow.com/football/fenerbahce-vs-liverpool-preview-uefa-champions-league-202611"
+        },
+        {
+          "label": "Wincomparator",
+          "url": "https://www.wincomparator.com/predictions/fenerbahce-liverpool-8786654/"
         }
-      ]
+      ],
+      "featured": {
+        "type": "vertiba",
+        "why": "Fenerbahçe uzvara 4,33. Squawka modelis dod Fenerbahçe 24 %, kamēr tirgus tikai ~18 %, un pats Squawka to sauc par vērtīgu likmi."
+      },
+      "valueSide": "1"
     },
     {
       "kickoff": "2026-11-04T18:45:00+01:00",
@@ -542,7 +580,11 @@
           "label": "FanDuel",
           "url": "https://sportsbook.fanduel.com/soccer/uefa-champions-league/aek-athens-v-real-madrid-36220990?tab=goal-scorer"
         }
-      ]
+      ],
+      "featured": {
+        "type": "svariga",
+        "why": "Mbappé ir trim no mums, un viņam ir kārtas lielākā iespēja gūt vārtus (~70 %)."
+      }
     },
     {
       "kickoff": "2026-11-04T21:00:00+01:00",
@@ -550,9 +592,9 @@
       "away": "Club Brugge",
       "odds": {
         "1": 2.13,
-        "X": null,
-        "2": 2.85,
-        "src": "Fox Sports"
+        "X": 4.2,
+        "2": 2.9,
+        "src": "Fox Sports / Betfred / bet365"
       },
       "score": "2:1",
       "pick": "Vairāk par 2,5 vārtiem",
@@ -582,8 +624,17 @@
         {
           "label": "Statz",
           "url": "https://statz.ai/news/19873708-psv-vs-club-brugge-predictions-betting-tips"
+        },
+        {
+          "label": "Fox Sports / Betfred / bet365",
+          "url": "https://www.wincomparator.com/predictions/psv-eindhoven-club-brugge-8786657/"
         }
-      ]
+      ],
+      "featured": {
+        "type": "vertiba",
+        "why": "Club Brugge uzvara 2,90 (34 %), bet Wincomparator modelis Brugge dod 40 %, un ATS iesaka Brugge ar „draw no bet”."
+      },
+      "valueSide": "2"
     },
     {
       "kickoff": "2026-11-04T21:00:00+01:00",
@@ -655,10 +706,10 @@
       "home": "B. Dortmund",
       "away": "Real Betis",
       "odds": {
-        "1": 1.75,
-        "X": null,
-        "2": 4.33,
-        "src": "Ladbrokes / bet365"
+        "1": 1.73,
+        "X": 3.95,
+        "2": 4.05,
+        "src": "vidējie (Gainblers)"
       },
       "score": "2:1",
       "pick": "Abas gūst vārtus",
@@ -688,6 +739,10 @@
         {
           "label": "OddAlerts",
           "url": "https://www.oddalerts.com/simulations/borussia-dortmund-vs-real-betis-prediction/420676171"
+        },
+        {
+          "label": "vidējie",
+          "url": "https://gainblers.com/ca/bets/football/europe/champions-league/borussiadortmund-betis/"
         }
       ]
     },
@@ -1016,8 +1071,10 @@
   "insights": [
     "Kārtas populārākā likme ir „abas komandas gūst vārtus”: tā ir galvenais ieteikums 6 no 18 spēlēm, un daudzās citās tā minēta kā otrā izvēle.",
     "Lielākā iespēja gūt vārtus ir Mbappé (~70 %), tālāk seko Hālands (61 %) un Rafinja (59 %).",
-    "Līdzsvarotākās spēles: Atleti – Bayern un Man Utd – Roma, kur favorīta koeficients pārsniedz 2,3.",
+    "Vērtības meklētājiem: Feyenoord (4,50), Fenerbahçe (4,33) un Club Brugge (2,90). Modeļi šīm komandām dod lielāku iespēju nekā bukmeikeri. Toties PSG 1,58 izskatās par zemu, jo Statz PSG dod tikai 54 %, bet koeficients atbilst ~63 %.",
     "Kartīšu un stūra sitienu prognozes publiski netika atrastas, tāpēc tās šeit nav iekļautas."
   ],
-  "disclaimer": "Šī ir izklaide un apskats, nevis padoms likt naudu. Koeficienti ņemti no publiskām prognožu lapām un bukmeikeru vietnēm (2. novembris) un var būt mainījušies. Procenti no koeficientiem ietver bukmeikera uzcenojumu. Azartspēles tikai no 18 gadiem. Palīdzība: www.spelesatkariba.lv"
+  "disclaimer": "Šī ir izklaide un apskats, nevis padoms likt naudu. Koeficienti ņemti no publiskām prognožu lapām un bukmeikeru vietnēm (2. novembris) un var būt mainījušies. Procenti no koeficientiem ietver bukmeikera uzcenojumu. Azartspēles tikai no 18 gadiem. Palīdzība: www.spelesatkariba.lv",
+  "oddsNote": "Betsafe koeficientus no mana servera nevar nolasīt, jo Betsafe bloķē piekļuvi no tās valsts, kur atrodas serveris. Tāpēc koeficienti ņemti no citiem bukmeikeriem un salīdzināšanas vietnēm. Betsafe koeficienti var nedaudz atšķirties, tāpēc pirms likmes paskaties Betsafe.",
+  "valueNote": "„Vērtība” nozīmē, ka kāds neatkarīgs modelis rezultātam dod lielāku iespēju nekā bukmeikera koeficients. Tas nav garantēts laimests, tikai pazīme, ka koeficients varētu būt pārāk augsts."
 }

@@ -383,6 +383,31 @@ footer { font-size: 13px; color: var(--muted); }
 .bet-cs li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; font-size: 14px; }
 .bet-cs b { font-variant-numeric: tabular-nums; }
 .bet-cs small { grid-column: 1 / -1; color: var(--muted); font-size: 12px; }
+.bet-card.vertiba { border-color: color-mix(in srgb, var(--cheese) 60%, var(--line)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--cheese) 25%, transparent); }
+.bet-card.svariga { border-color: color-mix(in srgb, var(--accent) 50%, var(--line)); }
+.bet-badge { justify-self: start; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; border-radius: 999px; padding: 2px 10px; color: #fff; background: var(--accent); }
+.bet-badge.vertiba { background: var(--cheese); color: #2a2000; }
+.bet-why { font-weight: 600; }
+.bet-hint { font-size: 13px; color: var(--muted); margin: -4px 0 8px; }
+.bet-minis { display: grid; gap: 6px; }
+.bet-mini { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+.bet-mini.is-vertiba { border-left: 4px solid var(--cheese); }
+.bet-mini.is-svariga { border-left: 4px solid var(--accent); }
+.bet-mini summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 8px; padding: 8px 10px; color: var(--ink); font-weight: 400; }
+.bet-mini summary::-webkit-details-marker { display: none; }
+.bet-mini .mt { display: grid; min-width: 0; }
+.bet-mini .tm { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.bet-mini .tn { font-weight: 800; font-size: 14px; line-height: 1.2; overflow-wrap: anywhere; }
+.bet-odds.mini { grid-template-columns: repeat(3, 44px); gap: 4px; }
+.bet-odds.mini .bet-odd { padding: 3px 2px; border-radius: 8px; }
+.bet-odds.mini .bet-odd small { font-size: 10px; }
+.bet-odds.mini .bet-odd b { font-size: 14px; }
+.bet-mini[open] summary { border-bottom: 1px solid var(--line); }
+.mini-body { padding: 10px 12px 12px; display: grid; gap: 8px; }
+.mini-body p { margin: 0; font-size: 14px; color: var(--ink); max-width: none; }
+.bet-odd.val { background: color-mix(in srgb, var(--cheese) 30%, var(--chip)); box-shadow: inset 0 0 0 2px var(--cheese); }
+.bet-hint .lg { font-weight: 700; padding-left: 8px; border-left: 4px solid var(--accent); }
+.bet-hint .lg.v { border-left-color: var(--cheese); }
 .bet-more { margin-top: 12px; width: 100%; padding: 10px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--accent); font: 800 15px var(--body); cursor: pointer; }
 .bet-more:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .bet-warn { font-size: 12px; color: var(--muted); border-left: 3px solid var(--fire); padding: 4px 0 4px 10px; margin-top: 14px; }
@@ -901,25 +926,37 @@ footer { font-size: 13px; color: var(--muted); }
     const num = v => v == null ? "–" : Number(v).toFixed(2).replace(".", ",");
     const when = d => { const x = new Date(d); return isNaN(x) ? "" : x.toLocaleString("lv-LV", { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }); };
     if (b.intro) document.getElementById("betIntro").textContent = (b.md ? b.md + ". kārta. " : "") + b.intro;
-    list.innerHTML = ms.map((m, i) => {
+    const oddsCells = (m, mini) => {
       const o = m.odds || {};
       const vals = ["1", "X", "2"].map(k => o[k]).filter(v => v != null);
       const fav = vals.length ? Math.min(...vals) : null;
-      const cell = (k, label) => `<span class="bet-odd${o[k] != null && o[k] === fav ? " fav" : ""}"><small>${label}</small><b>${num(o[k])}</b></span>`;
-      return `<article class="bet-card"${i >= 4 ? " hidden" : ""}>
-        <div class="bet-head"><span class="bet-teams">${esc(m.home)} – ${esc(m.away)}</span><span class="bet-time">${esc(when(m.kickoff))}</span></div>
-        <div class="bet-odds">${cell("1", esc(m.home))}${cell("X", "Neizšķirts")}${cell("2", esc(m.away))}</div>
-        ${o.src ? `<span class="bet-src">Koeficienti: ${esc(o.src)}</span>` : ""}
-        ${probBar(o, m)}
+      const val = m.featured && m.featured.type === "vertiba" ? m.valueSide : null;
+      const cell = (k, label) => `<span class="bet-odd${o[k] != null && o[k] === fav ? " fav" : ""}${val === k ? " val" : ""}"${val === k ? ' title="Vērtība"' : ""}><small>${label}</small><b>${num(o[k])}</b></span>`;
+      return `<div class="bet-odds${mini ? " mini" : ""}">${cell("1", mini ? "1" : esc(m.home))}${cell("X", mini ? "X" : "Neizšķirts")}${cell("2", mini ? "2" : esc(m.away))}</div>`;
+    };
+    const body = m => `
+        ${(m.odds || {}).src ? `<span class="bet-src">Koeficienti: ${esc(m.odds.src)}</span>` : ""}
+        ${probBar(m.odds || {}, m)}
         <div class="bet-pick"><span class="lbl">Ieteikums</span><b>${esc(m.pick)}</b>${m.pickOdds ? `<span class="od">${num(m.pickOdds)}</span>` : ""}</div>
         ${m.score || m.alt ? `<span class="bet-score">${m.score ? `Prognozētais rezultāts: <b>${esc(m.score)}</b>` : ""}${m.score && m.alt ? " · " : ""}${m.alt ? `Vēl: ${esc(m.alt)}` : ""}</span>` : ""}
         ${m.note ? `<p>${esc(m.note)}</p>` : ""}
         ${(m.players || []).length ? `<div class="bet-players"><span class="ttl">Iespēja gūt vārtus</span>${m.players.map(playerRowBet).join("")}</div>` : ""}
         ${m.ours ? `<span class="bet-ours">Mūsu spēlētāji: <b>${esc(m.ours)}</b></span>` : ""}
-        ${(m.sources || []).length ? `<span class="bet-src">Avoti: ${m.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(", ")}</span>` : ""}
-      </article>`;
-    }).join("");
-    let extra = ms.length > 4 ? `<button type="button" class="bet-more" id="betMore">Rādīt visas spēles (${ms.length})</button>` : "";
+        ${(m.sources || []).length ? `<span class="bet-src">Avoti: ${m.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(", ")}</span>` : ""}`;
+    const BADGE = { svariga: "Svarīga mums", vertiba: "Vērtība" };
+    const feat = ms.filter(m => m.featured);
+    const minis = `<h3 class="bet-sub" style="margin-top:0">Visas spēles</h3><p class="bet-hint">Pieskaries spēlei, lai redzētu prognozi un vārtu guvējus. <span class="lg s">Zaļa josla</span> nozīmē svarīgu spēli mums, <span class="lg v">dzeltena</span> spēli ar vērtību.</p><div class="bet-minis">`
+      + ms.map(m => `<details class="bet-mini${m.featured ? " is-" + m.featured.type : ""}">
+          <summary><span class="mt"><span class="tm">${esc(when(m.kickoff))}</span><span class="tn">${esc(m.home)} – ${esc(m.away)}</span></span>${oddsCells(m, true)}</summary>
+          <div class="mini-body">${m.featured ? `<span class="bet-badge ${m.featured.type}">${BADGE[m.featured.type]}</span><p class="bet-why">${esc(m.featured.why)}</p>` : ""}${body(m)}</div>
+        </details>`).join("") + `</div>`;
+    list.innerHTML = minis + (feat.length ? `<h3 class="bet-sub">Izceltās spēles</h3>` : "") + feat.map(m => `<article class="bet-card ${m.featured.type}">
+        <span class="bet-badge ${m.featured.type}">${BADGE[m.featured.type] || ""}</span>
+        <div class="bet-head"><span class="bet-teams">${esc(m.home)} – ${esc(m.away)}</span><span class="bet-time">${esc(when(m.kickoff))}</span></div>
+        ${m.featured.why ? `<p class="bet-why">${esc(m.featured.why)}</p>` : ""}
+        ${oddsCells(m, false)}${body(m)}
+      </article>`).join("");
+    let extra = "";
     if ((b.scorers || []).length) {
       extra += `<h3 class="bet-sub">Lielākās izredzes gūt vārtus</h3><div class="bet-players" style="background:var(--surface);border:1px solid var(--line)"><span class="ttl">Spēlētājs · iespēja · koeficients</span>${b.scorers.map(s => playerRowBet({ ...s, name: s.name + " (pret " + s.vs + ")" })).join("")}</div>`;
     }
@@ -931,10 +968,10 @@ footer { font-size: 13px; color: var(--muted); }
       extra += `<h3 class="bet-sub">${esc(b.combo.title || "Ekspresis")}</h3><div class="bet-combo">${b.combo.legs.map(l => `<div class="leg"><span>${esc(l.match)}: ${esc(l.pick)}</span><span>${num(l.odds)}</span></div>`).join("")}
         <div class="tot"><span>Kopējais koeficients</span><b>${num(tot)}</b></div>${b.combo.note ? `<small>${esc(b.combo.note)}</small>` : ""}</div>`;
     }
+    if (b.valueNote) extra += `<p class="bet-warn" style="border-left-color:var(--cheese)">${esc(b.valueNote)}</p>`;
+    if (b.oddsNote) extra += `<p class="bet-warn" style="border-left-color:var(--cornflower)">${esc(b.oddsNote)}</p>`;
     if (b.disclaimer) extra += `<p class="bet-warn">${esc(b.disclaimer)}</p>`;
     document.getElementById("betExtra").innerHTML = extra;
-    const more = document.getElementById("betMore");
-    if (more) more.onclick = () => { list.querySelectorAll(".bet-card[hidden]").forEach(c => c.hidden = false); more.remove(); };
   }
   fetch("bets.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(renderBets)
     .catch(() => { document.getElementById("betList").innerHTML = '<div class="empty">Neizdevās ielādēt likmes.</div>'; });
