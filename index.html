@@ -1123,7 +1123,7 @@ body.view-bets #likmes { padding-top: 26px; }
     }));
     const stats = ps.map(p => {
       const mine = slips.filter(s => s.player === p.id), done = mine.filter(s => s.status !== "open"), open = mine.filter(s => s.status === "open");
-      const staked = done.reduce((t, s) => t + s.stake, 0), back = done.reduce((t, s) => t + s.back, 0);
+      const staked = mine.reduce((t, s) => t + s.stake, 0), back = done.reduce((t, s) => t + s.back, 0);
       return { p, staked, back, pl: back - staked, won: done.filter(s => s.status === "won").length, done: done.length,
         legHit: mine.reduce((t, s) => t + s.hit, 0), legJudged: mine.reduce((t, s) => t + s.judged, 0),
         open: open.length, openStake: open.reduce((t, s) => t + s.stake, 0), openWin: open.reduce((t, s) => t + s.stake * s.odds, 0),
@@ -1137,7 +1137,7 @@ body.view-bets #likmes { padding-top: 26px; }
       <dl><dt>Likts</dt><dd>${fmt(s.staked)}</dd><dt>Vinnēts</dt><dd>${fmt(s.back)}</dd>
       <dt>Ienākuši betslipi</dt><dd>${s.won}/${s.done}</dd>
       <dt>Trāpītas spēles</dt><dd>${s.legHit}/${s.legJudged}${s.legJudged ? ` (${Math.round(s.legHit / s.legJudged * 100)} %)` : ""}</dd>
-      ${s.open ? `<dt>Spēlē</dt><dd>${fmt(s.openStake)} → ${fmt(s.openWin)}</dd>` : ""}
+      ${s.open ? `<dt>Var vinnēt</dt><dd>${fmt(s.openWin)}</dd>` : ""}
       ${s.best ? `<dt>Lielākais vinnests</dt><dd>${fmt(s.best)}</dd>` : ""}</dl></div>`).join("");
 
     // Kumulatīvā peļņa: viens punkts katrai dienai, kad kāds betslips izšķīrās
@@ -1187,7 +1187,7 @@ body.view-bets #likmes { padding-top: 26px; }
     box.innerHTML = `<section class="duel" aria-label="Mūsu likmes"><h3>${esc(d.title || "Mūsu likmes")}</h3>
       <div class="duel-cards">${cards}</div>${chart}
       <div class="tbl-wrap"><table class="duel-tbl"><thead><tr><th>Spēle</th><th>Likme</th><th class="num">Koef.</th>${ps.map(p => `<th class="who-c">${esc(p.name.slice(0, 1))}</th>`).join("")}<th><span class="hide-sm">Statuss</span></th></tr></thead><tbody>${rows}</tbody></table></div>
-      <p class="duel-note">Katram kārtā viens kombinētais betslips: tas ienāk tikai tad, ja trāpītas visas tajā esošās spēles. Peļņa = vinnests mīnus likts, skaitot tikai izšķirtos betslipus. Ailēs ${ps.map(p => esc(p.name.slice(0, 1)) + " = " + esc(p.name)).join(", ")}.</p></section>`;
+      <p class="duel-note">Katram kārtā viens kombinētais betslips: tas ienāk tikai tad, ja trāpītas visas tajā esošās spēles. Bilance = vinnēts mīnus likts (likts ietver arī vēl aktīvos betslipus). Ailēs ${ps.map(p => esc(p.name.slice(0, 1)) + " = " + esc(p.name)).join(", ")}.</p></section>`;
     const wrap = box.querySelector(".duel-chart");
     if (wrap && tipData) {
       const tip = wrap.querySelector(".duel-tip"), svg = wrap.querySelector("svg"), t = tipData;
