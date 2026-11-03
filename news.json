@@ -1,6 +1,37 @@
 {
-  "updatedAt": "2026-11-03T11:30:00Z",
+  "updatedAt": "2026-11-03T22:50:00Z",
   "items": [
+    {
+      "id": "fantasy-k4-otrdiena",
+      "date": "2026-11-03",
+      "tag": "Fantasy",
+      "title": "4. kārtas otrdiena: Raphinha divreiz, Yamal iesit, Kane ar piespēli",
+      "teaser": "Aleksam laba diena (Raphinha 2 vārti, Yamal kapteinis ar vārtiem), Kane bez vārtiem, bet ar piespēli. PSG un Barcelona nospēlēja sausu.",
+      "body": [
+        "Barcelona ar 3:0 sagrāva Aston Villa. Lamine Yamal (Aleks, Maarels, renardsudris) atklāja rezultātu jau 7. minūtē, un Raphinha (Aleks) iesita divreiz. Barcelona nospēlēja sausu, pirmo reizi Čempionu līgā 19 spēlēs. Aleksa Ross Barkley un Nicolas Jackson ar Villa šoreiz palika bez vārtiem.",
+        "Bayern Madridē uzvarēja Atleti ar 2:0. Harry Kane (Arturs M, Maarels, renardsudris) vārtus neguva, un viņa sērija apstājās pie 10 spēlēm, taču 74. minūtē viņš atdeva rezultatīvo piespēli Konrad Laimer. Joshua Kimmich (Arturs M) saņēma dzelteno kartīti. Manuel Neuer (Aleks) bija pamatsastāvā, un Bayern nospēlēja sausu.",
+        "PSG Villarreālā uzvarēja ar 6:0, četrus vārtus gūstot pirmajās 17 minūtēs. Ferran Torres (renardsudris) gan vārtus neguva. Willian Pacho (Maarels, renardsudris) komanda nospēlēja sausu.",
+        "Trešdien spēlēs: Kylian Mbappé (Aleks, Maarels, renardsudris) pret AEK 19:45, Alexander Isak (Aleks) un Virgil van Dijk (Aleks, Maarels) Stambulā pret Fenerbahçe 19:45. 22:00 sāksies Erling Haaland (Arturs M) spēle pret Leipzig, Gabriel (Aleks, renardsudris) pret Slavia, kā arī Napoli spēle Porto, kur Kevin De Bruyne (Aleks) dalība joprojām nav skaidra."
+      ],
+      "sources": [
+        {
+          "label": "France 24 (Barcelona–Villa)",
+          "url": "https://www.france24.com/en/live-news/20261103-raphinha-yamal-power-barca-to-champions-league-win-over-villa"
+        },
+        {
+          "label": "Bundesliga.com (Atleti–Bayern)",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/club-atletico-de-madrid-bayern-munich-match-report-highlights-matchday-4-39870"
+        },
+        {
+          "label": "ESPN (Villarreal–PSG)",
+          "url": "https://www.espn.com/soccer/story/_/id/50371706/psg-villarreal-champions-league-record-goals"
+        },
+        {
+          "label": "PSG Fans (otrdienas rezultāti)",
+          "url": "https://en.parisfans.fr/champions-league-tuesdays-results-from-matchday-4.html"
+        }
+      ]
+    },
     {
       "id": "leszno-poznan",
       "date": "2026-10-30",
@@ -95,34 +126,6 @@
         {
           "label": "VAVEL (Betis–Feyenoord)",
           "url": "https://www.vavel.com/en-us/soccer/2026/10/21/1276237-real-betis-vs-feyenoord-live-score-uefa-champions-league.html"
-        }
-      ]
-    },
-    {
-      "id": "fantasy-k3-otrdiena",
-      "date": "2026-10-20",
-      "tag": "Fantasy",
-      "title": "3. kārtas otrdiena: Yamal iesit PSG, Dembélé un Kvaratskhelia savainojas, Haaland uz soliņa",
-      "teaser": "PSG ar 4:2 uzvar “Barcelona”, bet Arturam un Maarelam bažas par Dembélé un Kvaratskhelia pirms 4. kārtas.",
-      "body": [
-        "Parīzē PSG ar 4:2 pieveica “Barcelona”. Lamine Yamal 79. minūtē izlīdzināja rezultātu uz 2:2, un mūsu datos viņam ir 7 punkti. Yamal ir Aleksam (kā kapteinis), Maarelam un renardsudris. PSG pēc tam guva vēl divus vārtus (Vitinha un Fabián Ruiz).",
-        "Sliktās ziņas: Ousmane Dembélé (Arturs M) jau ap 19. minūti tika nomainīts, iespējams, ar pakaļējās augšstilba muskuļa traumu, bet Khvicha Kvaratskhelia (Maarels) 59. minūtē tika izvests no laukuma ar sasitumu. Cik ilgi viņi būs ārā, vēl nav zināms, tāpēc pirms 4. kārtas jāseko ziņām.",
-        "“Man City” mājās ar 5:1 sagrāva AEK, bet Haaland (Arturs M) pēc nedēļas nogalē gūtā sasituma sāka uz soliņa un viņam ir 0 punktu. Toties Cherki (Maarels) savāca 7 punktus.",
-        "Pārējie: “Liverpool” ar 4:3 uzvarēja “Villarreal”, un van Dijk (Aleks, Maarels) savāca 3 punktus. “Napoli” ar 4:3 pieveica “Bodø/Glimt”, un Aleksa De Bruyne savāca 6 punktus. Punkti ņemti no mūsu līgas datiem.",
-        "4. kārta sāksies 3. novembrī."
-      ],
-      "sources": [
-        {
-          "label": "Sky Sports (PSG–Barcelona)",
-          "url": "https://www.skysports.com/football/news/13600929/psg-4-2-barcelona-european-giants-turn-out-in-classic-as-hansi-flicks-side-handed-first-defeat-of-the-season"
-        },
-        {
-          "label": "Al Jazeera",
-          "url": "https://www.aljazeera.com/sports/2026/10/20/psg-sink-barcelona-4-2-for-third-champions-league-win-in-a-row"
-        },
-        {
-          "label": "Yahoo Sports (Haaland)",
-          "url": "https://sports.yahoo.com/articles/erling-haaland-rested-man-city-175646667.html"
         }
       ]
     },

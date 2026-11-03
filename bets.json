@@ -40,7 +40,13 @@
               "label": "Wincomparator",
               "url": "https://www.wincomparator.com/predictions/shakhtar-donetsk-sporting-portugal-8786644/"
             }
-          ]
+          ],
+          "result": {
+            "h": 0,
+            "a": 1
+          },
+          "hit": true,
+          "resultNote": "Sporting uzvarēja ar 1:0 (spēle Londonā, Stamford Bridge), lai gan dienu iepriekš bija atlaidis treneri."
         },
         {
           "kickoff": "2026-11-03T18:45:00+01:00",
@@ -64,7 +70,8 @@
               "odds": 1.85,
               "pct": 54,
               "note": "Koeficients 1,80–1,91, Modelis: 52 %. Spēlēs, ja būs vesels.",
-              "ours": ""
+              "ours": "",
+              "scored": false
             }
           ],
           "ours": "",
@@ -85,7 +92,13 @@
               "label": "Wincomparator",
               "url": "https://www.wincomparator.com/predictions/galatasaray-stuttgart-8786645/"
             }
-          ]
+          ],
+          "result": {
+            "h": 2,
+            "a": 0
+          },
+          "hit": true,
+          "resultNote": "Aleksey Batrakov guva abus vārtus 12. un 15. minūtē. Victor Osimhen bija aktīvs, bet neiesita."
         },
         {
           "kickoff": "2026-11-03T21:00:00+01:00",
@@ -109,7 +122,8 @@
               "odds": 2.1,
               "pct": 48,
               "note": "3 vārti 157 minūtēs Čempionu līgā. Bez Dembélé viņš būs galvenais uzbrucējs.",
-              "ours": ""
+              "ours": "",
+              "scored": false
             },
             {
               "name": "Désiré Doué",
@@ -117,7 +131,8 @@
               "odds": 2.3,
               "pct": 43,
               "note": "Koeficients 2,15–2,45.",
-              "ours": ""
+              "ours": "",
+              "scored": true
             }
           ],
           "ours": "",
@@ -138,7 +153,13 @@
               "label": "Wincomparator",
               "url": "https://www.wincomparator.com/predictions/villarreal-psg-8786652/"
             }
-          ]
+          ],
+          "result": {
+            "h": 0,
+            "a": 6
+          },
+          "hit": true,
+          "resultNote": "PSG pirmajās 17 minūtēs guva četrus vārtus, kas ir Čempionu līgas rekords. Vārtus guva João Neves, Désiré Doué, Senny Mayulu, Fabián Ruiz (2) un 17 gadus vecais David Boly."
         },
         {
           "kickoff": "2026-11-03T21:00:00+01:00",
@@ -162,7 +183,8 @@
               "odds": 2.0,
               "pct": 50,
               "note": "4 vārti 3 spēlēs, vārti 10 Čempionu līgas spēlēs pēc kārtas.",
-              "ours": ""
+              "ours": "",
+              "scored": false
             },
             {
               "name": "Alexander Sørloth",
@@ -170,7 +192,8 @@
               "odds": 2.75,
               "pct": 36,
               "note": "",
-              "ours": ""
+              "ours": "",
+              "scored": false
             },
             {
               "name": "Julián Álvarez",
@@ -178,7 +201,8 @@
               "odds": 2.8,
               "pct": 36,
               "note": "Spēlējis visās trijās Atleti spēlēs no sākuma.",
-              "ours": ""
+              "ours": "",
+              "scored": false
             }
           ],
           "ours": "",
@@ -209,7 +233,13 @@
             "Kāpēc tik līdzīgi: Bayern ir labākā sastāvā spēlējošā komanda, bet uzbrukumā trūkst Musiala un Luis Díaz, un Olise trenējas ar pārsietu ceļgalu. Atleti mājās „Metropolitano” stadionā ir neērts pretinieks, un viņu uzbrucēji Sørloth un Álvarez kopā ir bīstami (abiem ~36 % iespēja gūt vārtus). Prognozētāji ir sadalījušies: Squawka gaida 1:1, Sports Mole 2:1 Atleti, Covers iesaka „Atleti nezaudēs” un mazāk par 3,5 vārtiem, bet tips.gg „Bayern nezaudēs”.",
             "Kane vārtus guvis 10 Čempionu līgas spēlēs pēc kārtas, bet koeficients 2,00 nozīmē, ka bukmeikeri viņam šoreiz dod tikai ~50 %. Pret Atleti aizsardzību vārti nav garantēti, tāpēc viņa sērija šeit ir reālā pārbaudījumā.",
             "Kopsavilkums: tā ir spēle, kuru interesanti skatīties, bet grūti prognozēt. Ja kas, tad neizšķirts (4,00) ir loģiskākā „interešu” likme, jo to izvēlējās vairāki neatkarīgi prognozētāji."
-          ]
+          ],
+          "result": {
+            "h": 0,
+            "a": 2
+          },
+          "hit": false,
+          "resultNote": "Bayern uzvarēja ar 2:0: Lennart Karl (54') pēc Le Normand kļūdas un Konrad Laimer (74') pēc Harry Kane piespēles. Kane šoreiz vārtus neguva, un viņa sērija apstājās."
         },
         {
           "kickoff": "2026-11-03T21:00:00+01:00",
@@ -233,7 +263,8 @@
               "odds": 1.7,
               "pct": 59,
               "note": "Modelis: 59 %.",
-              "ours": ""
+              "ours": "",
+              "scored": true
             },
             {
               "name": "Lamine Yamal",
@@ -241,7 +272,8 @@
               "odds": 1.9,
               "pct": 53,
               "note": "Koeficients 1,80–1,95, Modelis: 54 %.",
-              "ours": ""
+              "ours": "",
+              "scored": true
             },
             {
               "name": "Nicolas Jackson",
@@ -249,7 +281,8 @@
               "odds": 3.1,
               "pct": 32,
               "note": "3 vārti Čempionu līgā.",
-              "ours": ""
+              "ours": "",
+              "scored": false
             }
           ],
           "ours": "",
@@ -276,7 +309,13 @@
             "Tāpēc populārākā likme nav vienkārši Barcelona uzvara (1,22, kas ir ļoti zems koeficients), bet gan „abas komandas gūst vārtus” (1,50) vai „Barcelona uzvara un abas gūst vārtus” (2,05). Football Whispers prognozē 3:1, Statz 2:1.",
             "Vārtu guvēji: Raphinha iespēja gūt vārtus ir kārtas trešā lielākā (59 %), Yamal 53 %. Villas pusē Nicolas Jackson iespēja ir ap 32 %, un viņš Čempionu līgā jau guvis 3 vārtus.",
             "Kopsavilkums: sagaidāms vārtiem bagāts mačs. Barcelona uzvara ir ļoti ticama, bet Villa šosezon gūst vārtus gandrīz katrā spēlē, tāpēc sausā spēle Barcelonai nav garantēta (~36 %)."
-          ]
+          ],
+          "result": {
+            "h": 3,
+            "a": 0
+          },
+          "hit": false,
+          "resultNote": "Lamine Yamal (7') pēc João Gomes kļūdas un Raphinha (2 vārti). Barcelona nospēlēja pirmo sauso spēli Čempionu līgā 19 spēlēs, un Villa zaudēja pirmo reizi."
         },
         {
           "kickoff": "2026-11-03T21:00:00+01:00",
@@ -300,7 +339,8 @@
               "odds": 2.15,
               "pct": 47,
               "note": "Populārākais vārtu guvēja ieteikums (2,10–2,20).",
-              "ours": ""
+              "ours": "",
+              "scored": true
             },
             {
               "name": "Bryan Mbeumo",
@@ -308,7 +348,8 @@
               "odds": 3.1,
               "pct": 32,
               "note": "",
-              "ours": ""
+              "ours": "",
+              "scored": false
             }
           ],
           "ours": "",
@@ -329,7 +370,13 @@
               "label": "Football365",
               "url": "https://www.football365.com/match-preview/man-utd-v-roma-prediction-preview"
             }
-          ]
+          ],
+          "result": {
+            "h": 3,
+            "a": 2
+          },
+          "hit": true,
+          "resultNote": "Roma vadīja ar 2:0 (Soulé, Malen no 11 m), bet United atspēlējās: Bruno Fernandes (11 m) un Matheus Cunha ar diviem vārtiem 83. un 86. minūtē."
         },
         {
           "kickoff": "2026-11-03T21:00:00+01:00",
@@ -353,7 +400,8 @@
               "odds": 2.2,
               "pct": 45,
               "note": "",
-              "ours": ""
+              "ours": "",
+              "scored": false
             },
             {
               "name": "Pio Esposito",
@@ -361,7 +409,8 @@
               "odds": 2.35,
               "pct": 43,
               "note": "",
-              "ours": ""
+              "ours": "",
+              "scored": true
             },
             {
               "name": "Ange-Yoan Bonny",
@@ -369,7 +418,8 @@
               "odds": 2.6,
               "pct": 38,
               "note": "",
-              "ours": ""
+              "ours": "",
+              "scored": false
             }
           ],
           "ours": "",
@@ -401,7 +451,13 @@
             "Argumenti par Feyenoord: šosezon „De Kuip” stadionā viņi vēl nav zaudējuši, un Hadj Moussa sezonā guvis 6 vārtus 9 spēlēs. Interam, iespējams, trūks Lautaro Martínez, tāpēc uzbrukumā spēlēs Thuram (2,20), Esposito (2,35) vai Bonny (2,60).",
             "Argumenti pret: lielākā daļa prognožu tik un tā gaida Inter uzvaru ar 2:1 vai 3:1 (Statz Interam dod 59 %). Modeļi savā starpā ievērojami atšķiras, tāpēc „vērtība” šeit ir drīzāk pazīme, ka bukmeikeri Feyenoord varētu nedaudz par zemu novērtēt, nevis paredzējums, ka Feyenoord uzvarēs.",
             "Drošāka alternatīva ir „vairāk par 2,5 vārtiem” (1,42), kam piekrīt vairāki avoti."
-          ]
+          ],
+          "result": {
+            "h": 0,
+            "a": 3
+          },
+          "hit": true,
+          "resultNote": "Inter pārliecinoši: Yann Bisseck (8'), Pio Esposito (34') un Piotr Zieliński (53'). Ieteikums „vairāk par 2,5” izdevās, bet „vērtības” likme uz Feyenoord – nē."
         },
         {
           "kickoff": "2026-11-03T21:00:00+01:00",
@@ -425,7 +481,8 @@
               "odds": null,
               "pct": 50,
               "note": "Tikai modeļa vērtējums.",
-              "ours": ""
+              "ours": "",
+              "scored": false
             }
           ],
           "ours": "",
@@ -442,7 +499,13 @@
               "label": "Statz",
               "url": "https://statz.ai/news/19873699-bodo-glimt-vs-lille-predictions-betting-tips"
             }
-          ]
+          ],
+          "result": {
+            "h": 0,
+            "a": 0
+          },
+          "hit": false,
+          "resultNote": "Bezvārtu neizšķirts. Bodø/Glimt neuzvarēja, un Lille ieguva savu pirmo punktu."
         },
         {
           "kickoff": "2026-11-03T21:00:00+01:00",
@@ -474,7 +537,13 @@
               "label": "Statz",
               "url": "https://statz.ai/news/19873700-lask-linz-vs-slovan-predictions-betting-tips"
             }
-          ]
+          ],
+          "result": {
+            "h": 4,
+            "a": 0
+          },
+          "hit": true,
+          "resultNote": "LASK pārliecinoši sagrāva Slovan, kas joprojām ir bez punktiem."
         },
         {
           "kickoff": "2026-11-04T18:45:00+01:00",
@@ -942,7 +1011,8 @@
           "pct": 59,
           "odds": 1.7,
           "ours": "",
-          "note": "Modelis: 59 %."
+          "note": "Modelis: 59 %.",
+          "scored": true
         },
         {
           "name": "Carlos Espí",
@@ -960,7 +1030,8 @@
           "pct": 54,
           "odds": 1.85,
           "ours": "",
-          "note": "Koeficients 1,80–1,91, Modelis: 52 %. Spēlēs, ja būs vesels."
+          "note": "Koeficients 1,80–1,91, Modelis: 52 %. Spēlēs, ja būs vesels.",
+          "scored": false
         },
         {
           "name": "Lamine Yamal",
@@ -969,7 +1040,8 @@
           "pct": 53,
           "odds": 1.9,
           "ours": "",
-          "note": "Koeficients 1,80–1,95, Modelis: 54 %."
+          "note": "Koeficients 1,80–1,95, Modelis: 54 %.",
+          "scored": true
         },
         {
           "name": "Harry Kane",
@@ -978,7 +1050,8 @@
           "pct": 50,
           "odds": 2.0,
           "ours": "",
-          "note": "4 vārti 3 spēlēs, vārti 10 Čempionu līgas spēlēs pēc kārtas."
+          "note": "4 vārti 3 spēlēs, vārti 10 Čempionu līgas spēlēs pēc kārtas.",
+          "scored": false
         },
         {
           "name": "Helmersen",
@@ -987,7 +1060,8 @@
           "pct": 50,
           "odds": null,
           "ours": "",
-          "note": "Tikai modeļa vērtējums."
+          "note": "Tikai modeļa vērtējums.",
+          "scored": false
         },
         {
           "name": "Ferran Torres",
@@ -996,7 +1070,8 @@
           "pct": 48,
           "odds": 2.1,
           "ours": "",
-          "note": "3 vārti 157 minūtēs Čempionu līgā. Bez Dembélé viņš būs galvenais uzbrucējs."
+          "note": "3 vārti 157 minūtēs Čempionu līgā. Bez Dembélé viņš būs galvenais uzbrucējs.",
+          "scored": false
         },
         {
           "name": "Serhou Guirassy",
@@ -1014,7 +1089,8 @@
           "pct": 47,
           "odds": 2.15,
           "ours": "",
-          "note": "Populārākais vārtu guvēja ieteikums (2,10–2,20)."
+          "note": "Populārākais vārtu guvēja ieteikums (2,10–2,20).",
+          "scored": true
         },
         {
           "name": "Alexander Isak",
@@ -1032,7 +1108,8 @@
           "pct": 45,
           "odds": 2.2,
           "ours": "",
-          "note": ""
+          "note": "",
+          "scored": false
         },
         {
           "name": "Désiré Doué",
@@ -1041,7 +1118,8 @@
           "pct": 43,
           "odds": 2.3,
           "ours": "",
-          "note": "Koeficients 2,15–2,45."
+          "note": "Koeficients 2,15–2,45.",
+          "scored": true
         }
       ],
       "cleanSheets": [
@@ -1154,6 +1232,15 @@
               "Koeficienti mainās līdz pat sākuma svilpei, īpaši pēc sastāvu paziņošanas, kas notiek apmēram stundu pirms spēles. Ja interesē kāds vārtu guvējs, vispirms pārbaudi, vai viņš ir pamatsastāvā. Betsafe koeficienti var nedaudz atšķirties no šeit norādītajiem."
             ]
           }
+        ]
+      },
+      "recap": {
+        "title": "Prognozes pret realitāti: 1. diena (otrdiena)",
+        "p": [
+          "No deviņiem otrdienas ieteikumiem izdevās seši. Precīzi bija favorītu uzvaras (Sporting, Galatasaray, PSG, LASK), „vairāk par 2,5 vārtiem” Inter spēlē un „abas gūst vārtus + vairāk par 2,5” Old Trafford stadionā, kur Manchester United no 0:2 izrāva uzvaru ar 3:2.",
+          "Lielākā kļūda bija PSG novērtējumā. Pirms spēles rakstījām, ka PSG koeficients 1,58 izskatās pārāk zems, jo komandai trūka četru spēlētāju. Īstenībā PSG pirmajās 17 minūtēs guva četrus vārtus un uzvarēja ar 6:0. Modeļu skepse šoreiz bija nepamatota.",
+          "Neizdevās arī: neizšķirts Atleti – Bayern (Bayern uzvarēja 2:0), „abas gūst vārtus” Barcelona spēlē (3:0, Villa pirmo reizi bez vārtiem) un Bodø/Glimt uzvara (0:0). „Vērtības” likme uz Feyenoord (4,50) arī neattaisnojās, jo Inter uzvarēja 3:0.",
+          "Vārtu guvēji: no minētajiem vārtus guva Raphinha (divreiz), Lamine Yamal, Donyell Malen, Pio Esposito un Désiré Doué. Harry Kane sērija apstājās pie 10 spēlēm, lai gan viņš atdeva rezultatīvu piespēli. Trešdien vēl priekšā deviņas spēles, tostarp Mbappé pret AEK un Haaland pret Leipzig."
         ]
       }
     }
