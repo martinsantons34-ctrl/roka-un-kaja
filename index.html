@@ -481,6 +481,9 @@ footer { font-size: 13px; color: var(--muted); }
 .st.lost { background: color-mix(in srgb, var(--down) 15%, transparent); color: var(--down); }
 .st.void { background: var(--chip); color: var(--muted); }
 .duel-note { font-size: 12px; color: var(--muted); margin: 0; }
+.duel-tbl .slip td { background: color-mix(in srgb, var(--c) 10%, var(--surface)); border-left: 0; font-size: 13px; }
+.duel-tbl .slip td:first-child { box-shadow: inset 4px 0 0 var(--c); }
+.duel-tbl .win { color: var(--up); } .duel-tbl .loss { color: var(--down); }
 .duel-tbl .show-sm { display: none; }
 .duel-tbl .mk { display: block; color: var(--muted); font-size: 12px; }
 @media (max-width: 520px) { .duel-tbl .hide-sm { display: none; } .duel-tbl .show-sm { display: inline; } .duel-tbl { font-size: 13px; } .duel-tbl td, .duel-tbl th { padding-left: 4px; padding-right: 4px; } .duel { padding: 12px; } .duel-card .pl { font-size: 28px; } }
@@ -1098,86 +1101,100 @@ body.view-bets #likmes { padding-top: 26px; }
     if (b.disclaimer) extra += `<p class="bet-warn">${esc(b.disclaimer)}</p>`;
     document.getElementById("betExtra").innerHTML = extra;
   }
-  // ---- Mūsu likmes (musu-likmes.json): Maarels pret Renardu ----
+  // ---- Mūsu likmes (musu-likmes.json): Maarels pret Renardu, katram viens kombinētais betslips kārtā ----
   function renderDuel(d) {
     const box = document.getElementById("duel");
     if (!d || !(d.players || []).length) { box.innerHTML = ""; return; }
-    const ps = d.players, cols = ["var(--p1)", "var(--p2)"];
-    const bets = (d.bets || []).slice().sort((a, b) => String(a.kickoff).localeCompare(String(b.kickoff)));
-    const allKnown = bets.every(b => Object.values(b.by || {}).every(x => x.stake != null));
-    const cur = allKnown ? (d.currency || "€") : "v.";
-    const stakeOf = (b, p) => b.by && b.by[p.id] ? (b.by[p.id].stake ?? 1) : null;
-    const ret = (b, s) => b.status === "won" ? s * b.odds : b.status === "void" ? s : 0;
-    const fmt = (v, sign) => (sign && v > 0 ? "+" : "") + (Math.round(v * 100) / 100).toFixed(2).replace(".", ",") + " " + cur;
+    const ps = d.players, cols = ["var(--p1)", "var(--p2)"], cur = d.currency || "€";
+    const rounds = (d.rounds || []).slice().sort((a, b) => a.md - b.md);
+    const num = v => Number(v).toFixed(2).replace(".", ",");
+    const fmt = (v, sign) => (sign && v > 0.004 ? "+" : "") + num(Math.round(v * 100) / 100) + " " + cur;
+    const day = k => String(k).slice(0, 10);
+    // Kombinētā likme: zaudēta, ja zaudēts kaut viens notikums; vinnēta, kad visi vinnēti (atgriezts notikums = koef. 1)
+    const slips = [];
+    rounds.forEach(r => (r.slips || []).forEach(s => {
+      const legs = s.legs.map(id => r.legs.find(l => l.id === id)).filter(Boolean);
+      const odds = s.odds || legs.reduce((t, l) => t * (l.status === "void" ? 1 : l.odds), 1);
+      const lost = legs.filter(l => l.status === "lost"), open = legs.filter(l => l.status === "open");
+      const status = s.status || (lost.length ? "lost" : open.length ? "open" : "won");
+      const settled = status === "lost" ? day(lost.map(l => l.kickoff).sort()[0]) : status === "won" ? day(legs.map(l => l.kickoff).sort().pop()) : null;
+      slips.push({ ...s, md: r.md, legs, odds, status, settled, back: status === "won" ? s.stake * odds : 0,
+        hit: legs.filter(l => l.status === "won").length, judged: legs.filter(l => l.status === "won" || l.status === "lost").length });
+    }));
     const stats = ps.map(p => {
-      const mine = bets.filter(b => stakeOf(b, p) != null), done = mine.filter(b => b.status !== "open");
-      const staked = done.reduce((t, b) => t + stakeOf(b, p), 0), back = done.reduce((t, b) => t + ret(b, stakeOf(b, p)), 0);
-      const won = done.filter(b => b.status === "won").length, decided = done.filter(b => b.status !== "void").length;
-      const open = mine.filter(b => b.status === "open");
-      return { p, total: mine.length, staked, back, pl: back - staked, won, decided, open: open.length, openStake: open.reduce((t, b) => t + stakeOf(b, p), 0),
-        avgOdds: mine.length ? mine.reduce((t, b) => t + b.odds, 0) / mine.length : 0 };
+      const mine = slips.filter(s => s.player === p.id), done = mine.filter(s => s.status !== "open"), open = mine.filter(s => s.status === "open");
+      const staked = done.reduce((t, s) => t + s.stake, 0), back = done.reduce((t, s) => t + s.back, 0);
+      return { p, staked, back, pl: back - staked, won: done.filter(s => s.status === "won").length, done: done.length,
+        legHit: mine.reduce((t, s) => t + s.hit, 0), legJudged: mine.reduce((t, s) => t + s.judged, 0),
+        open: open.length, openStake: open.reduce((t, s) => t + s.stake, 0), openWin: open.reduce((t, s) => t + s.stake * s.odds, 0),
+        best: Math.max(0, ...mine.filter(s => s.status === "won").map(s => s.back)) };
     });
-    const anyDone = bets.some(b => b.status !== "open");
+    const anyDone = slips.some(s => s.status !== "open");
     const lead = anyDone && stats[0].pl !== stats[1].pl ? (stats[0].pl > stats[1].pl ? 0 : 1) : -1;
     const cards = stats.map((s, i) => `<div class="duel-card${i === lead ? " lead" : ""}" style="--c:${cols[i]}">
       <span class="who">${esc(s.p.name)}${s.p.nick ? `<small>${esc(s.p.nick)}</small>` : ""}</span>
       <span class="pl ${s.pl > 0 ? "pos" : s.pl < 0 ? "neg" : ""}">${fmt(s.pl, true)}</span>
-      <dl><dt>Likts</dt><dd>${fmt(s.staked)}</dd><dt>Atgūts</dt><dd>${fmt(s.back)}</dd>
-      <dt>Trāpītas</dt><dd>${s.won}/${s.decided}${s.decided ? ` (${Math.round(s.won / s.decided * 100)} %)` : ""}</dd>
-      <dt>Aktīvas</dt><dd>${s.open}${s.open ? ` · ${fmt(s.openStake)}` : ""}</dd><dt>Vid. koef.</dt><dd>${s.avgOdds ? s.avgOdds.toFixed(2).replace(".", ",") : "–"}</dd></dl></div>`).join("");
+      <dl><dt>Likts</dt><dd>${fmt(s.staked)}</dd><dt>Vinnēts</dt><dd>${fmt(s.back)}</dd>
+      <dt>Ienākuši betslipi</dt><dd>${s.won}/${s.done}</dd>
+      <dt>Trāpītas spēles</dt><dd>${s.legHit}/${s.legJudged}${s.legJudged ? ` (${Math.round(s.legHit / s.legJudged * 100)} %)` : ""}</dd>
+      ${s.open ? `<dt>Spēlē</dt><dd>${fmt(s.openStake)} → ${fmt(s.openWin)}</dd>` : ""}
+      ${s.best ? `<dt>Lielākais vinnests</dt><dd>${fmt(s.best)}</dd>` : ""}</dl></div>`).join("");
 
-    // Kumulatīvā peļņa: viens punkts katrai izspēlētajai likmju dienai
-    const days = [...new Set(bets.filter(b => b.status !== "open").map(b => String(b.kickoff).slice(0, 10)))];
-    let chart;
-    if (!days.length) chart = `<div class="duel-empty">📈 Grafiks parādīsies, kad būs izspēlētas pirmās likmes.</div>`;
+    // Kumulatīvā peļņa: viens punkts katrai dienai, kad kāds betslips izšķīrās
+    const days = [...new Set(slips.filter(s => s.settled).map(s => s.settled))].sort();
+    let chart, tipData = null;
+    if (!days.length) chart = `<div class="duel-empty">📈 Grafiks parādīsies, kad izšķirsies pirmie betslipi.</div>`;
     else {
-      const series = stats.map(s => { let acc = 0; return [0].concat(days.map(day => {
-        bets.filter(b => b.status !== "open" && String(b.kickoff).startsWith(day) && stakeOf(b, s.p) != null).forEach(b => { acc += ret(b, stakeOf(b, s.p)) - stakeOf(b, s.p); });
-        return acc; })); });
-      const narrow = box.clientWidth < 500, W = narrow ? 360 : 640, H = narrow ? 200 : 220, L = 30, R = narrow ? 92 : 100, T = 12, B = 26, n = days.length;
+      const series = stats.map(s => { let acc = 0; return [0].concat(days.map(dy => {
+        slips.filter(x => x.player === s.p.id && x.settled === dy).forEach(x => { acc += x.back - x.stake; }); return acc; })); });
+      const narrow = box.clientWidth < 500, W = narrow ? 360 : 640, H = narrow ? 200 : 220, L = 34, R = narrow ? 92 : 100, T = 12, B = 26, n = days.length;
       const vals = [].concat(...series, 0), lo = Math.min(...vals), hi = Math.max(...vals), pad = Math.max(1, (hi - lo) * .12);
       const y0 = lo - pad, y1 = hi + pad;
-      const X = i => L + (n ? i / n : 0) * (W - L - R), Y = v => T + (1 - (v - y0) / (y1 - y0)) * (H - T - B);
+      const X = i => L + i / n * (W - L - R), Y = v => T + (1 - (v - y0) / (y1 - y0)) * (H - T - B);
       const ticks = [y0 + (y1 - y0) * .1, (y0 + y1) / 2, y1 - (y1 - y0) * .1];
-      const dLabel = day => { const x = new Date(day + "T12:00:00"); return x.toLocaleDateString("lv-LV", { day: "numeric", month: "short" }); };
-      const labels = ["Sākums"].concat(days.map(dLabel));
-      // Direct labels at line ends; nudge apart if they collide
-      let ly = series.map(s => Y(s[n]));
+      const labels = ["Sākums"].concat(days.map(dy => new Date(dy + "T12:00:00").toLocaleDateString("lv-LV", { day: "numeric", month: "short" })));
+      const ly = series.map(s => Y(s[n]));
       if (Math.abs(ly[0] - ly[1]) < 14) { const m = (ly[0] + ly[1]) / 2, up = series[0][n] >= series[1][n] ? 0 : 1; ly[up] = m - 8; ly[1 - up] = m + 8; }
-      chart = `<div class="duel-legend">${stats.map((s, i) => `<span style="--c:${cols[i]}"><i></i>${esc(s.p.name)}</span>`).join("")}<span>· kopējā peļņa pa dienām</span></div>
-      <div class="duel-chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Kopējā peļņa pa dienām: ${stats.map(s => esc(s.p.name) + " " + fmt(s.pl, true)).join(", ")}">
+      const step = (W - L - R) / n;
+      chart = `<div class="duel-legend">${stats.map((s, i) => `<span style="--c:${cols[i]}"><i></i>${esc(s.p.name)}</span>`).join("")}<span>· kopējā peļņa</span></div>
+      <div class="duel-chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Kopējā peļņa: ${stats.map(s => esc(s.p.name) + " " + fmt(s.pl, true)).join(", ")}">
         ${ticks.map(t => `<line class="grid" x1="${L}" x2="${W - R}" y1="${Y(t)}" y2="${Y(t)}"/><text class="ax" x="${L - 6}" y="${Y(t) + 4}" text-anchor="end">${Math.round(t)}</text>`).join("")}
         <line class="zero" x1="${L}" x2="${W - R}" y1="${Y(0)}" y2="${Y(0)}"/>
         ${labels.map((t, i) => (n > 8 && i % Math.ceil(n / 8)) ? "" : `<text class="ax" x="${X(i)}" y="${H - 6}" text-anchor="middle">${esc(t)}</text>`).join("")}
         ${series.map((s, k) => `<polyline class="ln" style="stroke:${cols[k]}" points="${s.map((v, i) => X(i) + "," + Y(v)).join(" ")}"/>`).join("")}
         ${series.map((s, k) => s.map((v, i) => `<circle class="dot" r="4.5" cx="${X(i)}" cy="${Y(v)}" style="fill:${cols[k]}"/>`).join("")).join("")}
         ${series.map((s, k) => `<text class="lbl" x="${X(n) + 10}" y="${ly[k] + 4}">${esc(stats[k].p.name)} ${fmt(s[n], true).replace(" " + cur, "")}</text>`).join("")}
-        ${labels.map((t, i) => `<rect data-i="${i}" x="${X(i) - (W - L - R) / Math.max(1, n) / 2}" y="${T}" width="${(W - L - R) / Math.max(1, n)}" height="${H - T - B}" fill="transparent"/>`).join("")}
+        ${labels.map((t, i) => `<rect data-i="${i}" x="${X(i) - step / 2}" y="${T}" width="${step}" height="${H - T - B}" fill="transparent"/>`).join("")}
       </svg><div class="duel-tip" hidden></div></div>`;
-      box._tip = { labels, series, X, Y, W, fmt };
+      tipData = { labels, series, X, Y, W };
     }
 
-    // Tabula: katra likme, jaunākās kārtas augšā
+    // Tabula pa kārtām: katra spēle vienreiz, ailēs M/R – vai tā ir attiecīgajā betslipā; apakšā abu betslipu kopsumma
     const ST = { open: "Aktīva", won: "✓ Vinnēja", lost: "✗ Zaudēja", void: "Atgriezta" }, STS = { open: "•", won: "✓", lost: "✗", void: "↺" };
-    const mds = [...new Set(bets.map(b => b.md))].sort((a, b) => b - a);
-    const whoCell = (b, p, i) => { const s = stakeOf(b, p); return `<td class="who-c" style="--c:${cols[i]}">${s == null ? '<span class="n">—</span>' : `<span class="y">${b.by[p.id].stake != null ? esc(b.by[p.id].stake) : "✓"}</span>`}</td>`; };
-    const rows = mds.map(md => `<tr class="rd"><td colspan="6">${esc(md)}. kārta</td></tr>` + bets.filter(b => b.md === md).map(b => {
-      const when = new Date(b.kickoff).toLocaleString("lv-LV", { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
-      return `<tr><td class="m">${esc(b.home)} – ${esc(b.away)}<small>${esc(when)}${b.result ? ` · <b>${esc(b.result)}</b>` : ""}</small></td>
-        <td>${esc(b.pick)}<small class="mk hide-sm">${esc(b.market || "")}</small></td>
-        <td class="num">${Number(b.odds).toFixed(2).replace(".", ",")}</td>${ps.map((p, i) => whoCell(b, p, i)).join("")}
-        <td><span class="st ${esc(b.status)}" title="${ST[b.status] || ""}"><span class="hide-sm">${ST[b.status] || esc(b.status)}</span><span class="show-sm">${STS[b.status] || "?"}</span></span></td></tr>`; }).join("")).join("");
+    const stCell = st => `<span class="st ${esc(st)}" title="${ST[st] || ""}"><span class="hide-sm">${ST[st] || esc(st)}</span><span class="show-sm">${STS[st] || "?"}</span></span>`;
+    const rows = rounds.slice().reverse().map(r => {
+      const rs = ps.map(p => slips.find(s => s.md === r.md && s.player === p.id));
+      const legs = (r.legs || []).slice().sort((a, b) => String(a.kickoff).localeCompare(String(b.kickoff)));
+      return `<tr class="rd"><td colspan="6">${esc(r.md)}. kārta</td></tr>` + legs.map(l => {
+        const when = new Date(l.kickoff).toLocaleString("lv-LV", { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+        return `<tr><td class="m">${esc(l.home)} – ${esc(l.away)}<small>${esc(when)}${l.result ? ` · <b>${esc(l.result)}</b>` : ""}</small></td>
+          <td>${esc(l.pick)}<small class="mk hide-sm">${esc(l.market || "")}</small></td><td class="num">${num(l.odds)}</td>
+          ${rs.map((s, i) => `<td class="who-c" style="--c:${cols[i]}">${s && s.legs.includes(l) ? '<span class="y">✓</span>' : '<span class="n">—</span>'}</td>`).join("")}
+          <td>${stCell(l.status)}</td></tr>`; }).join("")
+        + rs.map((s, i) => s ? `<tr class="slip" style="--c:${cols[i]}"><td colspan="2"><b>${esc(ps[i].name)}</b> · ${esc(s.stake)} ${esc(cur)} × ${num(s.odds)} = <b>${fmt(s.stake * s.odds)}</b></td>
+          <td class="num">${num(s.odds)}</td><td colspan="2" class="num">${s.status === "won" ? `<b class="win">${fmt(s.back - s.stake, true)}</b>` : s.status === "lost" ? `<b class="loss">${fmt(-s.stake, true)}</b>` : ""}</td><td>${stCell(s.status)}</td></tr>` : "").join("");
+    }).join("");
     box.innerHTML = `<section class="duel" aria-label="Mūsu likmes"><h3>${esc(d.title || "Mūsu likmes")}</h3>
       <div class="duel-cards">${cards}</div>${chart}
       <div class="tbl-wrap"><table class="duel-tbl"><thead><tr><th>Spēle</th><th>Likme</th><th class="num">Koef.</th>${ps.map(p => `<th class="who-c">${esc(p.name.slice(0, 1))}</th>`).join("")}<th><span class="hide-sm">Statuss</span></th></tr></thead><tbody>${rows}</tbody></table></div>
-      <p class="duel-note">Peļņa = atgūtais mīnus likts, skaitot tikai izspēlētās likmes. Ailēs ${ps.map(p => esc(p.name.slice(0, 1)) + " = " + esc(p.name)).join(", ")}${allKnown ? " un likmes summa" : ""}.${allKnown ? "" : " Likmju summas vēl nav ievadītas, tāpēc katra likme skaitīta kā 1 vienība (v.)."}</p></section>`;
+      <p class="duel-note">Katram kārtā viens kombinētais betslips: tas ienāk tikai tad, ja trāpītas visas tajā esošās spēles. Peļņa = vinnests mīnus likts, skaitot tikai izšķirtos betslipus. Ailēs ${ps.map(p => esc(p.name.slice(0, 1)) + " = " + esc(p.name)).join(", ")}.</p></section>`;
     const wrap = box.querySelector(".duel-chart");
-    if (wrap && box._tip) {
-      const tip = wrap.querySelector(".duel-tip"), svg = wrap.querySelector("svg"), t = box._tip;
+    if (wrap && tipData) {
+      const tip = wrap.querySelector(".duel-tip"), svg = wrap.querySelector("svg"), t = tipData;
       svg.addEventListener("pointermove", e => {
         const r = e.target.closest("rect[data-i]"); if (!r) { tip.hidden = true; return; }
         const i = Number(r.dataset.i), k = svg.getBoundingClientRect().width / t.W;
-        tip.innerHTML = `<b>${esc(t.labels[i])}</b><br>${stats.map((s, j) => `${esc(s.p.name)}: ${t.fmt(t.series[j][i], true)}`).join("<br>")}`;
+        tip.innerHTML = `<b>${esc(t.labels[i])}</b><br>${stats.map((s, j) => `${esc(s.p.name)}: ${fmt(t.series[j][i], true)}`).join("<br>")}`;
         tip.style.left = t.X(i) * k + "px"; tip.style.top = Math.min(...t.series.map(s => t.Y(s[i]))) * k + "px"; tip.hidden = false;
       });
       svg.addEventListener("pointerleave", () => { tip.hidden = true; });
