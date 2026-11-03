@@ -438,6 +438,53 @@ footer { font-size: 13px; color: var(--muted); }
 .bet-more:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .bet-warn { font-size: 12px; color: var(--muted); border-left: 3px solid var(--fire); padding: 4px 0 4px 10px; margin-top: 14px; }
 
+/* Mūsu likmes: Maarels pret Renardu — score cards, cumulative profit chart, every slip in a table */
+:root { --p1: #1f5fbf; --p2: #b8860b; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --p1: #6ea8ff; --p2: #f2c443; } }
+:root[data-theme="dark"] { --p1: #6ea8ff; --p2: #f2c443; }
+.duel { background: var(--surface); border: 2px solid var(--line); border-radius: 18px; padding: 16px; display: grid; gap: 14px; margin-bottom: 22px; }
+.duel h3 { font-family: var(--display); font-weight: 800; font-size: 26px; text-transform: uppercase; line-height: 1.05; margin: 0; }
+.duel-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.duel-card { border-radius: 14px; padding: 12px; background: var(--chip); border-top: 4px solid var(--c); display: grid; gap: 6px; position: relative; }
+.duel-card.lead::after { content: "🏆 Vadībā"; position: absolute; top: 8px; right: 10px; font-size: 11px; font-weight: 800; color: var(--cheese-ink); }
+.duel-card .who { font-family: var(--display); font-weight: 800; font-size: 22px; line-height: 1; }
+.duel-card .who small { display: block; font-family: var(--body); font-size: 12px; font-weight: 600; color: var(--muted); margin-top: 2px; }
+.duel-card .pl { font-family: var(--display); font-weight: 800; font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums; }
+.duel-card .pl.pos { color: var(--up); } .duel-card .pl.neg { color: var(--down); }
+.duel-card dl { margin: 0; display: grid; grid-template-columns: auto auto; gap: 2px 8px; font-size: 13px; }
+.duel-card dt { color: var(--muted); } .duel-card dd { margin: 0; text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+.duel-chart { position: relative; }
+.duel-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.duel-chart .grid { stroke: var(--line); stroke-width: 1; }
+.duel-chart .zero { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; }
+.duel-chart .ax { fill: var(--muted); font: 600 11px var(--body); }
+.duel-chart .ln { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.duel-chart .dot { stroke: var(--surface); stroke-width: 2; }
+.duel-chart .lbl { font: 800 12px var(--body); fill: var(--ink); }
+.duel-legend { display: flex; gap: 14px; font-size: 13px; color: var(--muted); }
+.duel-legend i { display: inline-block; width: 14px; height: 3px; border-radius: 2px; background: var(--c); vertical-align: middle; margin-right: 6px; }
+.duel-tip { position: absolute; pointer-events: none; background: var(--board); color: #f4f4f4; border-radius: 10px; padding: 6px 10px; font-size: 12px; line-height: 1.4; white-space: nowrap; transform: translate(-50%, -100%); margin-top: -10px; }
+.duel-tip b { color: var(--led); }
+.duel-empty { font-size: 14px; color: var(--muted); background: var(--chip); border-radius: 12px; padding: 14px; text-align: center; }
+.duel-tbl { width: 100%; border-collapse: collapse; font-size: 14px; }
+.duel-tbl th { text-align: left; font-size: 11px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); padding: 6px 6px; border-bottom: 1px solid var(--line); }
+.duel-tbl td { padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.duel-tbl .rd td { background: var(--chip); font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; padding: 5px 8px; }
+.duel-tbl .m { font-weight: 700; } .duel-tbl .m small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; }
+.duel-tbl .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.duel-tbl .who-c { text-align: center; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.duel-tbl .who-c .y { display: inline-block; min-width: 26px; padding: 1px 6px; border-radius: 999px; font-weight: 800; font-size: 12px; color: #fff; background: var(--c); }
+.duel-tbl .who-c .n { color: var(--muted); }
+.st { font-size: 11px; font-weight: 800; text-transform: uppercase; border-radius: 999px; padding: 2px 8px; white-space: nowrap; }
+.st.open { background: color-mix(in srgb, var(--cornflower) 30%, transparent); color: var(--ink); }
+.st.won { background: color-mix(in srgb, var(--up) 18%, transparent); color: var(--up); }
+.st.lost { background: color-mix(in srgb, var(--down) 15%, transparent); color: var(--down); }
+.st.void { background: var(--chip); color: var(--muted); }
+.duel-note { font-size: 12px; color: var(--muted); margin: 0; }
+.duel-tbl .show-sm { display: none; }
+.duel-tbl .mk { display: block; color: var(--muted); font-size: 12px; }
+@media (max-width: 520px) { .duel-tbl .hide-sm { display: none; } .duel-tbl .show-sm { display: inline; } .duel-tbl { font-size: 13px; } .duel-tbl td, .duel-tbl th { padding-left: 4px; padding-right: 4px; } .duel { padding: 12px; } .duel-card .pl { font-size: 28px; } }
+
 /* Page tabs: "Sākums" = the whole league page, "Likmes" = the betting section alone, like a separate page */
 .page-tabs { position: sticky; top: 0; z-index: 20; margin: 0 -16px -30px; padding: 8px 16px; display: flex; gap: 8px; background: var(--sky-1); border-bottom: 1px solid color-mix(in srgb, var(--line) 60%, transparent); }
 .page-tabs a { flex: 1; text-align: center; font: 800 15px var(--body); padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); text-decoration: none; }
@@ -505,6 +552,7 @@ body.view-bets #likmes { padding-top: 26px; }
 
   <section id="likmes" aria-live="polite">
     <h2>Likmes</h2>
+    <div id="duel"></div>
     <div class="md-tabs" id="betTabs" role="tablist" aria-label="Kārta"></div>
     <p class="bet-intro" id="betIntro">Ko par nākamo kārtu saka bukmeikeri un prognožu lapas. Tikai interesei.</p>
     <div id="betRecap"></div>
@@ -1050,6 +1098,93 @@ body.view-bets #likmes { padding-top: 26px; }
     if (b.disclaimer) extra += `<p class="bet-warn">${esc(b.disclaimer)}</p>`;
     document.getElementById("betExtra").innerHTML = extra;
   }
+  // ---- Mūsu likmes (musu-likmes.json): Maarels pret Renardu ----
+  function renderDuel(d) {
+    const box = document.getElementById("duel");
+    if (!d || !(d.players || []).length) { box.innerHTML = ""; return; }
+    const ps = d.players, cols = ["var(--p1)", "var(--p2)"];
+    const bets = (d.bets || []).slice().sort((a, b) => String(a.kickoff).localeCompare(String(b.kickoff)));
+    const allKnown = bets.every(b => Object.values(b.by || {}).every(x => x.stake != null));
+    const cur = allKnown ? (d.currency || "€") : "v.";
+    const stakeOf = (b, p) => b.by && b.by[p.id] ? (b.by[p.id].stake ?? 1) : null;
+    const ret = (b, s) => b.status === "won" ? s * b.odds : b.status === "void" ? s : 0;
+    const fmt = (v, sign) => (sign && v > 0 ? "+" : "") + (Math.round(v * 100) / 100).toFixed(2).replace(".", ",") + " " + cur;
+    const stats = ps.map(p => {
+      const mine = bets.filter(b => stakeOf(b, p) != null), done = mine.filter(b => b.status !== "open");
+      const staked = done.reduce((t, b) => t + stakeOf(b, p), 0), back = done.reduce((t, b) => t + ret(b, stakeOf(b, p)), 0);
+      const won = done.filter(b => b.status === "won").length, decided = done.filter(b => b.status !== "void").length;
+      const open = mine.filter(b => b.status === "open");
+      return { p, total: mine.length, staked, back, pl: back - staked, won, decided, open: open.length, openStake: open.reduce((t, b) => t + stakeOf(b, p), 0),
+        avgOdds: mine.length ? mine.reduce((t, b) => t + b.odds, 0) / mine.length : 0 };
+    });
+    const anyDone = bets.some(b => b.status !== "open");
+    const lead = anyDone && stats[0].pl !== stats[1].pl ? (stats[0].pl > stats[1].pl ? 0 : 1) : -1;
+    const cards = stats.map((s, i) => `<div class="duel-card${i === lead ? " lead" : ""}" style="--c:${cols[i]}">
+      <span class="who">${esc(s.p.name)}${s.p.nick ? `<small>${esc(s.p.nick)}</small>` : ""}</span>
+      <span class="pl ${s.pl > 0 ? "pos" : s.pl < 0 ? "neg" : ""}">${fmt(s.pl, true)}</span>
+      <dl><dt>Likts</dt><dd>${fmt(s.staked)}</dd><dt>Atgūts</dt><dd>${fmt(s.back)}</dd>
+      <dt>Trāpītas</dt><dd>${s.won}/${s.decided}${s.decided ? ` (${Math.round(s.won / s.decided * 100)} %)` : ""}</dd>
+      <dt>Aktīvas</dt><dd>${s.open}${s.open ? ` · ${fmt(s.openStake)}` : ""}</dd><dt>Vid. koef.</dt><dd>${s.avgOdds ? s.avgOdds.toFixed(2).replace(".", ",") : "–"}</dd></dl></div>`).join("");
+
+    // Kumulatīvā peļņa: viens punkts katrai izspēlētajai likmju dienai
+    const days = [...new Set(bets.filter(b => b.status !== "open").map(b => String(b.kickoff).slice(0, 10)))];
+    let chart;
+    if (!days.length) chart = `<div class="duel-empty">📈 Grafiks parādīsies, kad būs izspēlētas pirmās likmes.</div>`;
+    else {
+      const series = stats.map(s => { let acc = 0; return [0].concat(days.map(day => {
+        bets.filter(b => b.status !== "open" && String(b.kickoff).startsWith(day) && stakeOf(b, s.p) != null).forEach(b => { acc += ret(b, stakeOf(b, s.p)) - stakeOf(b, s.p); });
+        return acc; })); });
+      const narrow = box.clientWidth < 500, W = narrow ? 360 : 640, H = narrow ? 200 : 220, L = 30, R = narrow ? 92 : 100, T = 12, B = 26, n = days.length;
+      const vals = [].concat(...series, 0), lo = Math.min(...vals), hi = Math.max(...vals), pad = Math.max(1, (hi - lo) * .12);
+      const y0 = lo - pad, y1 = hi + pad;
+      const X = i => L + (n ? i / n : 0) * (W - L - R), Y = v => T + (1 - (v - y0) / (y1 - y0)) * (H - T - B);
+      const ticks = [y0 + (y1 - y0) * .1, (y0 + y1) / 2, y1 - (y1 - y0) * .1];
+      const dLabel = day => { const x = new Date(day + "T12:00:00"); return x.toLocaleDateString("lv-LV", { day: "numeric", month: "short" }); };
+      const labels = ["Sākums"].concat(days.map(dLabel));
+      // Direct labels at line ends; nudge apart if they collide
+      let ly = series.map(s => Y(s[n]));
+      if (Math.abs(ly[0] - ly[1]) < 14) { const m = (ly[0] + ly[1]) / 2, up = series[0][n] >= series[1][n] ? 0 : 1; ly[up] = m - 8; ly[1 - up] = m + 8; }
+      chart = `<div class="duel-legend">${stats.map((s, i) => `<span style="--c:${cols[i]}"><i></i>${esc(s.p.name)}</span>`).join("")}<span>· kopējā peļņa pa dienām</span></div>
+      <div class="duel-chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Kopējā peļņa pa dienām: ${stats.map(s => esc(s.p.name) + " " + fmt(s.pl, true)).join(", ")}">
+        ${ticks.map(t => `<line class="grid" x1="${L}" x2="${W - R}" y1="${Y(t)}" y2="${Y(t)}"/><text class="ax" x="${L - 6}" y="${Y(t) + 4}" text-anchor="end">${Math.round(t)}</text>`).join("")}
+        <line class="zero" x1="${L}" x2="${W - R}" y1="${Y(0)}" y2="${Y(0)}"/>
+        ${labels.map((t, i) => (n > 8 && i % Math.ceil(n / 8)) ? "" : `<text class="ax" x="${X(i)}" y="${H - 6}" text-anchor="middle">${esc(t)}</text>`).join("")}
+        ${series.map((s, k) => `<polyline class="ln" style="stroke:${cols[k]}" points="${s.map((v, i) => X(i) + "," + Y(v)).join(" ")}"/>`).join("")}
+        ${series.map((s, k) => s.map((v, i) => `<circle class="dot" r="4.5" cx="${X(i)}" cy="${Y(v)}" style="fill:${cols[k]}"/>`).join("")).join("")}
+        ${series.map((s, k) => `<text class="lbl" x="${X(n) + 10}" y="${ly[k] + 4}">${esc(stats[k].p.name)} ${fmt(s[n], true).replace(" " + cur, "")}</text>`).join("")}
+        ${labels.map((t, i) => `<rect data-i="${i}" x="${X(i) - (W - L - R) / Math.max(1, n) / 2}" y="${T}" width="${(W - L - R) / Math.max(1, n)}" height="${H - T - B}" fill="transparent"/>`).join("")}
+      </svg><div class="duel-tip" hidden></div></div>`;
+      box._tip = { labels, series, X, Y, W, fmt };
+    }
+
+    // Tabula: katra likme, jaunākās kārtas augšā
+    const ST = { open: "Aktīva", won: "✓ Vinnēja", lost: "✗ Zaudēja", void: "Atgriezta" }, STS = { open: "•", won: "✓", lost: "✗", void: "↺" };
+    const mds = [...new Set(bets.map(b => b.md))].sort((a, b) => b - a);
+    const whoCell = (b, p, i) => { const s = stakeOf(b, p); return `<td class="who-c" style="--c:${cols[i]}">${s == null ? '<span class="n">—</span>' : `<span class="y">${b.by[p.id].stake != null ? esc(b.by[p.id].stake) : "✓"}</span>`}</td>`; };
+    const rows = mds.map(md => `<tr class="rd"><td colspan="6">${esc(md)}. kārta</td></tr>` + bets.filter(b => b.md === md).map(b => {
+      const when = new Date(b.kickoff).toLocaleString("lv-LV", { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+      return `<tr><td class="m">${esc(b.home)} – ${esc(b.away)}<small>${esc(when)}${b.result ? ` · <b>${esc(b.result)}</b>` : ""}</small></td>
+        <td>${esc(b.pick)}<small class="mk hide-sm">${esc(b.market || "")}</small></td>
+        <td class="num">${Number(b.odds).toFixed(2).replace(".", ",")}</td>${ps.map((p, i) => whoCell(b, p, i)).join("")}
+        <td><span class="st ${esc(b.status)}" title="${ST[b.status] || ""}"><span class="hide-sm">${ST[b.status] || esc(b.status)}</span><span class="show-sm">${STS[b.status] || "?"}</span></span></td></tr>`; }).join("")).join("");
+    box.innerHTML = `<section class="duel" aria-label="Mūsu likmes"><h3>${esc(d.title || "Mūsu likmes")}</h3>
+      <div class="duel-cards">${cards}</div>${chart}
+      <div class="tbl-wrap"><table class="duel-tbl"><thead><tr><th>Spēle</th><th>Likme</th><th class="num">Koef.</th>${ps.map(p => `<th class="who-c">${esc(p.name.slice(0, 1))}</th>`).join("")}<th><span class="hide-sm">Statuss</span></th></tr></thead><tbody>${rows}</tbody></table></div>
+      <p class="duel-note">Peļņa = atgūtais mīnus likts, skaitot tikai izspēlētās likmes. Ailēs ${ps.map(p => esc(p.name.slice(0, 1)) + " = " + esc(p.name)).join(", ")}${allKnown ? " un likmes summa" : ""}.${allKnown ? "" : " Likmju summas vēl nav ievadītas, tāpēc katra likme skaitīta kā 1 vienība (v.)."}</p></section>`;
+    const wrap = box.querySelector(".duel-chart");
+    if (wrap && box._tip) {
+      const tip = wrap.querySelector(".duel-tip"), svg = wrap.querySelector("svg"), t = box._tip;
+      svg.addEventListener("pointermove", e => {
+        const r = e.target.closest("rect[data-i]"); if (!r) { tip.hidden = true; return; }
+        const i = Number(r.dataset.i), k = svg.getBoundingClientRect().width / t.W;
+        tip.innerHTML = `<b>${esc(t.labels[i])}</b><br>${stats.map((s, j) => `${esc(s.p.name)}: ${t.fmt(t.series[j][i], true)}`).join("<br>")}`;
+        tip.style.left = t.X(i) * k + "px"; tip.style.top = Math.min(...t.series.map(s => t.Y(s[i]))) * k + "px"; tip.hidden = false;
+      });
+      svg.addEventListener("pointerleave", () => { tip.hidden = true; });
+    }
+  }
+  fetch("musu-likmes.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(renderDuel).catch(() => {});
+
   // ---- Lapas: Sākums / Likmes (#likmes) ----
   function setView(scroll) {
     const bets = location.hash === "#likmes";
