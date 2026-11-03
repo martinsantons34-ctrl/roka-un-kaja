@@ -8,18 +8,18 @@
   "bets": [
     { "id": "k4-gala", "md": 4, "kickoff": "2026-11-03T19:45:00+02:00", "home": "Galatasaray", "away": "Stuttgart",
       "market": "Mača uzvarētājs", "pick": "Galatasaray", "odds": 2.05, "status": "open",
-      "by": { "maarels": { "stake": null }, "renards": { "stake": null } } },
+      "by": { "maarels": { "stake": 5 }, "renards": { "stake": 5 } } },
     { "id": "k4-barca", "md": 4, "kickoff": "2026-11-03T22:00:00+02:00", "home": "Barcelona", "away": "Aston Villa",
       "market": "Uzvarētājs + abas gūst vārtus", "pick": "Barcelona + Jā", "odds": 1.95, "status": "open",
-      "by": { "maarels": { "stake": null }, "renards": { "stake": null } } },
+      "by": { "maarels": { "stake": 5 }, "renards": { "stake": 5 } } },
     { "id": "k4-psg", "md": 4, "kickoff": "2026-11-03T22:00:00+02:00", "home": "Villarreal", "away": "Paris SG",
       "market": "Mača uzvarētājs", "pick": "Paris SG", "odds": 1.75, "status": "open",
-      "by": { "maarels": { "stake": null }, "renards": { "stake": null } } },
+      "by": { "maarels": { "stake": 5 }, "renards": { "stake": 5 } } },
     { "id": "k4-bodo", "md": 4, "kickoff": "2026-11-03T22:00:00+02:00", "home": "Bodø/Glimt", "away": "Lille",
       "market": "Mača uzvarētājs", "pick": "Bodø/Glimt", "odds": 1.70, "status": "open",
-      "by": { "renards": { "stake": null } } },
+      "by": { "renards": { "stake": 5 } } },
     { "id": "k4-real", "md": 4, "kickoff": "2026-11-04T19:45:00+02:00", "home": "AEK Athens", "away": "Real Madrid",
       "market": "Handikaps (3 virzienu)", "pick": "Real Madrid −2", "odds": 2.58, "status": "open",
-      "by": { "maarels": { "stake": null } } }
+      "by": { "maarels": { "stake": 5 } } }
   ]
 }
