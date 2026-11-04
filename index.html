@@ -434,6 +434,40 @@ footer { font-size: 13px; color: var(--muted); }
 .rc-stats small { font-size: 11px; color: var(--muted); }
 .rc-stats b i { font-style: normal; font-size: 16px; color: var(--muted); }
 #betTabs { margin: 4px 0 10px; }
+.h2h-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+.h2h-btns button { flex: 1; min-width: 140px; font: 800 14px var(--body); padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.h2h-btns button[aria-expanded="true"] { background: var(--oak); border-color: var(--oak); color: #fff; }
+.h2h-btns button:focus-visible, .h2h-more:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.h2h-panel { display: grid; gap: 10px; padding: 12px; border-radius: 12px; background: var(--chip); }
+.h2h-panel h4 { margin: 4px 0 0; font-family: var(--display); font-weight: 800; font-size: 16px; text-transform: uppercase; }
+.h2h-none, .h2h-legend { margin: 0; font-size: 13px; color: var(--muted); }
+.h2h-legend .rs { margin: 0 2px 0 8px; }
+.h2h-sum { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; text-align: center; }
+.h2h-sum span { background: var(--surface); border-radius: 10px; padding: 6px 4px; display: grid; font-size: 11px; color: var(--muted); overflow-wrap: anywhere; }
+.h2h-sum b { font-family: var(--display); font-size: 22px; color: var(--ink); line-height: 1.1; }
+.h2h-meet, .h2h-form { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; background: var(--surface); border-radius: 10px; overflow: hidden; }
+.h2h-meet li { display: grid; grid-template-columns: 56px minmax(0, 1fr) 38px minmax(0, 1fr); gap: 2px 6px; align-items: center; padding: 6px 8px; font-size: 13px; }
+.h2h-meet .tm { overflow-wrap: anywhere; } .h2h-meet .tm.a { text-align: right; }
+.h2h-meet b, .h2h-form b { text-align: center; font-variant-numeric: tabular-nums; }
+.h2h-meet .cp { grid-column: 2 / -1; font-size: 11px; color: var(--muted); }
+.h2h-form li { display: grid; grid-template-columns: 22px 56px minmax(0, 1fr) 38px; gap: 0 6px; align-items: center; padding: 5px 8px; font-size: 13px; }
+.h2h-form li[hidden] { display: none; }
+.h2h-form .op { overflow-wrap: anywhere; }
+.h2h-form .cp { grid-column: 3 / -1; font-size: 11px; color: var(--muted); }
+.dt { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.rs { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 6px; font-size: 11px; font-weight: 800; color: #fff; }
+.rs.U { background: var(--up); } .rs.N { background: #8a929a; } .rs.Z { background: var(--down); }
+.h2h-team { display: grid; gap: 6px; }
+.h2h-th { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+.h2h-th .l5 { display: flex; gap: 3px; }
+.h2h-th .lgn { font-size: 12px; color: var(--muted); }
+.h2h-more { justify-self: start; font: 700 13px var(--body); padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--accent); cursor: pointer; }
+.h2h-tbl { width: 100%; border-collapse: collapse; background: var(--surface); border-radius: 10px; overflow: hidden; font-size: 13px; font-variant-numeric: tabular-nums; }
+.h2h-tbl th, .h2h-tbl td { padding: 4px 6px; text-align: right; border-top: 1px solid var(--line); white-space: nowrap; }
+.h2h-tbl td:nth-child(2) { white-space: normal; }
+.h2h-tbl th { font-size: 11px; color: var(--muted); border-top: 0; }
+.h2h-tbl th:nth-child(2), .h2h-tbl td:nth-child(2) { text-align: left; }
+.h2h-tbl tr.me td { background: color-mix(in srgb, var(--cheese) 30%, transparent); font-weight: 800; }
 .bet-more { margin-top: 12px; width: 100%; padding: 10px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--accent); font: 800 15px var(--body); cursor: pointer; }
 .bet-more:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .bet-warn { font-size: 12px; color: var(--muted); border-left: 3px solid var(--fire); padding: 4px 0 4px 10px; margin-top: 14px; }
@@ -1033,6 +1067,64 @@ body.view-bets #likmes { padding-top: 26px; }
     const cur = rounds.some(r => Number(r.md) === Number(data.current)) ? data.current : (rounds.length ? rounds[rounds.length - 1].md : null);
     if (cur != null) pick(cur); else renderBets(null);
   }
+  // ---- H2H, forma un līgu tabulas (h2h.json, no ESPN) ----
+  let h2hData = null, h2hSeq = 0;
+  const COMP = { "UEFA Champions League": "ČL", "UEFA Europa League": "EL", "UEFA Europa Conference League": "KL", "UEFA Conference League": "KL", "Club Friendly": "Draudz." };
+  const compShort = c => COMP[c] || c;
+  const dmy = d => { const [y, mo, da] = String(d).split("-"); return `${da}.${mo}.${String(y).slice(2)}`; };
+  const RES = { U: "Uzvara", N: "Neizšķirts", Z: "Zaudējums" };
+  function h2hButtons(m) {
+    if (!h2hData || !m.espn) return "";
+    const id = "h2h" + (++h2hSeq);
+    return `<div class="h2h-btns" data-h="${esc(m.espn.home)}" data-a="${esc(m.espn.away)}" data-id="${id}">
+      <button type="button" data-act="h2h" aria-expanded="false" aria-controls="${id}">📊 H2H un forma</button>
+      <button type="button" data-act="tbl" aria-expanded="false" aria-controls="${id}">🏆 Tabulas</button></div><div class="h2h-panel" id="${id}" hidden></div>`;
+  }
+  function formList(tid, n) {
+    const t = h2hData.teams[tid]; if (!t) return '<p class="h2h-none">Dati nav pieejami.</p>';
+    const rows = (t.form || []).map((g, i) => {
+      const home = g.homeId === tid, opp = home ? g.away : g.home, sc = home ? `${g.hs}:${g.as}` : `${g.as}:${g.hs}`;
+      return `<li${i >= n ? " hidden" : ""}><span class="rs ${g.res}" title="${RES[g.res]}">${g.res}</span><span class="dt">${dmy(g.date)}</span><span class="op">${home ? "pret" : "pie"} ${esc(opp)}</span><b>${sc}</b><span class="cp">${esc(compShort(g.comp))}</span></li>`;
+    }).join("");
+    const last5 = (t.form || []).slice(0, 5).map(g => `<span class="rs ${g.res}">${g.res}</span>`).join("");
+    return `<div class="h2h-team"><div class="h2h-th"><b>${esc(t.name)}</b><span class="l5">${last5}</span></div>
+      ${t.domestic ? "" : '<p class="h2h-none">Šīs komandas iekšzemes līgas spēles mūsu avotā nav pieejamas, tāpēc redzamas tikai Eiropas kausu spēles.</p>'}
+      <ol class="h2h-form">${rows || '<li class="h2h-none">Nav nospēlētu spēļu.</li>'}</ol>
+      ${(t.form || []).length > n ? `<button type="button" class="h2h-more" data-act="more">Vairāk spēļu ↓</button>` : ""}</div>`;
+  }
+  function h2hPanel(hid, aid) {
+    const pair = h2hData.pairs[`${hid}-${aid}`] || [];
+    const H = h2hData.teams[hid] || {}, A = h2hData.teams[aid] || {};
+    let wH = 0, wA = 0, dr = 0;
+    pair.forEach(g => { const hg = g.homeId === hid ? g.hs : g.as, ag = g.homeId === hid ? g.as : g.hs; hg > ag ? wH++ : hg < ag ? wA++ : dr++; });
+    const meet = pair.length ? `<div class="h2h-sum"><span><b>${wH}</b>${esc(H.name || "")}</span><span><b>${dr}</b>neizšķirti</span><span><b>${wA}</b>${esc(A.name || "")}</span></div>
+      <ol class="h2h-meet">${pair.map(g => `<li><span class="dt">${dmy(g.date)}</span><span class="tm">${esc(g.home)}</span><b>${g.hs}:${g.as}</b><span class="tm a">${esc(g.away)}</span><span class="cp">${esc(compShort(g.comp))}</span></li>`).join("")}</ol>`
+      : '<p class="h2h-none">Pēdējās sezonās šīs komandas savā starpā nav spēlējušas.</p>';
+    return `<h4>Savstarpējās spēles</h4>${meet}<h4>Pēdējās spēles</h4><p class="h2h-legend"><span class="rs U">U</span> uzvara <span class="rs N">N</span> neizšķirts <span class="rs Z">Z</span> zaudējums · „pret” = mājās, „pie” = izbraukumā</p>${formList(hid, 5)}${formList(aid, 5)}`;
+  }
+  function tablePanel(hid, aid) {
+    return [hid, aid].map(tid => {
+      const t = h2hData.teams[tid] || {}, lg = t.league && h2hData.leagues[t.league];
+      if (!lg) return `<div class="h2h-team"><div class="h2h-th"><b>${esc(t.name || "")}</b></div><p class="h2h-none">Šīs komandas līgas tabula mūsu avotā nav pieejama.</p></div>`;
+      const tb = lg.tables.find(x => x.rows.some(r => r.id === tid)) || lg.tables[0];
+      return `<div class="h2h-team"><div class="h2h-th"><b>${esc(t.name)}</b><span class="lgn">${esc(lg.name)}</span></div>
+        <table class="h2h-tbl"><thead><tr><th>#</th><th>Komanda</th><th>S</th><th>U-N-Z</th><th>VA</th><th>P</th></tr></thead><tbody>
+        ${tb.rows.map(r => `<tr${r.id === tid ? ' class="me"' : ""}><td>${r.rank}</td><td>${esc(r.team)}</td><td>${esc(r.gp)}</td><td>${esc(r.w)}-${esc(r.d)}-${esc(r.l)}</td><td>${esc(r.gd)}</td><td><b>${esc(r.pts)}</b></td></tr>`).join("")}
+        </tbody></table></div>`;
+    }).join("") + '<p class="h2h-legend">S – spēles, VA – vārtu attiecība, P – punkti.</p>';
+  }
+  document.getElementById("likmes").addEventListener("click", e => {
+    const btn = e.target.closest("button[data-act]"); if (!btn) return;
+    if (btn.dataset.act === "more") { btn.closest(".h2h-team").querySelectorAll("li[hidden]").forEach(li => li.hidden = false); btn.remove(); return; }
+    const box = btn.closest(".h2h-btns"); if (!box) return;
+    const panel = document.getElementById(box.dataset.id);
+    const open = btn.getAttribute("aria-expanded") === "true";
+    box.querySelectorAll("button").forEach(b => b.setAttribute("aria-expanded", "false"));
+    if (open) { panel.hidden = true; return; }
+    btn.setAttribute("aria-expanded", "true");
+    panel.innerHTML = btn.dataset.act === "h2h" ? h2hPanel(box.dataset.h, box.dataset.a) : tablePanel(box.dataset.h, box.dataset.a);
+    panel.hidden = false;
+  });
   function playerRowBet(p) {
     const od = p.odds ? Number(p.odds).toFixed(2).replace(".", ",") : "";
     return `<div class="bp${p.scored === true ? " scored" : p.scored === false ? " missed" : ""}"><span class="nm">${esc(p.name)}${p.scored === true ? " ⚽" : ""}</span><span class="pc">${pctTxt(p.pct)}</span><span class="od">${od}</span>
@@ -1066,7 +1158,8 @@ body.view-bets #likmes { padding-top: 26px; }
         ${m.score || m.alt ? `<span class="bet-score">${m.score ? `Prognozētais rezultāts: <b>${esc(m.score)}</b>` : ""}${m.score && m.alt ? " · " : ""}${m.alt ? `Vēl: ${esc(m.alt)}` : ""}</span>` : ""}
         ${m.note ? `<p>${esc(m.note)}</p>` : ""}
         ${(m.players || []).length ? `<div class="bet-players"><span class="ttl">Iespēja gūt vārtus</span>${m.players.map(playerRowBet).join("")}</div>` : ""}
-        ${(m.sources || []).length ? `<span class="bet-src">Avoti: ${m.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(", ")}</span>` : ""}`;
+        ${(m.sources || []).length ? `<span class="bet-src">Avoti: ${m.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(", ")}</span>` : ""}
+        ${h2hButtons(m)}`;
     const BADGE = { svariga: "Galvenā spēle", vertiba: "Vērtība" };
     const feat = ms.filter(m => m.featured);
     const minis = `<h3 class="bet-sub" style="margin-top:0">Visas spēles</h3><p class="bet-hint">Pieskaries spēlei, lai redzētu prognozi un vārtu guvējus. <span class="lg s">Zaļa josla</span> nozīmē kārtas galveno spēli, <span class="lg v">dzeltena</span> spēli ar vērtību.</p><div class="bet-minis">`
@@ -1213,7 +1306,10 @@ body.view-bets #likmes { padding-top: 26px; }
   window.addEventListener("hashchange", () => setView(true));
   setView(location.hash === "#likmes");
 
-  fetch("bets.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(loadBets)
+  Promise.all([
+    fetch("bets.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null),
+    fetch("h2h.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null)
+  ]).then(([b, h]) => { h2hData = h; loadBets(b); })
     .catch(() => { document.getElementById("betList").innerHTML = '<div class="empty">Neizdevās ielādēt likmes.</div>'; });
 
   fetch("news.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(renderNews)

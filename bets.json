@@ -46,7 +46,12 @@
             "a": 1
           },
           "hit": true,
-          "resultNote": "Sporting uzvarēja ar 1:0 (spēle Londonā, Stamford Bridge), lai gan dienu iepriekš bija atlaidis treneri."
+          "resultNote": "Sporting uzvarēja ar 1:0 (spēle Londonā, Stamford Bridge), lai gan dienu iepriekš bija atlaidis treneri.",
+          "espn": {
+            "event": "401915310",
+            "home": "493",
+            "away": "2250"
+          }
         },
         {
           "kickoff": "2026-11-03T18:45:00+01:00",
@@ -98,7 +103,12 @@
             "a": 0
           },
           "hit": true,
-          "resultNote": "Aleksey Batrakov guva abus vārtus 12. un 15. minūtē. Victor Osimhen bija aktīvs, bet neiesita."
+          "resultNote": "Aleksey Batrakov guva abus vārtus 12. un 15. minūtē. Victor Osimhen bija aktīvs, bet neiesita.",
+          "espn": {
+            "event": "401915311",
+            "home": "432",
+            "away": "134"
+          }
         },
         {
           "kickoff": "2026-11-03T21:00:00+01:00",
@@ -159,7 +169,12 @@
             "a": 6
           },
           "hit": true,
-          "resultNote": "PSG pirmajās 17 minūtēs guva četrus vārtus, kas ir Čempionu līgas rekords. Vārtus guva João Neves, Désiré Doué, Senny Mayulu, Fabián Ruiz (2) un 17 gadus vecais David Boly."
+          "resultNote": "PSG pirmajās 17 minūtēs guva četrus vārtus, kas ir Čempionu līgas rekords. Vārtus guva João Neves, Désiré Doué, Senny Mayulu, Fabián Ruiz (2) un 17 gadus vecais David Boly.",
+          "espn": {
+            "event": "401915309",
+            "home": "102",
+            "away": "160"
+          }
         },
         {
           "kickoff": "2026-11-03T21:00:00+01:00",
@@ -239,7 +254,12 @@
             "a": 2
           },
           "hit": false,
-          "resultNote": "Bayern uzvarēja ar 2:0: Lennart Karl (54') pēc Le Normand kļūdas un Konrad Laimer (74') pēc Harry Kane piespēles. Kane šoreiz vārtus neguva, un viņa sērija apstājās."
+          "resultNote": "Bayern uzvarēja ar 2:0: Lennart Karl (54') pēc Le Normand kļūdas un Konrad Laimer (74') pēc Harry Kane piespēles. Kane šoreiz vārtus neguva, un viņa sērija apstājās.",
+          "espn": {
+            "event": "401915386",
+            "home": "1068",
+            "away": "132"
+          }
         },
         {
           "kickoff": "2026-11-03T21:00:00+01:00",
@@ -315,7 +335,12 @@
             "a": 0
           },
           "hit": false,
-          "resultNote": "Lamine Yamal (7') pēc João Gomes kļūdas un Raphinha (2 vārti). Barcelona nospēlēja pirmo sauso spēli Čempionu līgā 19 spēlēs, un Villa zaudēja pirmo reizi."
+          "resultNote": "Lamine Yamal (7') pēc João Gomes kļūdas un Raphinha (2 vārti). Barcelona nospēlēja pirmo sauso spēli Čempionu līgā 19 spēlēs, un Villa zaudēja pirmo reizi.",
+          "espn": {
+            "event": "401915387",
+            "home": "83",
+            "away": "362"
+          }
         },
         {
           "kickoff": "2026-11-03T21:00:00+01:00",
@@ -376,7 +401,12 @@
             "a": 2
           },
           "hit": true,
-          "resultNote": "Roma vadīja ar 2:0 (Soulé, Malen no 11 m), bet United atspēlējās: Bruno Fernandes (11 m) un Matheus Cunha ar diviem vārtiem 83. un 86. minūtē."
+          "resultNote": "Roma vadīja ar 2:0 (Soulé, Malen no 11 m), bet United atspēlējās: Bruno Fernandes (11 m) un Matheus Cunha ar diviem vārtiem 83. un 86. minūtē.",
+          "espn": {
+            "event": "401915308",
+            "home": "360",
+            "away": "104"
+          }
         },
         {
           "kickoff": "2026-11-03T21:00:00+01:00",
@@ -457,7 +487,12 @@
             "a": 3
           },
           "hit": true,
-          "resultNote": "Inter pārliecinoši: Yann Bisseck (8'), Pio Esposito (34') un Piotr Zieliński (53'). Ieteikums „vairāk par 2,5” izdevās, bet „vērtības” likme uz Feyenoord – nē."
+          "resultNote": "Inter pārliecinoši: Yann Bisseck (8'), Pio Esposito (34') un Piotr Zieliński (53'). Ieteikums „vairāk par 2,5” izdevās, bet „vērtības” likme uz Feyenoord – nē.",
+          "espn": {
+            "event": "401915307",
+            "home": "142",
+            "away": "110"
+          }
         },
         {
           "kickoff": "2026-11-03T21:00:00+01:00",
@@ -505,7 +540,12 @@
             "a": 0
           },
           "hit": false,
-          "resultNote": "Bezvārtu neizšķirts. Bodø/Glimt neuzvarēja, un Lille ieguva savu pirmo punktu."
+          "resultNote": "Bezvārtu neizšķirts. Bodø/Glimt neuzvarēja, un Lille ieguva savu pirmo punktu.",
+          "espn": {
+            "event": "401915384",
+            "home": "2980",
+            "away": "166"
+          }
         },
         {
           "kickoff": "2026-11-03T21:00:00+01:00",
@@ -543,7 +583,12 @@
             "a": 0
           },
           "hit": true,
-          "resultNote": "LASK pārliecinoši sagrāva Slovan, kas joprojām ir bez punktiem."
+          "resultNote": "LASK pārliecinoši sagrāva Slovan, kas joprojām ir bez punktiem.",
+          "espn": {
+            "event": "401915385",
+            "home": "4411",
+            "away": "521"
+          }
         },
         {
           "kickoff": "2026-11-04T18:45:00+01:00",
@@ -607,7 +652,12 @@
             "Argumenti: Liverpool ielaiduši vārtus visās trijās šīs Čempionu līgas spēlēs, un visās bija vismaz 3 vārti. Szoboszlai joprojām ir savainots, un Stambulas atmosfēra ir viena no grūtākajām Eiropā. Fenerbahçe guvuši vārtus abās savās mājas spēlēs.",
             "Atšķirība starp modeli un tirgu gan ir neliela (24 % pret ~21 %), tāpēc vienprātīgāka likme ir „abas komandas gūst vārtus” (1,53–1,57). Isak iespēja gūt vārtus ir ~47 %, Gakpo ~40 %.",
             "Liverpool sausās spēles iespēja ir tikai ~35 %, kas apstiprina, ka Stambulā gaidāmi vārti abos laukuma galos."
-          ]
+          ],
+          "espn": {
+            "event": "401915382",
+            "home": "436",
+            "away": "364"
+          }
         },
         {
           "kickoff": "2026-11-04T18:45:00+01:00",
@@ -686,7 +736,12 @@
             "Mbappé ir kārtas „drošākais” vārtu guvējs: koeficients 1,40–1,44 nozīmē ~70 %, un arī statistikas modelis dod 68 %. Viņš ir guvis vārtus piecās spēlēs pēc kārtas. Vinícius Júnior iespēja ir ap 40 %, Bellingham ap 31 %.",
             "Realam ir arī kārtas otrā lielākā sausās spēles iespēja (42 %). Tāpēc „Real uzvara un AEK negūst vārtus” ir loģiska kombinācija, lai gan AEK mājās parasti cīnās līdz galam.",
             "Kopsavilkums: Mbappé vārti ir kārtas statistiski ticamākais notikums. Spēle ir trešdien 19:45 pēc Latvijas laika, agrāk nekā lielākā daļa trešdienas spēļu (22:00)."
-          ]
+          ],
+          "espn": {
+            "event": "401915383",
+            "home": "887",
+            "away": "86"
+          }
         },
         {
           "kickoff": "2026-11-04T21:00:00+01:00",
@@ -742,7 +797,12 @@
             "Galvenais iemesls ir Nicolò Tresoldi, viens no Čempionu līgas vārtu guvēju līderiem (4 vārti no 12 sitieniem 255 minūtēs). Brugge uzbrukums šosezon ir ļoti efektīvs.",
             "Prognozes gan krasi atšķiras: Foresportia modelis PSV dod 52 %, bet Squawka gaida 2:1 PSV. Vienīgais, kam lielākā daļa piekrīt, ir vārti: Squawka „vairāk par 2,5” (1,33), WhoScored arī.",
             "Kopsavilkums: ja interesē „modelis pret bukmeikeri” eksperiments, šī ir labākā spēle, jo vērtības pazīme ir pie diezgan zema koeficienta, nevis pie autsaidera."
-          ]
+          ],
+          "espn": {
+            "event": "401915303",
+            "home": "148",
+            "away": "570"
+          }
         },
         {
           "kickoff": "2026-11-04T21:00:00+01:00",
@@ -783,7 +843,12 @@
               "label": "FanDuel",
               "url": "https://sportsbook.fanduel.com/soccer/uefa-champions-league/rb-leipzig-v-man-city-36223259?tab=assists"
             }
-          ]
+          ],
+          "espn": {
+            "event": "401915306",
+            "home": "11420",
+            "away": "382"
+          }
         },
         {
           "kickoff": "2026-11-04T21:00:00+01:00",
@@ -807,7 +872,12 @@
               "label": "Squawka",
               "url": "https://www.squawka.com/en/news/previews/viking-vs-sabah-predictions-betting-tips-04-11-26/"
             }
-          ]
+          ],
+          "espn": {
+            "event": "401915302",
+            "home": "510",
+            "away": "21922"
+          }
         },
         {
           "kickoff": "2026-11-04T21:00:00+01:00",
@@ -852,7 +922,12 @@
               "label": "vidējie",
               "url": "https://gainblers.com/ca/bets/football/europe/champions-league/borussiadortmund-betis/"
             }
-          ]
+          ],
+          "espn": {
+            "event": "401915304",
+            "home": "124",
+            "away": "244"
+          }
         },
         {
           "kickoff": "2026-11-04T21:00:00+01:00",
@@ -901,7 +976,12 @@
               "label": "Bet-Experts",
               "url": "https://www.bet-experts.com/picks/football/champions-league/fc-porto-vs-napoli-prediction-betting-tips-04-11-2026"
             }
-          ]
+          ],
+          "espn": {
+            "event": "401915301",
+            "home": "437",
+            "away": "114"
+          }
         },
         {
           "kickoff": "2026-11-04T21:00:00+01:00",
@@ -933,7 +1013,12 @@
               "label": "Statz",
               "url": "https://statz.ai/news/19873711-lens-vs-como-predictions-betting-tips"
             }
-          ]
+          ],
+          "espn": {
+            "event": "401915305",
+            "home": "175",
+            "away": "2572"
+          }
         },
         {
           "kickoff": "2026-11-04T21:00:00+01:00",
@@ -982,7 +1067,12 @@
               "label": "Bet-Experts",
               "url": "https://www.bet-experts.com/picks/football/champions-league/slavia-prague-vs-arsenal-prediction-betting-tips-04-11-2026"
             }
-          ]
+          ],
+          "espn": {
+            "event": "401915381",
+            "home": "494",
+            "away": "359"
+          }
         }
       ],
       "scorers": [
