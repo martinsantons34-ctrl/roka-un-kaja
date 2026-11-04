@@ -104,10 +104,9 @@
           "kickoff": "2026-11-04T19:45:00+02:00",
           "home": "AEK Athens",
           "away": "Real Madrid",
-          "market": "Handikaps",
+          "market": "Aziātiskais handikaps",
           "pick": "Real Madrid −1,5",
-          "odds": 1.77,
-          "oddsApprox": true,
+          "odds": 1.54,
           "status": "open"
         },
         {
@@ -117,8 +116,7 @@
           "away": "Man City",
           "market": "Mača uzvarētājs",
           "pick": "Man City",
-          "odds": 1.58,
-          "oddsApprox": true,
+          "odds": 1.5,
           "status": "open"
         },
         {
@@ -128,8 +126,7 @@
           "away": "Arsenal",
           "market": "Mača uzvarētājs",
           "pick": "Arsenal",
-          "odds": 1.29,
-          "oddsApprox": true,
+          "odds": 1.23,
           "status": "open"
         }
       ],
