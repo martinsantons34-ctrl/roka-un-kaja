@@ -1157,7 +1157,8 @@ body.view-bets #likmes { padding-top: 26px; }
       const cell = (k, label) => `<span class="bet-odd${o[k] != null && o[k] === fav ? " fav" : ""}${val === k ? " val" : ""}${won === k ? " won" : ""}"${val === k ? ' title="Vērtība"' : ""}><small>${label}</small><b>${num(o[k])}</b></span>`;
       return `<div class="bet-odds${mini ? " mini" : ""}">${cell("1", mini ? "1" : esc(m.home))}${cell("X", mini ? "X" : "Neizšķirts")}${cell("2", mini ? "2" : esc(m.away))}</div>`;
     };
-    const body = m => `
+    const body = (m, after = "") => `
+        ${h2hButtons(m)}${after}
         ${resultHtml(m)}
         ${(m.odds || {}).src ? `<span class="bet-src">Koeficienti: ${esc(m.odds.src)}</span>` : ""}
         ${probBar(m.odds || {}, m)}
@@ -1165,14 +1166,13 @@ body.view-bets #likmes { padding-top: 26px; }
         ${m.score || m.alt ? `<span class="bet-score">${m.score ? `Prognozētais rezultāts: <b>${esc(m.score)}</b>` : ""}${m.score && m.alt ? " · " : ""}${m.alt ? `Vēl: ${esc(m.alt)}` : ""}</span>` : ""}
         ${m.note ? `<p>${esc(m.note)}</p>` : ""}
         ${(m.players || []).length ? `<div class="bet-players"><span class="ttl">Iespēja gūt vārtus</span>${m.players.map(playerRowBet).join("")}</div>` : ""}
-        ${(m.sources || []).length ? `<span class="bet-src">Avoti: ${m.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(", ")}</span>` : ""}
-        ${h2hButtons(m)}`;
+        ${(m.sources || []).length ? `<span class="bet-src">Avoti: ${m.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(", ")}</span>` : ""}`;
     const BADGE = { svariga: "Galvenā spēle", vertiba: "Vērtība" };
     const feat = ms.filter(m => m.featured);
     const minis = `<h3 class="bet-sub" style="margin-top:0">Visas spēles</h3><p class="bet-hint">Pieskaries spēlei, lai redzētu prognozi un vārtu guvējus. <span class="lg s">Zaļa josla</span> nozīmē kārtas galveno spēli, <span class="lg v">dzeltena</span> spēli ar vērtību.</p><div class="bet-minis">`
       + ms.map(m => `<details class="bet-mini${m.featured ? " is-" + m.featured.type : ""}">
           <summary><span class="mt"><span class="tm">${m.result ? `<b class="res">${esc(m.result.h)}:${esc(m.result.a)}</b> ${hitMark(m)}` : esc(when(m.kickoff))}</span><span class="tn">${esc(m.home)} – ${esc(m.away)}</span></span>${oddsCells(m, true)}</summary>
-          <div class="mini-body">${m.featured ? `<span class="bet-badge ${m.featured.type}">${BADGE[m.featured.type]}</span><p class="bet-why">${esc(m.featured.why)}</p>` : ""}${body(m)}${(m.analysis || []).length ? `<div class="bet-analysis"><span class="ttl">Plašāk par spēli</span>${m.analysis.map(t => `<p>${esc(t)}</p>`).join("")}</div>` : ""}</div>
+          <div class="mini-body">${body(m, m.featured ? `<span class="bet-badge ${m.featured.type}">${BADGE[m.featured.type]}</span><p class="bet-why">${esc(m.featured.why)}</p>` : "")}${(m.analysis || []).length ? `<div class="bet-analysis"><span class="ttl">Plašāk par spēli</span>${m.analysis.map(t => `<p>${esc(t)}</p>`).join("")}</div>` : ""}</div>
         </details>`).join("") + `</div>`;
     list.innerHTML = minis + (feat.length ? `<h3 class="bet-sub">Izceltās spēles</h3>` : "") + feat.map(m => `<article class="bet-card ${m.featured.type}">
         <span class="bet-badge ${m.featured.type}">${BADGE[m.featured.type] || ""}</span>
