@@ -9,10 +9,10 @@
     {
       "md": 4,
       "legs": [
-        { "id": "gala", "kickoff": "2026-11-03T19:45:00+02:00", "home": "Galatasaray", "away": "Stuttgart", "market": "Mača uzvarētājs", "pick": "Galatasaray", "odds": 2.05, "status": "open" },
-        { "id": "barca", "kickoff": "2026-11-03T22:00:00+02:00", "home": "Barcelona", "away": "Aston Villa", "market": "Uzvarētājs + abas gūst vārtus", "pick": "Barcelona + Jā", "odds": 1.95, "status": "open" },
-        { "id": "psg", "kickoff": "2026-11-03T22:00:00+02:00", "home": "Villarreal", "away": "Paris SG", "market": "Mača uzvarētājs", "pick": "Paris SG", "odds": 1.75, "status": "open" },
-        { "id": "bodo", "kickoff": "2026-11-03T22:00:00+02:00", "home": "Bodø/Glimt", "away": "Lille", "market": "Mača uzvarētājs", "pick": "Bodø/Glimt", "odds": 1.70, "status": "open" },
+        { "id": "gala", "kickoff": "2026-11-03T19:45:00+02:00", "home": "Galatasaray", "away": "Stuttgart", "market": "Mača uzvarētājs", "pick": "Galatasaray", "odds": 2.05, "status": "won", "result": "2:0" },
+        { "id": "barca", "kickoff": "2026-11-03T22:00:00+02:00", "home": "Barcelona", "away": "Aston Villa", "market": "Uzvarētājs + abas gūst vārtus", "pick": "Barcelona + Jā", "odds": 1.95, "status": "lost", "result": "3:0" },
+        { "id": "psg", "kickoff": "2026-11-03T22:00:00+02:00", "home": "Villarreal", "away": "Paris SG", "market": "Mača uzvarētājs", "pick": "Paris SG", "odds": 1.75, "status": "won", "result": "0:6" },
+        { "id": "bodo", "kickoff": "2026-11-03T22:00:00+02:00", "home": "Bodø/Glimt", "away": "Lille", "market": "Mača uzvarētājs", "pick": "Bodø/Glimt", "odds": 1.70, "status": "lost", "result": "0:0" },
         { "id": "real", "kickoff": "2026-11-04T19:45:00+02:00", "home": "AEK Athens", "away": "Real Madrid", "market": "Handikaps (3 virzienu)", "pick": "Real Madrid −2", "odds": 2.58, "status": "open" }
       ],
       "slips": [
