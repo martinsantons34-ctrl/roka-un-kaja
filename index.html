@@ -1077,7 +1077,7 @@ body.view-bets #likmes { padding-top: 26px; }
     if (!h2hData || !m.espn) return "";
     const id = "h2h" + (++h2hSeq);
     return `<div class="h2h-btns" data-h="${esc(m.espn.home)}" data-a="${esc(m.espn.away)}" data-id="${id}">
-      <button type="button" data-act="h2h" aria-expanded="false" aria-controls="${id}">📊 H2H un forma</button>
+      <button type="button" data-act="h2h" aria-expanded="false" aria-controls="${id}">📊 H2H</button>
       <button type="button" data-act="tbl" aria-expanded="false" aria-controls="${id}">🏆 Tabulas</button></div><div class="h2h-panel" id="${id}" hidden></div>`;
   }
   function formList(tid, n) {
