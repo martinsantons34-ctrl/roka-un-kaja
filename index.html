@@ -423,6 +423,7 @@ footer { font-size: 13px; color: var(--muted); }
 .hit.no { background: color-mix(in srgb, var(--down) 15%, transparent); color: var(--down); }
 .bet-mini .tm .res, .bet-time .res { color: var(--ink); font-size: 13px; font-variant-numeric: tabular-nums; }
 .bp.scored .nm { color: var(--up); }
+.bet-odd.model b { font-size: 15px; }
 .bet-odd.won { outline: 2px solid var(--ink); outline-offset: -2px; }
 .bp.missed { opacity: .6; }
 .bet-recap { background: var(--surface); border: 2px solid var(--accent); border-radius: 16px; padding: 14px 16px; display: grid; gap: 10px; margin-bottom: 14px; }
@@ -1030,10 +1031,13 @@ body.view-bets #likmes { padding-top: 26px; }
   // ---- Likmes (bets.json): koeficienti, prognozes un vārtu guvēji nākamajai kārtai ----
   const pctTxt = v => v == null ? "–" : Math.round(v) + " %";
   function probBar(o, m) {
-    if (o["1"] == null || o.X == null || o["2"] == null) return "";
-    const inv = ["1", "X", "2"].map(k => 1 / o[k]); const t = inv.reduce((a, b) => a + b, 0);
+    const hasOdds = o["1"] != null && o.X != null && o["2"] != null;
+    const md = m.model;
+    if (!hasOdds && !(md && md["1"] != null)) return "";
+    const inv = hasOdds ? ["1", "X", "2"].map(k => 1 / o[k]) : ["1", "X", "2"].map(k => Number(md[k])); const t = inv.reduce((a, b) => a + b, 0);
     const [h, d, a] = inv.map(v => v / t * 100);
     return `<div class="bet-prob" aria-hidden="true"><i class="h" style="width:${h}%"></i><i class="d" style="width:${d}%"></i><i class="a" style="width:${a}%"></i></div>
+      ${hasOdds ? "" : `<span class="bet-src">Modeļa varbūtības (${esc(md.src || "modelis")}), bukmeikeru koeficientu vēl nav.</span>`}
       <div class="bet-probtxt"><span>${esc(m.home)} ${Math.round(h)} %</span><span>neizšķirts ${Math.round(d)} %</span><span>${esc(m.away)} ${Math.round(a)} %</span></div>`;
   }
   function hitMark(m) { return m.hit === true ? '<span class="hit ok">✓ prognoze</span>' : m.hit === false ? '<span class="hit no">✗ prognoze</span>' : ""; }
@@ -1154,7 +1158,11 @@ body.view-bets #likmes { padding-top: 26px; }
       const fav = vals.length ? Math.min(...vals) : null;
       const val = m.featured && m.featured.type === "vertiba" ? m.valueSide : null;
       const won = m.result ? (Number(m.result.h) > Number(m.result.a) ? "1" : Number(m.result.h) < Number(m.result.a) ? "2" : "X") : null;
-      const cell = (k, label) => `<span class="bet-odd${o[k] != null && o[k] === fav ? " fav" : ""}${val === k ? " val" : ""}${won === k ? " won" : ""}"${val === k ? ' title="Vērtība"' : ""}><small>${label}</small><b>${num(o[k])}</b></span>`;
+      const md = !vals.length && m.model ? m.model : null;
+      const mfav = md ? Math.max(md["1"], md.X, md["2"]) : null;
+      const cell = (k, label) => md
+        ? `<span class="bet-odd model${md[k] === mfav ? " fav" : ""}${won === k ? " won" : ""}" title="Modeļa varbūtība"><small>${label}</small><b>${esc(md[k])}%</b></span>`
+        : `<span class="bet-odd${o[k] != null && o[k] === fav ? " fav" : ""}${val === k ? " val" : ""}${won === k ? " won" : ""}"${val === k ? ' title="Vērtība"' : ""}><small>${label}</small><b>${num(o[k])}</b></span>`;
       return `<div class="bet-odds${mini ? " mini" : ""}">${cell("1", mini ? "1" : esc(m.home))}${cell("X", mini ? "X" : "Neizšķirts")}${cell("2", mini ? "2" : esc(m.away))}</div>`;
     };
     const body = (m, after = "") => `

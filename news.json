@@ -1,6 +1,27 @@
 {
-  "updatedAt": "2026-11-03T22:50:00Z",
+  "updatedAt": "2026-11-04T23:00:00Z",
   "items": [
+    {
+      "id": "fantasy-k4-tresdiena",
+      "date": "2026-11-04",
+      "tag": "Fantasy",
+      "title": "4. kārtas trešdiena: Mbappé, Haaland un Isak iesit, Liverpool zaudē Stambulā",
+      "teaser": "Mbappé un Haaland ar vārtiem, Isak iesit no rezervistu soliņa, Cucurella ar piespēli. Napoli zaudē Porto ar 1:4.",
+      "body": [
+        "Atēnās Real uzvarēja AEK ar 3:2. Kylian Mbappé (Aleks, Maarels, renardsudris) guva vārtus 78. minūtē, un Marc Cucurella (Arturs M) atdeva rezultatīvo piespēli Jude Bellingham. Thibaut Courtois (Arturs M, renardsudris) gan ielaida divus vārtus. Dean Huijsen visu spēli nosēdēja uz soliņa.",
+        "Leipzigā City uzvarēja ar 3:2, un Erling Haaland (Arturs M) 78. minūtē guva uzvaras vārtus. Rayan Cherki un Matheus Nunes (abi Maarels) bija pamatsastāvā. Leipzig aizsargs Castello Lukeba iesita savos vārtos.",
+        "Stambulā Liverpool zaudēja Fenerbahçe ar 2:3. Alexander Isak (Aleks) iznāca no rezervistu soliņa un guva vārtus, bet Virgil van Dijk (Aleks, Maarels) komanda ielaida trīs.",
+        "Prāgā Arsenal uzvarēja Slavia ar 2:1. Gabriel (Aleks, renardsudris) un David Raya (Maarels) bija pamatsastāvā, bet sausā spēle izgāzās 90. minūtē. Riccardo Calafiori palika uz soliņa.",
+        "Porto Napoli zaudēja ar 1:4, lai gan Kevin De Bruyne un Amir Rrahmani (abi Aleks) bija pamatsastāvā. Serhou Guirassy spēlēja Dortmund rindās, bet vārtus neguva.",
+        "5. kārta sāksies 24. novembrī."
+      ],
+      "sources": [
+        {
+          "label": "ESPN (spēļu dati)",
+          "url": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions"
+        }
+      ]
+    },
     {
       "id": "fantasy-k4-otrdiena",
       "date": "2026-11-03",
@@ -91,41 +112,6 @@
         {
           "label": "Sportacentrs.com",
           "url": "https://sportacentrs.com/hokejs/latvijas_cempionats/24102026-fjodorovs_piesakas_sezonas_skaistakajiem_"
-        }
-      ]
-    },
-    {
-      "id": "fantasy-k3-tresdiena",
-      "date": "2026-10-21",
-      "tag": "Fantasy",
-      "title": "3. kārtas trešdiena: Kane soda sitienā, Mbappé atkal precīzs, Barkley iesit Aleksam",
-      "teaser": "Kane vārti jau desmitajā Čempionu līgas spēlē pēc kārtas, Mbappé ar vārtiem pret “Leipzig”, Aleksa jaunpienācējs Barkley iesit uzreiz.",
-      "body": [
-        "Minhenē “Bayern” un “Arsenal” nospēlēja 2:2. Harry Kane 61. minūtē realizēja 11 metru soda sitienu, kas piešķirts par Timber spēli ar roku. Pēc Sky Sports datiem, Kane ir tikai otrais spēlētājs pēc Ronaldo, kurš vārtus guvis desmit Čempionu līgas spēlēs pēc kārtas. Kane ir Arturam, Maarelam un renardsudris. Olise šajā spēlē nepiedalījās diskvalifikācijas dēļ. “Arsenal” vārtsargs Raya (Maarelam) atvairīja Davies metienu no tuvas distances, bet Saka agri tika nomainīts traumas dēļ.",
-        "Madridē “Real” ar 4:1 sagrāva “Leipzig”, un Mbappé 83. minūtē guva trešos vārtus. Mbappé ir Aleksam un Maarelam, un renardsudris viņu nopirka tieši pirms šīs kārtas.",
-        "Aleksa transfers attaisnojās uzreiz: Ross Barkley, ko Aleks nopirka pirms 3. kārtas, 23. minūtē atklāja rezultātu, “Aston Villa” uzvarot “Viking” ar 3:1. Par otru jaunpienācēju Nicolas Jackson atskaitēs nekas nav minēts.",
-        "Sevilja: “Betis” uzvarēja “Feyenoord” ar 1:0, vienīgos vārtus no soda sitiena guva Isco. Antony (renardsudris) vārtus neguva un tika nomainīts."
-      ],
-      "sources": [
-        {
-          "label": "Sky Sports (Bayern–Arsenal)",
-          "url": "https://www.skysports.com/football/bayern-munich-vs-arsenal/report/577643"
-        },
-        {
-          "label": "Yahoo Sports (Real–Leipzig)",
-          "url": "https://sports.yahoo.com/articles/real-madrid-rout-leipzig-continue-205844654.html"
-        },
-        {
-          "label": "VAVEL (Real–Leipzig)",
-          "url": "https://www.vavel.com/en-us/soccer/2026/10/21/1276250-real-madrid-vs-leipzig-live-score-uefa-champions-league.html"
-        },
-        {
-          "label": "101 Great Goals (Villa–Viking)",
-          "url": "https://www.101greatgoals.com/match-reports/aston-villa-3-1-viking-report-result-goals/"
-        },
-        {
-          "label": "VAVEL (Betis–Feyenoord)",
-          "url": "https://www.vavel.com/en-us/soccer/2026/10/21/1276237-real-betis-vs-feyenoord-live-score-uefa-champions-league.html"
         }
       ]
     },

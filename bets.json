@@ -1,5 +1,5 @@
 {
-  "current": 4,
+  "current": 5,
   "rounds": [
     {
       "md": 4,
@@ -612,7 +612,8 @@
               "odds": 2.15,
               "pct": 47,
               "note": "",
-              "ours": ""
+              "ours": "",
+              "scored": true
             },
             {
               "name": "Cody Gakpo",
@@ -620,7 +621,8 @@
               "odds": 2.5,
               "pct": 40,
               "note": "",
-              "ours": ""
+              "ours": "",
+              "scored": false
             }
           ],
           "ours": "",
@@ -657,7 +659,13 @@
             "event": "401915382",
             "home": "436",
             "away": "364"
-          }
+          },
+          "result": {
+            "h": 3,
+            "a": 2
+          },
+          "hit": true,
+          "resultNote": "Fenerbahçe atspēlējās un uzvarēja: Trey Nyoni un Alexander Isak guva vārtus Liverpool, bet Mason Greenwood, Archie Brown un Vedat Muriqi (79') Fenerbahçe. Vērtības likme uz Fenerbahçe (4,33) izdevās."
         },
         {
           "kickoff": "2026-11-04T18:45:00+01:00",
@@ -681,7 +689,8 @@
               "odds": 1.42,
               "pct": 70,
               "note": "Koeficients 1,40–1,44, modelis: 68 %. Vārti piecās spēlēs pēc kārtas.",
-              "ours": ""
+              "ours": "",
+              "scored": true
             },
             {
               "name": "Vinícius Júnior",
@@ -689,7 +698,8 @@
               "odds": 2.5,
               "pct": 40,
               "note": "",
-              "ours": ""
+              "ours": "",
+              "scored": false
             },
             {
               "name": "Jude Bellingham",
@@ -697,7 +707,8 @@
               "odds": 3.2,
               "pct": 31,
               "note": "",
-              "ours": ""
+              "ours": "",
+              "scored": true
             },
             {
               "name": "Carlos Espí",
@@ -705,7 +716,8 @@
               "odds": null,
               "pct": 55,
               "note": "Modelis.",
-              "ours": ""
+              "ours": "",
+              "scored": false
             }
           ],
           "ours": "",
@@ -741,7 +753,13 @@
             "event": "401915383",
             "home": "887",
             "away": "86"
-          }
+          },
+          "result": {
+            "h": 2,
+            "a": 3
+          },
+          "hit": false,
+          "resultNote": "Real uzvarēja tikai ar vienu vārtu pārsvaru: Jude Bellingham, Kylian Mbappé (78') un Federico Valverde 90.+2 minūtē. AEK vārtus guva Koita un Pilios. −1,5 handikaps neizdevās."
         },
         {
           "kickoff": "2026-11-04T21:00:00+01:00",
@@ -765,7 +783,8 @@
               "odds": null,
               "pct": null,
               "note": "4 vārti no 12 sitieniem 255 minūtēs. Pirmie vārti: 6,00.",
-              "ours": ""
+              "ours": "",
+              "scored": true
             }
           ],
           "ours": "",
@@ -802,7 +821,13 @@
             "event": "401915303",
             "home": "148",
             "away": "570"
-          }
+          },
+          "result": {
+            "h": 1,
+            "a": 2
+          },
+          "hit": true,
+          "resultNote": "Club Brugge uzvarēja izbraukumā: Nicolò Tresoldi (25') un Carlos Forbs, PSV atbildēja tikai ar Kodai Sano vārtiem. Gan „vairāk par 2,5”, gan vērtības likme uz Brugge (2,90) izdevās."
         },
         {
           "kickoff": "2026-11-04T21:00:00+01:00",
@@ -826,7 +851,8 @@
               "odds": null,
               "pct": 61,
               "note": "Modelis: 61 %. Iesitīs vai atdos rezultatīvu piespēli: 1,45.",
-              "ours": ""
+              "ours": "",
+              "scored": true
             }
           ],
           "ours": "",
@@ -848,7 +874,13 @@
             "event": "401915306",
             "home": "11420",
             "away": "382"
-          }
+          },
+          "result": {
+            "h": 2,
+            "a": 3
+          },
+          "hit": true,
+          "resultNote": "City uzvarēja ar 3:2: Lukeba pašu vārti, Enzo Fernández un Erling Haaland (78'). Leipzig vārtus guva Ridle Baku un Antonio Nusa."
         },
         {
           "kickoff": "2026-11-04T21:00:00+01:00",
@@ -877,7 +909,13 @@
             "event": "401915302",
             "home": "510",
             "away": "21922"
-          }
+          },
+          "result": {
+            "h": 4,
+            "a": 1
+          },
+          "hit": true,
+          "resultNote": "Sabah vadīja, bet Viking atspēlējās ar četriem vārtiem (Erik Botheim divreiz, Tripic, Falchener)."
         },
         {
           "kickoff": "2026-11-04T21:00:00+01:00",
@@ -901,7 +939,8 @@
               "odds": 2.1,
               "pct": 48,
               "note": "4 vārti 210 minūtēs, modelis: 50 %.",
-              "ours": ""
+              "ours": "",
+              "scored": false
             }
           ],
           "ours": "",
@@ -927,7 +966,13 @@
             "event": "401915304",
             "home": "124",
             "away": "244"
-          }
+          },
+          "result": {
+            "h": 2,
+            "a": 1
+          },
+          "hit": true,
+          "resultNote": "Dortmund uzvarēja ar 2:1: Fábio Silva un Konstantinos Karetsas, Betis vārtus guva Aitor Ruibal. Serhou Guirassy vārtus neguva."
         },
         {
           "kickoff": "2026-11-04T21:00:00+01:00",
@@ -951,7 +996,8 @@
               "odds": null,
               "pct": null,
               "note": "Squawka ieteiktais vārtu guvējs.",
-              "ours": ""
+              "ours": "",
+              "scored": true
             },
             {
               "name": "Rasmus Højlund",
@@ -959,7 +1005,8 @@
               "odds": null,
               "pct": null,
               "note": "Pirmie vārti: 8,00.",
-              "ours": ""
+              "ours": "",
+              "scored": false
             }
           ],
           "ours": "",
@@ -981,7 +1028,13 @@
             "event": "401915301",
             "home": "437",
             "away": "114"
-          }
+          },
+          "result": {
+            "h": 4,
+            "a": 1
+          },
+          "hit": true,
+          "resultNote": "Porto sagrāva Napoli ar 4:1: Bednarek, Gabri Veiga, Kiwior un Samu Aghehowa no 11 m. Napoli vārtus guva McTominay, Rafa Marín saņēma sarkano kartīti."
         },
         {
           "kickoff": "2026-11-04T21:00:00+01:00",
@@ -1018,7 +1071,13 @@
             "event": "401915305",
             "home": "175",
             "away": "2572"
-          }
+          },
+          "result": {
+            "h": 1,
+            "a": 9
+          },
+          "hit": true,
+          "resultNote": "Kārtas sensācija: Como izbraukumā uzvarēja ar 9:1. Anastasios Douvikas guva trīs vārtus, Nico Paz, Da Cunha, Kempf, Liberali, Baturina un Papaccioli pa vieniem."
         },
         {
           "kickoff": "2026-11-04T21:00:00+01:00",
@@ -1042,7 +1101,8 @@
               "odds": 4.0,
               "pct": 25,
               "note": "",
-              "ours": ""
+              "ours": "",
+              "scored": false
             },
             {
               "name": "Eberechi Eze",
@@ -1050,7 +1110,8 @@
               "odds": null,
               "pct": null,
               "note": "Squawka viņu min kā visticamāko pirmo vārtu guvēju.",
-              "ours": ""
+              "ours": "",
+              "scored": false
             }
           ],
           "ours": "",
@@ -1072,7 +1133,13 @@
             "event": "401915381",
             "home": "494",
             "away": "359"
-          }
+          },
+          "result": {
+            "h": 1,
+            "a": 2
+          },
+          "hit": false,
+          "resultNote": "Arsenal uzvarēja ar 2:1 (Madueke, Gyökeres), bet Slavia 90. minūtē samazināja starpību, tāpēc −1,5 handikaps neizdevās."
         }
       ],
       "scorers": [
@@ -1083,7 +1150,8 @@
           "pct": 70,
           "odds": 1.42,
           "ours": "",
-          "note": "Koeficients 1,40–1,44, modelis: 68 %. Vārti piecās spēlēs pēc kārtas."
+          "note": "Koeficients 1,40–1,44, modelis: 68 %. Vārti piecās spēlēs pēc kārtas.",
+          "scored": true
         },
         {
           "name": "Erling Haaland",
@@ -1092,7 +1160,8 @@
           "pct": 61,
           "odds": null,
           "ours": "",
-          "note": "Modelis: 61 %. Iesitīs vai atdos rezultatīvu piespēli: 1,45."
+          "note": "Modelis: 61 %. Iesitīs vai atdos rezultatīvu piespēli: 1,45.",
+          "scored": true
         },
         {
           "name": "Raphinha",
@@ -1111,7 +1180,8 @@
           "pct": 55,
           "odds": null,
           "ours": "",
-          "note": "Modelis."
+          "note": "Modelis.",
+          "scored": false
         },
         {
           "name": "Victor Osimhen",
@@ -1170,7 +1240,8 @@
           "pct": 48,
           "odds": 2.1,
           "ours": "",
-          "note": "4 vārti 210 minūtēs, modelis: 50 %."
+          "note": "4 vārti 210 minūtēs, modelis: 50 %.",
+          "scored": false
         },
         {
           "name": "Donyell Malen",
@@ -1189,7 +1260,8 @@
           "pct": 47,
           "odds": 2.15,
           "ours": "",
-          "note": ""
+          "note": "",
+          "scored": true
         },
         {
           "name": "Marcus Thuram",
@@ -1325,14 +1397,666 @@
         ]
       },
       "recap": {
-        "title": "Prognozes pret realitāti: 1. diena (otrdiena)",
+        "title": "Prognozes pret realitāti: visa 4. kārta",
         "p": [
-          "No deviņiem otrdienas ieteikumiem izdevās seši. Precīzi bija favorītu uzvaras (Sporting, Galatasaray, PSG, LASK), „vairāk par 2,5 vārtiem” Inter spēlē un „abas gūst vārtus + vairāk par 2,5” Old Trafford stadionā, kur Manchester United no 0:2 izrāva uzvaru ar 3:2.",
-          "Lielākā kļūda bija PSG novērtējumā. Pirms spēles rakstījām, ka PSG koeficients 1,58 izskatās pārāk zems, jo komandai trūka četru spēlētāju. Īstenībā PSG pirmajās 17 minūtēs guva četrus vārtus un uzvarēja ar 6:0. Modeļu skepse šoreiz bija nepamatota.",
-          "Neizdevās arī: neizšķirts Atleti – Bayern (Bayern uzvarēja 2:0), „abas gūst vārtus” Barcelona spēlē (3:0, Villa pirmo reizi bez vārtiem) un Bodø/Glimt uzvara (0:0). „Vērtības” likme uz Feyenoord (4,50) arī neattaisnojās, jo Inter uzvarēja 3:0.",
-          "Vārtu guvēji: no minētajiem vārtus guva Raphinha (divreiz), Lamine Yamal, Donyell Malen, Pio Esposito un Désiré Doué. Harry Kane sērija apstājās pie 10 spēlēm, lai gan viņš atdeva rezultatīvu piespēli. Trešdien vēl priekšā deviņas spēles, tostarp Mbappé pret AEK un Haaland pret Leipzig."
+          "Kopā izdevās 13 no 18 galvenajiem ieteikumiem: 6 no 9 otrdien un 7 no 9 trešdien. Visprecīzākās bija vārtu likmes. No sešām „abas gūst vārtus” likmēm izdevās piecas (neizdevās tikai Barcelona – Villa, 3:0). „Vairāk par 2,5 vārtiem” izdevās visās trijās spēlēs.",
+          "Vērtības likmes: divas no trim izdevās. Fenerbahçe pārspēja Liverpool ar 3:2 (koeficients 4,33), un Club Brugge uzvarēja PSV ar 2:1 (2,90). Neizdevās Feyenoord (4,50), kas zaudēja Inter ar 0:3. Ja uz visām trim liktu pa vienādai summai, peļņa būtu ievērojama, taču trīs spēles ir pārāk maza izlase, lai izdarītu secinājumus.",
+          "Galvenās kļūdas: PSG novērtējām par zemu (uzvara 6:0), kā arī abas −1,5 handikapa likmes (Real un Arsenal uzvarēja tikai ar vienu vārtu pārsvaru). Neizdevās arī Atleti – Bayern neizšķirts un Bodø/Glimt uzvara. „Draugu ekspresis” (Barcelona, Real, Arsenal, 1,97) gan izdevās.",
+          "Vārtu guvēji: Kylian Mbappé, Erling Haaland, Raphinha, Lamine Yamal, Alexander Isak, Nicolò Tresoldi, Jude Bellingham un Samu Aghehowa iesita, bet Harry Kane, Victor Osimhen un Serhou Guirassy palika bez vārtiem. Kārtas lielākais pārsteigums: Como izbraukumā uzvarēja Lens ar 9:1."
         ]
       }
+    },
+    {
+      "md": 5,
+      "provisional": true,
+      "intro": "Provizoriskā 5. kārtas prognoze. Bukmeikeri koeficientus šīm spēlēm vēl nav publicējuši, tāpēc pagaidām ir redzamas tikai statistikas modeļa (Prediball) varbūtības. Koeficienti, vārtu guvēju iespējas, vērtības spēles un analīze tiks pievienoti pirmdienas naktī pirms kārtas (23./24. novembrī). Tikai interesei.",
+      "insights": [
+        "Lielākais favorīts: Barcelona pie Sabah (modelis 87 %).",
+        "Līdzsvarotākās spēles: Feyenoord – Porto, Slavia – Villarreal un Shakhtar – Fenerbahçe, kur nevienai komandai nav vairāk par 40 %.",
+        "Galatasaray mājās pret Aston Villa ir autsaidere (31 % pret 46 %)."
+      ],
+      "matches": [
+        {
+          "kickoff": "2026-11-24T18:45:00+01:00",
+          "home": "Bodø/Glimt",
+          "away": "LASK",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 62,
+            "X": 19,
+            "2": 19,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Bodø/Glimt uzvara",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Bodø/Glimt 62 %, neizšķirts 19 %, LASK 19 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "espn": {
+            "event": "401915380",
+            "home": "2980",
+            "away": "4411"
+          }
+        },
+        {
+          "kickoff": "2026-11-24T18:45:00+01:00",
+          "home": "Galatasaray",
+          "away": "Aston Villa",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 31,
+            "X": 23,
+            "2": 46,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Atklāta spēle",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Galatasaray 31 %, neizšķirts 23 %, Aston Villa 46 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "espn": {
+            "event": "401915300",
+            "home": "432",
+            "away": "362"
+          }
+        },
+        {
+          "kickoff": "2026-11-24T21:00:00+01:00",
+          "home": "Arsenal",
+          "away": "B. Dortmund",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 67,
+            "X": 21,
+            "2": 12,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Arsenal uzvara",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Arsenal 67 %, neizšķirts 21 %, B. Dortmund 12 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "featured": {
+            "type": "svariga",
+            "why": "Arsenal un Dortmund cīnās par vietu labāko astoņniekā. Arsenal mājās ir favorīts (67 %)."
+          },
+          "espn": {
+            "event": "401915295",
+            "home": "359",
+            "away": "124"
+          }
+        },
+        {
+          "kickoff": "2026-11-24T21:00:00+01:00",
+          "home": "Como",
+          "away": "AEK Athens",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 55,
+            "X": 25,
+            "2": 20,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Como uzvara",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Como 55 %, neizšķirts 25 %, AEK Athens 20 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "espn": {
+            "event": "401915296",
+            "home": "2572",
+            "away": "887"
+          }
+        },
+        {
+          "kickoff": "2026-11-24T21:00:00+01:00",
+          "home": "Feyenoord",
+          "away": "Porto",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 39,
+            "X": 27,
+            "2": 34,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Atklāta spēle",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Feyenoord 39 %, neizšķirts 27 %, Porto 34 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "espn": {
+            "event": "401915294",
+            "home": "142",
+            "away": "437"
+          }
+        },
+        {
+          "kickoff": "2026-11-24T21:00:00+01:00",
+          "home": "Man City",
+          "away": "Napoli",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 72,
+            "X": 17,
+            "2": 11,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Man City uzvara",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Man City 72 %, neizšķirts 17 %, Napoli 11 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "featured": {
+            "type": "svariga",
+            "why": "City pret Napoli, kas pēdējā kārtā Porto zaudēja ar 1:4. Modelis City dod 72 %."
+          },
+          "espn": {
+            "event": "401915379",
+            "home": "382",
+            "away": "114"
+          }
+        },
+        {
+          "kickoff": "2026-11-24T21:00:00+01:00",
+          "home": "Leipzig",
+          "away": "Lens",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 57,
+            "X": 20,
+            "2": 23,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Leipzig uzvara",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Leipzig 57 %, neizšķirts 20 %, Lens 23 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "espn": {
+            "event": "401915299",
+            "home": "11420",
+            "away": "175"
+          }
+        },
+        {
+          "kickoff": "2026-11-24T21:00:00+01:00",
+          "home": "Real Madrid",
+          "away": "PSV",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 71,
+            "X": 16,
+            "2": 13,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Real Madrid uzvara",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Real Madrid 71 %, neizšķirts 16 %, PSV 13 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "featured": {
+            "type": "svariga",
+            "why": "Real pret PSV. PSV pēdējā kārtā mājās zaudēja Club Brugge, Real uzvarēja Atēnās ar 3:2."
+          },
+          "espn": {
+            "event": "401915298",
+            "home": "86",
+            "away": "148"
+          }
+        },
+        {
+          "kickoff": "2026-11-24T21:00:00+01:00",
+          "home": "S. Bratislava",
+          "away": "Real Betis",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 14,
+            "X": 19,
+            "2": 67,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Real Betis uzvara",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: S. Bratislava 14 %, neizšķirts 19 %, Real Betis 67 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "espn": {
+            "event": "401915297",
+            "home": "521",
+            "away": "244"
+          }
+        },
+        {
+          "kickoff": "2026-11-25T18:45:00+01:00",
+          "home": "Sabah",
+          "away": "Barcelona",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 5,
+            "X": 8,
+            "2": 87,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Barcelona uzvara",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Sabah 5 %, neizšķirts 8 %, Barcelona 87 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "espn": {
+            "event": "401915378",
+            "home": "21922",
+            "away": "83"
+          }
+        },
+        {
+          "kickoff": "2026-11-25T18:45:00+01:00",
+          "home": "Slavia Praha",
+          "away": "Villarreal",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 39,
+            "X": 25,
+            "2": 36,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Atklāta spēle",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Slavia Praha 39 %, neizšķirts 25 %, Villarreal 36 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "espn": {
+            "event": "401915293",
+            "home": "494",
+            "away": "102"
+          }
+        },
+        {
+          "kickoff": "2026-11-25T21:00:00+01:00",
+          "home": "Atleti",
+          "away": "Viking",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 63,
+            "X": 21,
+            "2": 16,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Atleti uzvara",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Atleti 63 %, neizšķirts 21 %, Viking 16 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "espn": {
+            "event": "401915291",
+            "home": "1068",
+            "away": "510"
+          }
+        },
+        {
+          "kickoff": "2026-11-25T21:00:00+01:00",
+          "home": "Club Brugge",
+          "away": "Liverpool",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 25,
+            "X": 20,
+            "2": 55,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Liverpool uzvara",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Club Brugge 25 %, neizšķirts 20 %, Liverpool 55 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "featured": {
+            "type": "svariga",
+            "why": "Brugge pēc uzvaras Eindhovenā uzņem Liverpool, kas zaudēja Stambulā ar 2:3."
+          },
+          "espn": {
+            "event": "401915292",
+            "home": "570",
+            "away": "364"
+          }
+        },
+        {
+          "kickoff": "2026-11-25T21:00:00+01:00",
+          "home": "Inter",
+          "away": "Stuttgart",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 63,
+            "X": 18,
+            "2": 19,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Inter uzvara",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Inter 63 %, neizšķirts 18 %, Stuttgart 19 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "espn": {
+            "event": "401915376",
+            "home": "110",
+            "away": "134"
+          }
+        },
+        {
+          "kickoff": "2026-11-25T21:00:00+01:00",
+          "home": "Lille",
+          "away": "Bayern München",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 15,
+            "X": 19,
+            "2": 66,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Bayern München uzvara",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Lille 15 %, neizšķirts 19 %, Bayern München 66 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "espn": {
+            "event": "401915377",
+            "home": "166",
+            "away": "132"
+          }
+        },
+        {
+          "kickoff": "2026-11-25T21:00:00+01:00",
+          "home": "Paris",
+          "away": "Roma",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 67,
+            "X": 17,
+            "2": 16,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "PSG uzvara",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Paris 67 %, neizšķirts 17 %, Roma 16 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "featured": {
+            "type": "svariga",
+            "why": "Līdere PSG pēc 6:0 Villarreālā uzņem Romu."
+          },
+          "espn": {
+            "event": "401915374",
+            "home": "160",
+            "away": "104"
+          }
+        },
+        {
+          "kickoff": "2026-11-25T21:00:00+01:00",
+          "home": "Shakhtar",
+          "away": "Fenerbahçe",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 37,
+            "X": 29,
+            "2": 34,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Atklāta spēle",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Shakhtar 37 %, neizšķirts 29 %, Fenerbahçe 34 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "espn": {
+            "event": "401915375",
+            "home": "493",
+            "away": "436"
+          }
+        },
+        {
+          "kickoff": "2026-11-25T21:00:00+01:00",
+          "home": "Sporting CP",
+          "away": "Man Utd",
+          "odds": {
+            "1": null,
+            "X": null,
+            "2": null,
+            "src": ""
+          },
+          "model": {
+            "1": 40,
+            "X": 25,
+            "2": 35,
+            "src": "Prediball"
+          },
+          "score": "",
+          "pick": "Atklāta spēle",
+          "pickOdds": null,
+          "alt": "",
+          "note": "Modeļa varbūtības: Sporting CP 40 %, neizšķirts 25 %, Man Utd 35 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "players": [],
+          "sources": [
+            {
+              "label": "Prediball (modeļa varbūtības)",
+              "url": "https://www.prediball.com/champions-league/matchday-5/"
+            }
+          ],
+          "featured": {
+            "type": "svariga",
+            "why": "Kārtas līdzsvarotākā lielā spēle: Sporting 40 %, Man Utd 35 %."
+          },
+          "espn": {
+            "event": "401915373",
+            "home": "2250",
+            "away": "360"
+          }
+        }
+      ],
+      "scorers": [],
+      "cleanSheets": [],
+      "disclaimer": "Šī ir izklaide un apskats, nevis padoms likt naudu. Koeficienti ņemti no publiskām prognožu lapām un bukmeikeru vietnēm (2. novembris) un var būt mainījušies. Procenti no koeficientiem ietver bukmeikera uzcenojumu. Azartspēles tikai no 18 gadiem. Palīdzība: www.spelesatkariba.lv",
+      "oddsNote": "Betsafe koeficientus no mana servera nevar nolasīt, jo Betsafe bloķē piekļuvi no tās valsts, kur atrodas serveris. Tāpēc koeficienti ņemti no citiem bukmeikeriem un salīdzināšanas vietnēm. Betsafe koeficienti var nedaudz atšķirties, tāpēc pirms likmes paskaties Betsafe."
     }
   ]
 }
