@@ -1084,13 +1084,13 @@ body.view-bets #likmes { padding-top: 26px; }
     const t = h2hData.teams[tid]; if (!t) return '<p class="h2h-none">Dati nav pieejami.</p>';
     const rows = (t.form || []).map((g, i) => {
       const home = g.homeId === tid, opp = home ? g.away : g.home, sc = home ? `${g.hs}:${g.as}` : `${g.as}:${g.hs}`;
-      return `<li${i >= n ? " hidden" : ""}><span class="rs ${g.res}" title="${RES[g.res]}">${g.res}</span><span class="dt">${dmy(g.date)}</span><span class="op">${home ? "pret" : "pie"} ${esc(opp)}</span><b>${sc}</b><span class="cp">${esc(compShort(g.comp))}</span></li>`;
+      return `<li${i >= n ? ' class="extra" hidden' : ""}><span class="rs ${g.res}" title="${RES[g.res]}">${g.res}</span><span class="dt">${dmy(g.date)}</span><span class="op">${home ? "pret" : "pie"} ${esc(opp)}</span><b>${sc}</b><span class="cp">${esc(compShort(g.comp))}</span></li>`;
     }).join("");
     const last5 = (t.form || []).slice(0, 5).map(g => `<span class="rs ${g.res}">${g.res}</span>`).join("");
     return `<div class="h2h-team"><div class="h2h-th"><b>${esc(t.name)}</b><span class="l5">${last5}</span></div>
       ${t.domestic ? "" : '<p class="h2h-none">Šīs komandas iekšzemes līgas spēles mūsu avotā nav pieejamas, tāpēc redzamas tikai Eiropas kausu spēles.</p>'}
       <ol class="h2h-form">${rows || '<li class="h2h-none">Nav nospēlētu spēļu.</li>'}</ol>
-      ${(t.form || []).length > n ? `<button type="button" class="h2h-more" data-act="more">Vairāk spēļu ↓</button>` : ""}</div>`;
+      ${(t.form || []).length > n ? `<button type="button" class="h2h-more" data-act="more" aria-expanded="false">Vairāk spēļu ↓</button>` : ""}</div>`;
   }
   function h2hPanel(hid, aid) {
     const pair = h2hData.pairs[`${hid}-${aid}`] || [];
@@ -1115,7 +1115,14 @@ body.view-bets #likmes { padding-top: 26px; }
   }
   document.getElementById("likmes").addEventListener("click", e => {
     const btn = e.target.closest("button[data-act]"); if (!btn) return;
-    if (btn.dataset.act === "more") { btn.closest(".h2h-team").querySelectorAll("li[hidden]").forEach(li => li.hidden = false); btn.remove(); return; }
+    if (btn.dataset.act === "more") {
+      const open = btn.getAttribute("aria-expanded") !== "true";
+      btn.closest(".h2h-team").querySelectorAll("li.extra").forEach(li => li.hidden = !open);
+      btn.setAttribute("aria-expanded", String(open));
+      btn.textContent = open ? "Mazāk spēļu ↑" : "Vairāk spēļu ↓";
+      if (!open) btn.closest(".h2h-team").scrollIntoView({ block: "nearest" });
+      return;
+    }
     const box = btn.closest(".h2h-btns"); if (!box) return;
     const panel = document.getElementById(box.dataset.id);
     const open = btn.getAttribute("aria-expanded") === "true";
