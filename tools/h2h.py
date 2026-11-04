@@ -82,6 +82,40 @@ def standings(slug):
         tables.append({"name": ch.get("name") or d.get("name"), "rows": rows})
     return {"name": d.get("name") or slug, "tables": tables}
 
+def flashscore_supplement(out):
+    """Clubs whose domestic league ESPN lacks: take recent games + league table from Flashscore (tools/flashscore.mjs)."""
+    import subprocess, os
+    need = {tid: t["name"] for tid, t in out["teams"].items() if not t.get("domestic")}
+    if not need: return
+    try:
+        p = subprocess.run(["node", os.path.join(os.path.dirname(__file__), "flashscore.mjs")], input=json.dumps(list(need.values())),
+                           capture_output=True, text=True, timeout=900)
+        print(p.stderr.strip(), file=sys.stderr)
+        fs = json.loads(p.stdout or "{}")
+    except Exception as e:
+        print("WARN flashscore", e, file=sys.stderr); return
+    for tid, name in need.items():
+        ft = (fs.get("teams") or {}).get(name)
+        if not ft: continue
+        t = out["teams"][tid]
+        alias = {norm(ft["fsName"]), norm(name)}
+        games = []
+        for g in ft["games"]:
+            home = norm(g["home"]) in alias
+            if not home and norm(g["away"]) not in alias: continue
+            me, op = (g["hs"], g["as"]) if home else (g["as"], g["hs"])
+            games.append({"date": g["date"], "comp": g["comp"], "home": name if home else g["home"], "homeId": tid if home else "",
+                          "away": g["away"] if home else name, "awayId": "" if home else tid, "hs": g["hs"], "as": g["as"],
+                          "res": "U" if me > op else "Z" if me < op else "N", "src": "flashscore"})
+        if games: t["form"] = games[:FORM_N]
+        lk = ft.get("league")
+        lg = (fs.get("leagues") or {}).get(lk) if lk else None
+        if lg:
+            key = "fs:" + lk.strip("/")
+            rows = [dict(r, id=(tid if norm(r["team"]) in alias else "")) for r in lg["rows"]]
+            out["leagues"][key] = {"name": lg["name"], "tables": [{"name": lg["name"], "rows": rows}], "src": "flashscore"}
+            t["league"] = key; t["domestic"] = True
+
 def main():
     bets = json.load(open("bets.json", encoding="utf-8"))
     mds = [int(a) for a in sys.argv[1:]] or [bets["current"]]
@@ -115,6 +149,7 @@ def main():
             pair = [g for g in team_games(h["id"], seasons) if a["id"] in (g["homeId"], g["awayId"])]
             out["pairs"][f'{h["id"]}-{a["id"]}'] = pair[:12]
             print(f'{m["home"]} – {m["away"]}: h2h {len(pair)}, form {len(out["teams"][h["id"]]["form"])}/{len(out["teams"][a["id"]]["form"])}')
+    flashscore_supplement(out)
     out["generatedAt"] = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     json.dump(out, open("h2h.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     json.dump(bets, open("bets.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2); open("bets.json", "a").write("\n")

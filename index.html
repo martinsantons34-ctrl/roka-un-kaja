@@ -1100,18 +1100,18 @@ body.view-bets #likmes { padding-top: 26px; }
     const meet = pair.length ? `<div class="h2h-sum"><span><b>${wH}</b>${esc(H.name || "")}</span><span><b>${dr}</b>neizšķirti</span><span><b>${wA}</b>${esc(A.name || "")}</span></div>
       <ol class="h2h-meet">${pair.map(g => `<li><span class="dt">${dmy(g.date)}</span><span class="tm">${esc(g.home)}</span><b>${g.hs}:${g.as}</b><span class="tm a">${esc(g.away)}</span><span class="cp">${esc(compShort(g.comp))}</span></li>`).join("")}</ol>`
       : '<p class="h2h-none">Pēdējās sezonās šīs komandas savā starpā nav spēlējušas.</p>';
-    return `<h4>Savstarpējās spēles</h4>${meet}<h4>Pēdējās spēles</h4><p class="h2h-legend"><span class="rs U">U</span> uzvara <span class="rs N">N</span> neizšķirts <span class="rs Z">Z</span> zaudējums · „pret” = mājās, „pie” = izbraukumā</p>${formList(hid, 5)}${formList(aid, 5)}`;
+    return `<p class="h2h-legend">Avots: ESPN${[H, A].some(t => (t.form || []).some(g => g.src === "flashscore")) ? " un Flashscore" : ""}.</p><h4>Savstarpējās spēles</h4>${meet}<h4>Pēdējās spēles</h4><p class="h2h-legend"><span class="rs U">U</span> uzvara <span class="rs N">N</span> neizšķirts <span class="rs Z">Z</span> zaudējums · „pret” = mājās, „pie” = izbraukumā</p>${formList(hid, 5)}${formList(aid, 5)}`;
   }
   function tablePanel(hid, aid) {
     return [hid, aid].map(tid => {
       const t = h2hData.teams[tid] || {}, lg = t.league && h2hData.leagues[t.league];
       if (!lg) return `<div class="h2h-team"><div class="h2h-th"><b>${esc(t.name || "")}</b></div><p class="h2h-none">Šīs komandas līgas tabula mūsu avotā nav pieejama.</p></div>`;
       const tb = lg.tables.find(x => x.rows.some(r => r.id === tid)) || lg.tables[0];
-      return `<div class="h2h-team"><div class="h2h-th"><b>${esc(t.name)}</b><span class="lgn">${esc(lg.name)}</span></div>
+      return `<div class="h2h-team"><div class="h2h-th"><b>${esc(t.name)}</b><span class="lgn">${esc(lg.name)}${lg.src === "flashscore" ? " · Flashscore" : ""}</span></div>
         <table class="h2h-tbl"><thead><tr><th>#</th><th>Komanda</th><th>S</th><th>U-N-Z</th><th>VA</th><th>P</th></tr></thead><tbody>
         ${tb.rows.map(r => `<tr${r.id === tid ? ' class="me"' : ""}><td>${r.rank}</td><td>${esc(r.team)}</td><td>${esc(r.gp)}</td><td>${esc(r.w)}-${esc(r.d)}-${esc(r.l)}</td><td>${esc(r.gd)}</td><td><b>${esc(r.pts)}</b></td></tr>`).join("")}
         </tbody></table></div>`;
-    }).join("") + '<p class="h2h-legend">S – spēles, VA – vārtu attiecība, P – punkti.</p>';
+    }).join("") + '<p class="h2h-legend">S – spēles, VA – vārtu attiecība, P – punkti. Avots: ESPN, dažām līgām Flashscore.</p>';
   }
   document.getElementById("likmes").addEventListener("click", e => {
     const btn = e.target.closest("button[data-act]"); if (!btn) return;
