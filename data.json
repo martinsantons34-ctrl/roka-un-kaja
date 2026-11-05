@@ -4,59 +4,57 @@
     "leagueId": 44087407,
     "startMd": 2,
     "currentMd": 4,
-    "updatedAt": "2026-11-04T06:29:02Z",
+    "updatedAt": "2026-11-05T06:11:38Z",
     "members": [
       {
         "name": "renardsudris",
         "team": "Spartaks",
-        "overall": 249,
+        "overall": 261,
         "officialRank": 1,
         "md": {
           "1": 88,
           "2": 46,
           "3": 62,
-          "4": 53
+          "4": 65
         }
       },
       {
         "name": "Maarels",
         "team": "tk3101",
-        "overall": 233,
+        "overall": 248,
         "officialRank": 2,
         "md": {
           "1": 64,
           "2": 53,
           "3": 64,
-          "4": 52
+          "4": 67
         }
       },
       {
         "name": "Arturs M",
         "team": "team maurini",
-        "overall": 196,
+        "overall": 214,
         "officialRank": 3,
         "md": {
           "1": 61,
           "2": 68,
           "3": 44,
-          "4": 23
+          "4": 41
         }
       },
       {
         "name": "Aleks",
         "team": "zvēri",
-        "overall": 180,
+        "overall": 198,
         "officialRank": 4,
         "md": {
           "1": 11,
           "2": 58,
           "3": 56,
-          "4": 55
+          "4": 73
         }
       }
-    ],
-    "liveMd": 4,
-    "liveNote": "4. kārta vēl notiek: ieskaitīta tikai otrdiena, trešdienas spēles vēl priekšā."
+    ]
   },
   "jokes": [
     {
@@ -79,6 +77,17 @@
         "Tumes ķengurs ar 62 aliem izdzertiem aizlēca otru garāko lēcienu kārtā, bet godīgajā tabulā tik un tā piezemējās pēdējā vietā. Tumes ķenguram līdz virsotnei trūkst vien 9 alu — viens kārtīgs lēciens.",
         "Lauva Aleks nopirka Barkliju, un tas uzreiz atnesa 10 izdzertus alus. Lauvas medībās dažreiz noķer arī to, ko neviens negaidīja — tagad Lauvam Aleksam līdz pirmajai vietai tikai 3 ali.",
         "Pēc 3. kārtas visus četrus šķir tikai 9 ali. Tik cieši pie viena galda parasti sēž tikai tad, kad rēķinu maksā kāds cits."
+      ]
+    },
+    {
+      "md": 4,
+      "createdAt": "2026-11-05T06:11:38Z",
+      "items": [
+        "Lauva Aleks 4. kārtā: 73 ali izdzerti, kapteinis Yamal un jaunpienācējs Doué — un godīgās tabulas virsotne pieder Lauvam Aleksam. Savannā atkal skaidrs, kurš pirmais tiek pie dzirdinātavas.",
+        "Mundrito jau otro kārtu pēc kārtas neveica nevienu maiņu. Komanda pateicās ar pieticīgu rezultātu — tikai 41 alus izdzerts — un godīgajā tabulā Mundrito noslīdēja uz pēdējo vietu. Uzticība ir skaista lieta, bet bārā par to atlaidi nedod.",
+        "Tumes ķengurs nopirka Batrakovu, un tas uzreiz atnesa 17 izdzertus alus — vairāk nekā jebkurš cits futbolists mūsu līgā. Tumes ķenguram beidzot izdevās izlēkt no pēdējās vietas, un pagaidām neviens nesaprot, kā viņš to paredzēja.",
+        "Maarels ar 67 aliem izdzertiem nospēlēja lieliski, bet tronis tik un tā aizgāja Lauvam Aleksam — starpība vien 3 ali. Maarels tagad pieprasa VAR pārbaudi un godīgās tabulas pārrēķinu no 4. kārtas.",
+        "Lens mājās zaudēja Komo ar 1:9. Fantasy menedžeri, kuriem bija Lens aizsargi, šonedēļ pasūtīja bezalkoholisko — lai vismaz kaut kas vakarā būtu ar nulli."
       ]
     }
   ],
@@ -759,11 +768,11 @@
           "pts": 11,
           "owners": [
             {
-              "name": "renardsudris",
+              "name": "Maarels",
               "captain": false
             },
             {
-              "name": "Maarels",
+              "name": "renardsudris",
               "captain": false
             }
           ]
@@ -793,11 +802,11 @@
               "captain": true
             },
             {
-              "name": "renardsudris",
-              "captain": true
+              "name": "Maarels",
+              "captain": false
             },
             {
-              "name": "Maarels",
+              "name": "renardsudris",
               "captain": false
             }
           ]
@@ -829,14 +838,14 @@
           ]
         },
         {
-          "id": "250016833",
-          "name": "H. Kane",
-          "club": "Bayern München",
-          "clubId": "50037",
-          "pts": 5,
+          "id": "250076574",
+          "name": "K. Mbappé",
+          "club": "Real Madrid",
+          "clubId": "50051",
+          "pts": 6,
           "owners": [
             {
-              "name": "renardsudris",
+              "name": "Aleks",
               "captain": false
             },
             {
@@ -844,17 +853,17 @@
               "captain": true
             },
             {
-              "name": "Arturs M",
+              "name": "renardsudris",
               "captain": true
             }
           ]
         },
         {
-          "id": "250070417",
-          "name": "J. Kimmich",
-          "club": "Bayern München",
-          "clubId": "50037",
-          "pts": 4,
+          "id": "250103758",
+          "name": "E. Haaland",
+          "club": "Man City",
+          "clubId": "52919",
+          "pts": 6,
           "owners": [
             {
               "name": "Arturs M",
@@ -864,6 +873,20 @@
         }
       ],
       "flops": [
+        {
+          "id": "250059233",
+          "name": "A. Rrahmani",
+          "club": "Napoli",
+          "clubId": "50136",
+          "pts": -1,
+          "price": 4.6,
+          "owners": [
+            {
+              "name": "Aleks",
+              "captain": false
+            }
+          ]
+        },
         {
           "id": "250066886",
           "name": "O. Dembélé",
@@ -879,10 +902,10 @@
           ]
         },
         {
-          "id": "250136465",
-          "name": "Nuno Mendes",
-          "club": "Paris",
-          "clubId": "52747",
+          "id": "250100013",
+          "name": "G. Lo Celso",
+          "club": "Real Betis",
+          "clubId": "52265",
           "pts": 0,
           "price": 6.0,
           "owners": [
@@ -893,43 +916,29 @@
           ]
         },
         {
-          "id": "250064064",
-          "name": "Marquinhos",
-          "club": "Paris",
-          "clubId": "52747",
+          "id": "250113392",
+          "name": "R. Calafiori",
+          "club": "Arsenal",
+          "clubId": "52280",
           "pts": 0,
-          "price": 5.0,
+          "price": 4.5,
           "owners": [
             {
-              "name": "Arturs M",
+              "name": "Maarels",
               "captain": false
             }
           ]
         },
         {
-          "id": "250159904",
-          "name": "F. Flecker",
-          "club": "LASK",
-          "clubId": "63405",
-          "pts": 0,
-          "price": 4.6,
+          "id": "250080553",
+          "name": "S. Guirassy",
+          "club": "B. Dortmund",
+          "clubId": "52758",
+          "pts": 1,
+          "price": 8.6,
           "owners": [
             {
               "name": "renardsudris",
-              "captain": false
-            }
-          ]
-        },
-        {
-          "id": "250163689",
-          "name": "N. Jackson",
-          "club": "Aston Villa",
-          "clubId": "52683",
-          "pts": 1,
-          "price": 7.2,
-          "owners": [
-            {
-              "name": "Aleks",
               "captain": false
             }
           ]
@@ -949,12 +958,26 @@
           ]
         },
         {
-          "id": "250139255",
-          "name": "Gavi",
-          "club": "Barcelona",
-          "clubId": "50080",
+          "id": "250055294",
+          "name": "R. Marin",
+          "club": "AEK Athens",
+          "clubId": "50129",
           "pts": 1,
-          "price": 5.9,
+          "price": 5.7,
+          "owners": [
+            {
+              "name": "Maarels",
+              "captain": false
+            }
+          ]
+        },
+        {
+          "id": "250191448",
+          "name": "A. Bouaddi",
+          "club": "Man City",
+          "clubId": "52919",
+          "pts": 1,
+          "price": 5.0,
           "owners": [
             {
               "name": "Arturs M",
@@ -963,26 +986,12 @@
           ]
         },
         {
-          "id": "250007655",
-          "name": "R. Barkley",
-          "club": "Aston Villa",
-          "clubId": "52683",
+          "id": "250124068",
+          "name": "C. Lukeba",
+          "club": "Leipzig",
+          "clubId": "2603790",
           "pts": 1,
-          "price": 5.7,
-          "owners": [
-            {
-              "name": "Aleks",
-              "captain": false
-            }
-          ]
-        },
-        {
-          "id": "250178067",
-          "name": "G. Zechiel",
-          "club": "Feyenoord",
-          "clubId": "52749",
-          "pts": 1,
-          "price": 4.6,
+          "price": 4.5,
           "owners": [
             {
               "name": "renardsudris",
@@ -991,15 +1000,15 @@
           ]
         },
         {
-          "id": "250190350",
-          "name": "N. Brown",
-          "club": "Bayern München",
-          "clubId": "50037",
-          "pts": 1,
-          "price": 3.9,
+          "id": "250104066",
+          "name": "D. Szoboszlai",
+          "club": "Liverpool",
+          "clubId": "7889",
+          "pts": 2,
+          "price": 7.1,
           "owners": [
             {
-              "name": "Maarels",
+              "name": "Aleks",
               "captain": false
             }
           ]
@@ -1205,21 +1214,21 @@
           "penalty": 0,
           "in": [
             {
+              "id": "250080553",
+              "name": "S. Guirassy",
+              "pts": 1
+            },
+            {
               "id": "250224345",
               "name": "A. Batrakov",
               "pts": 17
-            },
-            {
-              "id": "250080553",
-              "name": "S. Guirassy",
-              "pts": 0
             }
           ],
           "out": [
             {
               "id": "250144211",
               "name": "Antony",
-              "pts": 0
+              "pts": 2
             },
             {
               "id": "250088320",
@@ -1241,14 +1250,14 @@
             {
               "id": "250134138",
               "name": "B. Barcola",
-              "pts": 0
+              "pts": 2
             }
           ],
           "out": [
             {
               "id": "250124063",
               "name": "R. Cherki",
-              "pts": 0
+              "pts": 2
             },
             {
               "id": "250101808",
@@ -1284,7 +1293,7 @@
             {
               "id": "250008901",
               "name": "K. De Bruyne",
-              "pts": 0
+              "pts": 2
             },
             {
               "id": "97923",
@@ -1297,169 +1306,151 @@
     }
   ],
   "nextRound": {
-    "md": 4,
-    "deadline": "2026-11-04T18:45:00+01:00",
+    "md": 5,
+    "deadline": "2026-11-24T18:45:00+01:00",
     "matches": [
       {
-        "home": "Shakhtar",
-        "homeId": "52707",
-        "away": "Sporting CP",
-        "awayId": "50149",
-        "kickoff": "2026-11-03T18:45:00+01:00",
-        "status": "done",
-        "hs": 0,
-        "as": 1
+        "home": "Bodø/Glimt",
+        "homeId": "59333",
+        "away": "LASK",
+        "awayId": "63405",
+        "kickoff": "2026-11-24T18:45:00+01:00",
+        "status": "upcoming"
       },
       {
         "home": "Galatasaray",
         "homeId": "50067",
-        "away": "Stuttgart",
-        "awayId": "50107",
-        "kickoff": "2026-11-03T18:45:00+01:00",
-        "status": "done",
-        "hs": 2,
-        "as": 0
-      },
-      {
-        "home": "Man Utd",
-        "homeId": "52682",
-        "away": "Roma",
-        "awayId": "50137",
-        "kickoff": "2026-11-03T21:00:00+01:00",
-        "status": "done",
-        "hs": 3,
-        "as": 2
-      },
-      {
-        "home": "Bodø/Glimt",
-        "homeId": "59333",
-        "away": "Lille",
-        "awayId": "75797",
-        "kickoff": "2026-11-03T21:00:00+01:00",
-        "status": "done",
-        "hs": 0,
-        "as": 0
-      },
-      {
-        "home": "Feyenoord",
-        "homeId": "52749",
-        "away": "Inter",
-        "awayId": "50138",
-        "kickoff": "2026-11-03T21:00:00+01:00",
-        "status": "done",
-        "hs": 0,
-        "as": 3
-      },
-      {
-        "home": "Villarreal",
-        "homeId": "70691",
-        "away": "Paris",
-        "awayId": "52747",
-        "kickoff": "2026-11-03T21:00:00+01:00",
-        "status": "done",
-        "hs": 0,
-        "as": 6
-      },
-      {
-        "home": "LASK",
-        "homeId": "63405",
-        "away": "S. Bratislava",
-        "awayId": "52797",
-        "kickoff": "2026-11-03T21:00:00+01:00",
-        "status": "done",
-        "hs": 4,
-        "as": 0
-      },
-      {
-        "home": "Atleti",
-        "homeId": "50124",
-        "away": "Bayern München",
-        "awayId": "50037",
-        "kickoff": "2026-11-03T21:00:00+01:00",
-        "status": "done",
-        "hs": 0,
-        "as": 2
-      },
-      {
-        "home": "Barcelona",
-        "homeId": "50080",
         "away": "Aston Villa",
         "awayId": "52683",
-        "kickoff": "2026-11-03T21:00:00+01:00",
-        "status": "done",
-        "hs": 3,
-        "as": 0
-      },
-      {
-        "home": "Fenerbahçe",
-        "homeId": "52692",
-        "away": "Liverpool",
-        "awayId": "7889",
-        "kickoff": "2026-11-04T18:45:00+01:00",
+        "kickoff": "2026-11-24T18:45:00+01:00",
         "status": "upcoming"
       },
       {
-        "home": "AEK Athens",
-        "homeId": "50129",
-        "away": "Real Madrid",
-        "awayId": "50051",
-        "kickoff": "2026-11-04T18:45:00+01:00",
+        "home": "Man City",
+        "homeId": "52919",
+        "away": "Napoli",
+        "awayId": "50136",
+        "kickoff": "2026-11-24T21:00:00+01:00",
         "status": "upcoming"
       },
       {
-        "home": "PSV",
-        "homeId": "50062",
-        "away": "Club Brugge",
-        "awayId": "50043",
-        "kickoff": "2026-11-04T21:00:00+01:00",
+        "home": "Como",
+        "homeId": "79946",
+        "away": "AEK Athens",
+        "awayId": "50129",
+        "kickoff": "2026-11-24T21:00:00+01:00",
+        "status": "upcoming"
+      },
+      {
+        "home": "S. Bratislava",
+        "homeId": "52797",
+        "away": "Real Betis",
+        "awayId": "52265",
+        "kickoff": "2026-11-24T21:00:00+01:00",
         "status": "upcoming"
       },
       {
         "home": "Leipzig",
         "homeId": "2603790",
-        "away": "Man City",
-        "awayId": "52919",
-        "kickoff": "2026-11-04T21:00:00+01:00",
+        "away": "Lens",
+        "awayId": "52277",
+        "kickoff": "2026-11-24T21:00:00+01:00",
         "status": "upcoming"
       },
       {
-        "home": "Viking",
-        "homeId": "52319",
-        "away": "Sabah",
-        "awayId": "2609356",
-        "kickoff": "2026-11-04T21:00:00+01:00",
+        "home": "Feyenoord",
+        "homeId": "52749",
+        "away": "Porto",
+        "awayId": "50064",
+        "kickoff": "2026-11-24T21:00:00+01:00",
         "status": "upcoming"
       },
       {
-        "home": "B. Dortmund",
-        "homeId": "52758",
-        "away": "Real Betis",
-        "awayId": "52265",
-        "kickoff": "2026-11-04T21:00:00+01:00",
+        "home": "Arsenal",
+        "homeId": "52280",
+        "away": "B. Dortmund",
+        "awayId": "52758",
+        "kickoff": "2026-11-24T21:00:00+01:00",
         "status": "upcoming"
       },
       {
-        "home": "Porto",
-        "homeId": "50064",
-        "away": "Napoli",
-        "awayId": "50136",
-        "kickoff": "2026-11-04T21:00:00+01:00",
-        "status": "upcoming"
-      },
-      {
-        "home": "Lens",
-        "homeId": "52277",
-        "away": "Como",
-        "awayId": "79946",
-        "kickoff": "2026-11-04T21:00:00+01:00",
+        "home": "Real Madrid",
+        "homeId": "50051",
+        "away": "PSV",
+        "awayId": "50062",
+        "kickoff": "2026-11-24T21:00:00+01:00",
         "status": "upcoming"
       },
       {
         "home": "Slavia Praha",
         "homeId": "52498",
-        "away": "Arsenal",
-        "awayId": "52280",
-        "kickoff": "2026-11-04T21:00:00+01:00",
+        "away": "Villarreal",
+        "awayId": "70691",
+        "kickoff": "2026-11-25T18:45:00+01:00",
+        "status": "upcoming"
+      },
+      {
+        "home": "Sabah",
+        "homeId": "2609356",
+        "away": "Barcelona",
+        "awayId": "50080",
+        "kickoff": "2026-11-25T18:45:00+01:00",
+        "status": "upcoming"
+      },
+      {
+        "home": "Club Brugge",
+        "homeId": "50043",
+        "away": "Liverpool",
+        "awayId": "7889",
+        "kickoff": "2026-11-25T21:00:00+01:00",
+        "status": "upcoming"
+      },
+      {
+        "home": "Lille",
+        "homeId": "75797",
+        "away": "Bayern München",
+        "awayId": "50037",
+        "kickoff": "2026-11-25T21:00:00+01:00",
+        "status": "upcoming"
+      },
+      {
+        "home": "Inter",
+        "homeId": "50138",
+        "away": "Stuttgart",
+        "awayId": "50107",
+        "kickoff": "2026-11-25T21:00:00+01:00",
+        "status": "upcoming"
+      },
+      {
+        "home": "Atleti",
+        "homeId": "50124",
+        "away": "Viking",
+        "awayId": "52319",
+        "kickoff": "2026-11-25T21:00:00+01:00",
+        "status": "upcoming"
+      },
+      {
+        "home": "Sporting CP",
+        "homeId": "50149",
+        "away": "Man Utd",
+        "awayId": "52682",
+        "kickoff": "2026-11-25T21:00:00+01:00",
+        "status": "upcoming"
+      },
+      {
+        "home": "Paris",
+        "homeId": "52747",
+        "away": "Roma",
+        "awayId": "50137",
+        "kickoff": "2026-11-25T21:00:00+01:00",
+        "status": "upcoming"
+      },
+      {
+        "home": "Shakhtar",
+        "homeId": "52707",
+        "away": "Fenerbahçe",
+        "awayId": "52692",
+        "kickoff": "2026-11-25T21:00:00+01:00",
         "status": "upcoming"
       }
     ]

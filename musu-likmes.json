@@ -68,7 +68,8 @@
           "market": "Handikaps (3 virzienu)",
           "pick": "Real Madrid −2",
           "odds": 2.58,
-          "status": "open"
+          "status": "lost",
+          "result": "2:3"
         }
       ],
       "slips": [
@@ -107,7 +108,8 @@
           "market": "Aziātiskais handikaps",
           "pick": "Real Madrid −1,5",
           "odds": 1.54,
-          "status": "open"
+          "status": "lost",
+          "result": "2:3"
         },
         {
           "id": "city",
@@ -117,7 +119,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Man City",
           "odds": 1.5,
-          "status": "open"
+          "status": "won",
+          "result": "2:3"
         },
         {
           "id": "ars",
@@ -127,7 +130,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Arsenal",
           "odds": 1.23,
-          "status": "open"
+          "status": "won",
+          "result": "1:2"
         }
       ],
       "slips": [
