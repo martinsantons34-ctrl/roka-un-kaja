@@ -1,6 +1,28 @@
 {
-  "updatedAt": "2026-11-04T23:00:00Z",
+  "updatedAt": "2026-11-08T23:00:00Z",
   "items": [
+    {
+      "id": "udris-azerbaidzana",
+      "date": "2026-11-08",
+      "tag": "Izlase",
+      "title": "Ūdris atkal divreiz: Latvija Baku sagrauj Azerbaidžānu ar 5:1",
+      "teaser": "Renārs Ūdris guva vārtus jau 2. un 9. minūtē, un Latvija pirmo reizi vēsturē pārspēja Azerbaidžānu.",
+      "body": [
+        "8. novembrī 2028. gada Pasaules kausa kvalifikācijas pamatturnīra otrajā spēlē Latvija izbraukumā ar 5:1 (4:0) uzvarēja Azerbaidžānu. Rezultātu jau 2. minūtē atklāja Renārs Ūdris, noslēdzot Artjoma Kozlovska sitienu, bet 9. minūtē viņš pēc Miķa Babra sitiena guva savus otros vārtus.",
+        "Vēl vārtus guva Edgars Tarakanovs, Andrejs Baklanovs un Miks Babris, tāpēc puslaikā bija jau 4:0. Azerbaidžāna atbildēja tikai 37. minūtē. Tā ir pirmā Latvijas uzvara pār Azerbaidžānu vēsturē.",
+        "Ūdrim tagad ir četri vārti divās kvalifikācijas spēlēs. Grupā Čehijai ir 5 punkti trīs spēlēs, Latvijai 4 punkti divās, Azerbaidžānai 1 punkts. Nākamās spēles būs mājās: 27. februārī pret Azerbaidžānu un 3. martā pret Čehiju."
+      ],
+      "sources": [
+        {
+          "label": "LSM",
+          "url": "https://www.lsm.lv/raksts/sports/futbols/08.11.2026-latvijas-telpu-futbola-izlase-pasaules-kausa-kvalifikacijas-spele-uzvar-azerbaidzanu.a671017/"
+        },
+        {
+          "label": "Sportacentrs.com",
+          "url": "https://sportacentrs.com/futbols/futzals/08112026-latvijas_futzalisti_pirmajas_11_minutes_d"
+        }
+      ]
+    },
     {
       "id": "fantasy-k4-tresdiena",
       "date": "2026-11-04",
@@ -202,32 +224,6 @@
         {
           "label": "KS Futsal Leszno",
           "url": "https://www.futsal.leszno.pl/2026/10/11/trzecie-zwyciestwo-z-rzedu-gi-malepszy-leszno-pokonuje-fc-reiter-torun-75/"
-        }
-      ]
-    },
-    {
-      "id": "udris-izlase",
-      "date": "2026-10-12",
-      "tag": "Izlase",
-      "title": "Ūdris Latvijas izlasē: no EČ debijas Rīgā līdz vārtiem Pasaules kausa atlasē",
-      "teaser": "20 gadu vecumā spēlēja Eiropas čempionātā mājās, bet aprīlī iesita divus vārtus Kiprai.",
-      "body": [
-        "Ūdris (dzimis 2005. gada 20. decembrī, tātad tieši pirms Ziemassvētkiem) izlasē pirmo reizi tika iesaukts 2025. gada oktobrī pārbaudes spēlēm pret Eiropas čempioni Portugāli.",
-        "2026. gada janvārī viņš bija Latvijas sastāvā Eiropas čempionātā Rīgā, kur Latvija debitēja. Ūdris spēlēja rotācijā mačā pret Gruziju, ko Latvija uzvarēja ar 4:0. Pret Franciju (0:5) un Horvātiju (1:4) gan nācās zaudēt, tāpēc no grupas tikt tālāk neizdevās.",
-        "2026. gada aprīlī 2028. gada Pasaules kausa kvalifikācijā Latvija Tirānā sagrāva Sanmarīno (8:0) un Kipru (12:1). Pret Kipru Ūdris guva divus vārtus: pirmā puslaika vidū viņš dubultoja pārsvaru, bet otrajā puslaikā iesita vēlreiz. Latvija jau tad nodrošināja vietu kvalifikācijas pamatturnīrā."
-      ],
-      "sources": [
-        {
-          "label": "Sportacentrs.com",
-          "url": "https://sportacentrs.com/futbols/futzals/19012026-latvijas_izlase_atskaita_bralus_un_pazino"
-        },
-        {
-          "label": "Sportacentrs.com",
-          "url": "https://sportacentrs.com/futbols/futzals/10042026-latvijas_futzalisti_i_saplosa_i_ari_kipru"
-        },
-        {
-          "label": "Sportacentrs.com",
-          "url": "https://sportacentrs.com/futbols/futzals/09102025-latvijas_izlase_divas_parbaudes_speles_uz"
         }
       ]
     },
