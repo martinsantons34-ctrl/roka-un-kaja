@@ -1,6 +1,28 @@
 {
-  "updatedAt": "2026-11-08T23:00:00Z",
+  "updatedAt": "2026-11-11T23:00:00Z",
   "items": [
+    {
+      "id": "zemgale-panter",
+      "date": "2026-11-11",
+      "tag": "Hokejs",
+      "title": "“Zemgale/LBTU” divreiz atspēlējas, bet pēcspēles metienos zaudē Panter",
+      "teaser": "Jelgavā 2:3 pēc pēcspēles metieniem pret Tallinas Panter. Antons šoreiz bez rezultatīvām darbībām.",
+      "body": [
+        "11. novembrī Jelgavā “Zemgale/LBTU” pēc pēcspēles metieniem ar 2:3 zaudēja Tallinas “Panter”. Jelgavnieki divreiz atspēlējās: vārtus guva Roberts Vorona (26:08) un Deniss Fjodorovs (57:02), taču pēcspēles metienos precīzs bija tikai Kristaps Roķis.",
+        "Mārtiņš Antons šajā spēlē vārtus vai piespēles nesavāca. Pēc 10 spēlēm “Zemgale/LBTU” ir piektā ar 15 punktiem.",
+        "Nākamā spēle ir atkal pret Panter, 17. novembrī Jelgavā."
+      ],
+      "sources": [
+        {
+          "label": "Sportacentrs.com",
+          "url": "https://sportacentrs.com/hokejs/latvijas_cempionats/11112026-zemgale_lbtu_izglabj_punktu_tomer_sava_la"
+        },
+        {
+          "label": "HK Zemgale spēļu grafiks",
+          "url": "https://hkzemgale.lv/matches/"
+        }
+      ]
+    },
     {
       "id": "udris-azerbaidzana",
       "date": "2026-11-08",
@@ -116,24 +138,6 @@
         {
           "label": "sportazinas.com",
           "url": "https://www.sportazinas.com/capitals-paklup-jelgava-un-lauj-mogo-rsu-atgriezties-ohl-liderpozicija/"
-        }
-      ]
-    },
-    {
-      "id": "zemgale-liepaja",
-      "date": "2026-10-24",
-      "tag": "Hokejs",
-      "title": "Antons iesit vairākumā, “Zemgale/LBTU” papildlaikā uzvar Liepājā",
-      "teaser": "Liepājā 5:4 papildlaikā, Antonam vārti vairākumā. Jelgavnieki tabulā ir trešie.",
-      "body": [
-        "24. oktobrī “Zemgale/LBTU” izbraukumā ar 5:4 papildlaikā pārspēja Liepājas hokeja komandu. Pirmajā periodā 12:44 Mārtiņš Antons pēc Gricinska un Karašas piespēlēm iemeta vārtus vairākumā.",
-        "Vēl vārtus jelgavniekiem guva Deniss Fjodorovs, Haralds Jirgens un Kristaps Roķis, kurš panāca 4:4. Papildlaikā uzvaru atnesa Patriks Zabusovs. Gatim Gricinskim šajā spēlē bija trīs piespēles.",
-        "Pēc astoņām spēlēm “Zemgale/LBTU” ir trešajā vietā ar 12 punktiem (4 uzvaras pamatlaikā, 2 papildlaikā, 2 zaudējumi), vārtu attiecība 34:21."
-      ],
-      "sources": [
-        {
-          "label": "Sportacentrs.com",
-          "url": "https://sportacentrs.com/hokejs/latvijas_cempionats/24102026-fjodorovs_piesakas_sezonas_skaistakajiem_"
         }
       ]
     },
