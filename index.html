@@ -523,6 +523,66 @@ footer { font-size: 13px; color: var(--muted); }
 .duel-tbl .mk { display: block; color: var(--muted); font-size: 12px; }
 @media (max-width: 520px) { .duel-tbl .hide-sm { display: none; } .duel-tbl .show-sm { display: inline; } .duel-tbl { font-size: 13px; } .duel-tbl td, .duel-tbl th { padding-left: 4px; padding-right: 4px; } .duel { padding: 12px; } .duel-card .pl { font-size: 28px; } }
 
+/* Mans betslips: anyone can build a combo — desktop panel on the right (~1/3), phone bar at the bottom that opens a sheet */
+.bet-odd[data-key] { cursor: pointer; transition: transform .12s, box-shadow .12s; }
+.bet-odd[data-key]:hover { box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--accent) 60%, transparent); }
+.bet-odd[data-key]:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.bet-odd.picked, .bet-odd.picked.fav, .bet-odd.picked.val { background: var(--oak); color: #fff; box-shadow: none; }
+.bet-odd.picked small { color: rgba(255,255,255,.85); }
+.slip, .slip-backdrop { display: none; }
+body.view-bets .slip { display: block; }
+.slip-panel { background: var(--surface); color: var(--ink); display: flex; flex-direction: column; gap: 10px; padding: 16px; overflow-y: auto; overscroll-behavior: contain; }
+.slip-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.slip-head h3 { margin: 0; font-family: var(--display); font-weight: 800; font-size: 26px; text-transform: uppercase; line-height: 1; }
+.slip-type { margin: -4px 0 0; font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.slip-x { display: none; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--chip); color: var(--ink); font: 700 18px/1 var(--body); cursor: pointer; }
+.slip-empty { margin: 0; font-size: 14px; color: var(--muted); background: var(--chip); border-radius: 12px; padding: 12px; }
+.slip-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.slip-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 2px 8px; align-items: center; background: var(--chip); border-radius: 12px; padding: 8px 8px 8px 12px; border-left: 4px solid var(--oak); }
+.slip-list .sl-t { display: grid; min-width: 0; }
+.slip-list .sl-m { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.slip-list .sl-p { font-weight: 800; overflow-wrap: anywhere; }
+.slip-list .sl-k { font-size: 11px; color: var(--muted); }
+.slip-od { width: 62px; padding: 6px 4px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: 800 16px var(--body); text-align: center; font-variant-numeric: tabular-nums; }
+.slip-od:focus-visible, .slip-add input:focus-visible, .slip-stake input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.slip-rm { width: 32px; height: 32px; border-radius: 50%; border: 0; background: transparent; color: var(--muted); font: 700 16px/1 var(--body); cursor: pointer; }
+.slip-rm:hover { background: color-mix(in srgb, var(--down) 15%, transparent); color: var(--down); }
+.slip-add { display: grid; grid-template-columns: minmax(0, 1fr) 70px 44px; gap: 6px; }
+.slip-add input { min-width: 0; padding: 9px 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: 600 14px var(--body); }
+.slip-add button { border: 0; border-radius: 10px; background: var(--oak); color: #fff; font: 800 20px/1 var(--body); cursor: pointer; }
+.slip-lbl { font-size: 12px; font-weight: 700; color: var(--muted); margin: 4px 0 -4px; }
+.slip-sum { background: var(--board); color: #f4f4f4; border-radius: 14px; padding: 12px 14px; display: grid; gap: 6px; }
+.slip-sum .sr { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 14px; }
+.slip-sum .sr b { font-variant-numeric: tabular-nums; }
+.slip-sum .sr.tot b { font-family: var(--display); font-size: 30px; line-height: 1; color: var(--led); }
+.slip-sum .sr.win { border-top: 1px dashed rgba(255,255,255,.25); padding-top: 8px; }
+.slip-sum .sr.win b { font-family: var(--display); font-size: 26px; color: var(--led); }
+.slip-stake { display: flex; align-items: center; gap: 6px; }
+.slip-stake input { width: 72px; padding: 5px 8px; border-radius: 8px; border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.08); color: #fff; font: 800 16px var(--body); text-align: right; }
+.slip-clear { align-self: flex-start; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--muted); font: 700 13px var(--body); cursor: pointer; }
+.slip-note { margin: 0; font-size: 12px; color: var(--muted); }
+.slip-bar { display: none; }
+@media (min-width: 1000px) {
+  body.view-bets { padding-right: min(33.33vw, 460px); }
+  .slip-panel { position: fixed; top: 0; right: 0; bottom: 0; width: min(33.33vw, 460px); z-index: 30; border-left: 1px solid var(--line); box-shadow: -8px 0 24px rgba(0,0,0,.12); padding-top: 22px; }
+}
+@media (max-width: 999.98px) {
+  body.view-bets { padding-bottom: 72px; }
+  .slip-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%;
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); border: 0; border-top: 2px solid var(--led); background: var(--board); color: #fff; font: 700 15px var(--body); cursor: pointer; text-align: left; }
+  .slip-bar b { font-variant-numeric: tabular-nums; }
+  .slip-bar .sb-r b { font-family: var(--display); font-size: 24px; color: var(--led); margin-left: 4px; }
+  .slip-bar .sb-r i { font-style: normal; margin-left: 8px; font-size: 12px; opacity: .8; }
+  .slip-bar.bump { animation: slipBump .35s ease; }
+  @keyframes slipBump { 40% { transform: translateY(-6px); } }
+  .slip-panel { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; max-height: 85vh; max-height: 85dvh; border-radius: 18px 18px 0 0; box-shadow: 0 -10px 30px rgba(0,0,0,.35);
+    padding-bottom: calc(16px + env(safe-area-inset-bottom)); transform: translateY(105%); visibility: hidden; transition: transform .25s ease, visibility 0s .25s; }
+  .slip.open .slip-panel { transform: none; visibility: visible; transition: transform .25s ease; }
+  .slip-x { display: block; }
+  body.view-bets .slip-backdrop:not([hidden]) { display: block; position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,.5); }
+}
+@media (prefers-reduced-motion: reduce) { .slip-panel, .slip.open .slip-panel { transition: none; } .slip-bar.bump { animation: none; } }
+
 /* Page tabs: "Sākums" = the whole league page, "Likmes" = the betting section alone, like a separate page */
 .page-tabs { position: sticky; top: 0; z-index: 20; margin: 0 -16px -30px; padding: 8px 16px; display: flex; gap: 8px; background: var(--sky-1); border-bottom: 1px solid color-mix(in srgb, var(--line) 60%, transparent); }
 .page-tabs a { flex: 1; text-align: center; font: 800 15px var(--body); padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); text-decoration: none; }
@@ -666,6 +726,27 @@ body.view-bets #likmes { padding-top: 26px; }
 
   <footer>Dati no UEFA Champions League Fantasy līgas „roka un kaja” (kods yUdmgy). Atjaunojas automātiski pēc katras spēļu dienas.</footer>
 </div>
+
+<aside class="slip" id="slip" aria-label="Mans betslips">
+  <button type="button" class="slip-bar" id="slipBar" aria-expanded="false" aria-controls="slipPanel"><span class="sb-l">🧾 Mans betslips · <b id="slipCount">0</b> <span id="slipCountTxt">likmes</span></span><span class="sb-r">Koef.<b id="slipOddsBar">–</b><i aria-hidden="true">▲</i></span></button>
+  <div class="slip-panel" id="slipPanel">
+    <div class="slip-head"><h3>Mans betslips</h3><button type="button" class="slip-x" id="slipClose" aria-label="Aizvērt betslipu">✕</button></div>
+    <p class="slip-type">Kombinētā likme · koeficienti sareizināti</p>
+    <p class="slip-empty" id="slipEmpty">Pieskaries koeficientam spēļu sarakstā (1 / X / 2), lai to pievienotu. Citu likmi (handikapu, abas gūst vārtus u. c.) vari ierakstīt pats zemāk.</p>
+    <ul class="slip-list" id="slipList"></ul>
+    <span class="slip-lbl">Pievienot savu likmi</span>
+    <form class="slip-add" id="slipAdd" autocomplete="off"><input name="t" placeholder="Piem. Real Madrid −1,5" maxlength="80" required aria-label="Likme"><input name="o" inputmode="decimal" placeholder="Koef." required aria-label="Koeficients"><button type="submit" aria-label="Pievienot">+</button></form>
+    <div class="slip-sum">
+      <div class="sr"><span>Likmes</span><b id="slipN">0</b></div>
+      <div class="sr tot"><span>Kopējais koeficients</span><b id="slipOdds">–</b></div>
+      <div class="sr"><span>Likme</span><label class="slip-stake"><input id="slipStake" inputmode="decimal" value="5" aria-label="Likmes summa eiro"> €</label></div>
+      <div class="sr win"><span>Iespējamais vinnests</span><b id="slipWin">–</b></div>
+    </div>
+    <button type="button" class="slip-clear" id="slipClear">🗑 Notīrīt betslipu</button>
+    <p class="slip-note">Tikai aprēķinam: šeit likmes netiek liktas. Betslips saglabājas tikai tavā pārlūkā. Koeficientus vari labot, ja bukmeikerim tie ir citi.</p>
+  </div>
+</aside>
+<div class="slip-backdrop" id="slipBackdrop" hidden></div>
 
 <script>
 (function () {
@@ -1160,9 +1241,10 @@ body.view-bets #likmes { padding-top: 26px; }
       const won = m.result ? (Number(m.result.h) > Number(m.result.a) ? "1" : Number(m.result.h) < Number(m.result.a) ? "2" : "X") : null;
       const md = !vals.length && m.model ? m.model : null;
       const mfav = md ? Math.max(md["1"], md.X, md["2"]) : null;
+      const key = slipKey(m); slipMatches[key] = m;
       const cell = (k, label) => md
         ? `<span class="bet-odd model${md[k] === mfav ? " fav" : ""}${won === k ? " won" : ""}" title="Modeļa varbūtība"><small>${label}</small><b>${esc(md[k])}%</b></span>`
-        : `<span class="bet-odd${o[k] != null && o[k] === fav ? " fav" : ""}${val === k ? " val" : ""}${won === k ? " won" : ""}"${val === k ? ' title="Vērtība"' : ""}><small>${label}</small><b>${num(o[k])}</b></span>`;
+        : `<span class="bet-odd${o[k] != null && o[k] === fav ? " fav" : ""}${val === k ? " val" : ""}${won === k ? " won" : ""}${slipHas(key, k) ? " picked" : ""}"${val === k ? ' title="Vērtība"' : ""}${o[k] != null && !m.result ? ` data-key="${esc(key)}" data-k="${k}" role="button" tabindex="0" aria-pressed="${slipHas(key, k)}" aria-label="Pievienot betslipam: ${esc(k === "1" ? m.home : k === "2" ? m.away : "neizšķirts")}, ${num(o[k])}"` : ""}><small>${label}</small><b>${num(o[k])}</b></span>`;
       return `<div class="bet-odds${mini ? " mini" : ""}">${cell("1", mini ? "1" : esc(m.home))}${cell("X", mini ? "X" : "Neizšķirts")}${cell("2", mini ? "2" : esc(m.away))}</div>`;
     };
     const body = (m, after = "") => `
@@ -1309,6 +1391,82 @@ body.view-bets #likmes { padding-top: 26px; }
     }
   }
   fetch("musu-likmes.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(renderDuel).catch(() => {});
+
+  // ---- Mans betslips: kombinētā likme, ko katrs apmeklētājs saliek pats (saglabājas tikai viņa pārlūkā) ----
+  const slipMatches = {};
+  const slipKey = m => m.home + "|" + m.away + "|" + String(m.kickoff).slice(0, 10);
+  const slip = { items: [], stake: 5 };
+  try { const sv = JSON.parse(localStorage.getItem("rk-betslip") || "null"); if (sv && Array.isArray(sv.items)) Object.assign(slip, sv); } catch (e) {}
+  const slipSave = () => { try { localStorage.setItem("rk-betslip", JSON.stringify(slip)); } catch (e) {} };
+  const slipHas = (key, k) => slip.items.some(i => i.key === key && i.k === k);
+  const toNum = v => { const n = Number(String(v).replace(",", ".").trim()); return isFinite(n) ? n : NaN; };
+  const fmt2 = v => v.toFixed(2).replace(".", ",");
+  function slipToggle(key, k) {
+    const m = slipMatches[key]; if (!m || !m.odds || m.odds[k] == null) return;
+    const had = slipHas(key, k);
+    slip.items = slip.items.filter(i => i.key !== key); // vienā kombinētajā likmē no vienas spēles tikai viens iznākums
+    if (!had) slip.items.push({ id: key + "|" + k, key, k, match: m.home + " – " + m.away, pick: k === "1" ? m.home : k === "2" ? m.away : "Neizšķirts", market: "Mača uzvarētājs", odds: Number(m.odds[k]) });
+    slipSave(); slipRender(true);
+  }
+  function slipRender(bump) {
+    const list = document.getElementById("slipList");
+    list.innerHTML = slip.items.map((i, n) => `<li><span class="sl-t">${i.match ? `<span class="sl-m">${esc(i.match)}</span>` : ""}<span class="sl-p">${esc(i.pick)}</span>${i.market ? `<span class="sl-k">${esc(i.market)}</span>` : ""}</span>
+      <input class="slip-od" data-n="${n}" inputmode="decimal" value="${fmt2(i.odds)}" aria-label="Koeficients: ${esc(i.pick)}"><button type="button" class="slip-rm" data-n="${n}" aria-label="Noņemt ${esc(i.pick)}">✕</button></li>`).join("");
+    document.getElementById("slipEmpty").hidden = slip.items.length > 0;
+    document.getElementById("slipStake").value = String(slip.stake).replace(".", ",");
+    slipTotals();
+    document.querySelectorAll(".bet-odd[data-key]").forEach(c => { const on = slipHas(c.dataset.key, c.dataset.k); c.classList.toggle("picked", on); c.setAttribute("aria-pressed", String(on)); });
+    if (bump) { const bar = document.getElementById("slipBar"); bar.classList.remove("bump"); void bar.offsetWidth; bar.classList.add("bump"); }
+  }
+  function slipTotals() {
+    const n = slip.items.length, ok = slip.items.every(i => i.odds >= 1);
+    const tot = slip.items.reduce((t, i) => t * i.odds, 1), st = toNum(slip.stake);
+    const totTxt = n && ok ? fmt2(tot) : "–";
+    document.getElementById("slipN").textContent = n;
+    document.getElementById("slipCount").textContent = n;
+    document.getElementById("slipCountTxt").textContent = n % 10 === 1 && n % 100 !== 11 ? "likme" : "likmes";
+    document.getElementById("slipOdds").textContent = totTxt;
+    document.getElementById("slipOddsBar").textContent = totTxt;
+    document.getElementById("slipWin").textContent = n && ok && st > 0 ? fmt2(tot * st) + " €" : "–";
+  }
+  function slipOpen(open) {
+    const box = document.getElementById("slip"), bd = document.getElementById("slipBackdrop");
+    box.classList.toggle("open", open); bd.hidden = !open;
+    document.getElementById("slipBar").setAttribute("aria-expanded", String(open));
+    if (open) document.getElementById("slipClose").focus(); else if (document.activeElement && box.contains(document.activeElement)) document.getElementById("slipBar").focus();
+  }
+  document.getElementById("betList").addEventListener("click", e => {
+    const c = e.target.closest(".bet-odd[data-key]"); if (!c) return;
+    e.preventDefault(); e.stopPropagation(); slipToggle(c.dataset.key, c.dataset.k);
+  });
+  document.getElementById("betList").addEventListener("keydown", e => {
+    const c = e.target.closest(".bet-odd[data-key]"); if (!c || (e.key !== "Enter" && e.key !== " ")) return;
+    e.preventDefault(); e.stopPropagation(); slipToggle(c.dataset.key, c.dataset.k);
+  });
+  document.getElementById("slipList").addEventListener("click", e => {
+    const b = e.target.closest(".slip-rm"); if (!b) return;
+    slip.items.splice(Number(b.dataset.n), 1); slipSave(); slipRender();
+  });
+  document.getElementById("slipList").addEventListener("input", e => {
+    const i = slip.items[Number(e.target.dataset.n)]; if (!i) return;
+    const v = toNum(e.target.value); if (v >= 1) { i.odds = v; slipSave(); } slipTotals();
+  });
+  document.getElementById("slipList").addEventListener("change", e => { if (e.target.classList.contains("slip-od")) slipRender(); });
+  document.getElementById("slipStake").addEventListener("input", e => { const v = toNum(e.target.value); slip.stake = v > 0 ? v : 0; slipSave(); slipTotals(); });
+  document.getElementById("slipAdd").addEventListener("submit", e => {
+    e.preventDefault();
+    const f = e.target, t = f.t.value.trim(), o = toNum(f.o.value);
+    if (!t) return f.t.focus();
+    if (!(o >= 1)) { f.o.value = ""; f.o.placeholder = "≥ 1,01"; return f.o.focus(); }
+    slip.items.push({ id: "c" + Date.now(), pick: t, market: "Sava likme", odds: o });
+    f.reset(); slipSave(); slipRender(true); f.t.focus();
+  });
+  document.getElementById("slipClear").addEventListener("click", () => { slip.items = []; slipSave(); slipRender(); });
+  document.getElementById("slipBar").addEventListener("click", () => slipOpen(true));
+  document.getElementById("slipClose").addEventListener("click", () => slipOpen(false));
+  document.getElementById("slipBackdrop").addEventListener("click", () => slipOpen(false));
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && document.getElementById("slip").classList.contains("open")) slipOpen(false); });
+  slipRender();
 
   // ---- Lapas: Sākums / Likmes (#likmes) ----
   function setView(scroll) {
