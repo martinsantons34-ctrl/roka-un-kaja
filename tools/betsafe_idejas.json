@@ -1,0 +1,120 @@
+{
+ "Galatasaray": [
+  [
+   "1x2",
+   "away",
+   "Aston Villa uzvara",
+   "Modelis Aston Villa uzvarai dod 46 %, bet koeficients 2,50 nozīmē tikai ~40 %. Kārtas labākā vērtība pēc modeļa."
+  ]
+ ],
+ "Feyenoord": [
+  [
+   "1x2",
+   "home",
+   "Feyenoord uzvara",
+   "Mājās Feyenoord pēc modeļa uzvar 39 % spēļu, koeficients 2,88 atbilst ~35 %."
+  ]
+ ],
+ "Slavia Praha": [
+  [
+   "1x2",
+   "home",
+   "Slavia uzvara",
+   "Modelis Slavia mājās dod 39 %, Betsafe tikai ~32 %. Riskanti, bet koeficients 3,10."
+  ]
+ ],
+ "Arsenal": [
+  [
+   "btts",
+   "y",
+   "Abas gūst vārtus: Jā",
+   "Gandrīz 1,90 par to, ka abas komandas gūs vārtus. Arsenal tīrā uzvara maksā tikai 1,39."
+  ]
+ ],
+ "Man City": [
+  [
+   "ah",
+   "home:-1.5",
+   "Man City −1,5",
+   "Uzvara ar 2+ vārtiem maksā 1,63, nevis 1,24. Kombinētajā likmē tas koeficientu ceļ krietni vairāk."
+  ]
+ ],
+ "Real Madrid": [
+  [
+   "h3",
+   "home:-1",
+   "Real Madrid −1 (3 virzienu)",
+   "Uzvara ar 2+ vārtiem: 1,45 tīrās uzvaras 1,17 vietā."
+  ]
+ ],
+ "Atleti": [
+  [
+   "ah",
+   "home:-2.5",
+   "Atleti −2,5",
+   "Atleti pret Viking ir 1,10 favorīts. Uzvara ar 3+ vārtiem maksā 1,83."
+  ],
+  [
+   "btts",
+   "n",
+   "Abas gūst vārtus: Nē",
+   "Viking diez vai gūs vārtus Madridē: 1,72."
+  ]
+ ],
+ "Lille": [
+  [
+   "ah",
+   "away:-1.5",
+   "Bayern −1,5",
+   "Bayern uzvara maksā 1,32, uzvara ar 2+ vārtiem 1,80."
+  ]
+ ],
+ "Paris": [
+  [
+   "ah",
+   "home:-1.5",
+   "PSG −1,5",
+   "PSG uzvara ar 2+ vārtiem: 1,88 tīrās uzvaras 1,36 vietā."
+  ]
+ ],
+ "Inter": [
+  [
+   "h3",
+   "home:-1",
+   "Inter −1 (3 virzienu)",
+   "Inter uzvara ar 2+ vārtiem maksā 2,02."
+  ]
+ ],
+ "S. Bratislava": [
+  [
+   "ah",
+   "away:-1.5",
+   "Real Betis −1,5",
+   "Betis uzvara ar 2+ vārtiem: 1,74, nevis 1,29."
+  ]
+ ],
+ "Como": [
+  [
+   "ah",
+   "home:-1.5",
+   "Como −1,5",
+   "Como mājās ir 1,31 favorīts, uzvara ar 2+ vārtiem maksā 1,79."
+  ]
+ ],
+ "Sporting CP": [
+  [
+   "btts",
+   "y",
+   "Abas gūst vārtus: Jā",
+   "Pilnīgi līdzvērtīga spēle (abām uzvarai 2,62), un bukmeikers gaida vārtus abos vārtos: 1,46."
+  ]
+ ],
+ "Bodø/Glimt": [
+  [
+   "ah",
+   "home:-1.5",
+   "Bodø/Glimt −1,5",
+   "Bodø mājās uz mākslīgā seguma ir bīstami, un uzvara ar 2+ vārtiem maksā 2,25 (tīrā uzvara 1,55)."
+  ]
+ ]
+}
