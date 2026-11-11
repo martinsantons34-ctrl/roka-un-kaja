@@ -477,7 +477,18 @@ footer { font-size: 13px; color: var(--muted); }
 :root { --p1: #1f5fbf; --p2: #b8860b; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --p1: #6ea8ff; --p2: #f2c443; } }
 :root[data-theme="dark"] { --p1: #6ea8ff; --p2: #f2c443; }
-.duel { background: var(--surface); border: 2px solid var(--line); border-radius: 18px; padding: 16px; display: grid; gap: 14px; margin-bottom: 22px; }
+.duel { background: var(--surface); border: 2px solid var(--line); border-radius: 18px; margin-bottom: 22px; }
+.duel-sum { list-style: none; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 6px 12px; padding: 12px 16px; }
+.duel-sum::-webkit-details-marker { display: none; }
+.duel-sum:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 16px; }
+.ds-t { font-family: var(--display); font-weight: 800; font-size: 20px; text-transform: uppercase; line-height: 1.05; }
+.ds-ps { grid-column: 1; display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 14px; font-weight: 700; }
+.ds-p i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: 0; }
+.ds-p b { font-family: var(--display); font-size: 20px; font-variant-numeric: tabular-nums; }
+.ds-p b.pos { color: var(--up); } .ds-p b.neg { color: var(--down); }
+.ds-more { grid-column: 2; grid-row: 1 / span 2; width: 32px; height: 32px; display: grid; place-items: center; border-radius: 50%; background: var(--chip); color: var(--muted); font-size: 16px; transition: transform .2s; }
+.duel[open] .ds-more { transform: rotate(180deg); }
+.duel-body { display: grid; gap: 14px; padding: 0 16px 16px; }
 .duel h3 { font-family: var(--display); font-weight: 800; font-size: 26px; text-transform: uppercase; line-height: 1.05; margin: 0; }
 .duel-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .duel-card { border-radius: 14px; padding: 12px; background: var(--chip); border-top: 4px solid var(--c); display: grid; gap: 6px; position: relative; }
@@ -521,7 +532,7 @@ footer { font-size: 13px; color: var(--muted); }
 .duel-tbl .win { color: var(--up); } .duel-tbl .loss { color: var(--down); }
 .duel-tbl .show-sm { display: none; }
 .duel-tbl .mk { display: block; color: var(--muted); font-size: 12px; }
-@media (max-width: 520px) { .duel-tbl .hide-sm { display: none; } .duel-tbl .show-sm { display: inline; } .duel-tbl { font-size: 13px; } .duel-tbl td, .duel-tbl th { padding-left: 4px; padding-right: 4px; } .duel { padding: 12px; } .duel-card .pl { font-size: 28px; } }
+@media (max-width: 520px) { .duel-tbl .hide-sm { display: none; } .duel-tbl .show-sm { display: inline; } .duel-tbl { font-size: 13px; } .duel-tbl td, .duel-tbl th { padding-left: 4px; padding-right: 4px; } .duel-body { padding: 0 12px 12px; } .duel-sum { padding: 10px 12px; } .duel-card .pl { font-size: 28px; } }
 
 /* Mans betslips: anyone can build a combo — desktop panel on the right (~1/3), phone bar at the bottom that opens a sheet */
 .bet-odd[data-key] { cursor: pointer; transition: transform .12s, box-shadow .12s; }
@@ -529,6 +540,19 @@ footer { font-size: 13px; color: var(--muted); }
 .bet-odd[data-key]:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 .bet-odd.picked, .bet-odd.picked.fav, .bet-odd.picked.val { background: var(--oak); color: #fff; box-shadow: none; }
 .bet-odd.picked small { color: rgba(255,255,255,.85); }
+.mk-box { display: grid; gap: 8px; padding: 10px 12px; border-radius: 12px; background: var(--chip); }
+.mk-box .ttl { font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.mk { display: grid; gap: 4px; }
+.mk-name { font-size: 12px; font-weight: 800; color: var(--ink); }
+.mk-sels { display: flex; flex-wrap: wrap; gap: 6px; }
+.mk-chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: 600 13px var(--body); cursor: pointer; text-align: left; }
+.mk-chip b { font-weight: 800; font-variant-numeric: tabular-nums; }
+.mk-chip:hover { border-color: var(--accent); }
+.mk-chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.mk-chip.picked { background: var(--oak); border-color: var(--oak); color: #fff; }
+.mk-tips { display: grid; gap: 6px; padding: 8px 10px; border-radius: 10px; background: color-mix(in srgb, var(--cheese) 14%, var(--surface)); border: 1px solid color-mix(in srgb, var(--cheese) 45%, var(--line)); }
+.mk-tip { display: grid; gap: 3px; justify-items: start; }
+.mk-tip p { margin: 0; font-size: 13px; color: var(--muted); max-width: none; }
 .slip, .slip-backdrop { display: none; }
 body.view-bets .slip { display: block; }
 .slip-panel { background: var(--surface); color: var(--ink); display: flex; flex-direction: column; gap: 10px; padding: 16px; overflow-y: auto; overscroll-behavior: contain; }
@@ -563,19 +587,20 @@ body.view-bets .slip { display: block; }
 .slip-note { margin: 0; font-size: 12px; color: var(--muted); }
 .slip-bar { display: none; }
 @media (min-width: 1000px) {
-  body.view-bets { padding-right: min(33.33vw, 460px); }
+  body.view-bets:not(.has-slip) .slip { display: none; }
+  body.view-bets.has-slip { padding-right: min(33.33vw, 460px); }
   .slip-panel { position: fixed; top: 0; right: 0; bottom: 0; width: min(33.33vw, 460px); z-index: 30; border-left: 1px solid var(--line); box-shadow: -8px 0 24px rgba(0,0,0,.12); padding-top: 22px; }
 }
 @media (max-width: 999.98px) {
-  body.view-bets { padding-bottom: 72px; }
+  body.view-bets { padding-bottom: 56px; }
   .slip-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%;
-    padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); border: 0; border-top: 2px solid var(--led); background: var(--board); color: #fff; font: 700 15px var(--body); cursor: pointer; text-align: left; }
+    padding: 7px 16px calc(7px + env(safe-area-inset-bottom)); border: 0; border-top: 2px solid var(--led); background: var(--board); color: #fff; font: 700 14px var(--body); cursor: pointer; text-align: left; }
   .slip-bar b { font-variant-numeric: tabular-nums; }
-  .slip-bar .sb-r b { font-family: var(--display); font-size: 24px; color: var(--led); margin-left: 4px; }
+  .slip-bar .sb-r b { font-family: var(--display); font-size: 20px; line-height: 1; color: var(--led); margin-left: 4px; }
   .slip-bar .sb-r i { font-style: normal; margin-left: 8px; font-size: 12px; opacity: .8; }
   .slip-bar.bump { animation: slipBump .35s ease; }
   @keyframes slipBump { 40% { transform: translateY(-6px); } }
-  .slip-panel { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; max-height: 85vh; max-height: 85dvh; border-radius: 18px 18px 0 0; box-shadow: 0 -10px 30px rgba(0,0,0,.35);
+  .slip-panel { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; max-height: 72vh; max-height: 72dvh; border-radius: 18px 18px 0 0; box-shadow: 0 -10px 30px rgba(0,0,0,.35);
     padding-bottom: calc(16px + env(safe-area-inset-bottom)); transform: translateY(105%); visibility: hidden; transition: transform .25s ease, visibility 0s .25s; }
   .slip.open .slip-panel { transform: none; visibility: visible; transition: transform .25s ease; }
   .slip-x { display: block; }
@@ -731,7 +756,7 @@ body.view-bets #likmes { padding-top: 26px; }
   <button type="button" class="slip-bar" id="slipBar" aria-expanded="false" aria-controls="slipPanel"><span class="sb-l">🧾 Mans betslips · <b id="slipCount">0</b> <span id="slipCountTxt">likmes</span></span><span class="sb-r">Koef.<b id="slipOddsBar">–</b><i aria-hidden="true">▲</i></span></button>
   <div class="slip-panel" id="slipPanel">
     <div class="slip-head"><h3>Mans betslips</h3><button type="button" class="slip-x" id="slipClose" aria-label="Aizvērt betslipu">✕</button></div>
-    <p class="slip-type">Kombinētā likme · koeficienti sareizināti</p>
+    <p class="slip-type">Kombinētā likme · koeficienti sareizināti · no vienas spēles viena likme</p>
     <p class="slip-empty" id="slipEmpty">Pieskaries koeficientam spēļu sarakstā (1 / X / 2), lai to pievienotu. Citu likmi (handikapu, abas gūst vārtus u. c.) vari ierakstīt pats zemāk.</p>
     <ul class="slip-list" id="slipList"></ul>
     <span class="slip-lbl">Pievienot savu likmi</span>
@@ -1242,6 +1267,7 @@ body.view-bets #likmes { padding-top: 26px; }
       const md = !vals.length && m.model ? m.model : null;
       const mfav = md ? Math.max(md["1"], md.X, md["2"]) : null;
       const key = slipKey(m); slipMatches[key] = m;
+      ["1", "X", "2"].forEach(k => { if (o[k] != null) slipSels[key + "|" + k] = { pick: k === "1" ? m.home : k === "2" ? m.away : "Neizšķirts", market: "Mača uzvarētājs", odds: Number(o[k]) }; });
       const cell = (k, label) => md
         ? `<span class="bet-odd model${md[k] === mfav ? " fav" : ""}${won === k ? " won" : ""}" title="Modeļa varbūtība"><small>${label}</small><b>${esc(md[k])}%</b></span>`
         : `<span class="bet-odd${o[k] != null && o[k] === fav ? " fav" : ""}${val === k ? " val" : ""}${won === k ? " won" : ""}${slipHas(key, k) ? " picked" : ""}"${val === k ? ' title="Vērtība"' : ""}${o[k] != null && !m.result ? ` data-key="${esc(key)}" data-k="${k}" role="button" tabindex="0" aria-pressed="${slipHas(key, k)}" aria-label="Pievienot betslipam: ${esc(k === "1" ? m.home : k === "2" ? m.away : "neizšķirts")}, ${num(o[k])}"` : ""}><small>${label}</small><b>${num(o[k])}</b></span>`;
@@ -1250,6 +1276,7 @@ body.view-bets #likmes { padding-top: 26px; }
     const body = (m, after = "") => `
         ${h2hButtons(m)}${after}
         ${resultHtml(m)}
+        ${marketsHtml(m)}
         ${(m.odds || {}).src ? `<span class="bet-src">Koeficienti: ${esc(m.odds.src)}</span>` : ""}
         ${probBar(m.odds || {}, m)}
         <div class="bet-pick"><span class="lbl">Ieteikums</span><b>${esc(m.pick)}</b>${m.pickOdds ? `<span class="od">${num(m.pickOdds)}</span>` : ""}</div>
@@ -1374,10 +1401,12 @@ body.view-bets #likmes { padding-top: 26px; }
         + rs.map((s, i) => s ? `<tr class="slip" style="--c:${cols[i]}"><td colspan="2"><b>${esc(ps[i].name)}</b> · ${esc(s.stake)} ${esc(cur)} × ${s.approx ? "≈" : ""}${num(s.odds)} = <b>${s.approx ? "≈" : ""}${fmt(s.stake * s.odds)}</b></td>
           <td class="num">${s.approx ? "≈" : ""}${num(s.odds)}</td><td colspan="2" class="num">${s.status === "won" ? `<b class="win">${fmt(s.back - s.stake, true)}</b>` : s.status === "lost" ? `<b class="loss">${fmt(-s.stake, true)}</b>` : ""}</td><td>${stCell(s.status)}</td></tr>` : "").join("");
     }).join("");
-    box.innerHTML = `<section class="duel" aria-label="Mūsu likmes"><h3>${esc(d.title || "Mūsu likmes")}</h3>
-      <div class="duel-cards">${cards}</div>${chart}
+    const wasOpen = !!box.querySelector("details.duel[open]");
+    box.innerHTML = `<details class="duel"${wasOpen ? " open" : ""} aria-label="Mūsu likmes"><summary class="duel-sum"><span class="ds-t">${esc(d.title || "Mūsu likmes")}</span>
+      <span class="ds-ps">${stats.map((s, i) => `<span class="ds-p" style="--c:${cols[i]}"><i></i>${esc(s.p.name)} <b class="${s.pl > 0 ? "pos" : s.pl < 0 ? "neg" : ""}">${fmt(s.pl, true)}</b></span>`).join("")}</span><span class="ds-more" aria-hidden="true">▾</span></summary>
+      <div class="duel-body"><div class="duel-cards">${cards}</div>${chart}
       <div class="tbl-wrap"><table class="duel-tbl"><thead><tr><th>Spēle</th><th>Likme</th><th class="num">Koef.</th>${ps.map(p => `<th class="who-c">${esc(p.name.slice(0, 1))}</th>`).join("")}<th><span class="hide-sm">Statuss</span></th></tr></thead><tbody>${rows}</tbody></table></div>
-      <p class="duel-note">Katrs betslips ir kombinētā likme: tā ienāk tikai tad, ja trāpītas visas tajā esošās spēles. Bilance = vinnēts mīnus likts (likts ietver arī vēl aktīvos betslipus). Ailēs ${ps.map(p => esc(p.name.slice(0, 1)) + " = " + esc(p.name)).join(", ")}.</p></section>`;
+      <p class="duel-note">Katrs betslips ir kombinētā likme: tā ienāk tikai tad, ja trāpītas visas tajā esošās spēles. Bilance = vinnēts mīnus likts (likts ietver arī vēl aktīvos betslipus). Ailēs ${ps.map(p => esc(p.name.slice(0, 1)) + " = " + esc(p.name)).join(", ")}.</p></div></details>`;
     const wrap = box.querySelector(".duel-chart");
     if (wrap && tipData) {
       const tip = wrap.querySelector(".duel-tip"), svg = wrap.querySelector("svg"), t = tipData;
@@ -1392,20 +1421,39 @@ body.view-bets #likmes { padding-top: 26px; }
   }
   fetch("musu-likmes.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(renderDuel).catch(() => {});
 
+  // ---- Betsafe tirgi (betsafe.json): abas gūst, vārti, handikapi un ieteikumi katrai spēlei; visu var pielikt betslipam ----
+  let bsData = null;
+  function marketsHtml(m) {
+    const key = slipKey(m), x = bsData && bsData.matches && bsData.matches[key];
+    if (!x || m.result || (!(x.markets || []).length && !(x.tips || []).length)) return "";
+    slipMatches[key] = m;
+    const chip = (sid, label, odds, market, pick) => {
+      slipSels[key + "|" + sid] = { pick: pick || label, market, odds: Number(odds) };
+      const on = slipHas(key, sid);
+      return `<button type="button" class="mk-chip${on ? " picked" : ""}" data-key="${esc(key)}" data-sid="${esc(sid)}" aria-pressed="${on}"><span>${esc(label)}</span><b>${fmt2(Number(odds))}</b></button>`;
+    };
+    const tips = (x.tips || []).map(t => `<div class="mk-tip">${chip(t.id, t.label, t.odds, t.market)}<p>${esc(t.why)}</p></div>`).join("");
+    return `<div class="mk-box"><span class="ttl">Betsafe koeficienti · pieskaries, lai pieliktu betslipam</span>
+      ${tips ? `<div class="mk-tips"><span class="mk-name">💡 Idejas</span>${tips}</div>` : ""}
+      ${(x.markets || []).map(mk => `<div class="mk"><span class="mk-name">${esc(mk.name)}</span><div class="mk-sels">${mk.sels.map(sl => chip(mk.id + ":" + sl.id, sl.label, sl.odds, mk.name, mk.id === "btts" ? "Abas gūs vārtus: " + sl.label : mk.id === "dc" ? "Dubultā iespēja: " + sl.label : "")).join("")}</div></div>`).join("")}
+      ${bsData.updatedAt ? `<span class="bet-src">Betsafe.lv, ${esc(new Date(bsData.updatedAt).toLocaleDateString("lv-LV", { day: "numeric", month: "short" }))}</span>` : ""}</div>`;
+  }
+
   // ---- Mans betslips: kombinētā likme, ko katrs apmeklētājs saliek pats (saglabājas tikai viņa pārlūkā) ----
   const slipMatches = {};
   const slipKey = m => m.home + "|" + m.away + "|" + String(m.kickoff).slice(0, 10);
   const slip = { items: [], stake: 5 };
   try { const sv = JSON.parse(localStorage.getItem("rk-betslip") || "null"); if (sv && Array.isArray(sv.items)) Object.assign(slip, sv); } catch (e) {}
   const slipSave = () => { try { localStorage.setItem("rk-betslip", JSON.stringify(slip)); } catch (e) {} };
-  const slipHas = (key, k) => slip.items.some(i => i.key === key && i.k === k);
+  const slipSels = {};
+  const slipHas = (key, sid) => slip.items.some(i => i.key === key && (i.sid || i.k) === sid);
   const toNum = v => { const n = Number(String(v).replace(",", ".").trim()); return isFinite(n) ? n : NaN; };
   const fmt2 = v => v.toFixed(2).replace(".", ",");
-  function slipToggle(key, k) {
-    const m = slipMatches[key]; if (!m || !m.odds || m.odds[k] == null) return;
-    const had = slipHas(key, k);
-    slip.items = slip.items.filter(i => i.key !== key); // vienā kombinētajā likmē no vienas spēles tikai viens iznākums
-    if (!had) slip.items.push({ id: key + "|" + k, key, k, match: m.home + " – " + m.away, pick: k === "1" ? m.home : k === "2" ? m.away : "Neizšķirts", market: "Mača uzvarētājs", odds: Number(m.odds[k]) });
+  function slipToggle(key, sid) {
+    const m = slipMatches[key], sel = slipSels[key + "|" + sid]; if (!m || !sel) return;
+    const had = slipHas(key, sid);
+    slip.items = slip.items.filter(i => i.key !== key); // vienā kombinētajā likmē no vienas spēles tikai viena likme (kā Betsafe)
+    if (!had) slip.items.push({ id: key + "|" + sid, key, sid, match: m.home + " – " + m.away, pick: sel.pick, market: sel.market, odds: sel.odds });
     slipSave(); slipRender(true);
   }
   function slipRender(bump) {
@@ -1415,7 +1463,8 @@ body.view-bets #likmes { padding-top: 26px; }
     document.getElementById("slipEmpty").hidden = slip.items.length > 0;
     document.getElementById("slipStake").value = String(slip.stake).replace(".", ",");
     slipTotals();
-    document.querySelectorAll(".bet-odd[data-key]").forEach(c => { const on = slipHas(c.dataset.key, c.dataset.k); c.classList.toggle("picked", on); c.setAttribute("aria-pressed", String(on)); });
+    document.body.classList.toggle("has-slip", slip.items.length > 0);
+    document.querySelectorAll(".bet-odd[data-key], .mk-chip[data-key]").forEach(c => { const on = slipHas(c.dataset.key, c.dataset.sid || c.dataset.k); c.classList.toggle("picked", on); c.setAttribute("aria-pressed", String(on)); });
     if (bump) { const bar = document.getElementById("slipBar"); bar.classList.remove("bump"); void bar.offsetWidth; bar.classList.add("bump"); }
   }
   function slipTotals() {
@@ -1436,8 +1485,8 @@ body.view-bets #likmes { padding-top: 26px; }
     if (open) document.getElementById("slipClose").focus(); else if (document.activeElement && box.contains(document.activeElement)) document.getElementById("slipBar").focus();
   }
   document.getElementById("betList").addEventListener("click", e => {
-    const c = e.target.closest(".bet-odd[data-key]"); if (!c) return;
-    e.preventDefault(); e.stopPropagation(); slipToggle(c.dataset.key, c.dataset.k);
+    const c = e.target.closest(".bet-odd[data-key], .mk-chip[data-key]"); if (!c) return;
+    e.preventDefault(); e.stopPropagation(); slipToggle(c.dataset.key, c.dataset.sid || c.dataset.k);
   });
   document.getElementById("betList").addEventListener("keydown", e => {
     const c = e.target.closest(".bet-odd[data-key]"); if (!c || (e.key !== "Enter" && e.key !== " ")) return;
@@ -1482,7 +1531,8 @@ body.view-bets #likmes { padding-top: 26px; }
   Promise.all([
     fetch("bets.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null),
     fetch("h2h.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null)
-  ]).then(([b, h]) => { h2hData = h; loadBets(b); })
+    , fetch("betsafe.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null)
+  ]).then(([b, h, bs]) => { h2hData = h; bsData = bs; loadBets(b); })
     .catch(() => { document.getElementById("betList").innerHTML = '<div class="empty">Neizdevās ielādēt likmes.</div>'; });
 
   fetch("news.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(renderNews)

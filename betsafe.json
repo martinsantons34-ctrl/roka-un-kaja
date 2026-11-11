@@ -1,0 +1,1813 @@
+{
+ "source": "Betsafe.lv",
+ "updatedAt": "2026-11-11T13:00:00+02:00",
+ "md": 5,
+ "matches": {
+  "Bodø/Glimt|LASK|2026-11-24": {
+   "markets": [
+    {
+     "id": "btts",
+     "name": "Abas komandas gūs vārtus",
+     "sels": [
+      {
+       "id": "y",
+       "label": "Jā",
+       "odds": 1.37
+      },
+      {
+       "id": "n",
+       "label": "Nē",
+       "odds": 3
+      }
+     ]
+    },
+    {
+     "id": "dc",
+     "name": "Dubultā iespēja",
+     "sels": [
+      {
+       "id": "1X",
+       "label": "1X",
+       "odds": 1.17
+      },
+      {
+       "id": "12",
+       "label": "12",
+       "odds": 1.17
+      },
+      {
+       "id": "X2",
+       "label": "X2",
+       "odds": 2.57
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "name": "Handikaps (3 virzienu)",
+     "sels": [
+      {
+       "id": "home:-2",
+       "label": "Bodø/Glimt −2",
+       "odds": 4
+      },
+      {
+       "id": "home:-1",
+       "label": "Bodø/Glimt −1",
+       "odds": 2.28
+      },
+      {
+       "id": "away:+1",
+       "label": "LASK +1",
+       "odds": 2.58
+      },
+      {
+       "id": "away:+2",
+       "label": "LASK +2",
+       "odds": 1.65
+      }
+     ]
+    },
+    {
+     "id": "ah",
+     "name": "Aziātiskais handikaps",
+     "sels": [
+      {
+       "id": "home:-1.5",
+       "label": "Bodø/Glimt −1,5",
+       "odds": 2.25
+      },
+      {
+       "id": "away:+1.5",
+       "label": "LASK +1,5",
+       "odds": 1.63
+      },
+      {
+       "id": "home:-1.25",
+       "label": "Bodø/Glimt −1,25",
+       "odds": 2.01
+      },
+      {
+       "id": "away:+1.25",
+       "label": "LASK +1,25",
+       "odds": 1.78
+      },
+      {
+       "id": "home:-1",
+       "label": "Bodø/Glimt −1",
+       "odds": 1.77
+      },
+      {
+       "id": "away:+1",
+       "label": "LASK +1",
+       "odds": 2.02
+      }
+     ]
+    }
+   ],
+   "tips": [
+    {
+     "id": "ah:home:-1.5",
+     "label": "Bodø/Glimt −1,5",
+     "odds": 2.25,
+     "why": "Bodø mājās uz mākslīgā seguma ir bīstami, un uzvara ar 2+ vārtiem maksā 2,25 (tīrā uzvara 1,55).",
+     "market": "Aziātiskais handikaps"
+    }
+   ]
+  },
+  "Galatasaray|Aston Villa|2026-11-24": {
+   "markets": [
+    {
+     "id": "btts",
+     "name": "Abas komandas gūs vārtus",
+     "sels": [
+      {
+       "id": "y",
+       "label": "Jā",
+       "odds": 1.39
+      },
+      {
+       "id": "n",
+       "label": "Nē",
+       "odds": 2.95
+      }
+     ]
+    },
+    {
+     "id": "ou25",
+     "name": "Vārti kopā: 2,5",
+     "sels": [
+      {
+       "id": "o",
+       "label": "Vairāk par 2,5",
+       "odds": 1.44
+      },
+      {
+       "id": "u",
+       "label": "Mazāk par 2,5",
+       "odds": 2.78
+      }
+     ]
+    },
+    {
+     "id": "dc",
+     "name": "Dubultā iespēja",
+     "sels": [
+      {
+       "id": "1X",
+       "label": "1X",
+       "odds": 1.56
+      },
+      {
+       "id": "12",
+       "label": "12",
+       "odds": 1.26
+      },
+      {
+       "id": "X2",
+       "label": "X2",
+       "odds": 1.5
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "name": "Handikaps (3 virzienu)",
+     "sels": [
+      {
+       "id": "home:+1",
+       "label": "Galatasaray +1",
+       "odds": 1.58
+      },
+      {
+       "id": "away:+1",
+       "label": "Aston Villa +1",
+       "odds": 1.52
+      }
+     ]
+    },
+    {
+     "id": "ah",
+     "name": "Aziātiskais handikaps",
+     "sels": [
+      {
+       "id": "home:-0.25",
+       "label": "Galatasaray −0,25",
+       "odds": 2.24
+      },
+      {
+       "id": "away:+0.25",
+       "label": "Aston Villa +0,25",
+       "odds": 1.63
+      },
+      {
+       "id": "home:+0.25",
+       "label": "Galatasaray +0,25",
+       "odds": 1.71
+      },
+      {
+       "id": "away:-0.25",
+       "label": "Aston Villa −0,25",
+       "odds": 2.11
+      },
+      {
+       "id": "home:+0.5",
+       "label": "Galatasaray +0,5",
+       "odds": 1.56
+      },
+      {
+       "id": "away:-0.5",
+       "label": "Aston Villa −0,5",
+       "odds": 2.51
+      }
+     ]
+    }
+   ],
+   "tips": [
+    {
+     "id": "2",
+     "label": "Aston Villa uzvara",
+     "odds": 2.5,
+     "why": "Modelis Aston Villa uzvarai dod 46 %, bet koeficients 2,50 nozīmē tikai ~40 %. Kārtas labākā vērtība pēc modeļa.",
+     "market": "Mača uzvarētājs"
+    }
+   ]
+  },
+  "Arsenal|B. Dortmund|2026-11-24": {
+   "markets": [
+    {
+     "id": "btts",
+     "name": "Abas komandas gūs vārtus",
+     "sels": [
+      {
+       "id": "y",
+       "label": "Jā",
+       "odds": 1.9
+      },
+      {
+       "id": "n",
+       "label": "Nē",
+       "odds": 1.88
+      }
+     ]
+    },
+    {
+     "id": "ou25",
+     "name": "Vārti kopā: 2,5",
+     "sels": [
+      {
+       "id": "o",
+       "label": "Vairāk par 2,5",
+       "odds": 1.65
+      },
+      {
+       "id": "u",
+       "label": "Mazāk par 2,5",
+       "odds": 2.25
+      }
+     ]
+    },
+    {
+     "id": "dc",
+     "name": "Dubultā iespēja",
+     "sels": [
+      {
+       "id": "1X",
+       "label": "1X",
+       "odds": 1.07
+      },
+      {
+       "id": "12",
+       "label": "12",
+       "odds": 1.17
+      },
+      {
+       "id": "X2",
+       "label": "X2",
+       "odds": 3.1
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "name": "Handikaps (3 virzienu)",
+     "sels": [
+      {
+       "id": "home:-2",
+       "label": "Arsenal −2",
+       "odds": 3.8
+      },
+      {
+       "id": "home:-1",
+       "label": "Arsenal −1",
+       "odds": 2.08
+      },
+      {
+       "id": "away:+1",
+       "label": "B. Dortmund +1",
+       "odds": 3.15
+      },
+      {
+       "id": "away:+2",
+       "label": "B. Dortmund +2",
+       "odds": 1.75
+      }
+     ]
+    },
+    {
+     "id": "ah",
+     "name": "Aziātiskais handikaps",
+     "sels": [
+      {
+       "id": "home:-1.5",
+       "label": "Arsenal −1,5",
+       "odds": 2.06
+      },
+      {
+       "id": "away:+1.5",
+       "label": "B. Dortmund +1,5",
+       "odds": 1.74
+      },
+      {
+       "id": "home:-1.25",
+       "label": "Arsenal −1,25",
+       "odds": 1.81
+      },
+      {
+       "id": "away:+1.25",
+       "label": "B. Dortmund +1,25",
+       "odds": 1.97
+      },
+      {
+       "id": "home:-1",
+       "label": "Arsenal −1",
+       "odds": 1.56
+      },
+      {
+       "id": "away:+1",
+       "label": "B. Dortmund +1",
+       "odds": 2.38
+      }
+     ]
+    }
+   ],
+   "tips": [
+    {
+     "id": "btts:y",
+     "label": "Abas gūst vārtus: Jā",
+     "odds": 1.9,
+     "why": "Gandrīz 1,90 par to, ka abas komandas gūs vārtus. Arsenal tīrā uzvara maksā tikai 1,39.",
+     "market": "Abas komandas gūs vārtus"
+    }
+   ]
+  },
+  "Como|AEK Athens|2026-11-24": {
+   "markets": [
+    {
+     "id": "btts",
+     "name": "Abas komandas gūs vārtus",
+     "sels": [
+      {
+       "id": "y",
+       "label": "Jā",
+       "odds": 1.62
+      },
+      {
+       "id": "n",
+       "label": "Nē",
+       "odds": 2.25
+      }
+     ]
+    },
+    {
+     "id": "ou25",
+     "name": "Vārti kopā: 2,5",
+     "sels": [
+      {
+       "id": "o",
+       "label": "Vairāk par 2,5",
+       "odds": 1.36
+      },
+      {
+       "id": "u",
+       "label": "Mazāk par 2,5",
+       "odds": 3.15
+      }
+     ]
+    },
+    {
+     "id": "dc",
+     "name": "Dubultā iespēja",
+     "sels": [
+      {
+       "id": "1X",
+       "label": "1X",
+       "odds": 1.06
+      },
+      {
+       "id": "12",
+       "label": "12",
+       "odds": 1.12
+      },
+      {
+       "id": "X2",
+       "label": "X2",
+       "odds": 3.6
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "name": "Handikaps (3 virzienu)",
+     "sels": [
+      {
+       "id": "home:-2",
+       "label": "Como −2",
+       "odds": 3.05
+      },
+      {
+       "id": "home:-1",
+       "label": "Como −1",
+       "odds": 1.8
+      },
+      {
+       "id": "away:+2",
+       "label": "AEK Athens +2",
+       "odds": 2.02
+      },
+      {
+       "id": "away:+3",
+       "label": "AEK Athens +3",
+       "odds": 1.39
+      }
+     ]
+    },
+    {
+     "id": "ah",
+     "name": "Aziātiskais handikaps",
+     "sels": [
+      {
+       "id": "home:-1.75",
+       "label": "Como −1,75",
+       "odds": 2.01
+      },
+      {
+       "id": "away:+1.75",
+       "label": "AEK Athens +1,75",
+       "odds": 1.78
+      },
+      {
+       "id": "home:-1.5",
+       "label": "Como −1,5",
+       "odds": 1.79
+      },
+      {
+       "id": "away:+1.5",
+       "label": "AEK Athens +1,5",
+       "odds": 1.99
+      },
+      {
+       "id": "home:-1.25",
+       "label": "Como −1,25",
+       "odds": 1.6
+      },
+      {
+       "id": "away:+1.25",
+       "label": "AEK Athens +1,25",
+       "odds": 2.3
+      }
+     ]
+    }
+   ],
+   "tips": [
+    {
+     "id": "ah:home:-1.5",
+     "label": "Como −1,5",
+     "odds": 1.79,
+     "why": "Como mājās ir 1,31 favorīts, uzvara ar 2+ vārtiem maksā 1,79.",
+     "market": "Aziātiskais handikaps"
+    }
+   ]
+  },
+  "Feyenoord|Porto|2026-11-24": {
+   "markets": [
+    {
+     "id": "btts",
+     "name": "Abas komandas gūs vārtus",
+     "sels": [
+      {
+       "id": "y",
+       "label": "Jā",
+       "odds": 1.5
+      },
+      {
+       "id": "n",
+       "label": "Nē",
+       "odds": 2.55
+      }
+     ]
+    },
+    {
+     "id": "dc",
+     "name": "Dubultā iespēja",
+     "sels": [
+      {
+       "id": "1X",
+       "label": "1X",
+       "odds": 1.6
+      },
+      {
+       "id": "12",
+       "label": "12",
+       "odds": 1.28
+      },
+      {
+       "id": "X2",
+       "label": "X2",
+       "odds": 1.44
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "name": "Handikaps (3 virzienu)",
+     "sels": [
+      {
+       "id": "home:+1",
+       "label": "Feyenoord +1",
+       "odds": 1.62
+      },
+      {
+       "id": "away:-1",
+       "label": "Porto −1",
+       "odds": 4.5
+      },
+      {
+       "id": "away:+1",
+       "label": "Porto +1",
+       "odds": 1.45
+      }
+     ]
+    },
+    {
+     "id": "ah",
+     "name": "Aziātiskais handikaps",
+     "sels": [
+      {
+       "id": "home:-0.25",
+       "label": "Feyenoord −0,25",
+       "odds": 2.39
+      },
+      {
+       "id": "away:+0.25",
+       "label": "Porto +0,25",
+       "odds": 1.56
+      },
+      {
+       "id": "home:+0.25",
+       "label": "Feyenoord +0,25",
+       "odds": 1.77
+      },
+      {
+       "id": "away:-0.25",
+       "label": "Porto −0,25",
+       "odds": 2.02
+      },
+      {
+       "id": "home:+0.5",
+       "label": "Feyenoord +0,5",
+       "odds": 1.6
+      },
+      {
+       "id": "away:-0.5",
+       "label": "Porto −0,5",
+       "odds": 2.41
+      }
+     ]
+    }
+   ],
+   "tips": [
+    {
+     "id": "1",
+     "label": "Feyenoord uzvara",
+     "odds": 2.88,
+     "why": "Mājās Feyenoord pēc modeļa uzvar 39 % spēļu, koeficients 2,88 atbilst ~35 %.",
+     "market": "Mača uzvarētājs"
+    }
+   ]
+  },
+  "Man City|Napoli|2026-11-24": {
+   "markets": [
+    {
+     "id": "btts",
+     "name": "Abas komandas gūs vārtus",
+     "sels": [
+      {
+       "id": "y",
+       "label": "Jā",
+       "odds": 1.72
+      },
+      {
+       "id": "n",
+       "label": "Nē",
+       "odds": 2.08
+      }
+     ]
+    },
+    {
+     "id": "ou25",
+     "name": "Vārti kopā: 2,5",
+     "sels": [
+      {
+       "id": "o",
+       "label": "Vairāk par 2,5",
+       "odds": 1.34
+      },
+      {
+       "id": "u",
+       "label": "Mazāk par 2,5",
+       "odds": 3.3
+      }
+     ]
+    },
+    {
+     "id": "dc",
+     "name": "Dubultā iespēja",
+     "sels": [
+      {
+       "id": "1X",
+       "label": "1X",
+       "odds": 1.03
+      },
+      {
+       "id": "12",
+       "label": "12",
+       "odds": 1.1
+      },
+      {
+       "id": "X2",
+       "label": "X2",
+       "odds": 4.25
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "name": "Handikaps (3 virzienu)",
+     "sels": [
+      {
+       "id": "home:-2",
+       "label": "Man City −2",
+       "odds": 2.62
+      },
+      {
+       "id": "home:-1",
+       "label": "Man City −1",
+       "odds": 1.65
+      },
+      {
+       "id": "away:+2",
+       "label": "Napoli +2",
+       "odds": 2.28
+      },
+      {
+       "id": "away:+3",
+       "label": "Napoli +3",
+       "odds": 1.5
+      }
+     ]
+    },
+    {
+     "id": "ah",
+     "name": "Aziātiskais handikaps",
+     "sels": [
+      {
+       "id": "home:-2",
+       "label": "Man City −2",
+       "odds": 2.03
+      },
+      {
+       "id": "away:+2",
+       "label": "Napoli +2",
+       "odds": 1.76
+      },
+      {
+       "id": "home:-1.75",
+       "label": "Man City −1,75",
+       "odds": 1.78
+      },
+      {
+       "id": "away:+1.75",
+       "label": "Napoli +1,75",
+       "odds": 2.01
+      },
+      {
+       "id": "home:-1.5",
+       "label": "Man City −1,5",
+       "odds": 1.63
+      },
+      {
+       "id": "away:+1.5",
+       "label": "Napoli +1,5",
+       "odds": 2.25
+      }
+     ]
+    }
+   ],
+   "tips": [
+    {
+     "id": "ah:home:-1.5",
+     "label": "Man City −1,5",
+     "odds": 1.63,
+     "why": "Uzvara ar 2+ vārtiem maksā 1,63, nevis 1,24. Kombinētajā likmē tas koeficientu ceļ krietni vairāk.",
+     "market": "Aziātiskais handikaps"
+    }
+   ]
+  },
+  "Leipzig|Lens|2026-11-24": {
+   "markets": [
+    {
+     "id": "btts",
+     "name": "Abas komandas gūs vārtus",
+     "sels": [
+      {
+       "id": "y",
+       "label": "Jā",
+       "odds": 1.45
+      },
+      {
+       "id": "n",
+       "label": "Nē",
+       "odds": 2.7
+      }
+     ]
+    },
+    {
+     "id": "dc",
+     "name": "Dubultā iespēja",
+     "sels": [
+      {
+       "id": "1X",
+       "label": "1X",
+       "odds": 1.11
+      },
+      {
+       "id": "12",
+       "label": "12",
+       "odds": 1.14
+      },
+      {
+       "id": "X2",
+       "label": "X2",
+       "odds": 2.97
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "name": "Handikaps (3 virzienu)",
+     "sels": [
+      {
+       "id": "home:-1",
+       "label": "Leipzig −1",
+       "odds": 2.02
+      },
+      {
+       "id": "away:+1",
+       "label": "Lens +1",
+       "odds": 3
+      },
+      {
+       "id": "away:+2",
+       "label": "Lens +2",
+       "odds": 1.8
+      },
+      {
+       "id": "away:+3",
+       "label": "Lens +3",
+       "odds": 1.31
+      }
+     ]
+    },
+    {
+     "id": "ah",
+     "name": "Aziātiskais handikaps",
+     "sels": [
+      {
+       "id": "home:-1.75",
+       "label": "Leipzig −1,75",
+       "odds": 2.28
+      },
+      {
+       "id": "away:+1.75",
+       "label": "Lens +1,75",
+       "odds": 1.61
+      },
+      {
+       "id": "home:-1.5",
+       "label": "Leipzig −1,5",
+       "odds": 2
+      },
+      {
+       "id": "away:+1.5",
+       "label": "Lens +1,5",
+       "odds": 1.79
+      },
+      {
+       "id": "home:-1.25",
+       "label": "Leipzig −1,25",
+       "odds": 1.79
+      },
+      {
+       "id": "away:+1.25",
+       "label": "Lens +1,25",
+       "odds": 1.99
+      }
+     ]
+    }
+   ],
+   "tips": []
+  },
+  "Real Madrid|PSV|2026-11-24": {
+   "markets": [
+    {
+     "id": "btts",
+     "name": "Abas komandas gūs vārtus",
+     "sels": [
+      {
+       "id": "y",
+       "label": "Jā",
+       "odds": 1.52
+      },
+      {
+       "id": "n",
+       "label": "Nē",
+       "odds": 2.48
+      }
+     ]
+    },
+    {
+     "id": "ou25",
+     "name": "Vārti kopā: 2,5",
+     "sels": [
+      {
+       "id": "o",
+       "label": "Vairāk par 2,5",
+       "odds": 1.16
+      },
+      {
+       "id": "u",
+       "label": "Mazāk par 2,5",
+       "odds": 5.3
+      }
+     ]
+    },
+    {
+     "id": "dc",
+     "name": "Dubultā iespēja",
+     "sels": [
+      {
+       "id": "1X",
+       "label": "1X",
+       "odds": 1.02
+      },
+      {
+       "id": "12",
+       "label": "12",
+       "odds": 1.06
+      },
+      {
+       "id": "X2",
+       "label": "X2",
+       "odds": 5.3
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "name": "Handikaps (3 virzienu)",
+     "sels": [
+      {
+       "id": "home:-2",
+       "label": "Real Madrid −2",
+       "odds": 2.08
+      },
+      {
+       "id": "home:-1",
+       "label": "Real Madrid −1",
+       "odds": 1.45
+      },
+      {
+       "id": "away:+3",
+       "label": "PSV +3",
+       "odds": 1.75
+      },
+      {
+       "id": "away:+4",
+       "label": "PSV +4",
+       "odds": 1.32
+      }
+     ]
+    },
+    {
+     "id": "ah",
+     "name": "Aziātiskais handikaps",
+     "sels": [
+      {
+       "id": "home:-2.5",
+       "label": "Real Madrid −2,5",
+       "odds": 2.06
+      },
+      {
+       "id": "away:+2.5",
+       "label": "PSV +2,5",
+       "odds": 1.74
+      },
+      {
+       "id": "home:-2.25",
+       "label": "Real Madrid −2,25",
+       "odds": 1.86
+      },
+      {
+       "id": "away:+2.25",
+       "label": "PSV +2,25",
+       "odds": 1.91
+      },
+      {
+       "id": "home:-2",
+       "label": "Real Madrid −2",
+       "odds": 1.65
+      },
+      {
+       "id": "away:+2",
+       "label": "PSV +2",
+       "odds": 2.2
+      }
+     ]
+    }
+   ],
+   "tips": [
+    {
+     "id": "h3:home:-1",
+     "label": "Real Madrid −1 (3 virzienu)",
+     "odds": 1.45,
+     "why": "Uzvara ar 2+ vārtiem: 1,45 tīrās uzvaras 1,17 vietā.",
+     "market": "Handikaps (3 virzienu)"
+    }
+   ]
+  },
+  "S. Bratislava|Real Betis|2026-11-24": {
+   "markets": [
+    {
+     "id": "btts",
+     "name": "Abas komandas gūs vārtus",
+     "sels": [
+      {
+       "id": "y",
+       "label": "Jā",
+       "odds": 1.65
+      },
+      {
+       "id": "n",
+       "label": "Nē",
+       "odds": 2.18
+      }
+     ]
+    },
+    {
+     "id": "dc",
+     "name": "Dubultā iespēja",
+     "sels": [
+      {
+       "id": "1X",
+       "label": "1X",
+       "odds": 3.75
+      },
+      {
+       "id": "12",
+       "label": "12",
+       "odds": 1.11
+      },
+      {
+       "id": "X2",
+       "label": "X2",
+       "odds": 1.05
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "name": "Handikaps (3 virzienu)",
+     "sels": [
+      {
+       "id": "home:+2",
+       "label": "S. Bratislava +2",
+       "odds": 2.08
+      },
+      {
+       "id": "home:+3",
+       "label": "S. Bratislava +3",
+       "odds": 1.42
+      },
+      {
+       "id": "away:-2",
+       "label": "Real Betis −2",
+       "odds": 2.9
+      },
+      {
+       "id": "away:-1",
+       "label": "Real Betis −1",
+       "odds": 1.75
+      }
+     ]
+    },
+    {
+     "id": "ah",
+     "name": "Aziātiskais handikaps",
+     "sels": [
+      {
+       "id": "home:+1.5",
+       "label": "S. Bratislava +1,5",
+       "odds": 2.06
+      },
+      {
+       "id": "away:-1.5",
+       "label": "Real Betis −1,5",
+       "odds": 1.74
+      },
+      {
+       "id": "home:+1.75",
+       "label": "S. Bratislava +1,75",
+       "odds": 1.84
+      },
+      {
+       "id": "away:-1.75",
+       "label": "Real Betis −1,75",
+       "odds": 1.94
+      },
+      {
+       "id": "home:+2",
+       "label": "S. Bratislava +2",
+       "odds": 1.62
+      },
+      {
+       "id": "away:-2",
+       "label": "Real Betis −2",
+       "odds": 2.26
+      }
+     ]
+    }
+   ],
+   "tips": [
+    {
+     "id": "ah:away:-1.5",
+     "label": "Real Betis −1,5",
+     "odds": 1.74,
+     "why": "Betis uzvara ar 2+ vārtiem: 1,74, nevis 1,29.",
+     "market": "Aziātiskais handikaps"
+    }
+   ]
+  },
+  "Atleti|Viking|2026-11-25": {
+   "markets": [
+    {
+     "id": "btts",
+     "name": "Abas komandas gūs vārtus",
+     "sels": [
+      {
+       "id": "y",
+       "label": "Jā",
+       "odds": 2.08
+      },
+      {
+       "id": "n",
+       "label": "Nē",
+       "odds": 1.72
+      }
+     ]
+    },
+    {
+     "id": "ou25",
+     "name": "Vārti kopā: 2,5",
+     "sels": [
+      {
+       "id": "o",
+       "label": "Vairāk par 2,5",
+       "odds": 1.43
+      },
+      {
+       "id": "u",
+       "label": "Mazāk par 2,5",
+       "odds": 2.73
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "name": "Handikaps (3 virzienu)",
+     "sels": [
+      {
+       "id": "home:-2",
+       "label": "Atleti −2",
+       "odds": 1.85
+      },
+      {
+       "id": "home:-1",
+       "label": "Atleti −1",
+       "odds": 1.32
+      },
+      {
+       "id": "away:+3",
+       "label": "Viking +3",
+       "odds": 1.98
+      },
+      {
+       "id": "away:+4",
+       "label": "Viking +4",
+       "odds": 1.39
+      }
+     ]
+    },
+    {
+     "id": "ah",
+     "name": "Aziātiskais handikaps",
+     "sels": [
+      {
+       "id": "home:-2.75",
+       "label": "Atleti −2,75",
+       "odds": 2.05
+      },
+      {
+       "id": "away:+2.75",
+       "label": "Viking +2,75",
+       "odds": 1.75
+      },
+      {
+       "id": "home:-2.5",
+       "label": "Atleti −2,5",
+       "odds": 1.83
+      },
+      {
+       "id": "away:+2.5",
+       "label": "Viking +2,5",
+       "odds": 1.95
+      },
+      {
+       "id": "home:-2.25",
+       "label": "Atleti −2,25",
+       "odds": 1.64
+      },
+      {
+       "id": "away:+2.25",
+       "label": "Viking +2,25",
+       "odds": 2.22
+      }
+     ]
+    }
+   ],
+   "tips": [
+    {
+     "id": "ah:home:-2.5",
+     "label": "Atleti −2,5",
+     "odds": 1.83,
+     "why": "Atleti pret Viking ir 1,10 favorīts. Uzvara ar 3+ vārtiem maksā 1,83.",
+     "market": "Aziātiskais handikaps"
+    },
+    {
+     "id": "btts:n",
+     "label": "Abas gūst vārtus: Nē",
+     "odds": 1.72,
+     "why": "Viking diez vai gūs vārtus Madridē: 1,72.",
+     "market": "Abas komandas gūs vārtus"
+    }
+   ]
+  },
+  "Club Brugge|Liverpool|2026-11-25": {
+   "markets": [
+    {
+     "id": "btts",
+     "name": "Abas komandas gūs vārtus",
+     "sels": [
+      {
+       "id": "y",
+       "label": "Jā",
+       "odds": 1.35
+      },
+      {
+       "id": "n",
+       "label": "Nē",
+       "odds": 3.15
+      }
+     ]
+    },
+    {
+     "id": "ou25",
+     "name": "Vārti kopā: 2,5",
+     "sels": [
+      {
+       "id": "o",
+       "label": "Vairāk par 2,5",
+       "odds": 1.3
+      },
+      {
+       "id": "u",
+       "label": "Mazāk par 2,5",
+       "odds": 3.55
+      }
+     ]
+    },
+    {
+     "id": "dc",
+     "name": "Dubultā iespēja",
+     "sels": [
+      {
+       "id": "1X",
+       "label": "1X",
+       "odds": 2.24
+      },
+      {
+       "id": "12",
+       "label": "12",
+       "odds": 1.19
+      },
+      {
+       "id": "X2",
+       "label": "X2",
+       "odds": 1.22
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "name": "Handikaps (3 virzienu)",
+     "sels": [
+      {
+       "id": "home:+1",
+       "label": "Club Brugge +1",
+       "odds": 2.25
+      },
+      {
+       "id": "home:+2",
+       "label": "Club Brugge +2",
+       "odds": 1.5
+      },
+      {
+       "id": "away:-1",
+       "label": "Liverpool −1",
+       "odds": 2.58
+      }
+     ]
+    },
+    {
+     "id": "ah",
+     "name": "Aziātiskais handikaps",
+     "sels": [
+      {
+       "id": "home:+0.5",
+       "label": "Club Brugge +0,5",
+       "odds": 2.24
+      },
+      {
+       "id": "away:-0.5",
+       "label": "Liverpool −0,5",
+       "odds": 1.68
+      },
+      {
+       "id": "home:+0.75",
+       "label": "Club Brugge +0,75",
+       "odds": 2.01
+      },
+      {
+       "id": "away:-0.75",
+       "label": "Liverpool −0,75",
+       "odds": 1.78
+      },
+      {
+       "id": "home:+1",
+       "label": "Club Brugge +1",
+       "odds": 1.77
+      },
+      {
+       "id": "away:-1",
+       "label": "Liverpool −1",
+       "odds": 2.02
+      }
+     ]
+    }
+   ],
+   "tips": []
+  },
+  "Inter|Stuttgart|2026-11-25": {
+   "markets": [
+    {
+     "id": "btts",
+     "name": "Abas komandas gūs vārtus",
+     "sels": [
+      {
+       "id": "y",
+       "label": "Jā",
+       "odds": 1.36
+      },
+      {
+       "id": "n",
+       "label": "Nē",
+       "odds": 3.05
+      }
+     ]
+    },
+    {
+     "id": "dc",
+     "name": "Dubultā iespēja",
+     "sels": [
+      {
+       "id": "1X",
+       "label": "1X",
+       "odds": 1.12
+      },
+      {
+       "id": "12",
+       "label": "12",
+       "odds": 1.14
+      },
+      {
+       "id": "X2",
+       "label": "X2",
+       "odds": 2.92
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "name": "Handikaps (3 virzienu)",
+     "sels": [
+      {
+       "id": "home:-1",
+       "label": "Inter −1",
+       "odds": 2.02
+      },
+      {
+       "id": "away:+1",
+       "label": "Stuttgart +1",
+       "odds": 2.95
+      },
+      {
+       "id": "away:+2",
+       "label": "Stuttgart +2",
+       "odds": 1.82
+      },
+      {
+       "id": "away:+3",
+       "label": "Stuttgart +3",
+       "odds": 1.32
+      }
+     ]
+    }
+   ],
+   "tips": [
+    {
+     "id": "h3:home:-1",
+     "label": "Inter −1 (3 virzienu)",
+     "odds": 2.02,
+     "why": "Inter uzvara ar 2+ vārtiem maksā 2,02.",
+     "market": "Handikaps (3 virzienu)"
+    }
+   ]
+  },
+  "Lille|Bayern München|2026-11-25": {
+   "markets": [
+    {
+     "id": "btts",
+     "name": "Abas komandas gūs vārtus",
+     "sels": [
+      {
+       "id": "y",
+       "label": "Jā",
+       "odds": 1.6
+      },
+      {
+       "id": "n",
+       "label": "Nē",
+       "odds": 2.28
+      }
+     ]
+    },
+    {
+     "id": "dc",
+     "name": "Dubultā iespēja",
+     "sels": [
+      {
+       "id": "1X",
+       "label": "1X",
+       "odds": 3.55
+      },
+      {
+       "id": "12",
+       "label": "12",
+       "odds": 1.12
+      },
+      {
+       "id": "X2",
+       "label": "X2",
+       "odds": 1.06
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "name": "Handikaps (3 virzienu)",
+     "sels": [
+      {
+       "id": "home:+2",
+       "label": "Lille +2",
+       "odds": 2.02
+      },
+      {
+       "id": "home:+3",
+       "label": "Lille +3",
+       "odds": 1.39
+      },
+      {
+       "id": "away:-2",
+       "label": "Bayern München −2",
+       "odds": 3
+      },
+      {
+       "id": "away:-1",
+       "label": "Bayern München −1",
+       "odds": 1.82
+      }
+     ]
+    },
+    {
+     "id": "ah",
+     "name": "Aziātiskais handikaps",
+     "sels": [
+      {
+       "id": "home:+1.25",
+       "label": "Lille +1,25",
+       "odds": 2.3
+      },
+      {
+       "id": "away:-1.25",
+       "label": "Bayern München −1,25",
+       "odds": 1.6
+      },
+      {
+       "id": "home:+1.5",
+       "label": "Lille +1,5",
+       "odds": 1.99
+      },
+      {
+       "id": "away:-1.5",
+       "label": "Bayern München −1,5",
+       "odds": 1.8
+      },
+      {
+       "id": "home:+1.75",
+       "label": "Lille +1,75",
+       "odds": 1.78
+      },
+      {
+       "id": "away:-1.75",
+       "label": "Bayern München −1,75",
+       "odds": 2.01
+      }
+     ]
+    }
+   ],
+   "tips": [
+    {
+     "id": "ah:away:-1.5",
+     "label": "Bayern −1,5",
+     "odds": 1.8,
+     "why": "Bayern uzvara maksā 1,32, uzvara ar 2+ vārtiem 1,80.",
+     "market": "Aziātiskais handikaps"
+    }
+   ]
+  },
+  "Paris|Roma|2026-11-25": {
+   "markets": [
+    {
+     "id": "btts",
+     "name": "Abas komandas gūs vārtus",
+     "sels": [
+      {
+       "id": "y",
+       "label": "Jā",
+       "odds": 1.52
+      },
+      {
+       "id": "n",
+       "label": "Nē",
+       "odds": 2.48
+      }
+     ]
+    },
+    {
+     "id": "dc",
+     "name": "Dubultā iespēja",
+     "sels": [
+      {
+       "id": "1X",
+       "label": "1X",
+       "odds": 1.08
+      },
+      {
+       "id": "12",
+       "label": "12",
+       "odds": 1.14
+      },
+      {
+       "id": "X2",
+       "label": "X2",
+       "odds": 3.25
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "name": "Handikaps (3 virzienu)",
+     "sels": [
+      {
+       "id": "home:-2",
+       "label": "Paris −2",
+       "odds": 3.2
+      },
+      {
+       "id": "home:-1",
+       "label": "Paris −1",
+       "odds": 1.9
+      },
+      {
+       "id": "away:+2",
+       "label": "Roma +2",
+       "odds": 1.92
+      },
+      {
+       "id": "away:+3",
+       "label": "Roma +3",
+       "odds": 1.36
+      }
+     ]
+    },
+    {
+     "id": "ah",
+     "name": "Aziātiskais handikaps",
+     "sels": [
+      {
+       "id": "home:-1.75",
+       "label": "Paris −1,75",
+       "odds": 2.12
+      },
+      {
+       "id": "away:+1.75",
+       "label": "Roma +1,75",
+       "odds": 1.7
+      },
+      {
+       "id": "home:-1.5",
+       "label": "Paris −1,5",
+       "odds": 1.88
+      },
+      {
+       "id": "away:+1.5",
+       "label": "Roma +1,5",
+       "odds": 1.89
+      },
+      {
+       "id": "home:-1.25",
+       "label": "Paris −1,25",
+       "odds": 1.68
+      },
+      {
+       "id": "away:+1.25",
+       "label": "Roma +1,25",
+       "odds": 2.15
+      }
+     ]
+    }
+   ],
+   "tips": [
+    {
+     "id": "ah:home:-1.5",
+     "label": "PSG −1,5",
+     "odds": 1.88,
+     "why": "PSG uzvara ar 2+ vārtiem: 1,88 tīrās uzvaras 1,36 vietā.",
+     "market": "Aziātiskais handikaps"
+    }
+   ]
+  },
+  "Shakhtar|Fenerbahçe|2026-11-25": {
+   "markets": [
+    {
+     "id": "btts",
+     "name": "Abas komandas gūs vārtus",
+     "sels": [
+      {
+       "id": "y",
+       "label": "Jā",
+       "odds": 1.6
+      },
+      {
+       "id": "n",
+       "label": "Nē",
+       "odds": 2.32
+      }
+     ]
+    },
+    {
+     "id": "ou25",
+     "name": "Vārti kopā: 2,5",
+     "sels": [
+      {
+       "id": "o",
+       "label": "Vairāk par 2,5",
+       "odds": 1.75
+      },
+      {
+       "id": "u",
+       "label": "Mazāk par 2,5",
+       "odds": 2.08
+      }
+     ]
+    },
+    {
+     "id": "dc",
+     "name": "Dubultā iespēja",
+     "sels": [
+      {
+       "id": "1X",
+       "label": "1X",
+       "odds": 1.5
+      },
+      {
+       "id": "12",
+       "label": "12",
+       "odds": 1.29
+      },
+      {
+       "id": "X2",
+       "label": "X2",
+       "odds": 1.5
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "name": "Handikaps (3 virzienu)",
+     "sels": [
+      {
+       "id": "home:+1",
+       "label": "Shakhtar +1",
+       "odds": 1.52
+      },
+      {
+       "id": "away:+1",
+       "label": "Fenerbahçe +1",
+       "odds": 1.52
+      }
+     ]
+    },
+    {
+     "id": "ah",
+     "name": "Aziātiskais handikaps",
+     "sels": [
+      {
+       "id": "home:-0.5",
+       "label": "Shakhtar −0,5",
+       "odds": 2.66
+      },
+      {
+       "id": "away:+0.5",
+       "label": "Fenerbahçe +0,5",
+       "odds": 1.5
+      },
+      {
+       "id": "home:-0.25",
+       "label": "Shakhtar −0,25",
+       "odds": 2.21
+      },
+      {
+       "id": "away:+0.25",
+       "label": "Fenerbahçe +0,25",
+       "odds": 1.65
+      },
+      {
+       "id": "home:+0.25",
+       "label": "Shakhtar +0,25",
+       "odds": 1.65
+      },
+      {
+       "id": "away:-0.25",
+       "label": "Fenerbahçe −0,25",
+       "odds": 2.21
+      }
+     ]
+    }
+   ],
+   "tips": []
+  },
+  "Sporting CP|Man Utd|2026-11-25": {
+   "markets": [
+    {
+     "id": "btts",
+     "name": "Abas komandas gūs vārtus",
+     "sels": [
+      {
+       "id": "y",
+       "label": "Jā",
+       "odds": 1.46
+      },
+      {
+       "id": "n",
+       "label": "Nē",
+       "odds": 2.68
+      }
+     ]
+    },
+    {
+     "id": "dc",
+     "name": "Dubultā iespēja",
+     "sels": [
+      {
+       "id": "1X",
+       "label": "1X",
+       "odds": 1.52
+      },
+      {
+       "id": "12",
+       "label": "12",
+       "odds": 1.28
+      },
+      {
+       "id": "X2",
+       "label": "X2",
+       "odds": 1.52
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "name": "Handikaps (3 virzienu)",
+     "sels": [
+      {
+       "id": "home:+1",
+       "label": "Sporting CP +1",
+       "odds": 1.52
+      },
+      {
+       "id": "away:+1",
+       "label": "Man Utd +1",
+       "odds": 1.52
+      }
+     ]
+    },
+    {
+     "id": "ah",
+     "name": "Aziātiskais handikaps",
+     "sels": [
+      {
+       "id": "home:-0.5",
+       "label": "Sporting CP −0,5",
+       "odds": 2.63
+      },
+      {
+       "id": "away:+0.5",
+       "label": "Man Utd +0,5",
+       "odds": 1.52
+      },
+      {
+       "id": "home:-0.25",
+       "label": "Sporting CP −0,25",
+       "odds": 2.2
+      },
+      {
+       "id": "away:+0.25",
+       "label": "Man Utd +0,25",
+       "odds": 1.65
+      },
+      {
+       "id": "home:+0.25",
+       "label": "Sporting CP +0,25",
+       "odds": 1.65
+      },
+      {
+       "id": "away:-0.25",
+       "label": "Man Utd −0,25",
+       "odds": 2.2
+      }
+     ]
+    }
+   ],
+   "tips": [
+    {
+     "id": "btts:y",
+     "label": "Abas gūst vārtus: Jā",
+     "odds": 1.46,
+     "why": "Pilnīgi līdzvērtīga spēle (abām uzvarai 2,62), un bukmeikers gaida vārtus abos vārtos: 1,46.",
+     "market": "Abas komandas gūs vārtus"
+    }
+   ]
+  }
+ }
+}
