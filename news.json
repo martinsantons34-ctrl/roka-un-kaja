@@ -1,25 +1,25 @@
 {
-  "updatedAt": "2026-11-11T23:00:00Z",
+  "updatedAt": "2026-11-17T23:00:00Z",
   "items": [
     {
       "id": "zemgale-panter",
-      "date": "2026-11-11",
+      "date": "2026-11-17",
       "tag": "Hokejs",
-      "title": "“Zemgale/LBTU” divreiz atspēlējas, bet pēcspēles metienos zaudē Panter",
-      "teaser": "Jelgavā 2:3 pēc pēcspēles metieniem pret Tallinas Panter. Antons šoreiz bez rezultatīvām darbībām.",
+      "title": "“Zemgale/LBTU” otro reizi nedēļas laikā zaudē Panter pēcspēles metienos",
+      "teaser": "Jelgavā vadīja ar 3:0, bet zaudēja ar 3:4 pēc pēcspēles metieniem. Antons abās spēlēs pret Panter bez rezultatīvām darbībām.",
       "body": [
-        "11. novembrī Jelgavā “Zemgale/LBTU” pēc pēcspēles metieniem ar 2:3 zaudēja Tallinas “Panter”. Jelgavnieki divreiz atspēlējās: vārtus guva Roberts Vorona (26:08) un Deniss Fjodorovs (57:02), taču pēcspēles metienos precīzs bija tikai Kristaps Roķis.",
-        "Mārtiņš Antons šajā spēlē vārtus vai piespēles nesavāca. Pēc 10 spēlēm “Zemgale/LBTU” ir piektā ar 15 punktiem.",
-        "Nākamā spēle ir atkal pret Panter, 17. novembrī Jelgavā."
+        "17. novembrī Jelgavā “Zemgale/LBTU” jau pēc 29 minūtēm vadīja ar 3:0 (Streikišs, Kapura, Bajaruns), taču Tallinas “Panter” atspēlējās. M. Potsinoks guva divus vārtus, Novikovs vienus, un spēle aizgāja pēcspēles metienos. Tur deviņās sērijās uzvaru izšķīra Nikita Puzakovs.",
+        "Tas ir jau otrais zaudējums pēcspēles metienos pret “Panter” sešu dienu laikā, jo 11. novembrī spēle beidzās 2:3. Mārtiņš Antons abās spēlēs palika bez vārtiem un piespēlēm.",
+        "Pēc 11 spēlēm “Zemgale/LBTU” ir piektajā vietā ar 16 punktiem. Nākamā spēle būs 21. novembrī izbraukumā pret “Energija”."
       ],
       "sources": [
         {
-          "label": "Sportacentrs.com",
-          "url": "https://sportacentrs.com/hokejs/latvijas_cempionats/11112026-zemgale_lbtu_izglabj_punktu_tomer_sava_la"
+          "label": "Sportacentrs.com (17. nov.)",
+          "url": "https://sportacentrs.com/hokejs/latvijas_cempionats/17112026-zemgale_jau_atkal_pecspeles_metienu_serij"
         },
         {
-          "label": "HK Zemgale spēļu grafiks",
-          "url": "https://hkzemgale.lv/matches/"
+          "label": "Sportacentrs.com (11. nov.)",
+          "url": "https://sportacentrs.com/hokejs/latvijas_cempionats/11112026-zemgale_lbtu_izglabj_punktu_tomer_sava_la"
         }
       ]
     },
