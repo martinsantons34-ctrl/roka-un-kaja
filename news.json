@@ -1,6 +1,23 @@
 {
-  "updatedAt": "2026-11-17T23:00:00Z",
+  "updatedAt": "2026-11-18T23:00:00Z",
   "items": [
+    {
+      "id": "udris-kauss-swiecie",
+      "date": "2026-11-15",
+      "tag": "Futzāls",
+      "title": "Ūdris ar hat-triku ieved Lešno Polijas kausa 1/16 finālā",
+      "teaser": "Renārs Ūdris guva vārtus 3., 7. un 34. minūtē, un “GI Malepszy Leszno” izbraukumā uzvarēja Świecie ar 6:3.",
+      "body": [
+        "15. novembrī Polijas kausa spēlē “GI Malepszy Leszno” izbraukumā ar 6:3 (3:0) pārspēja “Futsal Świecie” un iekļuva kausa 1/16 finālā. Renārs Ūdris guva vārtus jau 3. un 7. minūtē, bet 34. minūtē izmantoja atlēkušo bumbu pēc Betowski sitiena un pabeidza hat-triku.",
+        "Vēl vārtus Lešno guva Albert Betowski, Adrian Skrzypek un Rajmund Siecla (no 11 m soda sitiena). Tas ir Ūdra trešais hat-triks Lešno rindās šosezon, pēc spēlēm pret Bochnia un Kazimierza Wielka. Kopā ar diviem vārtiem pret Azerbaidžānu izlasē tas ir veiksmīgs novembris."
+      ],
+      "sources": [
+        {
+          "label": "KS Futsal Leszno",
+          "url": "https://www.futsal.leszno.pl/2026/11/15/gi-malepszy-leszno-melduje-sie-w-1-16-finalu-pucharu-polski/"
+        }
+      ]
+    },
     {
       "id": "zemgale-panter",
       "date": "2026-11-17",
@@ -198,36 +215,6 @@
         {
           "label": "LHF",
           "url": "https://www.lhf.lv/en/game/kyc-zmg/20261010/35847"
-        }
-      ]
-    },
-    {
-      "id": "udris-leszno",
-      "date": "2026-10-11",
-      "tag": "Futzāls",
-      "title": "Renārs Ūdris Polijā: divi hat-triki jau pirmajā rudenī",
-      "teaser": "Latviešu pivots Lešno “GI Malepszy” rindās debijā iesita trīs vārtus, bet pēc tam vēl trīs, uzvarot 10:0.",
-      "body": [
-        "Vasaras beigās Renārs Ūdris no “Riga Futsal Club” pārcēlās uz Polijas augstāko līgu FOGO Futsal Ekstraklasa un pievienojās Lešno komandai “GI Malepszy Leszno”. Poļi viņu sauc par pivotu, tātad centra uzbrucēju, un viņš to ātri attaisnoja.",
-        "Jau debijas spēlē Lešno “Hala Trapez” zālē pret “BSF ABJ Bochnia” Ūdris guva vārtus 4., 25. un 31. minūtē un ar hat-triku izlīdzināja rezultātu 6:6. Komanda gan zaudēja trakā spēlē ar 7:9.",
-        "7. oktobrī izbraukumā pret “KKF Motus Kazimierza Wielka” Lešno uzvarēja ar 10:0, un Ūdris atkal guva trīs vārtus (13., 22. un 39. minūtē). Tas ir viņa otrais hat-triks Polijā. 11. oktobrī pret Toruņas “FC Reiter” viņš vārtus negūva, bet komanda uzvarēja 7:5. Tā bija Lešno trešā uzvara pēc kārtas, un pēc deviņām kārtām komanda ir 9. vietā ar 12 punktiem."
-      ],
-      "sources": [
-        {
-          "label": "Radio ESKA Leszno",
-          "url": "https://leszno.eska.pl/kolejne-wzmocnienie-w-futsalowej-druzynie-z-leszna-do-gi-malepszy-dolacza-lotysz-aa-TZ5Y-LbFU-tFpM.html"
-        },
-        {
-          "label": "KS Futsal Leszno",
-          "url": "https://www.futsal.leszno.pl/2026/08/31/szalony-mecz-w-hali-trapez-wielki-powrot-nie-wystarczyl/"
-        },
-        {
-          "label": "KS Futsal Leszno",
-          "url": "https://www.futsal.leszno.pl/2026/10/07/gi-malepszy-leszno-z-kolejnym-efektownym-zwyciestwem-100-w-kazimierzy-wielkiej/"
-        },
-        {
-          "label": "KS Futsal Leszno",
-          "url": "https://www.futsal.leszno.pl/2026/10/11/trzecie-zwyciestwo-z-rzedu-gi-malepszy-leszno-pokonuje-fc-reiter-torun-75/"
         }
       ]
     },
