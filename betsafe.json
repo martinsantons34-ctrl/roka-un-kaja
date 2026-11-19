@@ -1,6 +1,6 @@
 {
  "source": "Betsafe.lv",
- "updatedAt": "2026-11-18T09:29:45+02:00",
+ "updatedAt": "2026-11-19T13:12:53+02:00",
  "md": 5,
  "matches": {
   "Bodø/Glimt|LASK|2026-11-24": {
@@ -44,22 +44,22 @@
       {
        "id": "home:-2",
        "label": "Bodø/Glimt −2",
-       "odds": 4
+       "odds": 4.1
       },
       {
        "id": "home:-1",
        "label": "Bodø/Glimt −1",
-       "odds": 2.28
+       "odds": 2.32
       },
       {
        "id": "away:+1",
        "label": "LASK +1",
-       "odds": 2.58
+       "odds": 2.55
       },
       {
        "id": "away:+2",
        "label": "LASK +2",
-       "odds": 1.65
+       "odds": 1.62
       }
      ]
     },
@@ -68,34 +68,34 @@
      "name": "Aziātiskais handikaps",
      "sels": [
       {
-       "id": "home:-1.5",
-       "label": "Bodø/Glimt −1,5",
-       "odds": 2.27
-      },
-      {
-       "id": "away:+1.5",
-       "label": "LASK +1,5",
-       "odds": 1.64
-      },
-      {
        "id": "home:-1.25",
        "label": "Bodø/Glimt −1,25",
-       "odds": 2.04
+       "odds": 2.06
       },
       {
        "id": "away:+1.25",
        "label": "LASK +1,25",
-       "odds": 1.79
+       "odds": 1.77
       },
       {
        "id": "home:-1",
        "label": "Bodø/Glimt −1",
-       "odds": 1.79
+       "odds": 1.81
       },
       {
        "id": "away:+1",
        "label": "LASK +1",
-       "odds": 2.04
+       "odds": 2.01
+      },
+      {
+       "id": "home:-0.75",
+       "label": "Bodø/Glimt −0,75",
+       "odds": 1.64
+      },
+      {
+       "id": "away:+0.75",
+       "label": "LASK +0,75",
+       "odds": 2.28
       }
      ]
     }
@@ -104,8 +104,8 @@
     {
      "id": "ah:home:-1.5",
      "label": "Bodø/Glimt −1,5",
-     "odds": 2.27,
-     "why": "Bodø mājās uz mākslīgā seguma ir bīstami, un uzvara ar 2+ vārtiem maksā 2,27 (tīrā uzvara 1,55).",
+     "odds": 2.31,
+     "why": "Bodø mājās uz mākslīgā seguma ir bīstami, un uzvara ar 2+ vārtiem maksā 2,31 (tīrā uzvara 1,55).",
      "market": "Aziātiskais handikaps"
     }
    ]
@@ -119,12 +119,12 @@
       {
        "id": "y",
        "label": "Jā",
-       "odds": 1.39
+       "odds": 1.4
       },
       {
        "id": "n",
        "label": "Nē",
-       "odds": 2.95
+       "odds": 2.9
       }
      ]
     },
@@ -135,12 +135,12 @@
       {
        "id": "o",
        "label": "Vairāk par 2,5",
-       "odds": 1.44
+       "odds": 1.46
       },
       {
        "id": "u",
        "label": "Mazāk par 2,5",
-       "odds": 2.78
+       "odds": 2.72
       }
      ]
     },
@@ -151,12 +151,17 @@
       {
        "id": "home:+1",
        "label": "Galatasaray +1",
-       "odds": 1.58
+       "odds": 1.6
+      },
+      {
+       "id": "away:-1",
+       "label": "Aston Villa −1",
+       "odds": 4.45
       },
       {
        "id": "away:+1",
        "label": "Aston Villa +1",
-       "odds": 1.52
+       "odds": 1.5
       }
      ]
     },
@@ -167,32 +172,32 @@
       {
        "id": "home:-0.25",
        "label": "Galatasaray −0,25",
-       "odds": 2.24
+       "odds": 2.33
       },
       {
        "id": "away:+0.25",
        "label": "Aston Villa +0,25",
-       "odds": 1.66
+       "odds": 1.61
       },
       {
        "id": "home:+0.25",
        "label": "Galatasaray +0,25",
-       "odds": 1.71
+       "odds": 1.75
       },
       {
        "id": "away:-0.25",
        "label": "Aston Villa −0,25",
-       "odds": 2.15
+       "odds": 2.09
       },
       {
        "id": "home:+0.5",
        "label": "Galatasaray +0,5",
-       "odds": 1.56
+       "odds": 1.59
       },
       {
        "id": "away:-0.5",
        "label": "Aston Villa −0,5",
-       "odds": 2.53
+       "odds": 2.45
       }
      ]
     }
@@ -201,8 +206,8 @@
     {
      "id": "2",
      "label": "Aston Villa uzvara",
-     "odds": 2.52,
-     "why": "Modelis Aston Villa uzvarai dod 46 %, bet koeficients 2,52 nozīmē tikai ~40 %. Kārtas labākā vērtība pēc modeļa.",
+     "odds": 2.45,
+     "why": "Modelis Aston Villa uzvarai dod 46 %, bet koeficients 2,45 nozīmē tikai ~40 %. Kārtas labākā vērtība pēc modeļa.",
      "market": "Mača uzvarētājs"
     }
    ]
@@ -248,17 +253,17 @@
       {
        "id": "home:-2",
        "label": "Arsenal −2",
-       "odds": 3.8
+       "odds": 3.85
       },
       {
        "id": "home:-1",
        "label": "Arsenal −1",
-       "odds": 2.08
+       "odds": 2.1
       },
       {
        "id": "away:+1",
        "label": "B. Dortmund +1",
-       "odds": 3.1
+       "odds": 3.15
       },
       {
        "id": "away:+2",
@@ -271,6 +276,16 @@
      "id": "ah",
      "name": "Aziātiskais handikaps",
      "sels": [
+      {
+       "id": "home:-1.75",
+       "label": "Arsenal −1,75",
+       "odds": 2.42
+      },
+      {
+       "id": "away:+1.75",
+       "label": "B. Dortmund +1,75",
+       "odds": 1.57
+      },
       {
        "id": "home:-1.5",
        "label": "Arsenal −1,5",
@@ -290,16 +305,6 @@
        "id": "away:+1.25",
        "label": "B. Dortmund +1,25",
        "odds": 1.99
-      },
-      {
-       "id": "home:-1",
-       "label": "Arsenal −1",
-       "odds": 1.58
-      },
-      {
-       "id": "away:+1",
-       "label": "B. Dortmund +1",
-       "odds": 2.4
       }
      ]
     }
@@ -323,12 +328,12 @@
       {
        "id": "y",
        "label": "Jā",
-       "odds": 1.62
+       "odds": 1.6
       },
       {
        "id": "n",
        "label": "Nē",
-       "odds": 2.25
+       "odds": 2.3
       }
      ]
     },
@@ -355,22 +360,22 @@
       {
        "id": "home:-2",
        "label": "Como −2",
-       "odds": 2.85
+       "odds": 2.92
       },
       {
        "id": "home:-1",
        "label": "Como −1",
-       "odds": 1.78
+       "odds": 1.8
       },
       {
        "id": "away:+2",
        "label": "AEK Athens +2",
-       "odds": 2.1
+       "odds": 2.05
       },
       {
        "id": "away:+3",
        "label": "AEK Athens +3",
-       "odds": 1.42
+       "odds": 1.41
       }
      ]
     },
@@ -381,32 +386,32 @@
       {
        "id": "home:-2",
        "label": "Como −2",
-       "odds": 2.29
+       "odds": 2.33
       },
       {
        "id": "away:+2",
        "label": "AEK Athens +2",
-       "odds": 1.63
+       "odds": 1.61
       },
       {
        "id": "home:-1.75",
        "label": "Como −1,75",
-       "odds": 1.96
+       "odds": 1.99
       },
       {
        "id": "away:+1.75",
        "label": "AEK Athens +1,75",
-       "odds": 1.85
+       "odds": 1.83
       },
       {
        "id": "home:-1.5",
        "label": "Como −1,5",
-       "odds": 1.76
+       "odds": 1.79
       },
       {
        "id": "away:+1.5",
        "label": "AEK Athens +1,5",
-       "odds": 2.08
+       "odds": 2.04
       }
      ]
     }
@@ -415,8 +420,8 @@
     {
      "id": "ah:home:-1.5",
      "label": "Como −1,5",
-     "odds": 1.76,
-     "why": "Como mājās ir 1,30 favorīts, uzvara ar 2+ vārtiem maksā 1,76.",
+     "odds": 1.79,
+     "why": "Como mājās ir 1,31 favorīts, uzvara ar 2+ vārtiem maksā 1,79.",
      "market": "Aziātiskais handikaps"
     }
    ]
@@ -668,7 +673,7 @@
       {
        "id": "away:+2",
        "label": "Lens +2",
-       "odds": 1.78
+       "odds": 1.8
       },
       {
        "id": "away:+3",
@@ -681,16 +686,6 @@
      "id": "ah",
      "name": "Aziātiskais handikaps",
      "sels": [
-      {
-       "id": "home:-1.75",
-       "label": "Leipzig −1,75",
-       "odds": 2.35
-      },
-      {
-       "id": "away:+1.75",
-       "label": "Lens +1,75",
-       "odds": 1.6
-      },
       {
        "id": "home:-1.5",
        "label": "Leipzig −1,5",
@@ -710,6 +705,16 @@
        "id": "away:+1.25",
        "label": "Lens +1,25",
        "odds": 1.99
+      },
+      {
+       "id": "home:-1",
+       "label": "Leipzig −1",
+       "odds": 1.61
+      },
+      {
+       "id": "away:+1",
+       "label": "Lens +1",
+       "odds": 2.33
       }
      ]
     }
@@ -955,12 +960,12 @@
       {
        "id": "o",
        "label": "Vairāk par 2,5",
-       "odds": 1.1
+       "odds": 1.09
       },
       {
        "id": "u",
        "label": "Mazāk par 2,5",
-       "odds": 7.1
+       "odds": 7.4
       }
      ]
     },
@@ -971,17 +976,17 @@
       {
        "id": "home:+3",
        "label": "Sabah +3",
-       "odds": 2.35
+       "odds": 2.4
       },
       {
        "id": "home:+4",
        "label": "Sabah +4",
-       "odds": 1.6
+       "odds": 1.62
       },
       {
        "id": "away:-3",
        "label": "Barcelona −3",
-       "odds": 2.35
+       "odds": 2.32
       },
       {
        "id": "away:-2",
@@ -997,32 +1002,32 @@
       {
        "id": "home:+2.75",
        "label": "Sabah +2,75",
-       "odds": 2.1
+       "odds": 2.17
       },
       {
        "id": "away:-2.75",
        "label": "Barcelona −2,75",
-       "odds": 1.71
+       "odds": 1.7
       },
       {
        "id": "home:+3",
        "label": "Sabah +3",
-       "odds": 1.88
+       "odds": 1.93
       },
       {
        "id": "away:-3",
        "label": "Barcelona −3",
-       "odds": 1.89
+       "odds": 1.88
       },
       {
        "id": "home:+3.25",
        "label": "Sabah +3,25",
-       "odds": 1.71
+       "odds": 1.74
       },
       {
        "id": "away:-3.25",
        "label": "Barcelona −3,25",
-       "odds": 2.11
+       "odds": 2.1
       }
      ]
     }

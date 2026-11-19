@@ -4,7 +4,7 @@
    "1x2",
    "away",
    "Aston Villa uzvara",
-   "Modelis Aston Villa uzvarai dod 46 %, bet koeficients 2,52 nozīmē tikai ~40 %. Kārtas labākā vērtība pēc modeļa."
+   "Modelis Aston Villa uzvarai dod 46 %, bet koeficients 2,45 nozīmē tikai ~40 %. Kārtas labākā vērtība pēc modeļa."
   ]
  ],
  "Slavia Praha": [
@@ -12,7 +12,7 @@
    "1x2",
    "home",
    "Slavia uzvara",
-   "Modelis Slavia mājās dod 39 %, Betsafe tikai ~33 %. Riskanti, bet koeficients 3,05."
+   "Modelis Slavia mājās dod 39 %, Betsafe tikai ~33 %. Riskanti, bet koeficients 3,00."
   ]
  ],
  "Arsenal": [
@@ -90,7 +90,7 @@
    "ah",
    "home:-1.5",
    "Como −1,5",
-   "Como mājās ir 1,30 favorīts, uzvara ar 2+ vārtiem maksā 1,76."
+   "Como mājās ir 1,31 favorīts, uzvara ar 2+ vārtiem maksā 1,79."
   ]
  ],
  "Sporting CP": [
@@ -106,7 +106,7 @@
    "ah",
    "home:-1.5",
    "Bodø/Glimt −1,5",
-   "Bodø mājās uz mākslīgā seguma ir bīstami, un uzvara ar 2+ vārtiem maksā 2,27 (tīrā uzvara 1,55)."
+   "Bodø mājās uz mākslīgā seguma ir bīstami, un uzvara ar 2+ vārtiem maksā 2,31 (tīrā uzvara 1,55)."
   ]
  ]
 }
