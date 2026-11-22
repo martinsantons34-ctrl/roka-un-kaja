@@ -1,6 +1,23 @@
 {
-  "updatedAt": "2026-11-22T13:59:29Z",
+  "updatedAt": "2026-11-22T23:00:00Z",
   "items": [
+    {
+      "id": "zemgale-energija",
+      "date": "2026-11-21",
+      "tag": "Hokejs",
+      "title": "Antons ar piespēli, “Zemgale/LBTU” uzvar Elektrēnos ar 3:1",
+      "teaser": "Pēc diviem zaudējumiem pēcspēles metienos jelgavnieki atkal uzvar. Mārtiņš Antons piespēlēja pirmajiem vārtiem.",
+      "body": [
+        "21. novembrī “Zemgale/LBTU” izbraukumā ar 3:1 (1:0, 1:1, 1:0) pārspēja “Energija”. Pirmos vārtus 8. minūtē guva Gustavs Millers pēc Kristapa Roķa un Mārtiņa Antona piespēlēm. Vēl vārtus vairākumā guva Lauris Bajaruns un Millers, kurš iesita otrreiz.",
+        "Vārtsargs Aksels Ozols atvairīja 16 no 17 metieniem. Pēc 12 spēlēm “Zemgale/LBTU” ir piektajā vietā ar 19 punktiem, bet līderei Kijivas “Capitals” ir 24 punkti."
+      ],
+      "sources": [
+        {
+          "label": "Sportacentrs.com",
+          "url": "https://sportacentrs.com/hokejs/latvijas_cempionats/21112026-zemgale_izmanto_vairakuma_potencialu_un_s"
+        }
+      ]
+    },
     {
       "id": "udris-kauss-swiecie",
       "date": "2026-11-15",
@@ -111,28 +128,6 @@
         {
           "label": "PSG Fans (otrdienas rezultāti)",
           "url": "https://en.parisfans.fr/champions-league-tuesdays-results-from-matchday-4.html"
-        }
-      ]
-    },
-    {
-      "id": "leszno-poznan",
-      "date": "2026-10-30",
-      "tag": "Futzāls",
-      "title": "Lešno uzvar Poznaņas derbijā un pakāpjas uz 8. vietu",
-      "teaser": "“GI Malepszy Leszno” izbraukumā ar 2:0 pārspēja “Wiara Lecha”. Ūdris vārtu guvēju sarakstā nav jau otro spēli pēc kārtas.",
-      "body": [
-        "FOGO Futsal Ekstraklasa 11. kārtā Lielpolijas derbijā “GI Malepszy Leszno” izbraukumā ar 2:0 uzvarēja “Wiara Lecha Poznań”. Vārtus guva Daniel Gallego García (19. minūtē pēc Siecla stūra sitiena) un Serhii Malyshko (26. minūtē pēc Gallego García piespēles).",
-        "Iepriekšējā kārtā Lešno mājās nospēlēja 3:3 ar “We-Met”. Pēc 11 spēlēm komandai ir 16 punkti un 8. vieta.",
-        "Renārs Ūdris klubā vārtus nav guvis jau divas spēles pēc kārtas. Kluba atskaitēs par Poznaņas spēli viņš nav minēts. 8. novembrī viņu gaida Latvijas izlases Pasaules kausa kvalifikācijas spēle Azerbaidžānā."
-      ],
-      "sources": [
-        {
-          "label": "KS Futsal Leszno",
-          "url": "https://www.futsal.leszno.pl/2026/10/31/derby-wielkopolski-dla-gi-malepszy-leszno-zwyciestwo-w-poznaniu/"
-        },
-        {
-          "label": "KS Futsal Leszno (We-Met)",
-          "url": "https://www.futsal.leszno.pl/2026/10/25/podzial-punktow-w-hali-trapez-gi-malepszy-leszno-remisuje-z-we-metem/"
         }
       ]
     },

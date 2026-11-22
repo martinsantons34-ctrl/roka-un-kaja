@@ -1496,7 +1496,13 @@
             "type": "vertiba",
             "why": "Kārtas labākā vērtība pēc modeļa: Aston Villa uzvara Stambulā 2,45 (modelis 46 %, koeficients atbilst ~40 %)."
           },
-          "valueSide": "2"
+          "valueSide": "2",
+          "analysis": [
+            "Kāpēc vērtība: Betsafe Aston Villa uzvarai dod 2,45, kas bez uzcenojuma atbilst ~39 % iespējai. Prediball modelis Villa dod 46 %, un Forza Football prognozē 1:2. Starpība nav milzīga, taču šī ir vienīgā kārtas spēle, kur modelis skaidri vērtē viesus augstāk par tirgu.",
+            "Argumenti par Villa: līgas fāzē Villa ir 6. vietā ar 9 punktiem (3 uzvaras, 1 zaudējums), un viņiem ir kvalitatīvāks sastāvs. Argumenti pret: Galatasaray ir uzvarējusi visās pēdējās piecās spēlēs, tostarp 2:0 pret Stuttgart Čempionu līgā, bet Villa pēdējās piecās spēlēs uzvarējusi tikai vienreiz. Tostarp ir zaudējums 0:3 Barcelonā un 4:4 Mančestrā.",
+            "Stambulas atmosfēra parasti tuvina abu komandu izredzes, tāpēc droši ir tas, ka abas komandas gūs vārtus (1,40). Tas ir arī Forza Football alternatīvais ieteikums.",
+            "Kopsavilkums: forma ir Galatasaray pusē, modelis Villa pusē. Tā ir klasiska „vērtības” situācija, kur risks ir augsts, un šī likme der tikai kā eksperiments."
+          ]
         },
         {
           "kickoff": "2026-11-24T21:00:00+01:00",
@@ -1563,7 +1569,13 @@
             "event": "401915295",
             "home": "359",
             "away": "124"
-          }
+          },
+          "analysis": [
+            "Kas uz spēles: abas komandas cīnās par vietu labāko astoņniekā. Arsenal ir 3. vietā ar 10 punktiem, Dortmund 12. vietā ar 9 punktiem. Betsafe Arsenal dod 1,39 (iespēja bez uzcenojuma ~69 %), Dortmund 8,40 (~11 %).",
+            "Abām komandām trūkst uzbrucēju: Arsenal spēlēs bez Bukayo Saka, Dortmund bez Serhou Guirassy. Dortmund vārtus guvusi tik un tā, jo pēdējās piecās spēlēs ir 4 uzvaras un 2:2 Minhenē. Arsenal pēdējās piecās spēlēs nav zaudējusi. Vienīgā nesenā savstarpējā spēle bija augusta pārbaudes spēle, kurā Dortmund uzvarēja ar 3:2.",
+            "Vārtu guvēji: Kai Havertz (2,38, ~42 %) ir Arsenal galvenais variants bez Saka. Dortmund pusē Fábio Silva (5,00), kas iesita arī pret Betis.",
+            "Kopsavilkums: Arsenal ir pamatots favorīts, taču Dortmund forma liek domāt, ka vienpusēja spēle tā nebūs. Forza prognozē 2:1, un „vairāk par 2,5 vārtiem” (1,65) ir loģiska papildlikme."
+          ]
         },
         {
           "kickoff": "2026-11-24T21:00:00+01:00",
@@ -1710,7 +1722,13 @@
             "event": "401915379",
             "home": "382",
             "away": "114"
-          }
+          },
+          "analysis": [
+            "Paradokss: City ir kārtas lielākais favorīts starp lielajām spēlēm (1,25, ~77 %), lai gan forma ir vāja. Pēdējās piecās spēlēs City ir zaudējusi trīs reizes, tostarp 1:3 pret Nottingham Forest un 0:1 pret Brighton. Čempionu līgā gan City ir 7. vietā ar 9 punktiem.",
+            "Napoli situācija ir vēl sliktāka: 27. vieta ar 3 punktiem, pēdējā izbraukumā zaudējums 1:4 Porto, kā arī trūkst Di Lorenzo, Lobotka, Buongiorno un vēl divu spēlētāju. Kevin De Bruyne ir vesels un atgriežas pret savu bijušo klubu.",
+            "Erling Haaland (1,40, ~71 %) ir kārtas ticamākais vārtu guvējs, un pret Leipzig viņš guva uzvaras vārtus. Rayan Cherki (2,80) ir otrs variants.",
+            "Kopsavilkums: City uzvara ir ticama, taču koeficients 1,25 nedod vietu kļūdām. Forza gaida 2:1, kas nozīmē, ka −1,5 handikaps nav pārliecinošs."
+          ]
         },
         {
           "kickoff": "2026-11-24T21:00:00+01:00",
@@ -1790,7 +1808,13 @@
             "event": "401915298",
             "home": "86",
             "away": "148"
-          }
+          },
+          "analysis": [
+            "Real ir vienīgā komanda līdzās PSG, kas uzvarējusi visās četrās līgas fāzes spēlēs, un arī pēdējās piecās spēlēs ir piecas uzvaras. Betsafe Real dod 1,17 (~83 %), kas ir kārtas trešais lielākais favorīts.",
+            "PSV ir 24. vietā ar 4 punktiem. Pēdējā Čempionu līgas spēlē PSV mājās zaudēja Club Brugge ar 1:2, taču vietējā līgā ir labā formā: 5:2 pret Cambuur un 7:0 pret Willem II. Tāpēc PSV vārtus gūt prot, un abas gūst vārtus maksā 1,55.",
+            "Kylian Mbappé un Jude Bellingham abi guva vārtus Atēnās. Pret AEK Real gan ielaida divus vārtus, tāpēc sausā spēle nav garantēta.",
+            "Kopsavilkums: Forza prognozē 3:1. Real uzvara ir ticama, interesantāka ir Real −1 handikapa likme (3 virzienu)."
+          ]
         },
         {
           "kickoff": "2026-11-24T21:00:00+01:00",
@@ -1984,7 +2008,13 @@
             "event": "401915292",
             "home": "570",
             "away": "364"
-          }
+          },
+          "analysis": [
+            "Brugge ir sezonas pārsteigums: 9. vieta ar 9 punktiem, uzvara Eindhovenā un pēdējās piecās spēlēs nav zaudējumu. Nicolò Tresoldi ir viens no Čempionu līgas vārtu guvēju līderiem.",
+            "Liverpool forma ir nestabila: zaudējums Stambulā 2:3, mājās 0:1 pret Arsenal, bet uzvara 3:1 pret Crystal Palace. Liverpool ir ielaidusi vārtus visās četrās šīs Čempionu līgas spēlēs.",
+            "Betsafe Liverpool dod 1,68 (~58 %). Tas ir mazāk, nekā varētu gaidīt no Liverpool, un liecina, ka tirgus nopietni vērtē Brugge mājas formu. Forza prognozē 1:2.",
+            "Kopsavilkums: abas komandas gūst vārtus (1,36) ir kārtas viena no ticamākajām likmēm. Liverpool šajā Čempionu līgā ielaiž katrā spēlē, un Brugge mājās gūst vārtus regulāri."
+          ]
         },
         {
           "kickoff": "2026-11-25T21:00:00+01:00",
@@ -2127,7 +2157,13 @@
             "event": "401915374",
             "home": "160",
             "away": "104"
-          }
+          },
+          "analysis": [
+            "PSG ir līdere ar 12 punktiem un vārtu starpību 20:5. Pēdējās piecās spēlēs ir piecas uzvaras, tostarp 6:0 Villarreālā un 5:1 Havrā. Betsafe PSG dod 1,34 (~72 %).",
+            "Traumu saraksts sarūk: Ousmane Dembélé, Marquinhos un Nuno Mendes ir atsākuši individuālos treniņus, bet Khvicha Kvaratskhelia būs ārā vēl mēnešiem, un Désiré Doué ir apšaubāms. Romai trūkst Paulo Dybala, Lorenzo Pellegrini un vārtsarga Mile Svilar.",
+            "Roma (20. vieta, 4 punkti) pēdējās piecās spēlēs ir zaudējusi tikai vienreiz, ar 2:3 Mančestrā, un nedēļas nogalē uzvarēja Sassuolo ar 3:0. Donyell Malen (2,75) guva vārtus arī Old Trafford stadionā.",
+            "Kopsavilkums: Forza gaida 2:1 un abu komandu vārtus. Ferran Torres (1,80, ~56 %) ir PSG ticamākais vārtu guvējs bez Dembélé."
+          ]
         },
         {
           "kickoff": "2026-11-25T21:00:00+01:00",
@@ -2232,7 +2268,13 @@
             "event": "401915373",
             "home": "2250",
             "away": "360"
-          }
+          },
+          "analysis": [
+            "Kārtas līdzsvarotākā lielā spēle: Betsafe abām komandām dod 2,62 (pa ~37 %). Tā ir Mauricio Pochettino pirmā Čempionu līgas spēle Man Utd trenera amatā.",
+            "Sporting ir 10. vietā ar 9 punktiem un pēdējā Čempionu līgas spēlē uzvarēja Shakhtar ar 1:0, taču pēdējo piecu spēļu vidū ir divi zaudējumi. Man Utd (17. vieta, 6 punkti) atgūstas: no 0:2 izrāva 3:2 pret Roma un nospēlēja 4:4 ar Aston Villa.",
+            "United trūkst Šeško, Baleba un Dorgu, apšaubāmi Shaw, Rashford un de Ligt. Sporting uzbrukuma līderis Luis Suárez (2,10, ~48 %) ir šīs spēles ticamākais vārtu guvējs. United pusē tas ir Bryan Mbeumo (2,75).",
+            "Kopsavilkums: abas gūst vārtus (1,46) ir galvenais ieteikums, jo Man Utd pēdējās divās spēlēs ielaida sešus vārtus. Forza kā vērtību iesaka Sporting uzvaru (2,62)."
+          ]
         }
       ],
       "scorers": [
@@ -2345,7 +2387,39 @@
         ],
         "note": "Pieci lielākie favorīti, tāpat kā Forza Football ekspresī. Betsafe koeficienti. Pat tik “droša” kombinācija nav garantēta: ja kaut viens paklūp, viss ir zaudēts."
       },
-      "valueNote": "„Vērtība” nozīmē, ka kāds neatkarīgs modelis rezultātam dod lielāku iespēju nekā bukmeikera koeficients. Tas nav garantēts laimests, tikai pazīme, ka koeficients varētu būt pārāk augsts."
+      "valueNote": "„Vērtība” nozīmē, ka kāds neatkarīgs modelis rezultātam dod lielāku iespēju nekā bukmeikera koeficients. Tas nav garantēts laimests, tikai pazīme, ka koeficients varētu būt pārāk augsts.",
+      "review": {
+        "title": "5. kārtas apskats",
+        "sections": [
+          {
+            "h": "Kopaina",
+            "p": [
+              "Pēc četrām kārtām tikai PSG un Real ir bez zaudējumiem (12 punkti). Tālāk seko Arsenal (10) un liels bars ar 9 punktiem: Como, Barcelona, Aston Villa, Man City, Liverpool, Club Brugge, Sporting, Betis un Dortmund. Cīņa par labāko astoņnieku ir ļoti blīva, tāpēc 5. kārtā katrs zaudējums var maksāt tiešo vietu nākamajā kārtā.",
+              "Lielākie favorīti spēlē pret tabulas lejasdaļu: Barcelona pie Sabah (1,07), Atleti pret Viking (1,10), Real pret PSV (1,17) un City pret Napoli (1,25)."
+            ]
+          },
+          {
+            "h": "Forma pret koeficientiem",
+            "p": [
+              "Interesantākais kontrasts ir Man City. Bukmeikeri City dod ~77 %, lai gan pēdējās piecās spēlēs City zaudēja trīs reizes. Pretinieks Napoli gan ir vēl sliktākā situācijā. Pretējs piemērs ir Galatasaray: piecas uzvaras pēc kārtas, bet mājās pret Aston Villa koeficients 2,75.",
+              "Betsafe uzcenojums šai kārtai ir tikai ~3,5 %, kas ir krietni mazāk nekā daudziem citiem bukmeikeriem (5–10 %). Tāpēc procenti no Betsafe koeficientiem ir tuvāk patiesajām izredzēm."
+            ]
+          },
+          {
+            "h": "Vārti",
+            "p": [
+              "Atkal sagaidāma vārtiem bagāta kārta. Abas gūst vārtus ir galvenais ieteikums četrās līdzsvarotajās spēlēs: Feyenoord – Porto, Slavia – Villarreal, Shakhtar – Fenerbahçe un Sporting – Man Utd. 4. kārtā no sešām šādām likmēm izdevās piecas.",
+              "Ticamākie vārtu guvēji pēc koeficientiem ir Erling Haaland (~71 %), Ferran Torres (~56 %), Luis Suárez (~48 %) un Kai Havertz (~42 %)."
+            ]
+          },
+          {
+            "h": "Pirms spēles",
+            "p": [
+              "Sauso spēļu un vārtu guvēju statistikas modeļi (Fantasy Football Pundit) šai kārtai vēl nav publicēti, tāpēc šoreiz tie nav iekļauti. Sastāvi tiek paziņoti apmēram stundu pirms spēles. Īpaši vērts tos pārbaudīt PSG (Dembélé, Doué) un Man City (Matheus Nunes) spēlēs."
+            ]
+          }
+        ]
+      }
     }
   ]
 }
