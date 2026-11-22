@@ -1408,12 +1408,13 @@
     },
     {
       "md": 5,
-      "provisional": true,
-      "intro": "Provizoriskā 5. kārtas prognoze. Koeficienti ir no Betsafe.lv (11. novembris) un tiks atjaunoti pirms kārtas. Procenti aprēķināti no koeficientiem (ar bukmeikera uzcenojumu). Vārtu guvēju iespējas, vērtības spēles un analīze tiks pievienotas pirms kārtas (23./24. novembrī). Pieskaries koeficientam, lai to pieliktu savam betslipam. Tikai interesei.",
+      "provisional": false,
+      "intro": "Visas 18 kārtas spēles: Betsafe.lv koeficienti, prognozes un ieteikumi. Prognozētie rezultāti un vārtu guvēju koeficienti ņemti no Forza Football priekšskatiem, procenti aprēķināti no koeficientiem. Pieskaries koeficientam, lai to pieliktu savam betslipam. Tikai interesei.",
       "insights": [
-        "Lielākais favorīts: Barcelona pie Sabah (modelis 87 %).",
-        "Līdzsvarotākās spēles: Feyenoord – Porto, Slavia – Villarreal un Shakhtar – Fenerbahçe, kur nevienai komandai nav vairāk par 40 %.",
-        "Galatasaray mājās pret Aston Villa ir autsaidere (31 % pret 46 %)."
+        "Lielākie favorīti: Barcelona pie Sabah (1,07), Atleti pret Viking (1,10) un Real pret PSV (1,17).",
+        "Vērtība pēc modeļa: Aston Villa uzvara Stambulā (2,45), modelis tai dod 46 %.",
+        "Līdzsvarotākās spēles: Shakhtar – Fenerbahçe un Sporting – Man Utd (abām komandām 2,62–2,68).",
+        "Nespēlēs: Saka (Arsenal), Guirassy (Dortmund), Semenyo (Man City), Kvaratskhelia (PSG), Davies (Bayern)."
       ],
       "matches": [
         {
@@ -1432,13 +1433,17 @@
             "2": 19,
             "src": "Prediball"
           },
-          "score": "",
+          "score": "2:1",
           "pick": "Bodø/Glimt uzvara",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Bodø/Glimt 62 %, neizšķirts 19 %, LASK 19 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "pickOdds": 1.55,
+          "alt": "Abas gūst vārtus – 1,37",
+          "note": "Bukmeikeri Bodø mājās dod ~62 %. Forza Football gaida 2:1 un abu komandu vārtus.",
           "players": [],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/odds-champions-league-matchday-5"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -1466,13 +1471,17 @@
             "2": 46,
             "src": "Prediball"
           },
-          "score": "",
-          "pick": "Atklāta spēle",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Galatasaray 31 %, neizšķirts 23 %, Aston Villa 46 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "score": "1:2",
+          "pick": "Aston Villa uzvara",
+          "pickOdds": 2.45,
+          "alt": "Abas gūst vārtus – 1,40 · Forza: Aston Villa vai neizšķirts",
+          "note": "Tirgus šo spēli vērtē gandrīz līdzīgi (Galatasaray 36 %, Aston Villa 38 %), bet modelis Aston Villa dod 46 %. Forza Football prognozē 1:2.",
           "players": [],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/odds-champions-league-matchday-5"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -1482,7 +1491,12 @@
             "event": "401915300",
             "home": "432",
             "away": "362"
-          }
+          },
+          "featured": {
+            "type": "vertiba",
+            "why": "Kārtas labākā vērtība pēc modeļa: Aston Villa uzvara Stambulā 2,45 (modelis 46 %, koeficients atbilst ~40 %)."
+          },
+          "valueSide": "2"
         },
         {
           "kickoff": "2026-11-24T21:00:00+01:00",
@@ -1500,13 +1514,42 @@
             "2": 12,
             "src": "Prediball"
           },
-          "score": "",
+          "score": "2:1",
           "pick": "Arsenal uzvara",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Arsenal 67 %, neizšķirts 21 %, B. Dortmund 12 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
-          "players": [],
+          "pickOdds": 1.39,
+          "alt": "Vairāk par 2,5 vārtiem – 1,65 · Arsenal uzvara + vairāk par 2,5",
+          "note": "Arsenal bez Saka (augšstilbs, līdz decembra sākumam), Dortmund bez Serhou Guirassy (augšstilbs), Emre Can un Konstantelias. Forza Football: 2:1 Arsenal, tirgus 69 % / 19 % / 12 %.",
+          "players": [
+            {
+              "name": "Kai Havertz",
+              "club": "Arsenal",
+              "odds": 2.38,
+              "pct": 42,
+              "note": "",
+              "ours": ""
+            },
+            {
+              "name": "Christos Tzolis",
+              "club": "Arsenal",
+              "odds": 3.4,
+              "pct": 29,
+              "note": "",
+              "ours": ""
+            },
+            {
+              "name": "Fábio Silva",
+              "club": "Dortmund",
+              "odds": 5.0,
+              "pct": 20,
+              "note": "Guva vārtus pēdējā līgas spēlē pret Bayern.",
+              "ours": ""
+            }
+          ],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/arsenal-vs-dortmund-champions-league-predictions-odds"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -1538,13 +1581,17 @@
             "2": 20,
             "src": "Prediball"
           },
-          "score": "",
+          "score": "2:1",
           "pick": "Como uzvara",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Como 55 %, neizšķirts 25 %, AEK Athens 20 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "pickOdds": 1.31,
+          "alt": "Vairāk par 2,5 vārtiem – 1,35",
+          "note": "Como mājās ir liels favorīts (tirgus 74 %). Forza Football ieliek Como savā ekspresī un gaida 2:1.",
           "players": [],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/odds-champions-league-matchday-5"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -1572,13 +1619,17 @@
             "2": 34,
             "src": "Prediball"
           },
-          "score": "",
-          "pick": "Atklāta spēle",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Feyenoord 39 %, neizšķirts 27 %, Porto 34 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "score": "1:2",
+          "pick": "Abas gūst vārtus: Jā",
+          "pickOdds": 1.49,
+          "alt": "Forza: Porto vai neizšķirts · Porto uzvara – 2,50",
+          "note": "Līdzsvarota spēle (tirgus: Feyenoord 35 %, Porto 39 %). Forza Football prognozē 1:2 un abu komandu vārtus.",
           "players": [],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/odds-champions-league-matchday-5"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -1606,13 +1657,46 @@
             "2": 11,
             "src": "Prediball"
           },
-          "score": "",
+          "score": "2:1",
           "pick": "Man City uzvara",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Man City 72 %, neizšķirts 17 %, Napoli 11 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
-          "players": [],
+          "pickOdds": 1.25,
+          "alt": "Abas gūst vārtus – 1,70 · Man City −1,5 aziātiskais handikaps",
+          "note": "City bez Semenyo (celis), Matheus Nunes ir nopietns jautājums. Napoli trūks Di Lorenzo, Lobotka, Buongiorno, Badiashile un Alisson Santos, bet De Bruyne ir vesels. Forza Football: 2:1 City.",
+          "players": [
+            {
+              "name": "Erling Haaland",
+              "club": "Man City",
+              "odds": 1.4,
+              "pct": 71,
+              "note": "",
+              "ours": ""
+            },
+            {
+              "name": "Rayan Cherki",
+              "club": "Man City",
+              "odds": 2.8,
+              "pct": 36,
+              "note": "",
+              "ours": ""
+            },
+            {
+              "name": "Rasmus Højlund",
+              "club": "Napoli",
+              "odds": 4.33,
+              "pct": 23,
+              "note": "",
+              "ours": ""
+            }
+          ],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/manchester-city-vs-napoli-champions-league-predictions-odds"
+            },
+            {
+              "label": "Sports Mole",
+              "url": "https://www.sportsmole.co.uk/football/man-city/champions-league/injuries-and-suspensions/nunes-semenyo-latest-man-city-injury-suspension-list-vs-napoli_609586.html"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -1644,13 +1728,17 @@
             "2": 23,
             "src": "Prediball"
           },
-          "score": "",
+          "score": "2:1",
           "pick": "Leipzig uzvara",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Leipzig 57 %, neizšķirts 20 %, Lens 23 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "pickOdds": 1.44,
+          "alt": "Abas gūst vārtus – 1,44",
+          "note": "Tirgus Leipzig dod 68 %. Forza Football gaida 2:1 un abu komandu vārtus.",
           "players": [],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/odds-champions-league-matchday-5"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -1678,13 +1766,17 @@
             "2": 13,
             "src": "Prediball"
           },
-          "score": "",
+          "score": "3:1",
           "pick": "Real Madrid uzvara",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Real Madrid 71 %, neizšķirts 16 %, PSV 13 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "pickOdds": 1.17,
+          "alt": "Abas gūst vārtus – 1,55 · Real −1 (3 virzienu)",
+          "note": "Real līgas fāzē uzvarējis visās četrās spēlēs, PSV ir 4 punkti. Tirgus Real dod 83 %. Forza Football prognozē 3:1.",
           "players": [],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/odds-champions-league-matchday-5"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -1716,13 +1808,17 @@
             "2": 67,
             "src": "Prediball"
           },
-          "score": "",
+          "score": "1:2",
           "pick": "Real Betis uzvara",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: S. Bratislava 14 %, neizšķirts 19 %, Real Betis 67 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "pickOdds": 1.25,
+          "alt": "Vairāk par 2,5 vārtiem – 1,35",
+          "note": "Betis izbraukumā ir liels favorīts (tirgus 76 %). Forza Football: 1:2.",
           "players": [],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/odds-champions-league-matchday-5"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -1750,13 +1846,17 @@
             "2": 87,
             "src": "Prediball"
           },
-          "score": "",
+          "score": "1:3",
           "pick": "Barcelona uzvara",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Sabah 5 %, neizšķirts 8 %, Barcelona 87 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "pickOdds": 1.07,
+          "alt": "Abas gūst vārtus – 1,62 · Barcelona −2,5 handikaps",
+          "note": "Kārtas lielākais favorīts (tirgus 90 %). Forza Football tomēr gaida, ka arī Sabah gūs vārtus: 1:3.",
           "players": [],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/odds-champions-league-matchday-5"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -1784,13 +1884,17 @@
             "2": 36,
             "src": "Prediball"
           },
-          "score": "",
-          "pick": "Atklāta spēle",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Slavia Praha 39 %, neizšķirts 25 %, Villarreal 36 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "score": "1:2",
+          "pick": "Abas gūst vārtus: Jā",
+          "pickOdds": 1.46,
+          "alt": "Forza: Villarreal vai neizšķirts · Slavia uzvara – 3,00 (modelis 39 %)",
+          "note": "Tirgus: Slavia 32 %, Villarreal 43 %, bet modelis Slavia dod 39 %. Forza Football prognozē 1:2.",
           "players": [],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/odds-champions-league-matchday-5"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -1818,13 +1922,17 @@
             "2": 16,
             "src": "Prediball"
           },
-          "score": "",
+          "score": "3:0",
           "pick": "Atleti uzvara",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Atleti 63 %, neizšķirts 21 %, Viking 16 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "pickOdds": 1.1,
+          "alt": "Abas gūst vārtus: Nē – 1,70 · Atleti −2,5",
+          "note": "Atleti ir milzīgs favorīts (tirgus 88 %). Forza Football: 3:0 un Viking bez vārtiem.",
           "players": [],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/odds-champions-league-matchday-5"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -1852,13 +1960,17 @@
             "2": 55,
             "src": "Prediball"
           },
-          "score": "",
+          "score": "1:2",
           "pick": "Liverpool uzvara",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Club Brugge 25 %, neizšķirts 20 %, Liverpool 55 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "pickOdds": 1.68,
+          "alt": "Abas gūst vārtus – 1,36",
+          "note": "Tirgus Liverpool dod 58 %. Forza Football gaida 1:2 un abu komandu vārtus.",
           "players": [],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/odds-champions-league-matchday-5"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -1890,13 +2002,17 @@
             "2": 19,
             "src": "Prediball"
           },
-          "score": "",
+          "score": "2:1",
           "pick": "Inter uzvara",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Inter 63 %, neizšķirts 18 %, Stuttgart 19 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "pickOdds": 1.42,
+          "alt": "Abas gūst vārtus – 1,37",
+          "note": "Tirgus Inter dod 68 %. Forza Football: 2:1.",
           "players": [],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/odds-champions-league-matchday-5"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -1924,13 +2040,17 @@
             "2": 66,
             "src": "Prediball"
           },
-          "score": "",
+          "score": "1:2",
           "pick": "Bayern München uzvara",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Lille 15 %, neizšķirts 19 %, Bayern München 66 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "pickOdds": 1.31,
+          "alt": "Abas gūst vārtus – 1,60 · Bayern −1,5",
+          "note": "Lille pēdējās spēlēs bez uzvaras (Z Z Z N). Bayern trūkst Alphonso Davies (augšstilba muskulis). Tirgus Bayern dod 73 %, Forza Football: 1:2.",
           "players": [],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/odds-champions-league-matchday-5"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -1958,13 +2078,42 @@
             "2": 16,
             "src": "Prediball"
           },
-          "score": "",
+          "score": "2:1",
           "pick": "PSG uzvara",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Paris 67 %, neizšķirts 17 %, Roma 16 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
-          "players": [],
+          "pickOdds": 1.34,
+          "alt": "Abas gūst vārtus – 1,55 · PSG uzvara + abas gūst",
+          "note": "PSG uzvarējusi visās četrās spēlēs (20:5). Dembélé, Marquinhos un Nuno Mendes atsākuši individuālos treniņus, Doué ir apšaubāms, Kvaratskhelia ārā uz mēnešiem. Romai trūkst Dybala, Pellegrini un Svilar. Forza Football: 2:1.",
+          "players": [
+            {
+              "name": "Ferran Torres",
+              "club": "PSG",
+              "odds": 1.8,
+              "pct": 56,
+              "note": "",
+              "ours": ""
+            },
+            {
+              "name": "Mika Godts",
+              "club": "PSG",
+              "odds": 2.55,
+              "pct": 39,
+              "note": "",
+              "ours": ""
+            },
+            {
+              "name": "Donyell Malen",
+              "club": "Roma",
+              "odds": 2.75,
+              "pct": 36,
+              "note": "",
+              "ours": ""
+            }
+          ],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/psg-vs-roma-champions-league-predictions-odds"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -1996,13 +2145,17 @@
             "2": 34,
             "src": "Prediball"
           },
-          "score": "",
-          "pick": "Atklāta spēle",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Shakhtar 37 %, neizšķirts 29 %, Fenerbahçe 34 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
+          "score": "1:1",
+          "pick": "Abas gūst vārtus: Jā",
+          "pickOdds": 1.58,
+          "alt": "Neizšķirts – 3,50 (Forza vērtība)",
+          "note": "Kārtas līdzsvarotākā spēle (tirgus 36 % / 28 % / 36 %). Forza Football: abas gūst un 1:1.",
           "players": [],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/odds-champions-league-matchday-5"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -2030,13 +2183,42 @@
             "2": 35,
             "src": "Prediball"
           },
-          "score": "",
-          "pick": "Atklāta spēle",
-          "pickOdds": null,
-          "alt": "",
-          "note": "Modeļa varbūtības: Sporting CP 40 %, neizšķirts 25 %, Man Utd 35 %. Koeficienti un detalizēta prognoze tiks pievienoti pirms kārtas.",
-          "players": [],
+          "score": "2:1",
+          "pick": "Abas gūst vārtus: Jā",
+          "pickOdds": 1.46,
+          "alt": "Sporting uzvara – 2,62 (Forza vērtība)",
+          "note": "Pochettino pirmā Čempionu līgas spēle Man Utd. United trūkst Šeško, Baleba un Dorgu, apšaubāmi Shaw, Rashford un de Ligt. Sporting apšaubāms Ioannidis. Forza Football: 2:1 Sporting.",
+          "players": [
+            {
+              "name": "Luis Suárez",
+              "club": "Sporting",
+              "odds": 2.1,
+              "pct": 48,
+              "note": "",
+              "ours": ""
+            },
+            {
+              "name": "Bryan Mbeumo",
+              "club": "Man Utd",
+              "odds": 2.75,
+              "pct": 36,
+              "note": "",
+              "ours": ""
+            },
+            {
+              "name": "Luís Guilherme",
+              "club": "Sporting",
+              "odds": 4.0,
+              "pct": 25,
+              "note": "",
+              "ours": ""
+            }
+          ],
           "sources": [
+            {
+              "label": "Forza Football",
+              "url": "https://forzafootball.com/gb/play/betting-tips/sporting-vs-manchester-united-champions-league-predictions-odds"
+            },
             {
               "label": "Prediball (modeļa varbūtības)",
               "url": "https://www.prediball.com/champions-league/matchday-5/"
@@ -2053,11 +2235,117 @@
           }
         }
       ],
-      "scorers": [],
+      "scorers": [
+        {
+          "name": "Erling Haaland",
+          "club": "Man City",
+          "odds": 1.4,
+          "pct": 71,
+          "note": "Forza Football (Midnite).",
+          "ours": "",
+          "vs": "Napoli"
+        },
+        {
+          "name": "Ferran Torres",
+          "club": "PSG",
+          "odds": 1.8,
+          "pct": 56,
+          "note": "",
+          "ours": "",
+          "vs": "Roma"
+        },
+        {
+          "name": "Luis Suárez",
+          "club": "Sporting",
+          "odds": 2.1,
+          "pct": 48,
+          "note": "",
+          "ours": "",
+          "vs": "Man Utd"
+        },
+        {
+          "name": "Kai Havertz",
+          "club": "Arsenal",
+          "odds": 2.38,
+          "pct": 42,
+          "note": "",
+          "ours": "",
+          "vs": "Dortmund"
+        },
+        {
+          "name": "Mika Godts",
+          "club": "PSG",
+          "odds": 2.55,
+          "pct": 39,
+          "note": "",
+          "ours": "",
+          "vs": "Roma"
+        },
+        {
+          "name": "Bryan Mbeumo",
+          "club": "Man Utd",
+          "odds": 2.75,
+          "pct": 36,
+          "note": "",
+          "ours": "",
+          "vs": "Sporting"
+        },
+        {
+          "name": "Donyell Malen",
+          "club": "Roma",
+          "odds": 2.75,
+          "pct": 36,
+          "note": "",
+          "ours": "",
+          "vs": "PSG"
+        },
+        {
+          "name": "Rayan Cherki",
+          "club": "Man City",
+          "odds": 2.8,
+          "pct": 36,
+          "note": "",
+          "ours": "",
+          "vs": "Napoli"
+        }
+      ],
       "cleanSheets": [],
       "disclaimer": "Šī ir izklaide un apskats, nevis padoms likt naudu. Koeficienti ņemti no publiskām prognožu lapām un bukmeikeru vietnēm (Betsafe.lv, 11. novembris) un var būt mainījušies. Procenti no koeficientiem ietver bukmeikera uzcenojumu. Azartspēles tikai no 18 gadiem. Palīdzība: www.spelesatkariba.lv",
-      "oddsNote": "Koeficienti (1 / X / 2) ņemti no Betsafe.lv un tiek atjaunoti kopā ar pārējo lapu. Pirms likmes tik un tā paskaties Betsafe, jo koeficienti mainās.",
-      "oddsUpdatedAt": "2026-11-20T10:40:29Z"
+      "oddsNote": "Koeficienti ņemti no Betsafe.lv un tiek atjaunoti kopā ar pārējo lapu. Pirms likmes tik un tā paskaties Betsafe, jo koeficienti mainās. Vārtu guvēju koeficienti ir no Forza Football (Midnite), nevis Betsafe.",
+      "oddsUpdatedAt": "2026-11-20T10:40:29Z",
+      "updatedAt": "2026-11-22T13:59:08Z",
+      "combo": {
+        "title": "Draugu ekspresis (tikai prieka pēc)",
+        "legs": [
+          {
+            "match": "Sabah – Barcelona",
+            "pick": "Barcelona uzvara",
+            "odds": 1.07
+          },
+          {
+            "match": "Atleti – Viking",
+            "pick": "Atleti uzvara",
+            "odds": 1.1
+          },
+          {
+            "match": "Real Madrid – PSV",
+            "pick": "Real uzvara",
+            "odds": 1.17
+          },
+          {
+            "match": "Slovan – Real Betis",
+            "pick": "Betis uzvara",
+            "odds": 1.25
+          },
+          {
+            "match": "Como – AEK",
+            "pick": "Como uzvara",
+            "odds": 1.31
+          }
+        ],
+        "note": "Pieci lielākie favorīti, tāpat kā Forza Football ekspresī. Betsafe koeficienti. Pat tik “droša” kombinācija nav garantēta: ja kaut viens paklūp, viss ir zaudēts."
+      },
+      "valueNote": "„Vērtība” nozīmē, ka kāds neatkarīgs modelis rezultātam dod lielāku iespēju nekā bukmeikera koeficients. Tas nav garantēts laimests, tikai pazīme, ka koeficients varētu būt pārāk augsts."
     }
   ]
 }

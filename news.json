@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T23:00:00Z",
+  "updatedAt": "2026-11-22T13:59:29Z",
   "items": [
     {
       "id": "udris-kauss-swiecie",
@@ -265,6 +265,47 @@
         {
           "label": "Paris Fans (PSG sastāvs)",
           "url": "https://en.parisfans.fr/villarreal-vs-psg-the-paris-squad-the-paris-squad-4-players-missing-and-1-return.html"
+        }
+      ]
+    },
+    {
+      "id": "fantasy-k5-pirms",
+      "date": "2026-11-22",
+      "tag": "Fantasy",
+      "title": "Pirms 5. kārtas: Guirassy ārā, Doué un Matheus Nunes apšaubāmi, PSG trijotne tikai sāk trenēties",
+      "teaser": "Renardsudris paliek bez Dortmundes uzbrucēja, Aleksam jāseko Doué, Maarelim Matheus Nunes, bet Artura M PSG aizsargi un Dembélé vēl nav gatavi.",
+      "body": [
+        "Noteikti nespēlēs: Serhou Guirassy (renardsudris) Dortmundei izbraukumā pret Arsenal otrdien nebūs, jo viņam ir augšstilba sastiepums no spēles ar Betis, un atgriešanās datums nav zināms. Bayern ilgāku laiku nebūs Alphonso Davies (Arturs M), kuram atkal plīsusi augšstilba muskuļa šķiedra. Arsenālam trūkst Saka, un Man City trūkst Semenyo, bet viņi nav mūsu komandās.",
+        "PSG trijotne: Ousmane Dembélé, Marquinhos un Nuno Mendes (visi Arturs M) pēc augšstilba traumām ir atsākuši individuālos treniņus, un Forza Football raksta, ka viņi varētu atgriezties sestdien pret Nice. UEFA Fantasy lapā visi trīs joprojām ir atzīmēti kā traumēti, tāpēc spēlē ar Romu trešdien viņu dalība nav droša, un Arturam M ir vērts paturēt rezervi.",
+        "Apšaubāmi: Désiré Doué (Aleks) pirms Francijas spēles ar Turciju sajuta paceles cīpslu un pirms PSG – Roma ir apšaubāms. Matheus Nunes (Maarels) Sports Mole sarakstā ir “nopietns jautājums”: viņš izlaida Portugāles spēles un Man City neizšķirtu ar Fulham, lēmums tiks pieņemts pēc pārbaudēm pirms spēles ar Napoli. UEFA Fantasy lapā kā traumēts atzīmēts arī Atleti aizsargs J. Cardoso (Maarels).",
+        "Labās ziņas: Kevin De Bruyne Napolē ir vesels, bet viņš vairs nav nevienā mūsu komandā. Lille – Bayern priekšskatos svaigu ziņu par traumām nav, un Harry Kane (Arturs M, Maarels, renardsudris) ir labā formā. Man City traumu sarakstā ir tikai Semenyo un Nunes, tātad Haaland (Arturs M) un Bouaddi (Arturs M) ir spēlētgatavi. Forza Football Arsenāla traumu sarakstā min tikai Saka, tātad Raya, Calafiori (Maarels) un Gabriel (Aleks, renardsudris) varētu spēlēt. Par Mbappé (Aleks, Maarels, renardsudris) un Yamal (Aleks, Maarels, renardsudris) traumu ziņu nav.",
+        "Komandu sastāvi ņemti no mūsu līgas 4. kārtas datiem. Ja kopš tā laika esat veikuši transferus, ziņā tie nav ņemti vērā. Pirmdienas vakarā pēc preses konferencēm šī ziņa tiks atjaunota.",
+        "5. kārtas termiņš: otrdien, 24. novembrī plkst. 19:45 (Latvijas laiks). Līdz tam jāsakārto komanda un kapteinis."
+      ],
+      "sources": [
+        {
+          "label": "Forza Football: Arsenal – Dortmund",
+          "url": "https://forzafootball.com/gb/play/betting-tips/arsenal-vs-dortmund-champions-league-predictions-odds"
+        },
+        {
+          "label": "Forza Football: PSG – Roma",
+          "url": "https://forzafootball.com/gb/play/betting-tips/psg-vs-roma-champions-league-predictions-odds"
+        },
+        {
+          "label": "Sports Mole: Man City traumas pirms Napoli",
+          "url": "https://www.sportsmole.co.uk/football/man-city/champions-league/injuries-and-suspensions/nunes-semenyo-latest-man-city-injury-suspension-list-vs-napoli_609586.html"
+        },
+        {
+          "label": "Forza Football: Man City – Napoli",
+          "url": "https://forzafootball.com/gb/play/betting-tips/manchester-city-vs-napoli-champions-league-predictions-odds"
+        },
+        {
+          "label": "LiveScore: Davies trauma",
+          "url": "https://www.livescore.com/en/news/football/bundesliga/bayern-munich-face-a-major-dilemma-as-a-pressing-question-resurfaces-over-alphonso-davies-goal/"
+        },
+        {
+          "label": "UEFA Champions League Fantasy (spēlētāju statuss)",
+          "url": "https://gaming.uefa.com/en/uclfantasy/"
         }
       ]
     }
