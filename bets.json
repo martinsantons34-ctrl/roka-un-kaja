@@ -1422,10 +1422,10 @@
           "home": "Bodø/Glimt",
           "away": "LASK",
           "odds": {
-            "1": 1.55,
-            "X": 4.95,
-            "2": 5.2,
-            "src": "Betsafe.lv, 20. nov."
+            "1": 1.52,
+            "X": 5.05,
+            "2": 5.6,
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 62,
@@ -1460,10 +1460,10 @@
           "home": "Galatasaray",
           "away": "Aston Villa",
           "odds": {
-            "1": 2.75,
-            "X": 3.8,
-            "2": 2.45,
-            "src": "Betsafe.lv, 20. nov."
+            "1": 2.9,
+            "X": 3.9,
+            "2": 2.28,
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 31,
@@ -1512,7 +1512,7 @@
             "1": 1.39,
             "X": 5.05,
             "2": 8.4,
-            "src": "Betsafe.lv, 20. nov."
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 67,
@@ -1582,10 +1582,10 @@
           "home": "Como",
           "away": "AEK Athens",
           "odds": {
-            "1": 1.31,
-            "X": 6.0,
-            "2": 9.4,
-            "src": "Betsafe.lv, 20. nov."
+            "1": 1.26,
+            "X": 6.7,
+            "2": 11.0,
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 55,
@@ -1620,10 +1620,10 @@
           "home": "Feyenoord",
           "away": "Porto",
           "odds": {
-            "1": 2.75,
+            "1": 2.95,
             "X": 3.7,
-            "2": 2.5,
-            "src": "Betsafe.lv, 20. nov."
+            "2": 2.35,
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 39,
@@ -1658,10 +1658,10 @@
           "home": "Man City",
           "away": "Napoli",
           "odds": {
-            "1": 1.25,
-            "X": 6.9,
-            "2": 11.0,
-            "src": "Betsafe.lv, 20. nov."
+            "1": 1.3,
+            "X": 6.5,
+            "2": 8.9,
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 72,
@@ -1735,10 +1735,10 @@
           "home": "Leipzig",
           "away": "Lens",
           "odds": {
-            "1": 1.44,
-            "X": 5.35,
-            "2": 6.6,
-            "src": "Betsafe.lv, 20. nov."
+            "1": 1.38,
+            "X": 5.6,
+            "2": 7.6,
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 57,
@@ -1773,10 +1773,10 @@
           "home": "Real Madrid",
           "away": "PSV",
           "odds": {
-            "1": 1.17,
-            "X": 9.2,
-            "2": 14.0,
-            "src": "Betsafe.lv, 20. nov."
+            "1": 1.16,
+            "X": 9.1,
+            "2": 16.0,
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 71,
@@ -1821,10 +1821,10 @@
           "home": "S. Bratislava",
           "away": "Real Betis",
           "odds": {
-            "1": 11.0,
-            "X": 6.8,
-            "2": 1.25,
-            "src": "Betsafe.lv, 20. nov."
+            "1": 12.0,
+            "X": 6.9,
+            "2": 1.24,
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 14,
@@ -1859,10 +1859,10 @@
           "home": "Sabah",
           "away": "Barcelona",
           "odds": {
-            "1": 30.0,
-            "X": 15.0,
-            "2": 1.07,
-            "src": "Betsafe.lv, 20. nov."
+            "1": 22.0,
+            "X": 14.0,
+            "2": 1.09,
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 5,
@@ -1897,10 +1897,10 @@
           "home": "Slavia Praha",
           "away": "Villarreal",
           "odds": {
-            "1": 3.0,
+            "1": 3.15,
             "X": 3.9,
-            "2": 2.25,
-            "src": "Betsafe.lv, 20. nov."
+            "2": 2.18,
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 39,
@@ -1936,9 +1936,9 @@
           "away": "Viking",
           "odds": {
             "1": 1.1,
-            "X": 11.0,
-            "2": 28.0,
-            "src": "Betsafe.lv, 20. nov."
+            "X": 10.5,
+            "2": 30.0,
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 63,
@@ -1973,10 +1973,10 @@
           "home": "Club Brugge",
           "away": "Liverpool",
           "odds": {
-            "1": 4.5,
-            "X": 4.6,
+            "1": 4.55,
+            "X": 4.65,
             "2": 1.68,
-            "src": "Betsafe.lv, 20. nov."
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 25,
@@ -2022,9 +2022,9 @@
           "away": "Stuttgart",
           "odds": {
             "1": 1.42,
-            "X": 5.55,
-            "2": 6.6,
-            "src": "Betsafe.lv, 20. nov."
+            "X": 5.85,
+            "2": 6.2,
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 63,
@@ -2059,10 +2059,10 @@
           "home": "Lille",
           "away": "Bayern München",
           "odds": {
-            "1": 9.0,
-            "X": 6.2,
-            "2": 1.31,
-            "src": "Betsafe.lv, 20. nov."
+            "1": 5.3,
+            "X": 4.35,
+            "2": 1.62,
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 15,
@@ -2097,10 +2097,10 @@
           "home": "Paris",
           "away": "Roma",
           "odds": {
-            "1": 1.34,
-            "X": 5.8,
-            "2": 8.6,
-            "src": "Betsafe.lv, 20. nov."
+            "1": 1.43,
+            "X": 5.25,
+            "2": 6.8,
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 67,
@@ -2173,7 +2173,7 @@
             "1": 2.68,
             "X": 3.5,
             "2": 2.68,
-            "src": "Betsafe.lv, 20. nov."
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 37,
@@ -2208,10 +2208,10 @@
           "home": "Sporting CP",
           "away": "Man Utd",
           "odds": {
-            "1": 2.62,
-            "X": 3.65,
-            "2": 2.62,
-            "src": "Betsafe.lv, 20. nov."
+            "1": 2.48,
+            "X": 3.75,
+            "2": 2.75,
+            "src": "Betsafe.lv, 23. nov."
           },
           "model": {
             "1": 40,
@@ -2354,7 +2354,7 @@
       "cleanSheets": [],
       "disclaimer": "Šī ir izklaide un apskats, nevis padoms likt naudu. Koeficienti ņemti no publiskām prognožu lapām un bukmeikeru vietnēm (Betsafe.lv, 11. novembris) un var būt mainījušies. Procenti no koeficientiem ietver bukmeikera uzcenojumu. Azartspēles tikai no 18 gadiem. Palīdzība: www.spelesatkariba.lv",
       "oddsNote": "Koeficienti ņemti no Betsafe.lv un tiek atjaunoti kopā ar pārējo lapu. Pirms likmes tik un tā paskaties Betsafe, jo koeficienti mainās. Vārtu guvēju koeficienti ir no Forza Football (Midnite), nevis Betsafe.",
-      "oddsUpdatedAt": "2026-11-20T10:40:29Z",
+      "oddsUpdatedAt": "2026-11-23T18:11:30Z",
       "updatedAt": "2026-11-22T13:59:08Z",
       "combo": {
         "title": "Draugu ekspresis (tikai prieka pēc)",
