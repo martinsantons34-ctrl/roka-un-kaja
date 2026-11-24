@@ -154,6 +154,220 @@
           ]
         }
       ]
+    },
+    {
+      "md": 5,
+      "label": "5. kārta · Renarda betslips (×4)",
+      "legs": [
+        {
+          "id": "galabtts",
+          "kickoff": "2026-11-24T19:45:00+02:00",
+          "home": "Galatasaray",
+          "away": "Aston Villa",
+          "market": "Abas komandas gūs vārtus",
+          "pick": "Jā",
+          "odds": 1.43,
+          "status": "open"
+        },
+        {
+          "id": "liv",
+          "kickoff": "2026-11-25T22:00:00+02:00",
+          "home": "Club Brugge",
+          "away": "Liverpool",
+          "market": "Mača uzvarētājs",
+          "pick": "Liverpool",
+          "odds": 1.65,
+          "status": "open"
+        },
+        {
+          "id": "psg",
+          "kickoff": "2026-11-25T22:00:00+02:00",
+          "home": "Paris SG",
+          "away": "Roma",
+          "market": "Mača uzvarētājs",
+          "pick": "Paris SG",
+          "odds": 1.46,
+          "status": "open"
+        },
+        {
+          "id": "como",
+          "kickoff": "2026-11-24T22:00:00+02:00",
+          "home": "Como",
+          "away": "AEK Athens",
+          "market": "Mača uzvarētājs",
+          "pick": "Como",
+          "odds": 1.27,
+          "status": "open"
+        }
+      ],
+      "slips": [
+        {
+          "player": "renards",
+          "stake": 5,
+          "boost": 1.7,
+          "boostPct": 10,
+          "legs": [
+            "galabtts",
+            "liv",
+            "psg",
+            "como"
+          ],
+          "odds": 4.37
+        }
+      ]
+    },
+    {
+      "md": 5,
+      "label": "5. kārta · Maarela betslips Nr. 1 (×7)",
+      "legs": [
+        {
+          "id": "bodo",
+          "kickoff": "2026-11-24T19:45:00+02:00",
+          "home": "Bodø/Glimt",
+          "away": "LASK",
+          "market": "Mača uzvarētājs",
+          "pick": "Bodø/Glimt",
+          "odds": 1.38,
+          "status": "open"
+        },
+        {
+          "id": "villa",
+          "kickoff": "2026-11-24T19:45:00+02:00",
+          "home": "Galatasaray",
+          "away": "Aston Villa",
+          "market": "Mača uzvarētājs",
+          "pick": "Aston Villa",
+          "odds": 2.28,
+          "status": "open"
+        },
+        {
+          "id": "como",
+          "kickoff": "2026-11-24T22:00:00+02:00",
+          "home": "Como",
+          "away": "AEK Athens",
+          "market": "Mača uzvarētājs",
+          "pick": "Como",
+          "odds": 1.27,
+          "status": "open"
+        },
+        {
+          "id": "ars",
+          "kickoff": "2026-11-24T22:00:00+02:00",
+          "home": "Arsenal",
+          "away": "Borussia Dortmund",
+          "market": "Mača uzvarētājs",
+          "pick": "Arsenal",
+          "odds": 1.47,
+          "status": "open"
+        },
+        {
+          "id": "liv",
+          "kickoff": "2026-11-25T22:00:00+02:00",
+          "home": "Club Brugge",
+          "away": "Liverpool",
+          "market": "Mača uzvarētājs",
+          "pick": "Liverpool",
+          "odds": 1.65,
+          "status": "open"
+        },
+        {
+          "id": "psg",
+          "kickoff": "2026-11-25T22:00:00+02:00",
+          "home": "Paris SG",
+          "away": "Roma",
+          "market": "Mača uzvarētājs",
+          "pick": "Paris SG",
+          "odds": 1.46,
+          "status": "open"
+        },
+        {
+          "id": "betis",
+          "kickoff": "2026-11-24T22:00:00+02:00",
+          "home": "Slovan Bratislava",
+          "away": "Real Betis",
+          "market": "Mača uzvarētājs",
+          "pick": "Real Betis",
+          "odds": 1.27,
+          "status": "open"
+        }
+      ],
+      "slips": [
+        {
+          "player": "maarels",
+          "stake": 5,
+          "boost": 17.0,
+          "boostPct": 20,
+          "legs": [
+            "bodo",
+            "villa",
+            "como",
+            "ars",
+            "liv",
+            "psg",
+            "betis"
+          ],
+          "odds": 17.97
+        }
+      ]
+    },
+    {
+      "md": 5,
+      "label": "5. kārta · Maarela betslips Nr. 2 (×4)",
+      "legs": [
+        {
+          "id": "como",
+          "kickoff": "2026-11-24T22:00:00+02:00",
+          "home": "Como",
+          "away": "AEK Athens",
+          "market": "Mača uzvarētājs",
+          "pick": "Como",
+          "odds": 1.27,
+          "status": "open"
+        },
+        {
+          "id": "villadc",
+          "kickoff": "2026-11-24T19:45:00+02:00",
+          "home": "Galatasaray",
+          "away": "Aston Villa",
+          "market": "Dubultiespēja",
+          "pick": "Neizšķirts vai Aston Villa",
+          "odds": 1.4,
+          "status": "open"
+        },
+        {
+          "id": "ars",
+          "kickoff": "2026-11-24T22:00:00+02:00",
+          "home": "Arsenal",
+          "away": "Borussia Dortmund",
+          "market": "Mača uzvarētājs",
+          "pick": "Arsenal",
+          "odds": 1.47,
+          "status": "open"
+        },
+        {
+          "id": "leipbtts",
+          "kickoff": "2026-11-24T22:00:00+02:00",
+          "home": "RB Leipzig",
+          "away": "Lens",
+          "market": "Abas komandas gūs vārtus",
+          "pick": "Jā",
+          "odds": 1.45,
+          "status": "open"
+        }
+      ],
+      "slips": [
+        {
+          "player": "maarels",
+          "stake": 5,
+          "legs": [
+            "como",
+            "villadc",
+            "ars",
+            "leipbtts"
+          ],
+          "odds": 3.79
+        }
+      ]
     }
   ]
 }

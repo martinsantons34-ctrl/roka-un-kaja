@@ -1335,7 +1335,7 @@ body.view-bets #likmes { padding-top: 26px; }
       const lost = legs.filter(l => l.status === "lost"), open = legs.filter(l => l.status === "open");
       const status = s.status || (lost.length ? "lost" : open.length ? "open" : "won");
       const settled = status === "lost" ? day(lost.map(l => l.kickoff).sort()[0]) : status === "won" ? day(legs.map(l => l.kickoff).sort().pop()) : null;
-      slips.push({ ...s, ri, md: r.md, approx: legs.some(l => l.oddsApprox), legs, odds, status, settled, back: status === "won" ? s.stake * odds : 0,
+      slips.push({ ...s, ri, md: r.md, approx: legs.some(l => l.oddsApprox), legs, odds, status, settled, back: status === "won" ? s.stake * odds + (s.boost || 0) : 0,
         hit: legs.filter(l => l.status === "won").length, judged: legs.filter(l => l.status === "won" || l.status === "lost").length });
     }));
     const stats = ps.map(p => {
@@ -1343,7 +1343,7 @@ body.view-bets #likmes { padding-top: 26px; }
       const staked = mine.reduce((t, s) => t + s.stake, 0), back = done.reduce((t, s) => t + s.back, 0);
       return { p, staked, back, pl: back - staked, won: done.filter(s => s.status === "won").length, done: done.length,
         legHit: mine.reduce((t, s) => t + s.hit, 0), legJudged: mine.reduce((t, s) => t + s.judged, 0),
-        open: open.length, openStake: open.reduce((t, s) => t + s.stake, 0), openWin: open.reduce((t, s) => t + s.stake * s.odds, 0),
+        open: open.length, openStake: open.reduce((t, s) => t + s.stake, 0), openWin: open.reduce((t, s) => t + s.stake * s.odds + (s.boost || 0), 0),
         best: Math.max(0, ...mine.filter(s => s.status === "won").map(s => s.back)) };
     });
     const anyDone = slips.some(s => s.status !== "open");
@@ -1398,7 +1398,7 @@ body.view-bets #likmes { padding-top: 26px; }
           <td>${esc(l.pick)}<small class="mk hide-sm">${esc(l.market || "")}</small></td><td class="num">${l.oddsApprox ? "≈" : ""}${num(l.odds)}</td>
           ${rs.map((s, i) => `<td class="who-c" style="--c:${cols[i]}">${s && s.legs.includes(l) ? '<span class="y">✓</span>' : '<span class="n">—</span>'}</td>`).join("")}
           <td>${stCell(l.status)}</td></tr>`; }).join("")
-        + rs.map((s, i) => s ? `<tr class="slip" style="--c:${cols[i]}"><td colspan="2"><b>${esc(ps[i].name)}</b> · ${esc(s.stake)} ${esc(cur)} × ${s.approx ? "≈" : ""}${num(s.odds)} = <b>${s.approx ? "≈" : ""}${fmt(s.stake * s.odds)}</b></td>
+        + rs.map((s, i) => s ? `<tr class="slip" style="--c:${cols[i]}"><td colspan="2"><b>${esc(ps[i].name)}</b> · ${esc(s.stake)} ${esc(cur)} × ${s.approx ? "≈" : ""}${num(s.odds)} ${s.boost ? `+ ${fmt(s.boost)} boost${s.boostPct ? ` (${esc(s.boostPct)} %)` : ""} ` : ""}= <b>${s.approx ? "≈" : ""}${fmt(s.stake * s.odds + (s.boost || 0))}</b></td>
           <td class="num">${s.approx ? "≈" : ""}${num(s.odds)}</td><td colspan="2" class="num">${s.status === "won" ? `<b class="win">${fmt(s.back - s.stake, true)}</b>` : s.status === "lost" ? `<b class="loss">${fmt(-s.stake, true)}</b>` : ""}</td><td>${stCell(s.status)}</td></tr>` : "").join("");
     }).join("");
     const wasOpen = !!box.querySelector("details.duel[open]");
