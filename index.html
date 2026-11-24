@@ -1287,7 +1287,7 @@ body.view-bets #likmes { padding-top: 26px; }
       if (!bt) return x12;
       const bcell = sl => {
         const sid = "btts:" + sl.id, on = slipHas(key, sid);
-        slipSels[key + "|" + sid] = { pick: "Abas gūs vārtus: " + sl.label, market: "Abas komandas gūs vārtus", odds: Number(sl.odds) };
+        slipSels[key + "|" + sid] = { pick: "Both teams to score: " + sl.label, market: "Both teams to score", odds: Number(sl.odds) };
         return `<span class="bet-odd bt${on ? " picked" : ""}" data-key="${esc(key)}" data-sid="${sid}" role="button" tabindex="0" aria-pressed="${on}" aria-label="Pievienot betslipam: abas komandas gūs vārtus, ${esc(sl.label)}, ${num(sl.odds)}"><small>${sl.id === "y" ? "jā" : "nē"}</small><b>${num(sl.odds)}</b></span>`;
       };
       return `<div class="odds-row${mini ? " mini" : ""}">${x12}<div class="bet-odds btts${mini ? " mini" : ""}" title="Abas komandas gūs vārtus (Betsafe)"><small class="bt-cap">Both teams to score</small>${bt.sels.map(bcell).join("")}</div></div>`;
@@ -1442,6 +1442,7 @@ body.view-bets #likmes { padding-top: 26px; }
 
   // ---- Betsafe tirgi (betsafe.json): abas gūst, vārti, handikapi un ieteikumi katrai spēlei; visu var pielikt betslipam ----
   let bsData = null;
+  const MK_NAME = { btts: "Both teams to score", dc: "Double chance" };
   function marketsHtml(m) {
     const key = slipKey(m), x = bsData && bsData.matches && bsData.matches[key];
     if (!x || m.result || (!(x.markets || []).length && !(x.tips || []).length)) return "";
@@ -1454,7 +1455,7 @@ body.view-bets #likmes { padding-top: 26px; }
     const tips = (x.tips || []).map(t => `<div class="mk-tip">${chip(t.id, t.label, t.odds, t.market)}<p>${esc(t.why)}</p></div>`).join("");
     return `<div class="mk-box"><span class="ttl">Betsafe koeficienti · pieskaries, lai pieliktu betslipam</span>
       ${tips ? `<div class="mk-tips"><span class="mk-name">💡 Idejas</span>${tips}</div>` : ""}
-      ${(x.markets || []).map(mk => `<div class="mk"><span class="mk-name">${esc(mk.name)}</span><div class="mk-sels">${mk.sels.map(sl => chip(mk.id + ":" + sl.id, sl.label, sl.odds, mk.name, mk.id === "btts" ? "Abas gūs vārtus: " + sl.label : mk.id === "dc" ? "Dubultā iespēja: " + sl.label : "")).join("")}</div></div>`).join("")}
+      ${(x.markets || []).map(mk => { const nm = MK_NAME[mk.id] || mk.name; return `<div class="mk"><span class="mk-name">${esc(nm)}</span><div class="mk-sels">${mk.sels.map(sl => chip(mk.id + ":" + sl.id, sl.label, sl.odds, nm, MK_NAME[mk.id] ? nm + ": " + sl.label : "")).join("")}</div></div>`; }).join("")}
       ${bsData.updatedAt ? `<span class="bet-src">Betsafe.lv, ${esc(new Date(bsData.updatedAt).toLocaleDateString("lv-LV", { day: "numeric", month: "short" }))}</span>` : ""}</div>`;
   }
 
