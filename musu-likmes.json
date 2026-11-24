@@ -157,7 +157,7 @@
     },
     {
       "md": 5,
-      "label": "5. kārta · Renarda betslips (×4)",
+      "label": "5. kārta · Maarela betslips Nr. 2 (×4)",
       "legs": [
         {
           "id": "galabtts",
@@ -202,9 +202,9 @@
       ],
       "slips": [
         {
-          "player": "renards",
-          "stake": 5,
-          "boost": 1.7,
+          "player": "maarels",
+          "stake": 10,
+          "boost": 3.4,
           "boostPct": 10,
           "legs": [
             "galabtts",
@@ -312,7 +312,7 @@
     },
     {
       "md": 5,
-      "label": "5. kārta · Maarela betslips Nr. 2 (×4)",
+      "label": "5. kārta · Renarda betslips (×4)",
       "legs": [
         {
           "id": "como",
@@ -357,7 +357,7 @@
       ],
       "slips": [
         {
-          "player": "maarels",
+          "player": "renards",
           "stake": 5,
           "legs": [
             "como",
