@@ -405,8 +405,12 @@ footer { font-size: 13px; color: var(--muted); }
 .odds-row { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 10px; }
 .odds-row.mini { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 10px; }
 .bet-odds.btts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.bet-odds.btts.mini { grid-template-columns: repeat(2, 50px); }
-.bet-odd.bt { background: color-mix(in srgb, var(--accent) 6%, var(--chip)); }
+.bet-odds.btts.mini { grid-template-columns: repeat(2, 48px); }
+.bet-odd.bt { background: color-mix(in srgb, var(--accent) 6%, var(--chip)); align-content: center; }
+.bet-odds.btts { grid-template-rows: auto 1fr; row-gap: 2px; }
+.bt-cap { grid-column: 1 / -1; text-align: center; font-size: 10px; font-weight: 700; color: var(--muted); line-height: 1.2; white-space: nowrap; }
+.bt-cap span { color: var(--ink); opacity: .7; }
+.bet-odds.btts:not(.mini) .bt-cap { font-size: 11px; }
 @media (max-width: 520px) { .odds-row:not(.mini) { grid-template-columns: 1fr; } .odds-row.mini { display: grid; grid-template-columns: auto; gap: 4px; } .bet-odds.btts.mini { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .bet-mini[open] summary { border-bottom: 1px solid var(--line); }
 .mini-body { padding: 10px 12px 12px; display: grid; gap: 8px; }
@@ -1285,9 +1289,9 @@ body.view-bets #likmes { padding-top: 26px; }
       const bcell = sl => {
         const sid = "btts:" + sl.id, on = slipHas(key, sid);
         slipSels[key + "|" + sid] = { pick: "Abas gūs vārtus: " + sl.label, market: "Abas komandas gūs vārtus", odds: Number(sl.odds) };
-        return `<span class="bet-odd bt${on ? " picked" : ""}" data-key="${esc(key)}" data-sid="${sid}" role="button" tabindex="0" aria-pressed="${on}" aria-label="Pievienot betslipam: abas komandas gūs vārtus, ${esc(sl.label)}, ${num(sl.odds)}"><small>${mini ? (sl.id === "y" ? "BTTS jā" : "BTTS nē") : "Abas gūs: " + esc(sl.label)}</small><b>${num(sl.odds)}</b></span>`;
+        return `<span class="bet-odd bt${on ? " picked" : ""}" data-key="${esc(key)}" data-sid="${sid}" role="button" tabindex="0" aria-pressed="${on}" aria-label="Pievienot betslipam: abas komandas gūs vārtus, ${esc(sl.label)}, ${num(sl.odds)}"><b>${num(sl.odds)}</b></span>`;
       };
-      return `<div class="odds-row${mini ? " mini" : ""}">${x12}<div class="bet-odds btts${mini ? " mini" : ""}" title="Abas komandas gūs vārtus (Betsafe)">${bt.sels.map(bcell).join("")}</div></div>`;
+      return `<div class="odds-row${mini ? " mini" : ""}">${x12}<div class="bet-odds btts${mini ? " mini" : ""}" title="Abas komandas gūs vārtus (Betsafe)"><small class="bt-cap">Abas gūs: <span>jā · nē</span></small>${bt.sels.map(bcell).join("")}</div></div>`;
     };
     const body = (m, after = "") => `
         ${h2hButtons(m)}${after}
