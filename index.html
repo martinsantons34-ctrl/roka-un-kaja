@@ -402,15 +402,6 @@ footer { font-size: 13px; color: var(--muted); }
 .bet-odds.mini .bet-odd { padding: 3px 2px; border-radius: 8px; }
 .bet-odds.mini .bet-odd small { font-size: 10px; }
 .bet-odds.mini .bet-odd b { font-size: 14px; }
-.odds-row { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 10px; }
-.odds-row.mini { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 10px; }
-.bet-odds.btts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.bet-odds.btts.mini { grid-template-columns: repeat(2, 54px); }
-.bet-odd.bt { background: color-mix(in srgb, var(--accent) 6%, var(--chip)); display: flex; align-items: baseline; justify-content: center; gap: 4px; }
-.bet-odds.btts { grid-template-rows: auto 1fr; row-gap: 2px; }
-.bt-cap { grid-column: 1 / -1; text-align: center; font-size: 10px; font-weight: 700; color: var(--muted); line-height: 1.2; white-space: nowrap; }
-.bet-odds.btts:not(.mini) .bt-cap { font-size: 11px; }
-@media (max-width: 520px) { .odds-row:not(.mini) { grid-template-columns: 1fr; } .odds-row.mini { display: grid; grid-template-columns: auto; gap: 4px; } .bet-odds.btts.mini { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .bet-mini[open] summary { border-bottom: 1px solid var(--line); }
 .mini-body { padding: 10px 12px 12px; display: grid; gap: 8px; }
 .mini-body p { margin: 0; font-size: 14px; color: var(--ink); max-width: none; }
@@ -1280,17 +1271,7 @@ body.view-bets #likmes { padding-top: 26px; }
       const cell = (k, label) => md
         ? `<span class="bet-odd model${md[k] === mfav ? " fav" : ""}${won === k ? " won" : ""}" title="Modeļa varbūtība"><small>${label}</small><b>${esc(md[k])}%</b></span>`
         : `<span class="bet-odd${o[k] != null && o[k] === fav ? " fav" : ""}${val === k ? " val" : ""}${won === k ? " won" : ""}${slipHas(key, k) ? " picked" : ""}"${val === k ? ' title="Vērtība"' : ""}${o[k] != null && !m.result ? ` data-key="${esc(key)}" data-k="${k}" role="button" tabindex="0" aria-pressed="${slipHas(key, k)}" aria-label="Pievienot betslipam: ${esc(k === "1" ? m.home : k === "2" ? m.away : "neizšķirts")}, ${num(o[k])}"` : ""}><small>${label}</small><b>${num(o[k])}</b></span>`;
-      const x12 = `<div class="bet-odds${mini ? " mini" : ""}">${cell("1", mini ? "1" : esc(m.home))}${cell("X", mini ? "X" : "Neizšķirts")}${cell("2", mini ? "2" : esc(m.away))}</div>`;
-      // Abas komandas gūs vārtus (Betsafe), blakus 1X2
-      const bm = !md && !m.result && bsData && bsData.matches && bsData.matches[key];
-      const bt = bm && (bm.markets || []).find(k => k.id === "btts");
-      if (!bt) return x12;
-      const bcell = sl => {
-        const sid = "btts:" + sl.id, on = slipHas(key, sid);
-        slipSels[key + "|" + sid] = { pick: "Both teams to score: " + sl.label, market: "Both teams to score", odds: Number(sl.odds) };
-        return `<span class="bet-odd bt${on ? " picked" : ""}" data-key="${esc(key)}" data-sid="${sid}" role="button" tabindex="0" aria-pressed="${on}" aria-label="Pievienot betslipam: abas komandas gūs vārtus, ${esc(sl.label)}, ${num(sl.odds)}"><small>${sl.id === "y" ? "jā" : "nē"}</small><b>${num(sl.odds)}</b></span>`;
-      };
-      return `<div class="odds-row${mini ? " mini" : ""}">${x12}<div class="bet-odds btts${mini ? " mini" : ""}" title="Abas komandas gūs vārtus (Betsafe)"><small class="bt-cap">Both teams to score</small>${bt.sels.map(bcell).join("")}</div></div>`;
+      return `<div class="bet-odds${mini ? " mini" : ""}">${cell("1", mini ? "1" : esc(m.home))}${cell("X", mini ? "X" : "Neizšķirts")}${cell("2", mini ? "2" : esc(m.away))}</div>`;
     };
     const body = (m, after = "") => `
         ${h2hButtons(m)}${after}
