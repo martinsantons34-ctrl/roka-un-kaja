@@ -167,7 +167,8 @@
           "market": "Abas komandas gūs vārtus",
           "pick": "Jā",
           "odds": 1.43,
-          "status": "open"
+          "status": "lost",
+          "result": "1:0"
         },
         {
           "id": "liv",
@@ -197,7 +198,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Como",
           "odds": 1.27,
-          "status": "open"
+          "status": "won",
+          "result": "1:0"
         }
       ],
       "slips": [
@@ -228,7 +230,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Bodø/Glimt",
           "odds": 1.38,
-          "status": "open"
+          "status": "won",
+          "result": "1:0"
         },
         {
           "id": "villa",
@@ -238,7 +241,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Aston Villa",
           "odds": 2.28,
-          "status": "open"
+          "status": "lost",
+          "result": "1:0"
         },
         {
           "id": "como",
@@ -248,7 +252,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Como",
           "odds": 1.27,
-          "status": "open"
+          "status": "won",
+          "result": "1:0"
         },
         {
           "id": "ars",
@@ -258,7 +263,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Arsenal",
           "odds": 1.47,
-          "status": "open"
+          "status": "lost",
+          "result": "1:1"
         },
         {
           "id": "liv",
@@ -288,7 +294,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Real Betis",
           "odds": 1.27,
-          "status": "open"
+          "status": "won",
+          "result": "0:2"
         }
       ],
       "slips": [
@@ -322,7 +329,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Como",
           "odds": 1.27,
-          "status": "open"
+          "status": "won",
+          "result": "1:0"
         },
         {
           "id": "villadc",
@@ -332,7 +340,8 @@
           "market": "Dubultiespēja",
           "pick": "Neizšķirts vai Aston Villa",
           "odds": 1.4,
-          "status": "open"
+          "status": "lost",
+          "result": "1:0"
         },
         {
           "id": "ars",
@@ -342,7 +351,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Arsenal",
           "odds": 1.47,
-          "status": "open"
+          "status": "lost",
+          "result": "1:1"
         },
         {
           "id": "leipbtts",
@@ -352,7 +362,8 @@
           "market": "Abas komandas gūs vārtus",
           "pick": "Jā",
           "odds": 1.45,
-          "status": "open"
+          "status": "won",
+          "result": "3:1"
         }
       ],
       "slips": [

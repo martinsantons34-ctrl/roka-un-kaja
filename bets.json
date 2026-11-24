@@ -1453,7 +1453,13 @@
             "event": "401915380",
             "home": "2980",
             "away": "4411"
-          }
+          },
+          "result": {
+            "h": 1,
+            "a": 0
+          },
+          "hit": true,
+          "resultNote": "Bodø/Glimt uzvarēja ar 1:0. Vienīgie vārti krita 90.+2. minūtē, kad LASK aizsargs Melayro Bogarde iesita savos vārtos."
         },
         {
           "kickoff": "2026-11-24T18:45:00+01:00",
@@ -1502,7 +1508,13 @@
             "Argumenti par Villa: līgas fāzē Villa ir 6. vietā ar 9 punktiem (3 uzvaras, 1 zaudējums), un viņiem ir kvalitatīvāks sastāvs. Argumenti pret: Galatasaray ir uzvarējusi visās pēdējās piecās spēlēs, tostarp 2:0 pret Stuttgart Čempionu līgā, bet Villa pēdējās piecās spēlēs uzvarējusi tikai vienreiz. Tostarp ir zaudējums 0:3 Barcelonā un 4:4 Mančestrā.",
             "Stambulas atmosfēra parasti tuvina abu komandu izredzes, tāpēc droši ir tas, ka abas komandas gūs vārtus (1,40). Tas ir arī Forza Football alternatīvais ieteikums.",
             "Kopsavilkums: forma ir Galatasaray pusē, modelis Villa pusē. Tā ir klasiska „vērtības” situācija, kur risks ir augsts, un šī likme der tikai kā eksperiments."
-          ]
+          ],
+          "result": {
+            "h": 1,
+            "a": 0
+          },
+          "hit": false,
+          "resultNote": "Galatasaray uzvarēja ar 1:0. Vārtus 77. minūtē guva rezervists Deniz Gül."
         },
         {
           "kickoff": "2026-11-24T21:00:00+01:00",
@@ -1532,7 +1544,8 @@
               "odds": 2.38,
               "pct": 42,
               "note": "",
-              "ours": ""
+              "ours": "",
+              "scored": false
             },
             {
               "name": "Christos Tzolis",
@@ -1540,7 +1553,8 @@
               "odds": 3.4,
               "pct": 29,
               "note": "",
-              "ours": ""
+              "ours": "",
+              "scored": false
             },
             {
               "name": "Fábio Silva",
@@ -1548,7 +1562,8 @@
               "odds": 5.0,
               "pct": 20,
               "note": "Guva vārtus pēdējā līgas spēlē pret Bayern.",
-              "ours": ""
+              "ours": "",
+              "scored": false
             }
           ],
           "sources": [
@@ -1575,7 +1590,13 @@
             "Abām komandām trūkst uzbrucēju: Arsenal spēlēs bez Bukayo Saka, Dortmund bez Serhou Guirassy. Dortmund vārtus guvusi tik un tā, jo pēdējās piecās spēlēs ir 4 uzvaras un 2:2 Minhenē. Arsenal pēdējās piecās spēlēs nav zaudējusi. Vienīgā nesenā savstarpējā spēle bija augusta pārbaudes spēle, kurā Dortmund uzvarēja ar 3:2.",
             "Vārtu guvēji: Kai Havertz (2,38, ~42 %) ir Arsenal galvenais variants bez Saka. Dortmund pusē Fábio Silva (5,00), kas iesita arī pret Betis.",
             "Kopsavilkums: Arsenal ir pamatots favorīts, taču Dortmund forma liek domāt, ka vienpusēja spēle tā nebūs. Forza prognozē 2:1, un „vairāk par 2,5 vārtiem” (1,65) ir loģiska papildlikme."
-          ]
+          ],
+          "result": {
+            "h": 1,
+            "a": 1
+          },
+          "hit": false,
+          "resultNote": "Neizšķirts 1:1. Viktor Gyökeres iesita 10. minūtē, Maximilian Beier izlīdzināja 55. minūtē."
         },
         {
           "kickoff": "2026-11-24T21:00:00+01:00",
@@ -1613,7 +1634,13 @@
             "event": "401915296",
             "home": "2572",
             "away": "887"
-          }
+          },
+          "result": {
+            "h": 1,
+            "a": 0
+          },
+          "hit": true,
+          "resultNote": "Como uzvarēja ar 1:0. Vārtus 57. minūtē guva Luis Milla."
         },
         {
           "kickoff": "2026-11-24T21:00:00+01:00",
@@ -1651,7 +1678,13 @@
             "event": "401915294",
             "home": "142",
             "away": "437"
-          }
+          },
+          "result": {
+            "h": 0,
+            "a": 1
+          },
+          "hit": false,
+          "resultNote": "Porto uzvarēja ar 1:0. Vienīgie vārti krita jau 2. minūtē: Feyenoord pussargs Oussama Targhaline iesita savos vārtos."
         },
         {
           "kickoff": "2026-11-24T21:00:00+01:00",
@@ -1681,7 +1714,8 @@
               "odds": 1.4,
               "pct": 71,
               "note": "",
-              "ours": ""
+              "ours": "",
+              "scored": false
             },
             {
               "name": "Rayan Cherki",
@@ -1689,7 +1723,8 @@
               "odds": 2.8,
               "pct": 36,
               "note": "",
-              "ours": ""
+              "ours": "",
+              "scored": true
             },
             {
               "name": "Rasmus Højlund",
@@ -1697,7 +1732,8 @@
               "odds": 4.33,
               "pct": 23,
               "note": "",
-              "ours": ""
+              "ours": "",
+              "scored": true
             }
           ],
           "sources": [
@@ -1728,7 +1764,13 @@
             "Napoli situācija ir vēl sliktāka: 27. vieta ar 3 punktiem, pēdējā izbraukumā zaudējums 1:4 Porto, kā arī trūkst Di Lorenzo, Lobotka, Buongiorno un vēl divu spēlētāju. Kevin De Bruyne ir vesels un atgriežas pret savu bijušo klubu.",
             "Erling Haaland (1,40, ~71 %) ir kārtas ticamākais vārtu guvējs, un pret Leipzig viņš guva uzvaras vārtus. Rayan Cherki (2,80) ir otrs variants.",
             "Kopsavilkums: City uzvara ir ticama, taču koeficients 1,25 nedod vietu kļūdām. Forza gaida 2:1, kas nozīmē, ka −1,5 handikaps nav pārliecinošs."
-          ]
+          ],
+          "result": {
+            "h": 2,
+            "a": 2
+          },
+          "hit": false,
+          "resultNote": "Neizšķirts 2:2. Napoli divreiz izvirzījās vadībā (Rasmus Højlund 55', Noa Lang 76'), City abas reizes izlīdzināja (Ayyoub Bouaddi 67', Rayan Cherki 86')."
         },
         {
           "kickoff": "2026-11-24T21:00:00+01:00",
@@ -1766,7 +1808,13 @@
             "event": "401915299",
             "home": "11420",
             "away": "175"
-          }
+          },
+          "result": {
+            "h": 3,
+            "a": 1
+          },
+          "hit": true,
+          "resultNote": "Leipzig uzvarēja ar 3:1. Vārtus guva David Raum un divreiz Antonio Nusa, Lens vārtus guva Matthieu Udol."
         },
         {
           "kickoff": "2026-11-24T21:00:00+01:00",
@@ -1814,7 +1862,13 @@
             "PSV ir 24. vietā ar 4 punktiem. Pēdējā Čempionu līgas spēlē PSV mājās zaudēja Club Brugge ar 1:2, taču vietējā līgā ir labā formā: 5:2 pret Cambuur un 7:0 pret Willem II. Tāpēc PSV vārtus gūt prot, un abas gūst vārtus maksā 1,55.",
             "Kylian Mbappé un Jude Bellingham abi guva vārtus Atēnās. Pret AEK Real gan ielaida divus vārtus, tāpēc sausā spēle nav garantēta.",
             "Kopsavilkums: Forza prognozē 3:1. Real uzvara ir ticama, interesantāka ir Real −1 handikapa likme (3 virzienu)."
-          ]
+          ],
+          "result": {
+            "h": 5,
+            "a": 1
+          },
+          "hit": true,
+          "resultNote": "Real uzvarēja ar 5:1. Kylian Mbappé iesita divreiz, pa vienam Federico Valverde, Jude Bellingham un Vinícius Júnior; PSV vārtus no soda sitiena guva Ivan Perišić."
         },
         {
           "kickoff": "2026-11-24T21:00:00+01:00",
@@ -1852,7 +1906,13 @@
             "event": "401915297",
             "home": "521",
             "away": "244"
-          }
+          },
+          "result": {
+            "h": 0,
+            "a": 2
+          },
+          "hit": true,
+          "resultNote": "Real Betis uzvarēja ar 2:0. Abus vārtus guva Cucho Hernández."
         },
         {
           "kickoff": "2026-11-25T18:45:00+01:00",
@@ -2285,7 +2345,8 @@
           "pct": 71,
           "note": "Forza Football (Midnite).",
           "ours": "",
-          "vs": "Napoli"
+          "vs": "Napoli",
+          "scored": false
         },
         {
           "name": "Ferran Torres",
@@ -2312,7 +2373,8 @@
           "pct": 42,
           "note": "",
           "ours": "",
-          "vs": "Dortmund"
+          "vs": "Dortmund",
+          "scored": false
         },
         {
           "name": "Mika Godts",
@@ -2348,14 +2410,15 @@
           "pct": 36,
           "note": "",
           "ours": "",
-          "vs": "Napoli"
+          "vs": "Napoli",
+          "scored": true
         }
       ],
       "cleanSheets": [],
       "disclaimer": "Šī ir izklaide un apskats, nevis padoms likt naudu. Koeficienti ņemti no publiskām prognožu lapām un bukmeikeru vietnēm (Betsafe.lv, 11. novembris) un var būt mainījušies. Procenti no koeficientiem ietver bukmeikera uzcenojumu. Azartspēles tikai no 18 gadiem. Palīdzība: www.spelesatkariba.lv",
       "oddsNote": "Koeficienti ņemti no Betsafe.lv un tiek atjaunoti kopā ar pārējo lapu. Pirms likmes tik un tā paskaties Betsafe, jo koeficienti mainās. Vārtu guvēju koeficienti ir no Forza Football (Midnite), nevis Betsafe.",
       "oddsUpdatedAt": "2026-11-23T18:11:30Z",
-      "updatedAt": "2026-11-22T13:59:08Z",
+      "updatedAt": "2026-11-24T22:45:41Z",
       "combo": {
         "title": "Draugu ekspresis (tikai prieka pēc)",
         "legs": [
@@ -2418,6 +2481,15 @@
               "Sauso spēļu un vārtu guvēju statistikas modeļi (Fantasy Football Pundit) šai kārtai vēl nav publicēti, tāpēc šoreiz tie nav iekļauti. Sastāvi tiek paziņoti apmēram stundu pirms spēles. Īpaši vērts tos pārbaudīt PSG (Dembélé, Doué) un Man City (Matheus Nunes) spēlēs."
             ]
           }
+        ]
+      },
+      "recap": {
+        "title": "Prognozes pret realitāti: 5. kārtas otrdiena",
+        "p": [
+          "Otrdien izdevās 5 no 9 galvenajiem ieteikumiem. Real Madrid (5:1), Real Betis (2:0), Leipzig (3:1), Como (1:0) un Bodø/Glimt (1:0) uzvarēja, kā gaidīts. Bodø/Glimt gan uzvaras vārtus dabūja tikai 92. minūtē, kad LASK aizsargs iesita savos vārtos.",
+          "Neizdevās divas lielās favorītu likmes. Arsenal (1,39) ar Dortmund nospēlēja 1:1, bet Man City (1,25) divreiz atspēlējās un ar Napoli nospēlēja 2:2. Zaudēja arī kārtas vērtības likme Aston Villa (2,28): Galatasaray uzvarēja ar 1:0 un pagarināja savu uzvaru sēriju.",
+          "Vārtu bija maz: 22 vārti 9 spēlēs, vidēji 2,4 spēlē. Feyenoord – Porto “abas gūst vārtus” neizdevās (0:1, vienīgie vārti bija paštrāpījums 2. minūtē). Neizdevās arī visas trīs alternatīvās “vairāk par 2,5 vārtiem” likmes (Arsenal, Como, Betis). “Abas gūst vārtus” izdevās City – Napoli, Leipzig – Lens un Real – PSV.",
+          "Vārtu guvēji: Rayan Cherki (2,80) iesita, bet Erling Haaland (1,40) un Kai Havertz (2,38) palika bez vārtiem. Kylian Mbappé guva divus vārtus un atdeva rezultatīvu piespēli. “Draugu ekspresī” trīs no pieciem notikumiem jau izdevušies (Real, Betis, Como); trešdien vēl jāuzvar Barcelona un Atleti."
         ]
       }
     }
