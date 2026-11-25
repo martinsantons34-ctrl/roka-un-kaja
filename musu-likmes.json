@@ -178,7 +178,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Liverpool",
           "odds": 1.65,
-          "status": "open"
+          "status": "won",
+          "result": "0:3"
         },
         {
           "id": "psg",
@@ -188,7 +189,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Paris SG",
           "odds": 1.46,
-          "status": "open"
+          "status": "lost",
+          "result": "2:2"
         },
         {
           "id": "como",
@@ -274,7 +276,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Liverpool",
           "odds": 1.65,
-          "status": "open"
+          "status": "won",
+          "result": "0:3"
         },
         {
           "id": "psg",
@@ -284,7 +287,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Paris SG",
           "odds": 1.46,
-          "status": "open"
+          "status": "lost",
+          "result": "2:2"
         },
         {
           "id": "betis",
@@ -392,7 +396,8 @@
           "market": "Abas komandas gūs vārtus",
           "pick": "Jā",
           "odds": 1.5,
-          "status": "open"
+          "status": "lost",
+          "result": "0:1"
         },
         {
           "id": "bayern",
@@ -402,7 +407,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Bayern München",
           "odds": 1.65,
-          "status": "open"
+          "status": "lost",
+          "result": "2:1"
         },
         {
           "id": "psg",
@@ -412,7 +418,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Paris SG",
           "odds": 1.55,
-          "status": "open"
+          "status": "lost",
+          "result": "2:2"
         },
         {
           "id": "inter",
@@ -422,7 +429,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Inter",
           "odds": 1.42,
-          "status": "open"
+          "status": "won",
+          "result": "2:0"
         },
         {
           "id": "sporting",
@@ -432,7 +440,8 @@
           "market": "Mača uzvarētājs",
           "pick": "Sporting CP",
           "odds": 2.7,
-          "status": "open"
+          "status": "lost",
+          "result": "2:2"
         }
       ],
       "slips": [
