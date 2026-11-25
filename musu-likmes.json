@@ -379,6 +379,87 @@
           "odds": 3.79
         }
       ]
+    },
+    {
+      "md": 5,
+      "label": "5. kārta · trešdiena",
+      "legs": [
+        {
+          "id": "slavbtts",
+          "kickoff": "2026-11-25T19:45:00+02:00",
+          "home": "Slavia Praha",
+          "away": "Villarreal",
+          "market": "Abas komandas gūs vārtus",
+          "pick": "Jā",
+          "odds": 1.5,
+          "status": "open"
+        },
+        {
+          "id": "bayern",
+          "kickoff": "2026-11-25T22:00:00+02:00",
+          "home": "Lille",
+          "away": "Bayern München",
+          "market": "Mača uzvarētājs",
+          "pick": "Bayern München",
+          "odds": 1.65,
+          "status": "open"
+        },
+        {
+          "id": "psg",
+          "kickoff": "2026-11-25T22:00:00+02:00",
+          "home": "Paris SG",
+          "away": "Roma",
+          "market": "Mača uzvarētājs",
+          "pick": "Paris SG",
+          "odds": 1.55,
+          "status": "open"
+        },
+        {
+          "id": "inter",
+          "kickoff": "2026-11-25T22:00:00+02:00",
+          "home": "Inter",
+          "away": "VfB Stuttgart",
+          "market": "Mača uzvarētājs",
+          "pick": "Inter",
+          "odds": 1.42,
+          "status": "open"
+        },
+        {
+          "id": "sporting",
+          "kickoff": "2026-11-25T22:00:00+02:00",
+          "home": "Sporting CP",
+          "away": "Manchester United",
+          "market": "Mača uzvarētājs",
+          "pick": "Sporting CP",
+          "odds": 2.7,
+          "status": "open"
+        }
+      ],
+      "slips": [
+        {
+          "player": "maarels",
+          "stake": 5,
+          "boost": 1.24,
+          "boostPct": 5,
+          "legs": [
+            "inter",
+            "psg",
+            "sporting"
+          ],
+          "odds": 5.942
+        },
+        {
+          "player": "renards",
+          "stake": 5,
+          "legs": [
+            "bayern",
+            "psg",
+            "inter",
+            "slavbtts"
+          ],
+          "odds": 5.45
+        }
+      ]
     }
   ]
 }
