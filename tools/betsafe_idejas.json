@@ -1,90 +1,66 @@
 {
- "Slavia Praha": [
+ "Viking": [
   [
    "1x2",
    "home",
-   "Slavia uzvara",
-   "Pēc modeļa Slavia mājās uzvar ~39 % gadījumu, bet Betsafe koeficients 3,15 nozīmē tikai ~32 %. Riskanti."
+   "Viking uzvara",
+   "Pēc modeļa Viking mājās uzvar ~41 % gadījumu, bet koeficients 2,68 nozīmē ~37 %. Līdzīgas komandas, tāpēc riskanti."
   ]
  ],
- "Feyenoord": [
+ "Villarreal": [
+  [
+   "ah",
+   "home:-2",
+   "Villarreal −2 (aziātiskais)",
+   "Villarreal tīrā uzvara maksā tikai 1,19. Šeit vajag uzvaru ar 3+ vārtiem; ar tieši 2 vārtiem likmi atgriež."
+  ]
+ ],
+ "Roma": [
+  [
+   "1x2",
+   "away",
+   "Sporting uzvara",
+   "Pēc modeļa Sporting uzvar ~28 % gadījumu, koeficients 5,30 nozīmē tikai ~19 %. Roma mājās tomēr ir favorīte — liels risks."
+  ]
+ ],
+ "Aston Villa": [
   [
    "1x2",
    "home",
-   "Feyenoord uzvara",
-   "Pēc modeļa Feyenoord mājās uzvar ~39 % gadījumu, koeficients 2,95 nozīmē ~34 %. Līdzīgas komandas, tāpēc riskanti."
+   "Aston Villa uzvara",
+   "Pēc modeļa Villa mājās uzvar ~34 % gadījumu, koeficients 3,95 nozīmē ~25 %. PSG ir favorīts, tāpēc tikai drosmīgajiem."
   ]
  ],
- "Arsenal": [
+ "Bayern München": [
   [
    "h3",
-   "home:-1",
-   "Arsenal −1 (3 virzienu)",
-   "Arsenal mājās ir liels favorīts, bet Dortmundei atgriežas Guirassy un Arsenālam vārtos būs Kepa. Uzvara ar 2+ vārtiem maksā ap 2,1."
+   "home:-2",
+   "Bayern −2 (3 virzienu)",
+   "Bayern uzvara maksā 1,14. Ar −2 handikapu vajag uzvaru ar 3+ vārtiem — pret Slaviju tas ir reāli, bet nav garantēts."
   ]
  ],
- "Man City": [
+ "Man Utd": [
   [
-   "ah",
-   "home:-1.5",
-   "Man City −1,5",
-   "Tīrā City uzvara maksā maz, uzvara ar 2+ vārtiem krietni vairāk. Nunes atkal ir gatavs."
+   "1x2",
+   "away",
+   "Leipzig uzvara",
+   "Pēc modeļa Leipzig uzvar ~33 % gadījumu, koeficients 4,30 nozīmē ~23 %. Izbraukumā Old Trafford — riskanti."
   ]
  ],
- "Real Madrid": [
+ "Napoli": [
   [
-   "h3",
-   "home:-1",
-   "Real Madrid −1 (3 virzienu)",
-   "Real mājās ir liels favorīts. Uzvara ar 2+ vārtiem maksā daudz vairāk nekā tīrā uzvara."
+   "1x2",
+   "away",
+   "Brugge uzvara",
+   "Pēc modeļa Brugge uzvar ~30 % gadījumu, koeficients 4,25 nozīmē ~24 %. Napoli mājās ir favorīte."
   ]
  ],
- "Atleti": [
+ "LASK": [
   [
-   "ah",
-   "home:-2.5",
-   "Atleti −2,5",
-   "Atleti pret Viking ir milzīgs favorīts, tāpēc tīrā uzvara maksā gandrīz neko. Uzvara ar 3+ vārtiem ir riskantāka, bet maksā krietni vairāk."
-  ]
- ],
- "Paris": [
-  [
-   "ah",
-   "home:-1.5",
-   "PSG −1,5",
-   "PSG mājās ir liels favorīts, un Dembélé ir atgriezies. Uzvara ar 2+ vārtiem maksā krietni vairāk par tīro uzvaru."
-  ]
- ],
- "Inter": [
-  [
-   "h3",
-   "home:-1",
-   "Inter −1 (3 virzienu)",
-   "Inter mājās ir skaidrs favorīts, un uzvara ar 2+ vārtiem maksā ap divkāršu likmi."
-  ]
- ],
- "S. Bratislava": [
-  [
-   "ah",
-   "away:-1.5",
-   "Real Betis −1,5",
-   "Betis ir liels favorīts Bratislavā. Uzvara ar 2+ vārtiem maksā krietni vairāk par tīro uzvaru."
-  ]
- ],
- "Como": [
-  [
-   "ah",
-   "home:-1.5",
-   "Como −1,5",
-   "Como mājās ir liels favorīts pret AEK. Uzvara ar 2+ vārtiem maksā daudz vairāk."
-  ]
- ],
- "Bodø/Glimt": [
-  [
-   "ah",
-   "home:-1.5",
-   "Bodø/Glimt −1,5",
-   "Bodø mājās uz mākslīgā seguma ir bīstami. Uzvara ar 2+ vārtiem maksā ap 2,2."
+   "1x2",
+   "home",
+   "LASK uzvara",
+   "Pēc modeļa abām komandām ~38 % uzvaras iespēju, bet LASK koeficients 2,90 nozīmē tikai ~34 %."
   ]
  ]
 }

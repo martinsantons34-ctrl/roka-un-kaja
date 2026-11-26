@@ -2561,7 +2561,7 @@
     {
       "md": 6,
       "provisional": true,
-      "intro": "Provizoriskā 6. kārtas prognoze (8. un 9. decembris). Bukmeikeri koeficientus šīm spēlēm vēl nav publicējuši, tāpēc pagaidām ir redzamas tikai statistikas modeļa (Prediball) varbūtības. Koeficienti, vārtu guvēju iespējas, vērtības spēles un analīze tiks pievienoti pirmdienas naktī pirms kārtas (6./7. decembrī). Tikai interesei.",
+      "intro": "Provizoriskā 6. kārtas prognoze (8. un 9. decembris). Koeficienti ir no Betsafe.lv un tiek atjaunoti kopā ar pārējo lapu. Koeficienti, vārtu guvēju iespējas, vērtības spēles un analīze tiks pievienoti pirmdienas naktī pirms kārtas (6./7. decembrī). Tikai interesei.",
       "insights": [
         "Lielākie favorīti: Villarreal pret Sabah un Bayern pret Slavia (modelis abiem 78 %), kā arī Liverpool pret Porto (62 %).",
         "Kārtas lielās spēles: Barcelona – Man City (49 % / 22 % / 29 %), Arsenal – Real Madrid (51 % / 25 % / 24 %) un Aston Villa – PSG, kur modelis nedaudz vairāk tic viesiem (42 % pret 34 %).",
@@ -2574,10 +2574,10 @@
           "home": "Viking",
           "away": "Feyenoord",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 2.68,
+            "X": 3.8,
+            "2": 2.48,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 41,
@@ -2608,10 +2608,10 @@
           "home": "Villarreal",
           "away": "Sabah",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 1.19,
+            "X": 8.4,
+            "2": 13.0,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 78,
@@ -2642,10 +2642,10 @@
           "home": "AEK Athens",
           "away": "Galatasaray",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 2.58,
+            "X": 3.65,
+            "2": 2.68,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 42,
@@ -2676,10 +2676,10 @@
           "home": "Roma",
           "away": "Sporting CP",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 1.6,
+            "X": 4.45,
+            "2": 5.3,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 48,
@@ -2710,10 +2710,10 @@
           "home": "Aston Villa",
           "away": "Paris",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 3.95,
+            "X": 4.05,
+            "2": 1.88,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 34,
@@ -2744,10 +2744,10 @@
           "home": "Barcelona",
           "away": "Man City",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 1.85,
+            "X": 4.5,
+            "2": 3.7,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 49,
@@ -2778,10 +2778,10 @@
           "home": "Bayern München",
           "away": "Slavia Praha",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 1.14,
+            "X": 9.5,
+            "2": 19.0,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 78,
@@ -2812,10 +2812,10 @@
           "home": "Man Utd",
           "away": "Leipzig",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 1.75,
+            "X": 4.35,
+            "2": 4.3,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 47,
@@ -2846,10 +2846,10 @@
           "home": "Napoli",
           "away": "Club Brugge",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 1.78,
+            "X": 4.2,
+            "2": 4.25,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 47,
@@ -2880,10 +2880,10 @@
           "home": "Real Betis",
           "away": "Como",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 2.72,
+            "X": 3.7,
+            "2": 2.5,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 31,
@@ -2914,10 +2914,10 @@
           "home": "S. Bratislava",
           "away": "Shakhtar",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 4.2,
+            "X": 4.05,
+            "2": 1.82,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 21,
@@ -2948,10 +2948,10 @@
           "home": "Arsenal",
           "away": "Real Madrid",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 2.05,
+            "X": 3.8,
+            "2": 3.55,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 51,
@@ -2982,10 +2982,10 @@
           "home": "B. Dortmund",
           "away": "Inter",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 2.6,
+            "X": 3.75,
+            "2": 2.6,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 40,
@@ -3016,10 +3016,10 @@
           "home": "LASK",
           "away": "Fenerbahçe",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 2.9,
+            "X": 3.75,
+            "2": 2.35,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 38,
@@ -3050,10 +3050,10 @@
           "home": "Lens",
           "away": "Bodø/Glimt",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 2.38,
+            "X": 3.85,
+            "2": 2.8,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 38,
@@ -3084,10 +3084,10 @@
           "home": "Liverpool",
           "away": "Porto",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 1.49,
+            "X": 4.95,
+            "2": 6.2,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 62,
@@ -3118,10 +3118,10 @@
           "home": "PSV",
           "away": "Atleti",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 3.45,
+            "X": 4.15,
+            "2": 1.98,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 37,
@@ -3152,10 +3152,10 @@
           "home": "Stuttgart",
           "away": "Lille",
           "odds": {
-            "1": null,
-            "X": null,
-            "2": null,
-            "src": ""
+            "1": 1.75,
+            "X": 4.25,
+            "2": 4.4,
+            "src": "Betsafe.lv, 26. nov."
           },
           "model": {
             "1": 50,
@@ -3185,8 +3185,9 @@
       "scorers": [],
       "cleanSheets": [],
       "disclaimer": "Šī ir izklaide un apskats, nevis padoms likt naudu. Procenti ir statistikas modeļa (Prediball) varbūtības; koeficienti tiks pievienoti, kad bukmeikeri tos publicēs. Azartspēles tikai no 18 gadiem. Palīdzība: www.spelesatkariba.lv",
-      "oddsNote": "Koeficientu šai kārtai vēl nav. Tiklīdz Betsafe tos publicēs, tie parādīsies šeit.",
-      "updatedAt": "2026-11-25T22:45:58Z"
+      "oddsNote": "Koeficienti no Betsafe.lv; tie tiek atjaunoti kopā ar pārējo lapu.",
+      "updatedAt": "2026-11-25T22:45:58Z",
+      "oddsUpdatedAt": "2026-11-26T08:42:38Z"
     }
   ]
 }
